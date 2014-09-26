@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-Header
+Header & Top Area
 --------------------------------------------------------------*/
 #masthead{
 	position: relative;
@@ -11,7 +11,7 @@ Header
 .header{
 	width: 100%;
 	max-width: 1040px;
-	height: 166px; //set to same as #masthead height
+	height: 166px; //set equal to #masthead height
 	margin: 0 auto;
 	padding: 30px;
 	
@@ -48,7 +48,7 @@ Header
 		line-height: 35px;
 	}
 	
-	.fa{
+	.fa{ //fontawesome icons for header
 		background: white;
 		width: 34px;
 		height: 34px;
@@ -63,24 +63,53 @@ Header
 
 
 /*--------------------------------------------------------------
-Body
+Content & Containers
 --------------------------------------------------------------*/
-.container{
+#content{
 	width: 100%;
+	margin: 0;
+}
+
+.container{
 	max-width: 1040px;
 	margin: 0 auto;
-	background: white;
 	padding: 30px;
 }
+
+
+/*--------------------------------------------------------------
+Homepage
+--------------------------------------------------------------*/
+.video{
+	width: 100%;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	background: grey;
+}
+
+.welcome{
+	background: green;
+	height: 200px;
+}
+	
+.news{
+	background: yellow;
+	height: 200px;
+}
+	
+.partners{
+	background: black;
+	height: 200px;
+}
+	
 
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
 .site-footer{
 	width: 100%;
-	max-width: 1040px;
 	height: 200px;
-	margin: 0 auto;
-	padding: 30px 0;
-	background: green;	
+	margin: 0;
+	background: $brand_accent;	
 }

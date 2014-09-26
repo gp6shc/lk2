@@ -123,7 +123,8 @@ h3,
 h4,
 h5,
 h6 {
-  clear: both; }
+  clear: both;
+  font-family: "proxima-nova-alt", sans-serif, Arial; }
 
 p {
   margin-bottom: 1.5em; }
@@ -651,7 +652,7 @@ Galleries
   display: block; }
 
 /*--------------------------------------------------------------
-Header
+Header & Top Area
 --------------------------------------------------------------*/
 #masthead {
   position: relative;
@@ -703,25 +704,47 @@ Header
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
 
 /*--------------------------------------------------------------
-Body
+Content & Containers
 --------------------------------------------------------------*/
-.container {
+#content {
   width: 100%;
+  margin: 0; }
+
+.container {
   max-width: 1040px;
   margin: 0 auto;
-  background: white;
   padding: 30px; }
+
+/*--------------------------------------------------------------
+Homepage
+--------------------------------------------------------------*/
+.video {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  background: grey; }
+
+.welcome {
+  background: green;
+  height: 200px; }
+
+.news {
+  background: yellow;
+  height: 200px; }
+
+.partners {
+  background: black;
+  height: 200px; }
 
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
 .site-footer {
   width: 100%;
-  max-width: 1040px;
   height: 200px;
-  margin: 0 auto;
-  padding: 30px 0;
-  background: green; }
+  margin: 0;
+  background: #008996; }
 
 .grid_1 {
   width: 6.5%; }
@@ -792,7 +815,7 @@ Footer
   zoom: 1; }
 
 /*--------------------------------------------------------------
-Above 601px
+Above 769px
 --------------------------------------------------------------*/
 @media screen and (min-width: 769px) {
   .social button {
