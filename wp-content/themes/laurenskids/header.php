@@ -26,7 +26,8 @@
 	<header id="masthead" role="banner">
 
 		<div class="header">
-			<img class="logo" src="<?php bloginfo('stylesheet_directory') ?>/img/logo-full.png"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"></a></img>
+		
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php bloginfo('stylesheet_directory') ?>/img/logo-full.png"></img></a>
 			
 			<div class="top-area">
 				<ul class="social">
