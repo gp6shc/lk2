@@ -720,10 +720,15 @@ Homepage
 --------------------------------------------------------------*/
 .video {
   width: 100%;
-  height: 200px;
+  height: 566px;
   margin: 0;
   padding: 0;
-  background: grey; }
+  background: url("../img/vid-bg.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover cover;
+          background-size: cover;
+  background-attachment: fixed;
+  /*background-position: center center;*/ }
 
 .welcome {
   background: green;
@@ -869,7 +874,12 @@ Below 768px
       .main-navigation ul li {
         float: none;
         margin: 10px;
-        padding: 0; } }
+        padding: 0; }
+
+  .video {
+    height: 266px;
+    background-attachment: scroll;
+    background-position: center center; } }
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/

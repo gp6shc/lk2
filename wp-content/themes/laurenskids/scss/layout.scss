@@ -82,10 +82,14 @@ Homepage
 --------------------------------------------------------------*/
 .video{
 	width: 100%;
-	height: 200px;
+	height: 566px;
 	margin: 0;
 	padding: 0;
-	background: grey;
+	background: url('../img/vid-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	/*background-position: center center;*/
 }
 
 .welcome{

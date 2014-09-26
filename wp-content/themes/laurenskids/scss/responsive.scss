@@ -3,9 +3,6 @@ Above 769px
 --------------------------------------------------------------*/
 @media screen and (min-width: 769px) { 
 
-.top-area{
-	
-}
 
 .social{
 	button{
@@ -81,7 +78,6 @@ Below 768px
 .main-navigation{
 	width: 100%;
 	
-	
 	ul{
 		display: none;
 		
@@ -91,7 +87,12 @@ Below 768px
 			padding: 0;
 		}
 	}
-	
+}
+
+.video{
+	height: 266px;
+	background-attachment: scroll;
+	background-position: center center;
 }
 
 
