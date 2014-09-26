@@ -63,17 +63,20 @@ Header & Top Area
 
 
 /*--------------------------------------------------------------
-Content & Containers
+Container, Content, Pads (main)
 --------------------------------------------------------------*/
-#content{
+.container{
 	width: 100%;
 	margin: 0;
 }
 
-.container{
+.content{
 	max-width: 1040px;
 	margin: 0 auto;
-	padding: 30px;
+}
+
+.main{
+	padding: 72px 30px;
 }
 
 
@@ -84,7 +87,6 @@ Homepage
 	width: 100%;
 	height: 566px;
 	margin: 0;
-	padding: 0;
 	background: url('../img/vid-bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -93,18 +95,38 @@ Homepage
 }
 
 .welcome{
-	background: green;
-	height: 200px;
+	background: $brand_accent;
+	height: auto;
+	
+	h1{
+		color: white;
+		text-align: center;
+	}
+	
+	p{
+		@extend h1;
+		text-transform: none;
+	}
 }
 	
 .news{
-	background: yellow;
-	height: 200px;
+	background: white;
+	height: auto;
+	
+	h1{
+		color: $brand_main;
+		text-align: center;
+	}
 }
 	
 .partners{
-	background: black;
-	height: 200px;
+	background: $brand_offset;
+	height: auto;
+	
+	h1{
+		color: white;
+		text-align: center;
+	}
 }
 	
 
@@ -113,7 +135,7 @@ Footer
 --------------------------------------------------------------*/
 .site-footer{
 	width: 100%;
-	height: 200px;
+	height: auto;
 	margin: 0;
 	background: $brand_accent;	
 }

@@ -13,7 +13,8 @@
 Reset
 --------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1,
+.welcome p, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -117,14 +118,15 @@ textarea {
   font-size: 1.6rem;
   line-height: 1.5; }
 
-h1,
+h1, .welcome p,
 h2,
 h3,
 h4,
 h5,
 h6 {
   clear: both;
-  font-family: "proxima-nova-alt", sans-serif, Arial; }
+  font-family: "proxima-nova-alt", sans-serif, Arial;
+  text-transform: uppercase; }
 
 p {
   margin-bottom: 1.5em; }
@@ -704,16 +706,18 @@ Header & Top Area
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
 
 /*--------------------------------------------------------------
-Content & Containers
+Container, Content, Pads (main)
 --------------------------------------------------------------*/
-#content {
+.container {
   width: 100%;
   margin: 0; }
 
-.container {
+.content {
   max-width: 1040px;
-  margin: 0 auto;
-  padding: 30px; }
+  margin: 0 auto; }
+
+.main {
+  padding: 72px 30px; }
 
 /*--------------------------------------------------------------
 Homepage
@@ -722,7 +726,6 @@ Homepage
   width: 100%;
   height: 566px;
   margin: 0;
-  padding: 0;
   background: url("../img/vid-bg.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover cover;
@@ -731,23 +734,34 @@ Homepage
   /*background-position: center center;*/ }
 
 .welcome {
-  background: green;
-  height: 200px; }
+  background: #008996;
+  height: auto; }
+  .welcome h1, .welcome p {
+    color: white;
+    text-align: center; }
+  .welcome p {
+    text-transform: none; }
 
 .news {
-  background: yellow;
-  height: 200px; }
+  background: white;
+  height: auto; }
+  .news h1, .news .welcome p, .welcome .news p {
+    color: #eb008b;
+    text-align: center; }
 
 .partners {
-  background: black;
-  height: 200px; }
+  background: #58595b;
+  height: auto; }
+  .partners h1, .partners .welcome p, .welcome .partners p {
+    color: white;
+    text-align: center; }
 
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
 .site-footer {
   width: 100%;
-  height: 200px;
+  height: auto;
   margin: 0;
   background: #008996; }
 
