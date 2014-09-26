@@ -1,17 +1,21 @@
 /* LK main stylesheet: "style.scss", compiling to "css/style.css"
 -------------------------------------------------------------- */
 
-/* Sass variables
+/* Color variables
 -------------------------------------------------------------- */
 $brand_main: #EB008B; //pink 
 $brand_accent: #008996; //teal 
 
-/* Font Stacks
+/* Font variables
 -------------------------------------------------------------- */
-//@import url('http://fonts.googleapis.com/css?family=Open+Sans:100,400,700');
-//$font_main: 'Open Sans', sans-serif, Arial;
+$font_body: 'Roboto Slab', sans-serif, Arial; //google font imported below
+$font_heading: 'proxima-nova-alt', sans-serif, Arial; //typekit font loaded via script in header
 
-/* Sass @imports
+/* Font @imports
+-------------------------------------------------------------- */
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700');
+
+/* Main @imports
 -------------------------------------------------------------- */
 @import 'reset';
 @import 'default';
@@ -20,6 +24,7 @@ $brand_accent: #008996; //teal
 @import 'layout';
 @import 'grid';
 @import 'responsive';
-/* Sass vendor @imports
+
+/* Vendor @imports
 -------------------------------------------------------------- */
 @import 'font-awesome';

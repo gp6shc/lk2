@@ -1,12 +1,15 @@
 /*--------------------------------------------------------------
 Default
 --------------------------------------------------------------*/
+html{
+	/*-webkit-font-smoothing: antialiased;*/
+}
 body,
 input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: $font_body;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
