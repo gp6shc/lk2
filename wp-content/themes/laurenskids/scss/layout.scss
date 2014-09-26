@@ -1,0 +1,83 @@
+/*--------------------------------------------------------------
+Header
+--------------------------------------------------------------*/
+#masthead{
+	position: relative;
+	width: 100%;
+	margin: 0;
+	height: 166px;
+	background: $brand-main;
+}
+.header{
+	width: 100%;
+	max-width: 1040px;
+	height: 166px; //set to same as #masthead height
+	margin: 0 auto;
+	padding: 30px;
+	
+	.logo{
+		float: left;
+		width: 137px; //set to exact width of img
+		height: auto;
+		padding: 0;
+	}	
+}
+.top-area{
+	float: right;
+	margin: 0;
+	background: $brand-main;
+		
+	ul{
+		list-style: none;
+			
+		li{
+			display: inline;
+			padding: 0px 10px;
+		}	
+	}
+}
+.social{
+	margin: 15px 0px;
+	
+	a li{
+		padding: 0px 1px;
+		border-radius: 100%;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 35px;
+	}
+	
+	.fa{
+		background: white;
+		width: 34px;
+		height: 34px;
+		line-height: inherit;
+		border-radius: 50%;
+		color: $brand-main;
+	}
+		
+}
+
+
+/*--------------------------------------------------------------
+Body
+--------------------------------------------------------------*/
+.container{
+	width: 100%;
+	max-width: 1040px;
+	margin: 0 auto;
+	background: white;
+	padding: 30px;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+.site-footer{
+	width: 100%;
+	max-width: 1040px;
+	height: 200px;
+	margin: 0 auto;
+	padding: 30px 0;
+	background: green;	
+}

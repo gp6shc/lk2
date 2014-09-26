@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------
+Above 601px
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Below 768px
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 0; }
+    .header .logo {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px; }
+    .header .top-area {
+      float: none;
+      width: 100%; }
+      .header .top-area ul li {
+        display: inline;
+        padding: 0;
+        margin: 10px 0px; }
+      .header .top-area .social {
+        width: 100%;
+        margin: 0 auto;
+        display: block; }
+
+  .menu-toggle, .main-navigation.toggled .nav-menu {
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 22px;
+    background: black;
+    color: white;
+    border: none; }
+    .menu-toggle:active, .main-navigation.toggled .nav-menu:active {
+      border-bottom: 1px solid white; }
+
+  .main-navigation {
+    width: 100%; }
+    .main-navigation ul {
+      display: none; }
+    .main-navigation li {
+      float: none;
+      margin: 10px; } }
+/*--------------------------------------------------------------
+Below 480px
+--------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+  .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
+    width: 100%; } }

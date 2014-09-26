@@ -1,0 +1,25 @@
+/* LK main stylesheet: "style.scss", compiling to "css/style.css"
+-------------------------------------------------------------- */
+
+/* Sass variables
+-------------------------------------------------------------- */
+$brand_main: #EB008B; //pink 
+$brand_accent: #008996; //teal 
+
+/* Font Stacks
+-------------------------------------------------------------- */
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans:100,400,700');
+//$font_main: 'Open Sans', sans-serif, Arial;
+
+/* Sass @imports
+-------------------------------------------------------------- */
+@import 'reset';
+@import 'default';
+@import 'nav';
+@import 'content';
+@import 'layout';
+@import 'grid';
+@import 'responsive';
+/* Sass vendor @imports
+-------------------------------------------------------------- */
+@import 'font-awesome';

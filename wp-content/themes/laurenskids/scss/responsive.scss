@@ -1,0 +1,108 @@
+/*--------------------------------------------------------------
+Above 601px
+--------------------------------------------------------------*/
+@media screen and (min-width: 769px) { 
+
+.social{
+	button{
+		margin: 0px 5px;
+	}
+}
+
+}//end >769
+
+
+
+/*--------------------------------------------------------------
+Below 768px
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) { 
+
+.header{
+	height: auto;
+	padding: 0;
+
+	.logo{
+		float: none;
+		display: block;
+		margin: 0 auto; //center logo 
+		padding: 10px 20px;
+	}
+	
+	.top-area{
+		width: 100%;
+		margin-top: 0;
+		text-align: center;
+		
+		ul li{
+			display: inline;
+			padding: 0;
+			margin: 10px 0px;
+		}
+		
+		.social{
+			width: 100%;
+			margin: 0 auto;
+			
+			a li{
+				line-height: 28px;
+			}
+			
+			.fa{
+				width: 24px;
+				height: 24px;
+			}
+			
+			button{
+				width: 100%;
+			}
+		}
+		
+	}
+}
+
+.menu-toggle, .main-navigation.toggled .nav-menu {
+	display: block;
+	width: 100%;
+	padding: 10px 0px;
+	font-size: 22px;
+	background: black;
+	color: white;
+	border: none;
+	&:active{
+		border-bottom: 1px solid white;
+	}
+}
+
+.main-navigation{
+	width: 100%;
+	
+	
+	ul{
+		display: none;
+		
+		li{
+			float: none;
+			margin: 10px;
+			padding: 0;
+		}
+	}
+	
+}
+
+
+}//end <768
+
+
+
+
+/*--------------------------------------------------------------
+Below 480px
+--------------------------------------------------------------*/
+@media screen and (max-width :480px) {
+.grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
+	width: 100%;
+}
+
+    
+}//end <480
