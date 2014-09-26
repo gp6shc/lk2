@@ -33,14 +33,15 @@ Menus
 		li{
 			float: left;
 			position: relative;
-			padding: 0 10px;
+			padding: 0 7px;
+			text-transform: uppercase;
 			
 			a{
 				padding: 0;
 				color: white;
 				text-decoration: none;
 				&:hover{
-					border-bottom: 1px solid white;
+					border-bottom: 2px solid white;
 				}
 			}
 		}
@@ -51,12 +52,14 @@ Menus
 
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
+	width: 210px;
 	top: 1.5em;
 	left: -999em;
 	z-index: 99999;
+	background: $brand-accent;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .main-navigation ul ul ul {
@@ -66,6 +69,9 @@ Menus
 
 .main-navigation ul ul a {
 	width: 200px;
+	&:hover{
+		border-bottom: 0;
+	}
 }
 
 .main-navigation ul ul li {
