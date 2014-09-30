@@ -72,7 +72,7 @@ Container, Content, Pads (main)
 .content{
 	max-width: 1040px;
 	margin: 0 auto;
-	padding: 72px 30px;
+	padding: 66px 30px;
 }
 
 
@@ -83,7 +83,7 @@ Homepage
 	width: 100%;
 	height: 566px;
 	margin: 0;
-	background: url('../img/vid-bg.jpg');
+	background: url('../img/vid-bg.jpg'); //placeholder for now
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -91,21 +91,23 @@ Homepage
 }
 .welcome{
 	background: $brand_accent;
-	height: auto;
+	text-align: center;
 	
 	h1{
 		color: white;
-		text-align: center;
 	}
 	
 	p{
 		color: white;
 		text-transform: none;
 	}
+	
+	button{
+		margin-top: 36px;
+	}
 }
 .news{
 	background: white;
-	height: auto;
 	
 	h1{
 		color: $brand_main;
@@ -114,7 +116,6 @@ Homepage
 }
 .partners{
 	background: $brand_offset;
-	height: auto;
 	
 	h1{
 		color: white;

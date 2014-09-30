@@ -47,9 +47,9 @@ a { text-decoration: none; -webkit-transition: color 0.2s ease-in-out; transitio
 a:hover { text-decoration: underline; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 { font-family: "proxima-nova-alt", sans-serif, Arial; text-transform: uppercase; clear: both; color: inherit; line-height: 20px; text-rendering: optimizelegibility; }
+h1, h2, h3, h4, h5, h6 { font-family: "proxima-nova-alt", sans-serif, Arial; text-transform: uppercase; clear: both; color: inherit; text-rendering: optimizelegibility; line-height: 22.5px; margin-bottom: 15px; }
 
-h1, h2, h3 { line-height: 40px; }
+h1, h2, h3 { line-height: 42.5px; margin-bottom: 20px; }
 
 h1 { font-size: 38.5px; }
 
@@ -123,6 +123,11 @@ Forms
 button, input, select, textarea { font-size: 100%; /* Corrects font size not being inherited in all browsers */ margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */ vertical-align: baseline; /* Improves appearance and consistency in all browsers */ }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] { padding: 10px; background: white; text-transform: uppercase; color: #EB008B; border: 0; border-radius: 1px; box-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
+
+button.default, button.accent { padding: 10px 30px; background: white; text-transform: uppercase; color: #008996; border: 0; border-radius: 1px; box-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
+button.default:hover, button.accent:hover { background: #e6e6e6; }
+
+button.accent { background: #008996; color: white; }
 
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover { cursor: pointer; }
 
@@ -336,21 +341,22 @@ Container, Content, Pads (main)
 --------------------------------------------------------------*/
 .container { width: 100%; margin: 0; }
 
-.content { max-width: 1040px; margin: 0 auto; padding: 72px 30px; }
+.content { max-width: 1040px; margin: 0 auto; padding: 66px 30px; }
 
 /*--------------------------------------------------------------
 Homepage
 --------------------------------------------------------------*/
 .video { width: 100%; height: 566px; margin: 0; background: url("../img/vid-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; /*background-position: center center;*/ }
 
-.welcome { background: #008996; height: auto; }
-.welcome h1 { color: white; text-align: center; }
+.welcome { background: #008996; text-align: center; }
+.welcome h1 { color: white; }
 .welcome p { color: white; text-transform: none; }
+.welcome button { margin-top: 36px; }
 
-.news { background: white; height: auto; }
+.news { background: white; }
 .news h1 { color: #EB008B; text-align: center; }
 
-.partners { background: #58595B; height: auto; }
+.partners { background: #58595B; }
 .partners h1 { color: white; text-align: center; }
 
 /*--------------------------------------------------------------
