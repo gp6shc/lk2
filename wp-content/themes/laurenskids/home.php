@@ -2,7 +2,7 @@
 /*
 Template Name: Home
 *
-* separating out 
+* separating out different content parts on homepage
 */
 get_header(); ?>
 

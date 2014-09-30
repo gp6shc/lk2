@@ -11,8 +11,8 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="main content">
-			footer
+		<div class="content">
+			footer content blah blah blah
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-Header & Top Area
+Header & Top-Area
 --------------------------------------------------------------*/
 #masthead{
 	position: relative;
@@ -48,7 +48,7 @@ Header & Top Area
 		line-height: 35px;
 	}
 	
-	.fa{ //fontawesome icons for header
+	.fa{ //font-awesome icon class
 		background: white;
 		width: 34px;
 		height: 34px;
@@ -57,8 +57,7 @@ Header & Top Area
 		color: $brand-main;
 		box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-	}
-		
+	}		
 }
 
 
@@ -73,9 +72,6 @@ Container, Content, Pads (main)
 .content{
 	max-width: 1040px;
 	margin: 0 auto;
-}
-
-.main{
 	padding: 72px 30px;
 }
 
@@ -93,7 +89,6 @@ Homepage
 	background-attachment: fixed;
 	/*background-position: center center;*/
 }
-
 .welcome{
 	background: $brand_accent;
 	height: auto;
@@ -104,11 +99,10 @@ Homepage
 	}
 	
 	p{
-		@extend h1;
+		color: white;
 		text-transform: none;
 	}
 }
-	
 .news{
 	background: white;
 	height: auto;
@@ -118,7 +112,6 @@ Homepage
 		text-align: center;
 	}
 }
-	
 .partners{
 	background: $brand_offset;
 	height: auto;
@@ -137,5 +130,6 @@ Footer
 	width: 100%;
 	height: auto;
 	margin: 0;
+	color: white;
 	background: $brand_accent;	
 }
