@@ -41,7 +41,7 @@ a img { border: 0; }
 /*--------------------------------------------------------------
 Default
 --------------------------------------------------------------*/
-body { color: #444; font-family: "Roboto Slab", sans-serif, Arial; -webkit-font-smoothing: antialiased; font-size: 16px; }
+body { color: #444; font-family: "Roboto Slab", sans-serif, Arial; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 22px; }
 
 a { text-decoration: none; -webkit-transition: color 0.2s ease-in-out; transition: color 0.2s ease-in-out; }
 a:hover { text-decoration: underline; }
@@ -49,17 +49,17 @@ a:hover { text-decoration: underline; }
 /* Headings */
 h1, h2, h3, h4, h5, h6 { font-family: "proxima-nova-alt", sans-serif, Arial; text-transform: uppercase; clear: both; color: inherit; text-rendering: optimizelegibility; margin-bottom: 15px; }
 
-h1 { font-size: 38px; }
+h1 { font-size: 38px; line-height: 44px; }
 
-h2 { font-size: 34px; }
+h2 { font-size: 34px; line-height: 40px; }
 
-h3 { font-size: 30px; }
+h3 { font-size: 30px; line-height: 36px; }
 
-h4 { font-size: 26px; }
+h4 { font-size: 26px; line-height: 32px; }
 
-h5 { font-size: 22px; }
+h5 { font-size: 22px; line-height: 28px; }
 
-h6 { font-size: 18px; }
+h6 { font-size: 18px; line-height: 26px; }
 
 b, strong { font-weight: bold; }
 
