@@ -31,34 +31,34 @@ Below 768px
 	}
 	
 	.top-area{
+		float: none;
+		margin: 0;
 		width: 100%;
-		margin-top: 0;
 		text-align: center;
+	}
+}
 		
-		ul li{
-			display: inline;
-			padding: 0;
-			margin: 10px 0px;
-		}
-		
-		.social{
-			width: 100%;
-			margin: 0 auto;
+.social{
+	display: block;
+	width: 100%;
+	margin: 10px auto;
+	
+	.fa{
+		width: 24px;
+		height: 24px;
+	}
 			
-			a li{
-				line-height: 28px;
-			}
-			
-			.fa{
-				width: 24px;
-				height: 24px;
-			}
-			
-			button{
-				width: 100%;
-			}
-		}
-		
+	a li{
+		line-height: 28px; //decrease as font-awesome icon decreases in size
+	}
+}
+
+.quick-links{
+	display: block;
+	
+	button{
+		width: 100%;
+		border-bottom: 1px solid $body;
 	}
 }
 
@@ -67,9 +67,12 @@ Below 768px
 	width: 100%;
 	padding: 10px 0px;
 	font-size: 22px;
-	background: black;
+	background: $menu;
 	color: white;
 	border: none;
+	&:hover{
+		background: darken( $menu, 10%);
+	}
 	&:active{
 		border-bottom: 1px solid white;
 	}

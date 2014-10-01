@@ -5,47 +5,42 @@ Header & Top-Area
 	position: relative;
 	width: 100%;
 	margin: 0;
-	height: 166px;
+	height: auto;
 	background: $brand-main;
 }
 .header{
 	width: 100%;
 	max-width: 1040px;
-	height: 166px; //set equal to #masthead height
+	height: 166px;
 	margin: 0 auto;
 	padding: 30px;
 	
 	.logo{
 		float: left;
 		width: 100%;
-		max-width: 137px; 
+		max-width: 137px;
 		height: auto;
 		padding: 0;
 	}	
 }
 .top-area{
 	float: right;
-	margin: 0 0 7px 0;
-	background: $brand-main;
-		
-	ul{
-		list-style: none;
-			
-		li{
-			display: inline;
-			padding: 0px 10px;
-		}	
-	}
+	margin: 0 0 35px 0;
+	background: $brand-main;		
 }
 .social{
+	display: inline;
 	margin: 15px 0px;
+	padding-right: 10px;
 	
 	a li{
+		display: inline;
 		padding: 0px 1px;
 		border-radius: 100%;
 		text-align: center;
 		vertical-align: middle;
 		line-height: 35px;
+		list-style: none;
 	}
 	
 	.fa{ //font-awesome icon class
@@ -57,7 +52,13 @@ Header & Top-Area
 		color: $brand-main;
 		box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+		&:hover{
+			background: darken( white, 10%);
+		}
 	}		
+}
+.quick-links{
+	display: inline;
 }
 
 
@@ -72,7 +73,7 @@ Container, Content, Pads (main)
 .content{
 	max-width: 1040px;
 	margin: 0 auto;
-	padding: 66px 30px;
+	padding: 72px 30px;
 }
 
 

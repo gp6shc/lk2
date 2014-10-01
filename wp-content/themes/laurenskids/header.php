@@ -35,9 +35,11 @@
 					<a href="#"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="#"><li><i class="fa fa-rss"></i></li></a>
 					<a href="#"><li><i class="fa fa-youtube"></i></li></a>
+				</ul>
+				<div class="quick-links">
 					<a href="#"><button class="help">Need Help?</button></a>
 					<a href="#"><button class="join">Join the Movement &amp; Donate</button></a>
-				</ul>
+				</div>
 			</div>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
