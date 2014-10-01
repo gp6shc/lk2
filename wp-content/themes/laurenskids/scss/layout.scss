@@ -131,14 +131,16 @@ Homepage news section
 		color: $brand_main;
 		text-align: center;
 	}
+	
 }
-#featured{
-
+h3.entry-title, h3.entry-title a{
+	color: $brand_accent;
 }
-#latest{
-
+a.read-more{
+	display: inline;
+	padding-left: 10px;
+	color: $brand-accent;
 }
-
 
 /*--------------------------------------------------------------
 Homepage partners section

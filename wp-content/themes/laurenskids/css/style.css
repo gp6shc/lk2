@@ -47,21 +47,19 @@ a { text-decoration: none; -webkit-transition: color 0.2s ease-in-out; transitio
 a:hover { text-decoration: underline; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 { font-family: "proxima-nova-alt", sans-serif, Arial; text-transform: uppercase; clear: both; color: inherit; text-rendering: optimizelegibility; line-height: 22.5px; margin-bottom: 15px; }
+h1, h2, h3, h4, h5, h6 { font-family: "proxima-nova-alt", sans-serif, Arial; text-transform: uppercase; clear: both; color: inherit; text-rendering: optimizelegibility; margin-bottom: 15px; }
 
-h1, h2, h3 { line-height: 42.5px; margin-bottom: 20px; }
+h1 { font-size: 38px; }
 
-h1 { font-size: 38.5px; }
+h2 { font-size: 34px; }
 
-h2 { font-size: 31.5px; }
+h3 { font-size: 30px; }
 
-h3 { font-size: 24.5px; }
+h4 { font-size: 26px; }
 
-h4 { font-size: 17.5px; }
+h5 { font-size: 22px; }
 
-h5 { font-size: 14px; }
-
-h6 { font-size: 11.9px; }
+h6 { font-size: 18px; }
 
 b, strong { font-weight: bold; }
 
@@ -367,6 +365,10 @@ Homepage news section
 .news { background: white; }
 .news h1 { color: #EB008B; text-align: center; }
 
+h3.entry-title, h3.entry-title a { color: #008996; }
+
+a.read-more { display: inline; padding-left: 10px; color: #008996; }
+
 /*--------------------------------------------------------------
 Homepage partners section
 --------------------------------------------------------------*/
@@ -439,7 +441,8 @@ Below 800px
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
-@media screen and (max-width: 480px) { .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 { width: 100%; } }
+@media screen and (max-width: 480px) { .attachment-full { width: 100%; }
+  .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 { width: 100%; } }
 /* Vendor @imports
 -------------------------------------------------------------- */
 /*!

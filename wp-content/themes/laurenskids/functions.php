@@ -22,6 +22,8 @@ if ( ! function_exists( 'laurenskids_setup' ) ) :
  */
 function laurenskids_setup() {
 
+
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -29,9 +31,11 @@ function laurenskids_setup() {
 	 * to change 'laurenskids' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'laurenskids', get_template_directory() . '/languages' );
-
+	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+
+
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -44,6 +48,8 @@ function laurenskids_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'laurenskids' ),
 	) );
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -63,6 +69,25 @@ function laurenskids_setup() {
 	add_image_size( 'news-featured-thumb', 321, 234 ); //w x h
 	//set latest-news size
 	add_image_size( 'news-latest-thumb', 192, 140 ); //w x h
+	
+	
+	
+	
+	/*
+	 * the_excerpt()
+	 * set excerpt length & modify the read more link at end
+	 */
+	function lk_excerpt_length($length) {
+	    return 15; // return number of words
+	}
+	add_filter('excerpt_length', 'lk_excerpt_length');
+	 
+	function lk_excerpt_more($more) {
+	    global $post;
+	    return '<a class="read-more" href="'. get_permalink($post->ID) . '">Read More <i class="fa fa-caret-right"></i></a>';
+	}
+	add_filter('excerpt_more', 'lk_excerpt_more');
+
 	
 	
 	
