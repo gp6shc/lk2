@@ -403,13 +403,13 @@ Footer
 * html .clearfix, :first-child + html .clearfix { zoom: 1; }
 
 /*--------------------------------------------------------------
-Above 769px
+Above 801px
 --------------------------------------------------------------*/
-@media screen and (min-width: 769px) { .social button { margin: 0px 5px; } }
+@media screen and (min-width: 801px) { .social button { margin: 0px 5px; } }
 /*--------------------------------------------------------------
-Below 768px
+Below 800px
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) { .header { height: auto; padding: 0; }
+@media screen and (max-width: 800px) { .header { height: auto; padding: 0; }
   .header .logo { float: none; display: block; margin: 0 auto; padding: 10px 20px; }
   .header .top-area { float: none; margin: 0; width: 100%; text-align: center; }
   .social { display: block; width: 100%; margin: 10px auto; }
