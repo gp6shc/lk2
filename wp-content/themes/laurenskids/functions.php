@@ -52,6 +52,20 @@ function laurenskids_setup() {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
+	
+	
+	
+	/*
+	 * post thumbnail support (featured images for posts)
+	 */
+	add_theme_support( 'post-thumbnails' ); 
+	//set feautred-news size
+	add_image_size( 'news-featured-thumb', 321, 234 ); //w x h
+	//set latest-news size
+	add_image_size( 'news-latest-thumb', 192, 140 ); //w x h
+	
+	
+	
 
 	/*
 	 * Enable support for Post Formats.

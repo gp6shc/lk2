@@ -74,11 +74,17 @@ Container, Content, Pads (main)
 	max-width: 1040px;
 	margin: 0 auto;
 	padding: 72px 30px;
+	overflow: hidden;
+    zoom: 1;
 }
 
 
 /*--------------------------------------------------------------
 Homepage
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+Homepage video section
 --------------------------------------------------------------*/
 .video{
 	width: 100%;
@@ -90,6 +96,12 @@ Homepage
 	background-attachment: fixed;
 	/*background-position: center center;*/
 }
+
+
+
+/*--------------------------------------------------------------
+Homepage welcome section
+--------------------------------------------------------------*/
 .welcome{
 	background: $brand_accent url('../img/butterflies.png') center bottom no-repeat;
 	text-align: center;
@@ -107,6 +119,11 @@ Homepage
 		margin-top: 36px;
 	}
 }
+
+
+/*--------------------------------------------------------------
+Homepage news section
+--------------------------------------------------------------*/
 .news{
 	background: white;
 	
@@ -115,6 +132,17 @@ Homepage
 		text-align: center;
 	}
 }
+#featured{
+
+}
+#latest{
+
+}
+
+
+/*--------------------------------------------------------------
+Homepage partners section
+--------------------------------------------------------------*/
 .partners{
 	background: $brand_offset;
 	

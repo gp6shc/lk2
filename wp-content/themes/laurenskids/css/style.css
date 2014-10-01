@@ -343,21 +343,33 @@ Container, Content, Pads (main)
 --------------------------------------------------------------*/
 .container { width: 100%; margin: 0; }
 
-.content { max-width: 1040px; margin: 0 auto; padding: 72px 30px; }
+.content { max-width: 1040px; margin: 0 auto; padding: 72px 30px; overflow: hidden; zoom: 1; }
 
 /*--------------------------------------------------------------
 Homepage
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Homepage video section
+--------------------------------------------------------------*/
 .video { width: 100%; height: 566px; margin: 0; background: url("../img/vid-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; /*background-position: center center;*/ }
 
+/*--------------------------------------------------------------
+Homepage welcome section
+--------------------------------------------------------------*/
 .welcome { background: #008996 url("../img/butterflies.png") center bottom no-repeat; text-align: center; }
 .welcome h1 { color: white; }
 .welcome p { color: white; text-transform: none; }
 .welcome button { margin-top: 36px; }
 
+/*--------------------------------------------------------------
+Homepage news section
+--------------------------------------------------------------*/
 .news { background: white; }
 .news h1 { color: #EB008B; text-align: center; }
 
+/*--------------------------------------------------------------
+Homepage partners section
+--------------------------------------------------------------*/
 .partners { background: #58595B; }
 .partners h1 { color: white; text-align: center; }
 
