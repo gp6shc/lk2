@@ -531,6 +531,21 @@ Footer
 /* line 161, ../scss/layout.scss */
 .site-footer { width: 100%; height: auto; margin: 0; color: white; background: #008996; }
 
+/* line 168, ../scss/layout.scss */
+#footer-widgets .widget ul ul { margin: 0 0 0 1.5em; }
+
+/* line 172, ../scss/layout.scss */
+#footer-widgets.widget-count-2 .widget-area { float: left; width: 47.5%; margin-right: 5%; }
+
+/* line 178, ../scss/layout.scss */
+#footer-widgets.widget-count-2 #footer-widget-2 { margin-right: 0; }
+
+/* line 182, ../scss/layout.scss */
+#footer-widgets.widget-count-3 .widget-area { float: left; width: 30%; margin-right: 5%; }
+
+/* line 188, ../scss/layout.scss */
+#footer-widgets.widget-count-3 #footer-widget-3 { margin-right: 0; }
+
 /* line 1, ../scss/grid.scss */
 .grid_1 { width: 6.5%; }
 
@@ -626,10 +641,12 @@ Below 800px
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
-@media screen and (max-width: 480px) { /* line 112, ../scss/responsive.scss */
+@media screen and (max-width: 480px) { /* line 113, ../scss/responsive.scss */
   .attachment-full { width: 100%; }
-  /* line 116, ../scss/responsive.scss */
-  .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 { width: 100%; } }
+  /* line 117, ../scss/responsive.scss */
+  .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 { width: 100%; }
+  /* line 121, ../scss/responsive.scss */
+  #footer-widgets.widget-count-3 .widget-area { float: none; width: auto; margin-right: 0; } }
 /* Vendor @imports
 -------------------------------------------------------------- */
 /*!

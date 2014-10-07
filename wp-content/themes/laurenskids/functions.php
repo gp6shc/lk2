@@ -180,13 +180,13 @@ function lk_footer_widget_count() {
 
 	switch ( $count ) {
 		case '1':
-			$class = 'widgets-count-1';
+			$class = 'widget-count-1';
 			break;
 		case '2':
-			$class = 'widgets-count-2';
+			$class = 'widget-count-2';
 			break;
 		case '3':
-			$class = 'widgets-count-3';
+			$class = 'widget-count-3';
 			break;
 	}
 

@@ -165,3 +165,32 @@ Footer
 	color: white;
 	background: $brand_accent;	
 }
+#footer-widgets .widget ul ul {
+  	margin: 0 0 0 1.5em;
+}
+
+#footer-widgets.widget-count-2 .widget-area {
+    float: left;
+    width: 47.5%;
+    margin-right: 5%;
+}
+
+#footer-widgets.widget-count-2 #footer-widget-2 {
+    margin-right: 0;
+}
+
+#footer-widgets.widget-count-3 .widget-area {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+
+#footer-widgets.widget-count-3 #footer-widget-3 {
+    margin-right: 0;
+}
+
+
+
+
+
+
