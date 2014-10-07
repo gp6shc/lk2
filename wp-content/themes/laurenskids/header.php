@@ -17,6 +17,33 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
+<script>
+    jQuery(document).ready(function() {
+		var masthead = jQuery("#masthead");
+		var top_area = jQuery(".top-area");
+		jQuery(function () {
+		   jQuery(window).scroll(function () {
+
+			 //when we scroll > 166 (#masthead height), trigger sticky nav
+		     if (jQuery(this).scrollTop() > 167) { 
+		          masthead.css({"position":"fixed", "max-width":"100%", "border-bottom":"1px solid #ccc", "height":"88px", "top":0});
+		          top_area.css({"display":"none"});
+		     }
+		     //when we scroll back up and get to original position, set back to default
+		     else if (jQuery(this).scrollTop() < 167) { 
+		         masthead.css({"position":"relative", "height":"166px", "top":0});
+		         top_area.css({"display":"block"}); 
+		     }
+		     //default
+		     else {
+		         masthead.css({"position":"relative", "max-width":"1040px", "padding":"30px", "height":"166px", "margin":"0 auto"}); 
+		          top_area.css({"display":"block", "float":"right", "margin":"0 0 35px 0;"}); 
+		     }
+
+		  });
+	   });
+	});
+</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -41,7 +68,7 @@
 				</div>
 			</div>
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="main-navigation push-nav" role="navigation">
 				<button class="menu-toggle"><?php _e( 'Menu', 'laurenskids' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- /#site-navigation -->

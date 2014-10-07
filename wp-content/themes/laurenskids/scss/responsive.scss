@@ -68,11 +68,11 @@ Below 800px
 	width: 100%;
 	padding: 10px 0px;
 	font-size: 22px;
-	background: $menu;
+	background: $brand_accent;
 	color: white;
 	border: none;
 	&:hover{
-		background: darken( $menu, 10%);
+		background: $brand-accent; //keep same color on hover, for better mobile experience
 	}
 	&:active{
 		border-bottom: 1px solid white;

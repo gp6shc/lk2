@@ -199,8 +199,6 @@ function lk_footer_widget_count() {
 
 
 
-
-
 /**
  * Enqueue scripts and styles.
  */
@@ -210,9 +208,11 @@ function laurenskids_scripts() {
 	wp_enqueue_style( 'SASS', get_template_directory_uri() . '/css/style.css', array(), '0.1', true );
 	
 	//SCRIPTS
+	//jquery
+	wp_enqueue_script( 'jquery', array(), '0.1');
+	// navigation
 	//typekit font
 	//wp_enqueue_script( 'typekit', get_template_directory_uri() . '/js/typekit.js', array(), '0.1', false );
-	// navigation
 	wp_enqueue_script( 'laurenskids-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '0.1', true );
 	//link focus
 	wp_enqueue_script( 'laurenskids-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '0.1', true );
