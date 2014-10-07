@@ -21,14 +21,13 @@ Below 800px
 
 .header{
 	height: auto;
-	margin: 46px auto 0px auto;
 	padding: 0;
 
 	.logo{
 		float: none;
 		display: block;
 		margin: 0 auto; //center logo 
-		padding: 5px 0px;
+		padding: 15px 0px;
 	}
 	
 	.top-area{
@@ -68,11 +67,11 @@ Below 800px
 	width: 100%;
 	padding: 10px 0px;
 	font-size: 22px;
-	background: $brand_accent;
+	background: $menu;
 	color: white;
 	border: none;
 	&:hover{
-		background: $brand-accent; //keep same color on hover, for better mobile experience
+		background: $menu; //keep same color on hover, for better mobile experience
 	}
 	&:active{
 		border-bottom: 1px solid white;
@@ -80,8 +79,6 @@ Below 800px
 }
 
 .main-navigation{
-	position: fixed; //see if this works well on mobile, if not, switch back to absolute
-	top: 0;
 	float: none;
 	width: 100%;
 	
