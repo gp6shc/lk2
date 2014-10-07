@@ -115,17 +115,85 @@ add_action( 'after_setup_theme', 'laurenskids_setup' );
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function laurenskids_widgets_init() {
+	//sidebar-1
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'laurenskids' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => 'To show on all interior pages. Position: sidebar, right.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	//footer-1
+	register_sidebar( array(
+		'name'          => __( 'Footer Area 1', 'laurenskids' ),
+		'id'            => 'footer-1',
+		'description'   => 'To show on the footer on all pages. Position: footer, left',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	//footer-2
+	register_sidebar( array(
+		'name'          => __( 'Footer Area 2', 'laurenskids' ),
+		'id'            => 'footer-2',
+		'description'   => 'To show on the footer on all pages. Position: footer, middle',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	//footer-3
+	register_sidebar( array(
+		'name'          => __( 'Footer Area 3', 'laurenskids' ),
+		'id'            => 'footer-3',
+		'description'   => 'To show on the footer on all pages. Position: footer, right',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'laurenskids_widgets_init' );
+
+
+
+
+/**
+ * Count the number of footer sidebars (widgets) to enable dynamic classes for the footer.
+ */
+function lk_footer_widget_count() {
+	$count = 0;
+
+	if ( is_active_sidebar( 'footer-1' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'footer-2' ) )
+		$count++;
+
+	if ( is_active_sidebar( 'footer-3' ) )
+		$count++;
+
+	$class = '';
+
+	switch ( $count ) {
+		case '1':
+			$class = 'widgets-count-1';
+			break;
+		case '2':
+			$class = 'widgets-count-2';
+			break;
+		case '3':
+			$class = 'widgets-count-3';
+			break;
+	}
+
+	if ( $class )
+		echo $class;
+}
+
 
 
 

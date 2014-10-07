@@ -1,51 +1,91 @@
-/*--------------------------------------------------------------
-Above 601px
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-Below 768px
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  .header {
-    height: auto;
-    padding: 0; }
-    .header .logo {
-      float: none;
-      display: block;
-      margin: 0 auto;
-      padding: 10px 20px; }
-    .header .top-area {
-      float: none;
-      width: 100%; }
-      .header .top-area ul li {
-        display: inline;
-        padding: 0;
-        margin: 10px 0px; }
-      .header .top-area .social {
-        width: 100%;
-        margin: 0 auto;
-        display: block; }
+/*
+Error: Undefined variable: "$body".
+        on line 61 of /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss
 
-  .menu-toggle, .main-navigation.toggled .nav-menu {
-    display: block;
-    width: 100%;
-    padding: 10px 0px;
-    font-size: 22px;
-    background: black;
-    color: white;
-    border: none; }
-    .menu-toggle:active, .main-navigation.toggled .nav-menu:active {
-      border-bottom: 1px solid white; }
+56: .quick-links{
+57: 	display: block;
+58: 	
+59: 	button{
+60: 		width: 100%;
+61: 		border-bottom: 1px solid $body;
+62: 	}
+63: }
+64: 
+65: .menu-toggle, .main-navigation.toggled .nav-menu {
+66: 	display: block;
 
-  .main-navigation {
-    width: 100%; }
-    .main-navigation ul {
-      display: none; }
-    .main-navigation li {
-      float: none;
-      margin: 10px; } }
-/*--------------------------------------------------------------
-Below 480px
---------------------------------------------------------------*/
-@media screen and (max-width: 480px) {
-  .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
-    width: 100%; } }
+Backtrace:
+/Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss:61
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:62:in `block in _perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:62:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:62:in `_perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:502:in `visit_media'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:268:in `render'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:404:in `run'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/CodeKit.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$body\".\A         on line 61 of /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss\A \A 56: .quick-links{\A 57: 	display: block;\A 58: 	\A 59: 	button{\A 60: 		width: 100%;\A 61: 		border-bottom: 1px solid $body;\A 62: 	}\A 63: }\A 64: \A 65: .menu-toggle, .main-navigation.toggled .nav-menu {\A 66: 	display: block;"; }
