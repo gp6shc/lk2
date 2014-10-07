@@ -21,6 +21,7 @@ Below 800px
 
 .header{
 	height: auto;
+	margin: 46px auto 0px auto;
 	padding: 0;
 
 	.logo{
@@ -79,6 +80,9 @@ Below 800px
 }
 
 .main-navigation{
+	position: fixed; //see if this works well on mobile, if not, switch back to absolute
+	top: 0;
+	float: none;
 	width: 100%;
 	
 	ul{
@@ -117,8 +121,8 @@ Below 480px
 .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
 	width: 100%;
 }
-//if 3 widgets, make full width
-#footer-widgets.widget-count-3 .widget-area{
+//if 3 or 2 widgets, make full width
+#footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area{
 	float: none;
 	width: auto;
 	margin-right: 0;

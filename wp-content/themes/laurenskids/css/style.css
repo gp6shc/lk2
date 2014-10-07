@@ -609,44 +609,44 @@ Above 801px
 Below 800px
 --------------------------------------------------------------*/
 @media screen and (max-width: 800px) { /* line 22, ../scss/responsive.scss */
-  .header { height: auto; padding: 0; }
-  /* line 26, ../scss/responsive.scss */
+  .header { height: auto; margin: 46px auto 0px auto; padding: 0; }
+  /* line 27, ../scss/responsive.scss */
   .header .logo { float: none; display: block; margin: 0 auto; padding: 5px 0px; }
-  /* line 33, ../scss/responsive.scss */
+  /* line 34, ../scss/responsive.scss */
   .header .top-area { float: none; margin: 0; width: 100%; text-align: center; }
-  /* line 41, ../scss/responsive.scss */
+  /* line 42, ../scss/responsive.scss */
   .social { display: block; width: 100%; margin: 10px auto; }
-  /* line 46, ../scss/responsive.scss */
+  /* line 47, ../scss/responsive.scss */
   .social .fa { width: 24px; height: 24px; }
-  /* line 51, ../scss/responsive.scss */
+  /* line 52, ../scss/responsive.scss */
   .social a li { line-height: 28px; }
-  /* line 56, ../scss/responsive.scss */
+  /* line 57, ../scss/responsive.scss */
   .quick-links { display: block; }
-  /* line 59, ../scss/responsive.scss */
+  /* line 60, ../scss/responsive.scss */
   .quick-links button { width: 100%; border-bottom: 1px solid #444; }
-  /* line 65, ../scss/responsive.scss */
+  /* line 66, ../scss/responsive.scss */
   .menu-toggle, .main-navigation.toggled .nav-menu { display: block; width: 100%; padding: 10px 0px; font-size: 22px; background: #222; color: white; border: none; }
-  /* line 73, ../scss/responsive.scss */
+  /* line 74, ../scss/responsive.scss */
   .menu-toggle:hover, .main-navigation.toggled .nav-menu:hover { background: #090909; }
-  /* line 76, ../scss/responsive.scss */
+  /* line 77, ../scss/responsive.scss */
   .menu-toggle:active, .main-navigation.toggled .nav-menu:active { border-bottom: 1px solid white; }
-  /* line 81, ../scss/responsive.scss */
-  .main-navigation { width: 100%; }
-  /* line 84, ../scss/responsive.scss */
+  /* line 82, ../scss/responsive.scss */
+  .main-navigation { position: fixed; top: 0; float: none; width: 100%; }
+  /* line 88, ../scss/responsive.scss */
   .main-navigation ul { display: none; }
-  /* line 87, ../scss/responsive.scss */
+  /* line 91, ../scss/responsive.scss */
   .main-navigation ul li { float: none; margin: 10px; padding: 0; }
-  /* line 95, ../scss/responsive.scss */
+  /* line 99, ../scss/responsive.scss */
   .video { height: 266px; background-attachment: scroll; background-position: center center; } }
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
-@media screen and (max-width: 480px) { /* line 113, ../scss/responsive.scss */
+@media screen and (max-width: 480px) { /* line 117, ../scss/responsive.scss */
   .attachment-full { width: 100%; }
-  /* line 117, ../scss/responsive.scss */
-  .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 { width: 100%; }
   /* line 121, ../scss/responsive.scss */
-  #footer-widgets.widget-count-3 .widget-area { float: none; width: auto; margin-right: 0; } }
+  .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 { width: 100%; }
+  /* line 125, ../scss/responsive.scss */
+  #footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area { float: none; width: auto; margin-right: 0; } }
 /* Vendor @imports
 -------------------------------------------------------------- */
 /*!
