@@ -16,7 +16,6 @@
 <script>try{Typekit.load();}catch(e){}</script>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
 <?php wp_head(); ?>
 </head>
 
@@ -50,4 +49,4 @@
 
 	</header><!--/#masthead -->
 
-	<div id="content">
+	<div class="container">

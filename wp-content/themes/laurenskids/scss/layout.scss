@@ -65,12 +65,19 @@ Header & Top-Area
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
-.container{
+body.home .container{ //on homepage layout, set to full width, use padding on ".content"
 	width: 100%;
 	margin: 0;
 }
+body.page .container{ //on all page layouts, set a max-width & padding
+	max-width: 1040px;
+	margin: 0 auto;
+	padding: 72px 30px;
+	overflow: hidden;
+    zoom: 1;
+}
 
-.content{
+.content{ //used to pad homepage sections w/ different background colors
 	max-width: 1040px;
 	margin: 0 auto;
 	padding: 72px 30px;

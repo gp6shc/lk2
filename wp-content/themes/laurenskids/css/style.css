@@ -477,9 +477,12 @@ Header & Top-Area
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
 /* line 68, ../scss/layout.scss */
-.container { width: 100%; margin: 0; }
+body.home .container { width: 100%; margin: 0; }
 
-/* line 73, ../scss/layout.scss */
+/* line 72, ../scss/layout.scss */
+body.page .container { max-width: 1040px; margin: 0 auto; padding: 72px 30px; overflow: hidden; zoom: 1; }
+
+/* line 80, ../scss/layout.scss */
 .content { max-width: 1040px; margin: 0 auto; padding: 72px 30px; overflow: hidden; zoom: 1; }
 
 /*--------------------------------------------------------------
@@ -488,62 +491,62 @@ Homepage
 /*--------------------------------------------------------------
 Homepage video section
 --------------------------------------------------------------*/
-/* line 89, ../scss/layout.scss */
+/* line 96, ../scss/layout.scss */
 .video { width: 100%; height: 566px; margin: 0; background: url("../img/vid-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; /*background-position: center center;*/ }
 
 /*--------------------------------------------------------------
 Homepage welcome section
 --------------------------------------------------------------*/
-/* line 105, ../scss/layout.scss */
+/* line 112, ../scss/layout.scss */
 .welcome { background: #008996 url("../img/butterflies.png") center bottom no-repeat; text-align: center; }
-/* line 109, ../scss/layout.scss */
+/* line 116, ../scss/layout.scss */
 .welcome h1 { color: white; }
-/* line 113, ../scss/layout.scss */
+/* line 120, ../scss/layout.scss */
 .welcome p { color: white; text-transform: none; }
-/* line 118, ../scss/layout.scss */
+/* line 125, ../scss/layout.scss */
 .welcome button { margin-top: 36px; }
 
 /*--------------------------------------------------------------
 Homepage news section
 --------------------------------------------------------------*/
-/* line 127, ../scss/layout.scss */
+/* line 134, ../scss/layout.scss */
 .news { background: white; }
-/* line 130, ../scss/layout.scss */
+/* line 137, ../scss/layout.scss */
 .news h1 { color: #EB008B; text-align: center; }
 
-/* line 136, ../scss/layout.scss */
+/* line 143, ../scss/layout.scss */
 h3.entry-title, h3.entry-title a { color: #008996; }
 
-/* line 139, ../scss/layout.scss */
+/* line 146, ../scss/layout.scss */
 a.read-more { display: inline; padding-left: 10px; color: #008996; }
 
 /*--------------------------------------------------------------
 Homepage partners section
 --------------------------------------------------------------*/
-/* line 148, ../scss/layout.scss */
+/* line 155, ../scss/layout.scss */
 .partners { background: #58595B; }
-/* line 151, ../scss/layout.scss */
+/* line 158, ../scss/layout.scss */
 .partners h1 { color: white; text-align: center; }
 
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
-/* line 161, ../scss/layout.scss */
+/* line 168, ../scss/layout.scss */
 .site-footer { width: 100%; height: auto; margin: 0; color: white; background: #008996; }
 
-/* line 168, ../scss/layout.scss */
+/* line 175, ../scss/layout.scss */
 #footer-widgets .widget ul ul { margin: 0 0 0 1.5em; }
 
-/* line 172, ../scss/layout.scss */
+/* line 179, ../scss/layout.scss */
 #footer-widgets.widget-count-2 .widget-area { float: left; width: 47.5%; margin-right: 5%; }
 
-/* line 178, ../scss/layout.scss */
+/* line 185, ../scss/layout.scss */
 #footer-widgets.widget-count-2 #footer-widget-2 { margin-right: 0; }
 
-/* line 182, ../scss/layout.scss */
+/* line 189, ../scss/layout.scss */
 #footer-widgets.widget-count-3 .widget-area { float: left; width: 30%; margin-right: 5%; }
 
-/* line 188, ../scss/layout.scss */
+/* line 195, ../scss/layout.scss */
 #footer-widgets.widget-count-3 #footer-widget-3 { margin-right: 0; }
 
 /* line 1, ../scss/grid.scss */
