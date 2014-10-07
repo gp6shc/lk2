@@ -29,21 +29,21 @@
 		     if (jQuery(this).scrollTop() > 167) { 
 		          masthead.css({"position":"fixed", "max-width":"100%", "border-bottom":"1px solid #CCC", "height":"80px", "top":0});
 		          top_area.css({"display":"none"});
-				  jQuery(logo).attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-sticky-nav.png');
+				  logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-sticky-nav.png');
 				  logo.css({"max-width":"190px", "margin-top":"-12px"});
 		     }
 		     //when we scroll back up and get to original position, set back to default
 		     else if (jQuery(this).scrollTop() < 167) { 
 		         masthead.css({"position":"relative", "height":"166px", "top":0});
 		         top_area.css({"display":"block"}); 
-		         jQuery(logo).attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png');
+		         logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png');
 		         logo.css({"max-width":"137px", "margin":"0 auto"});
 		     }
 		     //default
 		     else {
 		         masthead.css({"position":"relative", "max-width":"1040px", "padding":"30px", "height":"166px", "margin":"0 auto", "border-bottom":"none"}); 
 		          top_area.css({"display":"block", "float":"right", "margin":"0 0 35px 0;"}); 
-		          jQuery(logo).attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png');
+		          logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png');
 		          logo.css({"max-width":"137px", "margin":"0 auto"});
 		     }
 
