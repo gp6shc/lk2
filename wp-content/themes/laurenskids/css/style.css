@@ -451,38 +451,38 @@ Galleries
 Header & Top-Area
 --------------------------------------------------------------*/
 /* line 4, ../scss/layout.scss */
-#masthead { position: relative; width: 100%; margin: 0; height: auto; background: #EB008B; }
+#masthead { position: relative; width: 100%; margin: 0; height: auto; background: #EB008B; z-index: 11; }
 
-/* line 11, ../scss/layout.scss */
+/* line 12, ../scss/layout.scss */
 .header { width: 100%; max-width: 1040px; height: 166px; margin: 0 auto; padding: 30px; }
-/* line 18, ../scss/layout.scss */
+/* line 19, ../scss/layout.scss */
 .header .logo { float: left; width: 100%; max-width: 137px; height: auto; padding: 0; }
 
-/* line 26, ../scss/layout.scss */
+/* line 27, ../scss/layout.scss */
 .top-area { float: right; margin: 0 0 35px 0; background: #EB008B; }
 
-/* line 31, ../scss/layout.scss */
+/* line 32, ../scss/layout.scss */
 .social { display: inline; margin: 15px 0px; padding-right: 10px; }
-/* line 36, ../scss/layout.scss */
+/* line 37, ../scss/layout.scss */
 .social a li { display: inline; padding: 0px 1px; border-radius: 100%; text-align: center; vertical-align: middle; line-height: 35px; list-style: none; }
-/* line 46, ../scss/layout.scss */
+/* line 47, ../scss/layout.scss */
 .social .fa { background: white; width: 34px; height: 34px; line-height: inherit; border-radius: 50%; color: #EB008B; box-shadow: 2px 2px rgba(0, 0, 0, 0.2); text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
-/* line 55, ../scss/layout.scss */
+/* line 56, ../scss/layout.scss */
 .social .fa:hover { background: #e6e6e6; }
 
-/* line 60, ../scss/layout.scss */
+/* line 61, ../scss/layout.scss */
 .quick-links { display: inline; }
 
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
-/* line 68, ../scss/layout.scss */
+/* line 69, ../scss/layout.scss */
 body.home .container { width: 100%; margin: 0; }
 
-/* line 72, ../scss/layout.scss */
+/* line 73, ../scss/layout.scss */
 body.page .container { max-width: 1040px; margin: 0 auto; padding: 72px 30px; overflow: hidden; zoom: 1; }
 
-/* line 80, ../scss/layout.scss */
+/* line 81, ../scss/layout.scss */
 .content { max-width: 1040px; margin: 0 auto; padding: 72px 30px; overflow: hidden; zoom: 1; }
 
 /*--------------------------------------------------------------
@@ -491,71 +491,71 @@ Homepage
 /*--------------------------------------------------------------
 Homepage video section
 --------------------------------------------------------------*/
-/* line 96, ../scss/layout.scss */
+/* line 97, ../scss/layout.scss */
 .video { width: 100%; height: 566px; margin: 0; /*background: url('../img/vid-bg.jpg'); //placeholder
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;*/ }
 
-/* line 105, ../scss/layout.scss */
-.video.wrapper { position: relative; padding-top: 30; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+/* line 106, ../scss/layout.scss */
+.video.wrapper { background: black; padding: 0; /* get rid of pre-styling */ margin: 0; width: 100%; /* take up full width available */ padding-top: 56.25%; /* give aspect ratio of 16:9; "720 / 1280 = 0.5625" */ height: 0px; /* don't want it to expand beyond padding */ position: relative; /* allow for absolute positioning of child elements */ }
 
-/* line 112, ../scss/layout.scss */
-.video.wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+/* line 115, ../scss/layout.scss */
+.video.wrapper > iframe { position: absolute; /* expand to fill */ top: 0px; left: 0px; right: 0px; bottom: 0px; }
 
 /*--------------------------------------------------------------
 Homepage welcome section
 --------------------------------------------------------------*/
-/* line 126, ../scss/layout.scss */
+/* line 129, ../scss/layout.scss */
 .welcome { background: #008996 url("../img/butterflies.png") center bottom no-repeat; text-align: center; }
-/* line 130, ../scss/layout.scss */
+/* line 133, ../scss/layout.scss */
 .welcome h1 { color: white; }
-/* line 134, ../scss/layout.scss */
+/* line 137, ../scss/layout.scss */
 .welcome p { color: white; text-transform: none; }
-/* line 139, ../scss/layout.scss */
+/* line 142, ../scss/layout.scss */
 .welcome button { margin-top: 36px; }
 
 /*--------------------------------------------------------------
 Homepage news section
 --------------------------------------------------------------*/
-/* line 148, ../scss/layout.scss */
-.news { background: white; }
 /* line 151, ../scss/layout.scss */
+.news { background: white; }
+/* line 154, ../scss/layout.scss */
 .news h1 { color: #EB008B; text-align: center; }
 
-/* line 157, ../scss/layout.scss */
+/* line 160, ../scss/layout.scss */
 h3.entry-title, h3.entry-title a { color: #008996; }
 
-/* line 160, ../scss/layout.scss */
+/* line 163, ../scss/layout.scss */
 a.read-more { display: inline; padding-left: 10px; color: #008996; }
 
 /*--------------------------------------------------------------
 Homepage partners section
 --------------------------------------------------------------*/
-/* line 169, ../scss/layout.scss */
-.partners { background: #58595B; }
 /* line 172, ../scss/layout.scss */
+.partners { background: #58595B; }
+/* line 175, ../scss/layout.scss */
 .partners h1 { color: white; text-align: center; }
 
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
-/* line 182, ../scss/layout.scss */
+/* line 185, ../scss/layout.scss */
 .site-footer { width: 100%; height: auto; margin: 0; color: white; background: #008996; }
 
-/* line 189, ../scss/layout.scss */
+/* line 192, ../scss/layout.scss */
 #footer-widgets .widget ul ul { margin: 0 0 0 1.5em; }
 
-/* line 193, ../scss/layout.scss */
+/* line 196, ../scss/layout.scss */
 #footer-widgets.widget-count-2 .widget-area { float: left; width: 47.5%; margin-right: 5%; }
 
-/* line 199, ../scss/layout.scss */
+/* line 202, ../scss/layout.scss */
 #footer-widgets.widget-count-2 #footer-widget-2 { margin-right: 0; }
 
-/* line 203, ../scss/layout.scss */
+/* line 206, ../scss/layout.scss */
 #footer-widgets.widget-count-3 .widget-area { float: left; width: 30%; margin-right: 5%; }
 
-/* line 209, ../scss/layout.scss */
+/* line 212, ../scss/layout.scss */
 #footer-widgets.widget-count-3 #footer-widget-3 { margin-right: 0; }
 
 /* line 1, ../scss/grid.scss */
@@ -637,27 +637,27 @@ Below 800px
   /* line 59, ../scss/responsive.scss */
   .quick-links button { width: 100%; border-bottom: 1px solid #444; }
   /* line 65, ../scss/responsive.scss */
-  .menu-toggle, .main-navigation.toggled .nav-menu { display: block; width: 100%; padding: 10px 0px; font-size: 22px; background: #555; color: white; border: none; }
-  /* line 73, ../scss/responsive.scss */
+  .menu-toggle, .main-navigation.toggled .nav-menu { display: block; width: 100%; padding: 10px 0px; font-size: 22px; background: #555; color: white; border: none; z-index: 11; }
+  /* line 74, ../scss/responsive.scss */
   .menu-toggle:hover, .main-navigation.toggled .nav-menu:hover { background: #555; }
-  /* line 76, ../scss/responsive.scss */
+  /* line 77, ../scss/responsive.scss */
   .menu-toggle:active, .main-navigation.toggled .nav-menu:active { border-bottom: 1px solid white; }
-  /* line 81, ../scss/responsive.scss */
+  /* line 82, ../scss/responsive.scss */
   .main-navigation { float: none; width: 100%; }
-  /* line 85, ../scss/responsive.scss */
+  /* line 86, ../scss/responsive.scss */
   .main-navigation ul { display: none; }
-  /* line 88, ../scss/responsive.scss */
+  /* line 89, ../scss/responsive.scss */
   .main-navigation ul li { float: none; margin: 10px; padding: 0; }
-  /* line 96, ../scss/responsive.scss */
+  /* line 97, ../scss/responsive.scss */
   .video { height: 266px; background-attachment: scroll; background-position: center center; } }
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
-@media screen and (max-width: 480px) { /* line 114, ../scss/responsive.scss */
+@media screen and (max-width: 480px) { /* line 115, ../scss/responsive.scss */
   .attachment-full { width: 100%; }
-  /* line 118, ../scss/responsive.scss */
+  /* line 119, ../scss/responsive.scss */
   .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 { width: 100%; }
-  /* line 122, ../scss/responsive.scss */
+  /* line 123, ../scss/responsive.scss */
   #footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area { float: none; width: auto; margin-right: 0; } }
 /* Vendor @imports
 -------------------------------------------------------------- */

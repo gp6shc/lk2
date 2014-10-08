@@ -34,14 +34,14 @@
 		     }
 		     //when we scroll back up and get to original position, set back to default
 		     else if (jQuery(this).scrollTop() < 167) { 
-		         masthead.css({"position":"relative", "height":"166px", "top":0});
+		         masthead.css({"position":"relative", "height":"auto", "top":0});
 		         top_area.css({"display":"block"}); 
 		         logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png');
 		         logo.css({"max-width":"137px", "margin":"0 auto"});
 		     }
 		     //default
 		     else {
-		         masthead.css({"position":"relative", "max-width":"1040px", "padding":"30px", "height":"166px", "margin":"0 auto", "border-bottom":"none"}); 
+		         masthead.css({"position":"relative", "max-width":"1040px", "padding":"30px", "height":"auto", "margin":"0 auto", "border-bottom":"none"}); 
 		          top_area.css({"display":"block", "float":"right", "margin":"0 0 35px 0;"}); 
 		          logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png');
 		          logo.css({"max-width":"137px", "margin":"0 auto"});
