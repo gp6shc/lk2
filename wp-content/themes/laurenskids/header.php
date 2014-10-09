@@ -24,18 +24,16 @@ jQuery(window).scroll(function () {
 	var viewport = jQuery(window).width();
 	var masthead = jQuery("#masthead");
 	var top_area = jQuery(".top-area");
-	var logo = jQuery("img.logo");
+	var logo = jQuery(".logo");
 	var menu = jQuery(".menu-toggle");
-	    //when we scroll past 70 && on a viewport > 800px...
+	    //when we scroll past 70
         if (scrolled > 70 && viewport > 800) { 
 			masthead.addClass('stickyhead');
-			logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-small.png');
 			logo.addClass('small');
 			top_area.css({'display':'none'});
-		//when we scroll back up && on a viewport > 800...
+		//when we scroll back up
 		} else if (scrolled < 70 && viewport > 800) { 
 			masthead.removeClass('stickyhead');
-			logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full.png');
 			logo.removeClass('small');
 			top_area.css({'display':'block'});	
 		} else {
@@ -51,8 +49,10 @@ jQuery(window).scroll(function () {
 	<header id="masthead" role="banner">
 
 		<div class="header">
-		
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php bloginfo('stylesheet_directory') ?>/img/logo-full.png"></img></a>
+
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<div class="logo"></div>
+			</a>
 			
 			<div class="top-area">
 				<ul class="social">
@@ -68,7 +68,7 @@ jQuery(window).scroll(function () {
 			</div>
 
 			<nav id="site-navigation" class="main-navigation push-nav" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Menu', 'laurenskids' ); ?></button>
+				<button class="menu-toggle"><?php _e( '<i class="fa fa-bars"></i> Menu', 'laurenskids' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- /#site-navigation -->
 		</div><!--/.header -->

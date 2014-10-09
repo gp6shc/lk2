@@ -19,60 +19,42 @@ Below 800px
 --------------------------------------------------------------*/
 @media screen and (max-width: 800px) { 
 
+#masthead{
+	position: fixed;
+}
 .header{
-	height: auto;
-	padding: 0;
+	height: 62px;
+	padding: 10px 20px;
 
 	.logo{
-		float: none;
-		display: block;
-		margin: 0 auto; //center logo 
-		padding: 15px 0px;
-	}
-	
-	.top-area{
-		float: none;
-		margin: 0;
-		width: 100%;
-		text-align: center;
+		display: inline-block;
+		float: left;
+		background: url('../img/logo-small.png') 0 0 no-repeat; //small logo
+		max-width: 193px;
+		height: 39px;
 	}
 }
 		
 .social{
-	display: block;
-	width: 100%;
-	margin: 10px auto;
-	
-	.fa{
-		width: 24px;
-		height: 24px;
-	}
-			
-	a li{
-		line-height: 28px; //decrease as font-awesome icon decreases in size
-	}
+	display: none;
 }
 
 .quick-links{
-	display: block;
-	
-	button{
-		width: 100%;
-		border-bottom: 1px solid $body;
-	}
+	display: none;
 }
 
 .menu-toggle, .main-navigation.toggled .nav-menu {
-	display: block;
-	width: 100%;
+	display: inline-block;
+	margin-top: 2px;
 	padding: 10px 0px;
-	font-size: 22px;
-	background: $menu;
+	font-size: 18px;
+	background: transparent;
 	color: white;
 	border: none;
+	box-shadow: none;
 	z-index: 11;
 	&:hover{
-		background: $menu; //keep same color on hover, for better mobile experience
+		background: transparent; //keep same color on hover, for better mobile experience
 	}
 	&:active{
 		border-bottom: 1px solid white;
@@ -80,8 +62,7 @@ Below 800px
 }
 
 .main-navigation{
-	float: none;
-	width: 100%;
+	float: right;
 	
 	ul{
 		display: none;
