@@ -18,39 +18,29 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
 <script>
+jQuery(document).ready(function() {
 jQuery(window).scroll(function () {
+    var scrolled = jQuery(this).scrollTop();
+	var viewport = jQuery(window).width();
 	var masthead = jQuery("#masthead");
 	var top_area = jQuery(".top-area");
 	var logo = jQuery("img.logo");
 	var menu = jQuery(".menu-toggle");
-
-	    //when we scroll past 70 && on a screen size > 800px...
-        if (jQuery(this).scrollTop() > 70 && jQuery(window).width() > 800) { 
+	    //when we scroll past 70 && on a viewport > 800px...
+        if (scrolled > 70 && viewport > 800) { 
 			masthead.addClass('stickyhead');
 			logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-small.png');
 			logo.addClass('small');
 			top_area.css({'display':'none'});
-		
-		//when we scroll back up && on a screen size > 800...
-		} else if (jQuery(this).scrollTop() < 70 && jQuery(window).width() > 800) { 
+		//when we scroll back up && on a viewport > 800...
+		} else if (scrolled < 70 && viewport > 800) { 
 			masthead.removeClass('stickyhead');
 			logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full.png');
 			logo.removeClass('small');
-			top_area.css({'display':'block'});
-			
-		//when we scroll to menu-toggle && on a screen size < 800px (1st brk point)...	
-		} else if (jQuery(this).scrollTop() > 250 && jQuery(window).width() < 800) { 
-			menu.css({"position":"fixed", "top":0});
-			
-		//when we scroll back up && on a screen size < 800px (1st brk point)...	
-		} else if (jQuery(this).scrollTop() < 250 && jQuery(window).width() < 800) { 
-			menu.css({"position":"relative", "margin":0});
-			
-		} else{
-			//blah
-		}
-		
- 
+			top_area.css({'display':'block'});	
+		} else {
+		}			
+});
 });
 </script>
 </head>

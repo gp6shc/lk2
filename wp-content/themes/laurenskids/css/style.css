@@ -853,6 +853,22 @@ Homepage video section
 --------------------------------------------------------------*/
 /* line 109, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
 .video {
+  width: 100%; }
+  /* line 112, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
+  .video .videoWrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; }
+    /* line 117, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
+    .video .videoWrapper > video {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+
+/* line 126, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
+.fallback {
   width: 100%;
   height: 566px;
   margin: 0;
@@ -861,34 +877,14 @@ Homepage video section
   background-size: cover;
   background-attachment: fixed; }
 
-/* line 119, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
-.video.wrapper {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 0px;
-  padding-top: 56.25%; }
-
-/* line 127, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
-.video.wrapper.fixtop {
-  position: relative; }
-
-/* line 130, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
-.video.wrapper > iframe {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px; }
-
 /*--------------------------------------------------------------
 Homepage welcome section
 --------------------------------------------------------------*/
-/* line 145, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
+/* line 144, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
 .welcome {
   background: #008996 url('../img/butterflies.png') center bottom no-repeat;
-  text-align: center; }
+  text-align: center;
+  margin-top: -20px; }
   /* line 149, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/layout */
   .welcome h1 {
     color: white; }
@@ -1127,24 +1123,19 @@ Below 800px
       .main-navigation ul li {
         float: none;
         margin: 10px;
-        padding: 0; }
-  /* line 97, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-  .video {
-    height: 266px;
-    background-attachment: scroll;
-    background-position: center center; } }
+        padding: 0; } }
 
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
-  /* line 115, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 111, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .attachment-full {
     width: 100%; }
-  /* line 119, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 115, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
     width: 100%; }
-  /* line 123, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 119, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   #footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area {
     float: none;
     width: auto;
