@@ -238,13 +238,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/logo-full.png": {
+	"\/img\/logo-full-nav.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 3651,
-		"inputAbbreviatedPath": "\/img\/logo-full.png",
-		"outputAbbreviatedPath": "\/img\/logo-full.png",
+		"inputAbbreviatedPath": "\/img\/logo-full-nav.png",
+		"outputAbbreviatedPath": "\/img\/logo-full-nav.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/logo-sticky-nav.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3468,
+		"inputAbbreviatedPath": "\/img\/logo-sticky-nav.png",
+		"outputAbbreviatedPath": "\/img\/logo-sticky-nav.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -364,6 +375,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/typekit-min.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/typekit-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/video-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/video-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/video-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/waypoints-sticky-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/waypoints-sticky-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/waypoints-sticky-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -600,7 +633,7 @@
 		"outputStyle": 2,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/search.php": {
 		"fileType": 8192,

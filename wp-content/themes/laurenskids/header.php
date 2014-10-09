@@ -18,43 +18,28 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
 <script>
-    jQuery(document).ready(function() {
-		var masthead = jQuery("#masthead");
-		var top_area = jQuery(".top-area");
-		var logo = jQuery("img.logo");
-		var menu = jQuery(".menu-toggle");
-		jQuery(function () {
-		   jQuery(window).scroll(function () {
-		   
-			 //when we scroll past 70 (top area buttons) && on a screen size > 800px...
-		     if (jQuery(this).scrollTop() > 70 && jQuery(window).width() > 800) { 
-		        masthead.css({"position":"fixed", "max-width":"100%", "border-bottom":"1px solid #CCC", "height":"80px", "top":0});
-		        top_area.css({"display":"none"});
-				logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-sticky-nav.png');
-				logo.css({"max-width":"190px", "margin-top":"-12px"});
-		     }
-		     
-		     //when we scroll TO menu bar && on screen < 800px, keep menu fixed...
-		     else if (jQuery(this).scrollTop() > 300 && jQuery(window).width() < 800) { 
-		     	menu.css({"position":"fixed", "top":0});
-		     }
-		     
-		     //when we scroll BACK UP on screen < 800px, put menu back to original pos.
-		     else if (jQuery(this).scrollTop() <= 150 && jQuery(window).width() < 800) { 
-		     	menu.css({"position":"relative", "margin":0});
-		     }
-				 
-			 //when we scroll back up...
-		     else {
-		        masthead.css({"position":"relative", "height": "auto"}); 
-		        top_area.css({"display":"block", "float":"right", "margin":"0 0 35px 0;"}); 
-		        logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png');
-		        logo.css({"max-width":"137px", "margin":"0 auto"});
-		     }
+jQuery(window).scroll(function () {
+	var masthead = jQuery("#masthead");
+	var top_area = jQuery(".top-area");
+	var logo = jQuery("img.logo");
+	var menu = jQuery(".menu-toggle");
+
+	    //when we scroll past 70 (top area buttons) && on a screen size > 800px...
+        if (jQuery(this).scrollTop() > 70 && jQuery(window).width() > 800) { 
+			masthead.addClass('stickyhead');
+			logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-small.png');
+			logo.addClass('small');
+			top_area.css({'display':'none'});
+		
+		//when we scroll back up...
+		} else {
+			masthead.removeClass('stickyhead');
+			logo.attr('src', '<?php bloginfo('stylesheet_directory') ?>/img/logo-full.png');
+			logo.removeClass('small');
+			top_area.css({'display':'block'});
+		}
  
-		  });
-	   });
-	});
+});
 </script>
 </head>
 
@@ -65,7 +50,7 @@
 
 		<div class="header">
 		
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php bloginfo('stylesheet_directory') ?>/img/logo-full-nav.png"></img></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php bloginfo('stylesheet_directory') ?>/img/logo-full.png"></img></a>
 			
 			<div class="top-area">
 				<ul class="social">
