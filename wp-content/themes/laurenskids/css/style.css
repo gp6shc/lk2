@@ -1085,7 +1085,7 @@ Below 800px
   .quick-links {
     display: none; }
   /* line 46, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-  .menu-toggle, .main-navigation.toggled .nav-menu {
+  .menu-toggle {
     display: inline-block;
     margin-top: 2px;
     padding: 10px 0px;
@@ -1096,34 +1096,46 @@ Below 800px
     box-shadow: none;
     z-index: 11; }
     /* line 56, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-    .menu-toggle:hover, .main-navigation.toggled .nav-menu:hover {
+    .menu-toggle:hover {
       background: transparent; }
-    /* line 59, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-    .menu-toggle:active, .main-navigation.toggled .nav-menu:active {
-      border-bottom: 1px solid white; }
-  /* line 64, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-  .main-navigation {
-    float: right; }
-    /* line 67, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-    .main-navigation ul {
-      display: none; }
-      /* line 70, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-      .main-navigation ul li {
-        float: none;
-        margin: 10px;
-        padding: 0; } }
+  /* line 61, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  .main-navigation.toggled .nav-menu {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin: 9px 0;
+    font-size: 18px;
+    text-align: center;
+    background: #555;
+    color: white;
+    border: none;
+    box-shadow: none;
+    z-index: 11; }
+  /* line 78, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  .main-navigation ul {
+    display: none; }
+    /* line 81, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+    .main-navigation ul li {
+      float: none;
+      margin: 0;
+      padding: 10px 0;
+      border-bottom: 1px solid #434343; }
+      /* line 87, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+      .main-navigation ul li:last-child {
+        border-bottom: none; } }
 
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
-  /* line 92, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 105, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .attachment-full {
     width: 100%; }
-  /* line 96, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 109, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
     width: 100%; }
-  /* line 100, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 113, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   #footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area {
     float: none;
     width: auto;

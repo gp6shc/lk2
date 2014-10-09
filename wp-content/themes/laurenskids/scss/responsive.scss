@@ -43,7 +43,7 @@ Below 800px
 	display: none;
 }
 
-.menu-toggle, .main-navigation.toggled .nav-menu {
+.menu-toggle {
 	display: inline-block;
 	margin-top: 2px;
 	padding: 10px 0px;
@@ -54,29 +54,42 @@ Below 800px
 	box-shadow: none;
 	z-index: 11;
 	&:hover{
-		background: transparent; //keep same color on hover, for better mobile experience
-	}
-	&:active{
-		border-bottom: 1px solid white;
+		background: transparent;
 	}
 }
 
+.main-navigation.toggled .nav-menu {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	margin: 9px 0;
+	font-size: 18px;
+	text-align: center;
+	background: $menu;
+	color: white;
+	border: none;
+	box-shadow: none;
+	z-index: 11;
+}
+
 .main-navigation{
-	float: right;
-	
+
 	ul{
 		display: none;
 		
 		li{
 			float: none;
-			margin: 10px;
-			padding: 0;
+			margin: 0;
+			padding: 10px 0;
+			border-bottom: 1px solid darken($menu, 7%);
+			
+			&:last-child{
+				border-bottom: none;
+			}
 		}
 	}
 }
-
-
-
 
 
 }//end <800
