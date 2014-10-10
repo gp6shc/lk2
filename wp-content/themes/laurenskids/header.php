@@ -19,7 +19,7 @@
 <?php wp_head(); ?>
 <script>
 jQuery(document).ready(function() {
-jQuery(window).scroll(function () {
+  jQuery(window).scroll(function () {
     var scrolled = jQuery(this).scrollTop();
 	var viewport = jQuery(window).width();
 	var masthead = jQuery("#masthead");
@@ -38,8 +38,22 @@ jQuery(window).scroll(function () {
 			top_area.css({'display':'block'});	
 		} else {
 		}			
+  });
 });
+
+//
+jQuery(document).ready(function() {
+    jQuery('.fa-bars').click(function() {		
+		if (jQuery(this).hasClass('fa-bars')) {
+		    jQuery(this).removeClass('fa-bars').addClass('fa-times');
+		} else {
+		    jQuery(this).removeClass('fa-times').addClass('fa-bars');
+		}
+    });    
+    
 });
+
+
 </script>
 </head>
 
@@ -68,7 +82,7 @@ jQuery(window).scroll(function () {
 			</div>
 
 			<nav id="site-navigation" class="main-navigation push-nav" role="navigation">
-				<button class="menu-toggle"><?php _e( '<i class="fa fa-bars"></i> Menu', 'laurenskids' ); ?></button>
+				<button class="menu-toggle"><?php _e( '<i class="fa fa-bars fa-2x"></i>', 'laurenskids' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- /#site-navigation -->
 		</div><!--/.header -->

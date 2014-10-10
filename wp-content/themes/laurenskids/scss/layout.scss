@@ -29,14 +29,14 @@ Header & Top-Area
 	max-width: 137px;
 	height: 94px;
 	padding: 0;
-	transition: all 150ms ease;
+	transition: all 250ms ease;
 }
 .logo.small{
 	background: url('../img/logo-small.png') 0 0 no-repeat;
 	max-width: 190px;
 	height: 39px;
 	margin-top: -12px;
-	transition: all 50ms ease;
+	transition: all 150ms ease;
 }
 .top-area{
 	float: right;
@@ -111,9 +111,13 @@ Homepage video section
 --------------------------------------------------------------*/
 .video{
 	width: 100%;
+	height: 566px;
+	background: url('../img/vid-bg.jpg'); //fallback-placeholder img
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 	
 	.videoWrapper{
-	 	position: relative;
 	 	height: 0;
 	 	padding-bottom: 56.25%;
 	
