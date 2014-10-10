@@ -40,8 +40,7 @@ jQuery(document).ready(function() {
 		}			
   });
 });
-
-//
+//listen for click on menu icon 
 jQuery(document).ready(function() {
     jQuery('.fa-bars').click(function() {		
 		if (jQuery(this).hasClass('fa-bars')) {

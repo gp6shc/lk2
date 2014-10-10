@@ -45,15 +45,12 @@ Below 800px
 
 .menu-toggle {
 	display: inline-block;
-	margin-top: 5px;
+	margin: 5px 0px;
 	padding: 0;
-	vertical-align: middle;
-	font-size: 18px;
 	background: transparent;
 	color: white;
 	border: none;
 	box-shadow: none;
-	z-index: 11;
 	&:hover{
 		background: transparent;
 	}
@@ -64,14 +61,12 @@ Below 800px
 	position: absolute;
 	left: 0;
 	width: 100%;
-	margin: 9px 0;
-	font-size: 18px;
-	text-align: center;
-	background: $menu;
+	padding: 10px 20px;
+	background: $brand_main;
+	text-align: right;
 	color: white;
 	border: none;
 	box-shadow: none;
-	transition: height 0.3s cubic-bezier(0.36, 0.06, 0.14, 1.45);
 }
 
 .main-navigation{
@@ -82,11 +77,15 @@ Below 800px
 		li{
 			float: none;
 			margin: 0;
-			padding: 10px 0;
-			border-bottom: 1px solid darken($menu, 7%);
-			
-			&:last-child{
-				border-bottom: none;
+			padding: 0;
+	
+			&:before{
+				content: "";
+				display: block;
+				border: 0;
+				margin: 5px 0;
+				height: 3px;
+				background-image: linear-gradient(to right, rgba(255,255,255,0) 40%, rgba(255,255,255,0.6) 80%, rgba(255,255,255,0.6) 100%);
 			}
 		}
 	}

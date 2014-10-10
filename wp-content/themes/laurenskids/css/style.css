@@ -1092,46 +1092,45 @@ Below 800px
   /* line 46, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .menu-toggle {
     display: inline-block;
-    margin-top: 5px;
+    margin: 5px 0px;
     padding: 0;
-    vertical-align: middle;
-    font-size: 18px;
     background: transparent;
     color: white;
     border: none;
-    box-shadow: none;
-    z-index: 11; }
-    /* line 57, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+    box-shadow: none; }
+    /* line 54, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
     .menu-toggle:hover {
       background: transparent; }
-  /* line 62, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 59, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .main-navigation.toggled .nav-menu {
     display: inline-block;
     position: absolute;
     left: 0;
     width: 100%;
-    margin: 9px 0;
-    font-size: 18px;
-    text-align: center;
-    background: #555;
+    padding: 10px 20px;
+    background: #EB008B;
+    text-align: right;
     color: white;
     border: none;
-    box-shadow: none;
-    -webkit-transition: height 0.3s cubic-bezier(0.36, 0.06, 0.14, 1.45);
-            transition: height 0.3s cubic-bezier(0.36, 0.06, 0.14, 1.45); }
-  /* line 79, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+    box-shadow: none; }
+  /* line 74, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .main-navigation ul {
     display: none; }
-    /* line 82, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+    /* line 77, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
     .main-navigation ul li {
       float: none;
       margin: 0;
-      padding: 10px 0;
-      border-bottom: 1px solid #434343; }
-      /* line 88, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
-      .main-navigation ul li:last-child {
-        border-bottom: none; }
-  /* line 94, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+      padding: 0; }
+      /* line 82, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+      .main-navigation ul li:before, .main-navigation ul li.clearfix:after {
+        content: "";
+        display: block;
+        border: 0;
+        margin: 5px 0;
+        height: 3px;
+        background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 0.6) 100%);
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.6) 80%, rgba(255, 255, 255, 0.6) 100%); }
+  /* line 93, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .video {
     height: 266px;
     background-attachment: scroll;
@@ -1141,13 +1140,13 @@ Below 800px
 Below 480px
 --------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
-  /* line 111, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 110, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .attachment-full {
     width: 100%; }
-  /* line 115, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 114, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
     width: 100%; }
-  /* line 119, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
+  /* line 118, /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive */
   #footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area {
     float: none;
     width: auto;
