@@ -5,7 +5,7 @@ Header & Top-Area
 	position: relative;
 	width: 100%;
 	margin: 0;
-	height: auto;
+	height: 166px;
 	background: $brand-main;
 	z-index: 11;
 }
@@ -18,7 +18,7 @@ Header & Top-Area
 .header{
 	width: 100%;
 	max-width: 1040px;
-	height: 166px;
+	height: auto;
 	margin: 0 auto;
 	padding: 30px;	
 }
@@ -101,6 +101,9 @@ body.page .container{ //on all page layouts, set a max-width & padding
 	overflow: hidden;
     zoom: 1;
 }
+.h-pad-bottom{ //h1 pads for section titles
+	padding-bottom: 42px;
+}
 
 
 /*--------------------------------------------------------------
@@ -113,7 +116,7 @@ Homepage video section
 .video{
 	width: 100%;
 	height: 566px;
-	background: url('../img/vid-bg.jpg'); //fallback-placeholder img
+	background: url('../img/vid-bg.jpg'); //placeholder img
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -164,7 +167,6 @@ Homepage news section
 	h1{
 		color: $brand_main;
 		text-align: center;
-		padding-bottom: 20px;
 	}
 	
 }
@@ -189,9 +191,12 @@ Homepage news section
 	white-space: nowrap;
 	max-width: 100%;*/
 }
-.posted-on{
+.posted-on, .posted-on a, .posted-on a:visited{
 	display: block;
 	margin: -15px 0 0 0;
+	color: $body;
+	text-transform: uppercase;
+	font-weight: 100;
 }
 .excerpt{
 	margin: 15px 0 0 0;
@@ -200,6 +205,9 @@ a.read-more{
 	display: inline;
 	padding-left: 10px;
 	color: $brand-accent;
+	&:hover{
+		color: $brand-main;
+	}
 }
 
 /*--------------------------------------------------------------

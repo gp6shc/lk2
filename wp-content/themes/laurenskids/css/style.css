@@ -88,8 +88,6 @@ a {
   text-decoration: none;
   -webkit-transition: 0.2s ease-in-out;
           transition: 0.2s ease-in-out; }
-  a:hover {
-    text-decoration: underline; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -264,8 +262,8 @@ button.default, button.accent {
   -webkit-transition: 0.2s ease-in-out;
           transition: 0.2s ease-in-out; }
   button.default:hover, button.accent:hover {
-    color: white;
-    background: #008996; }
+    color: darken #008996, 5%;
+    opacity: 0.9; }
 
 button.accent {
   background: #008996;
@@ -629,7 +627,7 @@ Header & Top-Area
   position: relative;
   width: 100%;
   margin: 0;
-  height: auto;
+  height: 166px;
   background: #EB008B;
   z-index: 11; }
 
@@ -642,7 +640,7 @@ Header & Top-Area
 .header {
   width: 100%;
   max-width: 1040px;
-  height: 166px;
+  height: auto;
   margin: 0 auto;
   padding: 30px; }
 
@@ -718,6 +716,9 @@ body.page .container {
   overflow: hidden;
   zoom: 1; }
 
+.h-pad-bottom {
+  padding-bottom: 42px; }
+
 /*--------------------------------------------------------------
 Homepage
 --------------------------------------------------------------*/
@@ -763,8 +764,7 @@ Homepage news section
   background: white; }
   .news h1 {
     color: #EB008B;
-    text-align: center;
-    padding-bottom: 20px; }
+    text-align: center; }
 
 #featured {
   padding-right: 20px; }
@@ -782,9 +782,12 @@ Homepage news section
 	white-space: nowrap;
 	max-width: 100%;*/ }
 
-.posted-on {
+.posted-on, .posted-on a, .posted-on a:visited {
   display: block;
-  margin: -15px 0 0 0; }
+  margin: -15px 0 0 0;
+  color: #444;
+  text-transform: uppercase;
+  font-weight: 100; }
 
 .excerpt {
   margin: 15px 0 0 0; }
@@ -793,6 +796,8 @@ a.read-more {
   display: inline;
   padding-left: 10px;
   color: #008996; }
+  a.read-more:hover {
+    color: #EB008B; }
 
 /*--------------------------------------------------------------
 Homepage partners section
@@ -905,7 +910,9 @@ Above 801px
 --------------------------------------------------------------*/
 @media screen and (min-width: 801px) {
   .social button {
-    margin: 0px 5px; } }
+    margin: 0px 5px; }
+  #featured article + article {
+    padding-top: 30px; } }
 
 /*--------------------------------------------------------------
 Below 800px
@@ -914,9 +921,9 @@ Below 800px
   h1, h2 {
     font-size: 24px; }
   #masthead {
-    position: fixed; }
+    position: fixed;
+    height: 64px; }
   .header {
-    height: 62px;
     padding: 10px 20px; }
     .header .logo {
       display: inline-block;

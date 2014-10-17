@@ -6,7 +6,7 @@
 
 <div class="news">
 	<div class="content">
-		<h1>Our Latest News</h1>
+		<h1 class="h-pad-bottom">Our Latest News</h1>
 		
 		<div id="featured" class="grid_4">
 		<?php $lk_featured_query = new WP_Query( 'category_name=featured-news&posts_per_page=2' );

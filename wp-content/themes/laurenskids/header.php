@@ -50,6 +50,7 @@ jQuery(document).ready(function() {
 		    jQuery(this).removeClass('fa-bars').addClass('fa-times');
 		} else {
 		    jQuery(this).removeClass('fa-times').addClass('fa-bars');
+		    
 		}
     });    
     
