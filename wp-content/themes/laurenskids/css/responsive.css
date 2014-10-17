@@ -1,39 +1,24 @@
 /*
-Error: Undefined variable: "$body".
-        on line 61 of /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss
+Error: Undefined variable: "$brand_main".
+        on line 68 of /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss
 
-56: .quick-links{
-57: 	display: block;
-58: 	
-59: 	button{
-60: 		width: 100%;
-61: 		border-bottom: 1px solid $body;
-62: 	}
-63: }
-64: 
-65: .menu-toggle, .main-navigation.toggled .nav-menu {
-66: 	display: block;
+63: 	display: inline-block;
+64: 	position: absolute;
+65: 	left: 0;
+66: 	width: 100%;
+67: 	padding: 10px 20px;
+68: 	background: $brand_main;
+69: 	text-align: right;
+70: 	color: white;
+71: 	border: none;
+72: 	box-shadow: none;
+73: }
 
 Backtrace:
-/Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss:61
+/Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss:68
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:62:in `block in _perform'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:62:in `map'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/list_literal.rb:62:in `_perform'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `map'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Applications/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
@@ -88,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$body\".\A         on line 61 of /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss\A \A 56: .quick-links{\A 57: 	display: block;\A 58: 	\A 59: 	button{\A 60: 		width: 100%;\A 61: 		border-bottom: 1px solid $body;\A 62: 	}\A 63: }\A 64: \A 65: .menu-toggle, .main-navigation.toggled .nav-menu {\A 66: 	display: block;"; }
+  content: "Error: Undefined variable: \"$brand_main\".\A         on line 68 of /Applications/MAMP/htdocs/lk/wp-content/themes/laurenskids/scss/responsive.scss\A \A 63: 	display: inline-block;\A 64: 	position: absolute;\A 65: 	left: 0;\A 66: 	width: 100%;\A 67: 	padding: 10px 20px;\A 68: 	background: $brand_main;\A 69: 	text-align: right;\A 70: 	color: white;\A 71: 	border: none;\A 72: 	box-shadow: none;\A 73: }"; }

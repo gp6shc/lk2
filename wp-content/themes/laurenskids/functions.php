@@ -78,7 +78,7 @@ function laurenskids_setup() {
 	 * set excerpt length & modify the read more link at end
 	 */
 	function lk_excerpt_length($length) {
-	    return 15; // return number of words
+	    return 20; // return number of words
 	}
 	add_filter('excerpt_length', 'lk_excerpt_length');
 	 
@@ -205,7 +205,7 @@ function lk_footer_widget_count() {
 function laurenskids_scripts() {
 	//STYLES
 	//replace default stylesheet with SASS-compiled stylesheet, "css/style.css"
-	wp_enqueue_style( 'SASS', get_template_directory_uri() . '/css/style.css', array(), '0.1', true );
+	wp_enqueue_style( 'SASS', get_template_directory_uri() . '/css/style.css', array(), '0.1');
 	
 	//SCRIPTS
 	//jquery

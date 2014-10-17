@@ -36,6 +36,9 @@ jQuery(document).ready(function() {
 			masthead.removeClass('stickyhead');
 			logo.removeClass('small');
 			top_area.css({'display':'block'});	
+		//<800 viewport, remove stickyhead and use media queries to style
+		} else if (viewport < 800) { 	
+			masthead.removeClass('stickyhead');
 		} else {
 		}			
   });

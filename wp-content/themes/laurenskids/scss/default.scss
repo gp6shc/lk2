@@ -6,13 +6,12 @@ body{
 	font-family: $font_body;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 14px;
+	line-height: 1.42857143;
 }
 a {
   text-decoration: none;
-  -webkit-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   &:hover{
 	  text-decoration: underline;
   }
@@ -31,36 +30,24 @@ h6 {
 	text-rendering: optimizelegibility;
 	margin-bottom: 15px;
 }
-
-
 h1 {
-  font-size: 38px;
-  line-height: 44px;
+  font-size: 36px;
 }
-
 h2 {
-  font-size: 34px;
-  line-height: 40px;
-}
-
-h3 {
   font-size: 30px;
-  line-height: 36px;
 }
-
+h3 {
+  font-size: 24px;
+}
 h4 {
-  font-size: 26px;
-  line-height: 32px;
-}
-
-h5 {
-  font-size: 22px;
-  line-height: 28px;
-}
-
-h6 {
   font-size: 18px;
-  line-height: 26px;
+}
+h5 {
+  font-size: 14px;
+
+}
+h6 {
+  font-size: 12px;
 }
 
 b,
@@ -235,8 +222,10 @@ input[type="submit"] {
 	border: 0;
 	border-radius: 1px;
 	box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+	transition: 0.2s ease-in-out;
 	&:hover{
-		background: darken( white, 10%);
+		color: white;
+		background: $brand-accent;
 	}
 }
 
@@ -248,8 +237,10 @@ button.default{
 	border: 0;
 	border-radius: 1px;
 	box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+	transition: 0.2s ease-in-out;
 	&:hover{
-		background: darken( white, 10%);
+		color: white;
+		background: $brand-accent;
 	}
 }
 
@@ -369,7 +360,7 @@ Accessibility
 }
 
 /*--------------------------------------------------------------
-Alignments
+Alignments & Show/hide content
 --------------------------------------------------------------*/
 .alignleft {
 	display: inline;
@@ -387,6 +378,16 @@ Alignments
 	clear: both;
 	display: block;
 	margin: 0 auto;
+}
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.invisible {
+  visibility: hidden;
 }
 
 /*--------------------------------------------------------------

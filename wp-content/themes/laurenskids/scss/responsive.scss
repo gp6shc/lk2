@@ -18,6 +18,9 @@ Above 801px
 Below 800px
 --------------------------------------------------------------*/
 @media screen and (max-width: 800px) { 
+h1, h2{
+  font-size: 24px;
+}
 
 #masthead{
 	position: fixed;
@@ -29,6 +32,7 @@ Below 800px
 	.logo{
 		display: inline-block;
 		float: left;
+		margin: 0;
 		background: url('../img/logo-small.png') 0 0 no-repeat; //small logo
 		max-width: 193px;
 		height: 39px;
@@ -45,7 +49,7 @@ Below 800px
 
 .menu-toggle {
 	display: inline-block;
-	margin: 5px 0px;
+	margin: 10px 0px;
 	padding: 0;
 	background: transparent;
 	color: white;
@@ -61,9 +65,9 @@ Below 800px
 	position: absolute;
 	left: 0;
 	width: 100%;
-	padding: 10px 20px;
-	background: $brand_main;
+	padding: 20px;
 	text-align: right;
+	background: $brand_main;
 	color: white;
 	border: none;
 	box-shadow: none;
@@ -95,7 +99,21 @@ Below 800px
 	background-attachment: scroll;
 	background-position: center center;
 }
+.excerpt {
+	margin: 0px 0 15px 0;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #E7E7E7;
+}
 
+#featured{
+	padding-right: 0;
+}
+#featured img, #latest img{
+	display: none;
+}
+.grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
+	width: 100%;
+}
 
 }//end <800
 
@@ -105,15 +123,16 @@ Below 800px
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
-@media screen and (max-width :480px) {
+@media screen and (max-width: 480px) {
+h1, h2, h3 {
+  font-size: 20px;
+}
+
 //make all thumbnail attachments full width
 .attachment-full{
 	width: 100%; 
 }
-//set grid full width
-.grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
-	width: 100%;
-}
+
 //if 3 or 2 widgets, make full width
 #footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area{
 	float: none;

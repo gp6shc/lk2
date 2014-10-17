@@ -6,14 +6,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="latest-thumb grid_5">
+	<div class="latest-thumb grid_4">
 	<?php the_post_thumbnail( 'news-latest-thumb', array('class' => 'attachment-full') ); ?>
 	</div>
 
-	<div class="entry-meta grid_7 omega">
-		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+	<div class="entry-meta grid_8 omega">
+		<?php the_title( sprintf( '<h4 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
 		<?php laurenskids_posted_on(); ?>
-		<div class="entry-content">
+		<div class="excerpt">
 			<?php the_excerpt() ?>
 		</div><!-- .entry-content -->
 	</div><!-- .entry-meta -->
