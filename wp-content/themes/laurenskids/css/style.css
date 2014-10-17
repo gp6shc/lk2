@@ -698,16 +698,18 @@ Header & Top-Area
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
-body.home .container {
-  width: 100%;
-  margin: 0; }
-
-body.page .container {
+.container {
   max-width: 1040px;
   margin: 0 auto;
   padding: 72px 30px;
   overflow: hidden;
   zoom: 1; }
+
+body.home .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0; }
 
 .content {
   max-width: 1040px;
@@ -765,6 +767,14 @@ Homepage news section
   .news h1 {
     color: #EB008B;
     text-align: center; }
+  .news img {
+    opacity: 1;
+    -webkit-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out; }
+    .news img:hover {
+      opacity: 0.6;
+      -webkit-transition: 0.5s ease-in-out;
+              transition: 0.5s ease-in-out; }
 
 #featured {
   padding-right: 20px; }

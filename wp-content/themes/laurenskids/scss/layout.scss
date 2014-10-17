@@ -82,18 +82,19 @@ Header & Top-Area
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
-body.home .container{ //on homepage layout, set to full width, use padding on ".content"
-	width: 100%;
-	margin: 0;
-}
-body.page .container{ //on all page layouts, set a max-width & padding
+.container{ //on all page layouts, set a max-width & padding
 	max-width: 1040px;
 	margin: 0 auto;
 	padding: 72px 30px;
 	overflow: hidden;
     zoom: 1;
 }
-
+body.home .container{ //on homepage layout, set to full width, use padding on ".content"
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
 .content{ //used to pad homepage sections w/ different background colors
 	max-width: 1040px;
 	margin: 0 auto;
@@ -168,8 +169,19 @@ Homepage news section
 		color: $brand_main;
 		text-align: center;
 	}
+
+	img{
+		opacity: 1;
+		transition: 0.5s ease-in-out;
+		
+		&:hover{
+			opacity: 0.6;
+			transition: 0.5s ease-in-out;
+		}
+	}
 	
 }
+
 #featured{
 	padding-right: 20px;
 	

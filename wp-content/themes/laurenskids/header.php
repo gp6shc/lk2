@@ -53,7 +53,14 @@ jQuery(document).ready(function() {
 		    
 		}
     });    
-    
+
+});
+
+jQuery(function(){
+    jQuery("#featured img").hover(function(){
+		jQuery(this).addClass('overlay');
+
+	});
 });
 
 
