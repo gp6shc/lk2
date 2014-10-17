@@ -11,9 +11,9 @@ body{
 }
 a, img {
   text-decoration: none;
-  transition: 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   &:hover{
-	  transition: 0.4s ease-in-out;
+	  transition: all 0.4s ease-in-out;
   }
 }
 /* Headings */

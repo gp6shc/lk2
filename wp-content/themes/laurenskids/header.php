@@ -43,6 +43,8 @@ jQuery(document).ready(function() {
 		}			
   });
 });
+
+	
 //listen for click on menu icon 
 jQuery(document).ready(function() {
     jQuery('.fa-bars').click(function() {		
@@ -55,14 +57,6 @@ jQuery(document).ready(function() {
     });    
 
 });
-
-jQuery(function(){
-    jQuery("#featured img").hover(function(){
-		jQuery(this).addClass('overlay');
-
-	});
-});
-
 
 </script>
 </head>

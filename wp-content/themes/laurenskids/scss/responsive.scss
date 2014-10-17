@@ -8,9 +8,15 @@ Above 801px
 		margin: 0px 5px;
 	}
 }
-
 #featured article + article{
 	padding-top: 30px;
+}
+.entry-title, .entry-title a{
+	/*  truncate title to 1 line only on desktop view  */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
 }
 
 }//end >801
@@ -45,11 +51,9 @@ h1, h2{
 .social{
 	display: none;
 }
-
 .quick-links{
 	display: none;
 }
-
 .menu-toggle {
 	display: inline-block;
 	margin: 10px 0px;
@@ -62,7 +66,6 @@ h1, h2{
 		background: transparent;
 	}
 }
-
 .main-navigation.toggled .nav-menu {
 	display: inline-block;
 	position: absolute;
@@ -75,11 +78,11 @@ h1, h2{
 	border: none;
 	box-shadow: none;
 }
-
 .main-navigation{
 
 	ul{
 		display: none;
+
 		
 		li{
 			float: none;
@@ -105,11 +108,7 @@ h1, h2{
 .excerpt {
 	margin: 0px 0 15px 0;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #E7E7E7;
-}
-
-#featured{
-	padding-right: 0;
+	border-bottom: 1px solid $border1;
 }
 #featured img, #latest img{
 	display: none;
@@ -129,6 +128,12 @@ Below 480px
 @media screen and (max-width: 480px) {
 h1, h2, h3 {
   font-size: 20px;
+}
+.content{
+	padding: 52px 20px;
+}
+.h-pad-bottom{ //h1 pads for section titles
+	padding-bottom: 22px;
 }
 
 //make all thumbnail attachments full width

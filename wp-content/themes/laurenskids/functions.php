@@ -78,7 +78,7 @@ function laurenskids_setup() {
 	 * set excerpt length & modify the read more link at end
 	 */
 	function lk_excerpt_length($length) {
-	    return 20; // return number of words
+	    return 26; // return number of words
 	}
 	add_filter('excerpt_length', 'lk_excerpt_length');
 	 
@@ -87,7 +87,6 @@ function laurenskids_setup() {
 	    return '<a class="read-more" href="'. get_permalink($post->ID) . '">Read More <i class="fa fa-caret-right"></i></a>';
 	}
 	add_filter('excerpt_more', 'lk_excerpt_more');
-
 	
 	
 	
