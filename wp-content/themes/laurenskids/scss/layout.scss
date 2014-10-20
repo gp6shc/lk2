@@ -64,6 +64,7 @@ Header & Top-Area
 		background: white;
 		width: 34px;
 		height: 34px;
+		font-size: 1.5em;
 		line-height: inherit;
 		border-radius: 50%;
 		color: $brand-main;
@@ -274,7 +275,24 @@ Footer
 }
 
 
+/*--------------------------------------------------------------
+About Page
+--------------------------------------------------------------*/
+.bracelet {
+	background-image: url("../img/bracelets_background.jpg");
+	padding: 72px 0;
+}
 
+.centered-text {
+	text-align: center;
+}
 
+.translucent {
+	background-color: fade-out(white, 0.1);
+}
 
-
+.butterfly {
+	background-image: url("../img/butterfly.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+}

@@ -68,7 +68,7 @@ jQuery(document).ready(function() {
 
 		<div class="header">
 
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<a href="<?php echo home_url() ?>" rel="home">
 				<div class="logo"></div>
 			</a>
 			
@@ -92,5 +92,3 @@ jQuery(document).ready(function() {
 		</div><!--/.header -->
 
 	</header><!--/#masthead -->
-
-	<div class="container">

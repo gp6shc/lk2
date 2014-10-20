@@ -7,9 +7,6 @@
  * @package laurenskids
  */
 ?>
-
-	</div><!-- .container -->
-
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="content">
 	
