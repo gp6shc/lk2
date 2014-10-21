@@ -3,17 +3,26 @@
 
 /* Color variables
 -------------------------------------------------------------- */
-$brand_main: #EB008B; //pink 
-$brand_accent: #008996; //teal 
-$brand_offset: #58595B; //grey
-$body: #444; //darker grey
-$menu: #555;
+$brand-main: #EB008B; 		//pink 
+$brand-accent: #008996; 	//teal 
+$brand-offset: #58595B; 	//grey
+
+$body: #444; 				//darker grey
+$menu: #555;				
 $border1: #E7E7E7;
+
+$font-color-body: #414042;
+
+// four sub-nav colors in about page
+$dark-teal: #008693;
+$light-teal: #5D9BA7;
+$bright-pink: #E95298;
+$soft-pink: #ED9ABC;
 
 /* Font variables
 -------------------------------------------------------------- */
-$font_body: 'Roboto Slab', sans-serif, Arial; //google font imported below
-$font_header: 'proxima-nova-alt', sans-serif, Arial; //typekit font loaded via script in header
+$font-header: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial; //typekit font loaded via script in header
+$font-body: 'Roboto Slab', sans-serif, Arial; //google font imported below; weights: 100 400 700
 
 /* Font @imports
 -------------------------------------------------------------- */

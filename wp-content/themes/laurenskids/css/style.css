@@ -143,7 +143,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "proxima-nova-alt", sans-serif, Arial;
+  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
   text-transform: uppercase;
   clear: both;
   color: inherit;
@@ -157,7 +157,10 @@ h1 {
 
 h2 {
   font-size: 30px;
+  font-weight: 100;
   color: #EB008B;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
 }
 
 h3 {
@@ -350,7 +353,6 @@ input[type="submit"] {
   color: #EB008B;
   border: 0;
   border-radius: 1px;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.2s ease-in-out;
           transition: 0.2s ease-in-out;
 }
@@ -461,6 +463,74 @@ textarea {
   vertical-align: top;
   /* Improves readability and alignment in all browsers */
   width: 100%;
+}
+
+/*--------------------------------------------------------------
+Search
+--------------------------------------------------------------*/
+.search {
+  display: inline-block;
+}
+.search .fa {
+  background: white;
+  width: 34px;
+  height: 34px;
+  font-size: 1.5em;
+  line-height: inherit;
+  border-radius: 50%;
+  color: #EB008B;
+  text-align: center;
+  cursor: pointer;
+}
+.search .fa:hover {
+  background: #f0f0f0;
+}
+.search span {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 14px;
+  opacity: 0;
+  display: none;
+}
+.search input[type="search"] {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  height: 28px;
+  text-indent: 10px;
+  background-color: #ff39ae;
+  border: 2px solid #ff39ae;
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
+}
+.search input[type="search"]:focus {
+  background-color: white;
+}
+.search input[type="search"]:focus::-webkit-input-placeholder {
+  color: #D3D3D3;
+}
+.search input[type="search"]:focus::-moz-placeholder {
+  color: #D3D3D3;
+}
+.search input[type="search"]:focus:-ms-input-placeholder {
+  color: #D3D3D3;
+}
+.search input[type="search"]:focus::placeholder {
+  color: #D3D3D3;
+}
+.search input[type="search"]::-webkit-input-placeholder {
+  color: white;
+}
+.search input[type="search"]::-moz-placeholder {
+  color: white;
+}
+.search input[type="search"]:-ms-input-placeholder {
+  color: white;
+}
+.search input[type="search"]::placeholder {
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -593,6 +663,16 @@ Clearings
   display: none;
 }
 
+::-moz-selection {
+  background-color: #EB008B;
+  color: white;
+}
+
+::selection {
+  background-color: #EB008B;
+  color: white;
+}
+
 /*--------------------------------------------------------------
 Navigation
 --------------------------------------------------------------*/
@@ -635,7 +715,7 @@ Menus
   padding: 0 0 2px;
   color: white;
   text-decoration: none;
-  font-family: "proxima-nova-alt", sans-serif, Arial;
+  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
   font-weight: 300;
 }
 .main-navigation ul li a:hover {
@@ -904,8 +984,8 @@ Header & Top-Area
   top: 0;
   max-width: 100%;
   height: 80px;
-  -webkit-transition: height 250ms ease-in-out;
-          transition: height 250ms ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+          transition: height 0.3s ease-in-out;
 }
 
 .header {
@@ -924,8 +1004,8 @@ Header & Top-Area
   height: 94px;
   margin: 0;
   padding: 0;
-  -webkit-transition: all 250ms ease;
-          transition: all 250ms ease;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 .logo.small {
@@ -933,20 +1013,20 @@ Header & Top-Area
   max-width: 190px;
   height: 39px;
   margin: -12px 0 0 0;
-  -webkit-transition: all 250ms ease;
-          transition: all 250ms ease;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 
 .top-area {
   float: right;
-  margin: 0 0 35px 0;
+  margin: 0 0 10px 0;
   background: #EB008B;
+  position: relative;
 }
 
 .social {
-  display: inline;
-  margin: 15px 0px;
-  padding-right: 10px;
+  display: inline-block;
+  margin: 15px 8px 15px 0;
 }
 .social a li {
   display: inline;
@@ -965,19 +1045,31 @@ Header & Top-Area
   line-height: inherit;
   border-radius: 50%;
   color: #EB008B;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .social .fa:hover {
-  background: #e6e6e6;
+  background: #f0f0f0;
 }
 
 .quick-links {
-  display: inline;
+  display: inline-block;
 }
 
 button.join {
-  margin-left: 10px;
+  margin: 0 8px;
+}
+
+.display-none {
+  display: none;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.search-expand {
+  -webkit-transform: translateX(-200px);
+      -ms-transform: translateX(-200px);
+          transform: translateX(-200px);
 }
 
 /*--------------------------------------------------------------
@@ -1168,7 +1260,69 @@ About Page
 --------------------------------------------------------------*/
 .bracelet {
   background-image: url("../img/bracelets_background.jpg");
-  padding: 72px 0;
+  background-size: cover;
+  padding: 0 0 72px 0;
+}
+.bracelet .container {
+  padding: 20px 115px 55px 115px;
+}
+.bracelet .entry-content {
+  color: #414042;
+  font-size: 16px;
+}
+
+.subnav {
+  height: 55px;
+  background-color: rgba(88, 89, 91, 0.8);
+  margin-bottom: 72px;
+}
+.subnav .container {
+  padding: 0;
+}
+.subnav ul {
+  margin: 0;
+}
+.subnav li {
+  display: table;
+  float: left;
+  list-style-type: none;
+  text-align: center;
+  width: 25%;
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
+}
+.subnav li a {
+  display: table-cell;
+  vertical-align: middle;
+  height: 55px;
+  padding: 0 10px;
+  color: white;
+  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+  text-transform: uppercase;
+}
+.subnav li:nth-child(1) {
+  background-color: #008996;
+}
+.subnav li:nth-child(1):hover {
+  background-color: #00a5b5;
+}
+.subnav li:nth-child(2) {
+  background-color: #5D9BA7;
+}
+.subnav li:nth-child(2):hover {
+  background-color: #71a7b2;
+}
+.subnav li:nth-child(3) {
+  background-color: #E95298;
+}
+.subnav li:nth-child(3):hover {
+  background-color: #ec6da8;
+}
+.subnav li:nth-child(4) {
+  background-color: #ED9ABC;
+}
+.subnav li:nth-child(4):hover {
+  background-color: #f2b4cd;
 }
 
 .centered-text {
@@ -1180,9 +1334,14 @@ About Page
 }
 
 .butterfly {
-  background-image: url("../img/butterfly.png");
-  background-position: right top;
-  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 25px;
+}
+.butterfly:after {
+  content: url("../img/butterfly.png");
+  position: absolute;
+  top: -21px;
+  margin-left: -7px;
 }
 
 .grid_1 {

@@ -6,7 +6,27 @@
  */
 
 get_header(); ?>
+
 <div class="bracelet">
+	<div class="subnav">
+		<div class="container">
+			<ul>
+				<li>
+					<a href="#">About Lauren</a>
+				</li>
+				<li>
+					<a href="#">Our Team</a>
+				</li>
+				<li>
+					<a href="#">Speaking Engagements</a>
+				</li>
+				<li>
+					<a href="#">Books</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
 	<div class="container translucent">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
