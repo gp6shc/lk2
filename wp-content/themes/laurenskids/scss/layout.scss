@@ -14,7 +14,7 @@ Header & Top-Area
 	top: 0;
 	max-width: 100%;
 	height: 80px;
-	transition: height 250ms ease-in-out;
+	transition: height 0.3s ease-in-out;
 }
 .header{
 	width: 100%;
@@ -31,24 +31,24 @@ Header & Top-Area
 	height: 94px;
 	margin: 0;
 	padding: 0;
-	transition: all 250ms ease;
+	transition: all 0.3s ease;
 }
 .logo.small{
 	background: url('../img/logo-small.png') 0 0 no-repeat;
 	max-width: 190px;
 	height: 39px;
 	margin: -12px 0 0 0;
-	transition: all 250ms ease;
+	transition: all 0.3s ease;
 }
 .top-area{
 	float: right;
-	margin: 0 0 35px 0;
+	margin: 0 0 10px 0;
 	background: $brand-main;	
+	position: relative;
 }
 .social{
-	display: inline;
-	margin: 15px 0px;
-	padding-right: 10px;
+	display: inline-block;
+	margin: 15px 8px 15px 0;
 	
 	a li{
 		display: inline;
@@ -68,18 +68,30 @@ Header & Top-Area
 		line-height: inherit;
 		border-radius: 50%;
 		color: $brand-main;
-		box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+		//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+		//text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 		&:hover{
-			background: darken( white, 10%);
+			background: darken( white, 6%);
 		}
 	}		
 }
 .quick-links{
-	display: inline;
+	display: inline-block;
 }
 button.join{
-	margin-left: 10px;
+	margin: 0 8px;
+}
+
+.display-none {
+	display: none;
+}
+
+.opacity-0 {
+	opacity: 0;
+}
+
+.search-expand {
+	transform: translateX(-200px);
 }
 
 /*--------------------------------------------------------------
@@ -143,7 +155,7 @@ Homepage video section
 Homepage welcome section
 --------------------------------------------------------------*/
 .welcome{
-	background: $brand_accent url('../img/butterflies.png') center bottom no-repeat;
+	background: $brand-accent url('../img/butterflies.png') center bottom no-repeat;
 	text-align: center;
 	margin-top: -20px;
 	
@@ -169,7 +181,7 @@ Homepage news section
 	background: white;
 	
 	h1{
-		color: $brand_main;
+		color: $brand-main;
 		text-align: center;
 	}
 
@@ -201,7 +213,7 @@ Homepage news section
 	}
 }
 .entry-title, .entry-title a{
-	color: $brand_accent;
+	color: $brand-accent;
 	/*truncate title to 1 line only*/
 	/*overflow: hidden;
 	text-overflow: ellipsis;
@@ -231,7 +243,7 @@ a.read-more{
 Homepage partners section
 --------------------------------------------------------------*/
 .partners{
-	background: $brand_offset;
+	background: $brand-offset;
 	
 	h1{
 		color: white;
@@ -248,7 +260,7 @@ Footer
 	height: auto;
 	margin: 0;
 	color: white;
-	background: $brand_accent;	
+	background: $brand-accent;	
 }
 #footer-widgets .widget ul ul {
   	margin: 0 0 0 1.5em;
@@ -280,9 +292,80 @@ About Page
 --------------------------------------------------------------*/
 .bracelet {
 	background-image: url("../img/bracelets_background.jpg");
-	padding: 72px 0;
+	background-size: cover;
+	padding: 0 0 72px 0;
+	
+	.container {
+		padding: 20px 115px 55px 115px;
+	}
+	
+	.entry-content {
+		color: $font-color-body;
+		font-size: 16px;
+	}
 }
 
+.subnav {
+	height: 55px;
+	background-color: fade-out(#58595B, 0.2);
+	margin-bottom: 72px; 
+	
+	.container {
+		padding: 0;
+	}
+	
+	ul {
+		margin: 0;
+	}
+	
+	li {
+		display: table;
+		float: left;
+		list-style-type: none;
+		text-align: center;
+		width: 25%;
+		transition: background-color 0.3s ease;
+		
+		a {
+			display: table-cell;
+			vertical-align: middle;
+			height: 55px;
+			padding: 0 10px;
+			color: white;
+			font-family: $font-header;
+			text-transform: uppercase;
+		}
+
+	}
+	
+	li:nth-child(1) { // About Lauren
+		background-color: $brand-accent;
+		&:hover {
+			background-color: lighten($brand-accent, 6%);
+		}
+	}
+	
+	li:nth-child(2) { // Our Team
+		background-color: $light-teal;
+		&:hover {
+			background-color: lighten($light-teal, 6%);
+		}
+	}
+	
+	li:nth-child(3) { // Speaking Engagements
+		background-color: $bright-pink;
+		&:hover {
+			background-color: lighten($bright-pink, 6%);
+		}
+	}
+	
+	li:nth-child(4) { // Books
+		background-color: $soft-pink;
+		&:hover {
+			background-color: lighten($soft-pink, 6%);
+		}
+	}
+}
 .centered-text {
 	text-align: center;
 }
@@ -292,7 +375,14 @@ About Page
 }
 
 .butterfly {
-	background-image: url("../img/butterfly.png");
-	background-position: right top;
-	background-repeat: no-repeat;
+	position: relative;
+	margin-top: 25px;
+		
+
+	&:after {
+		content: url("../img/butterfly.png");
+		position: absolute;
+		top: -21px;
+		margin-left: -7px;
+	}
 }

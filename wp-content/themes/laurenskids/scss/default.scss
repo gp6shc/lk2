@@ -3,7 +3,7 @@ Default
 --------------------------------------------------------------*/
 body{
 	color: $body;
-	font-family: $font_body;
+	font-family: $font-body;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
 	font-size: 14px;
@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font_header;
+	font-family: $font-header;
 	text-transform: uppercase;
 	clear: both;
 	color: inherit;
@@ -35,7 +35,10 @@ h1 {
 }
 h2 {
   font-size: 30px;
-  color: $brand_main;
+  font-weight: 100;
+  color: $brand-main;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
 }
 h3 {
   font-size: 24px;
@@ -222,7 +225,7 @@ input[type="submit"] {
 	color: $brand-main;
 	border: 0;
 	border-radius: 1px;
-	box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+	//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 	transition: 0.2s ease-in-out;
 	&:hover{
 		color: white;
@@ -241,7 +244,7 @@ button.default{
 	transition: 0.2s ease-in-out;
 	&:hover{
 		color: white;
-		background: $brand_main;
+		background: $brand-main;
 	}
 }
 
@@ -326,6 +329,68 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
 }
+
+/*--------------------------------------------------------------
+Search
+--------------------------------------------------------------*/
+.search {
+	display: inline-block;
+	
+	.fa {
+		background: white;
+		width: 34px;
+		height: 34px;
+		font-size: 1.5em;
+		line-height: inherit;
+		border-radius: 50%;
+		color: $brand-main;
+		text-align: center;
+		cursor: pointer;
+		//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+		//text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+		&:hover{
+			background: darken( white, 6%);
+		}
+	}
+	
+	span {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 14px;
+		opacity: 0;
+		display: none;
+	}
+	
+	input[type="search"] {
+		-webkit-appearance: none;
+		outline: none;
+		border: none;
+		border-radius: 20px;
+		height: 28px;
+		text-indent: 10px;
+		background-color: lighten($brand-main, 15%);
+		border: 2px solid lighten($brand-main, 15%);
+		transition: background-color 0.3s ease;
+		
+		&:focus {
+			background-color: white;
+				&::placeholder {
+					color: #D3D3D3;
+				}
+		}
+		
+		&::placeholder {
+			color: white;
+		}
+	}
+	
+	input[type="submit"] {
+
+	}
+}
+
+
 
 /*--------------------------------------------------------------
 Accessibility
@@ -446,4 +511,9 @@ Clearings
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
+}
+
+::selection {
+	background-color: $brand-main;
+	color: white;
 }
