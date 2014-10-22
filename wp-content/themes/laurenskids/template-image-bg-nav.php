@@ -1,29 +1,20 @@
 <?php
 /**
- * Template Name: About
+ * Template Name: Image Background + Submenu
  *
  * @package laurenskids
  */
 
 get_header(); ?>
 
-<div class="bracelet">
+
+<div class="background-image" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>);">
 	<div class="subnav">
 		<div class="container">
-			<ul>
-				<li>
-					<a href="#">About Lauren</a>
-				</li>
-				<li>
-					<a href="#">Our Team</a>
-				</li>
-				<li>
-					<a href="#">Speaking Engagements</a>
-				</li>
-				<li>
-					<a href="#">Books</a>
-				</li>
-			</ul>
+			<?php
+			if( is_page( array(8,75,77,79,81) ) ) { // About page and its children
+				wp_nav_menu( array( 'theme_location' => 'about' ) );
+			}?>
 		</div>
 	</div>
 	
@@ -52,7 +43,7 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- .container -->
-</div><!-- .bracelet -->	
+</div><!-- .background-image -->	
 	
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
