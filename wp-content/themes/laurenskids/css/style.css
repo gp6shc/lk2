@@ -468,6 +468,17 @@ textarea {
 /*--------------------------------------------------------------
 Search
 --------------------------------------------------------------*/
+.search-elements {
+  /* display: inline-block; */
+  position: absolute;
+  right: 0;
+  top: 14px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+          transition: opacity 0.4s ease;
+  margin-top: 2px;
+}
+
 .search {
   display: inline-block;
 }
@@ -481,17 +492,12 @@ Search
   color: #EB008B;
   text-align: center;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 .search .fa:hover {
-  background: #f0f0f0;
-}
-.search span {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 14px;
-  opacity: 0;
-  display: none;
+  background-color: #008996;
+  color: white;
 }
 .search input[type="search"] {
   -webkit-appearance: none;
@@ -504,6 +510,9 @@ Search
   border: 2px solid #ff39ae;
   -webkit-transition: background-color 0.3s ease;
           transition: background-color 0.3s ease;
+  width: 200px;
+  height: 25px;
+  vertical-align: middle;
 }
 .search input[type="search"]:focus {
   background-color: white;
@@ -531,6 +540,19 @@ Search
 }
 .search input[type="search"]::placeholder {
   color: white;
+}
+.search input[type="submit"] {
+  padding: 0 15px;
+  background: white;
+  text-transform: uppercase;
+  color: #EB008B;
+  border: 0;
+  border-radius: 1px;
+  -webkit-transition: 0.2s ease-in-out;
+          transition: 0.2s ease-in-out;
+  height: 29px;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -716,7 +738,7 @@ Menus
   color: white;
   text-decoration: none;
   font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
-  font-weight: 300;
+  font-weight: 400;
 }
 .main-navigation ul li a:hover {
   border-bottom: 2px solid white;
@@ -1026,7 +1048,10 @@ Header & Top-Area
 
 .social {
   display: inline-block;
-  margin: 15px 8px 15px 0;
+  margin: 15px 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease;
 }
 .social a li {
   display: inline;
@@ -1045,13 +1070,19 @@ Header & Top-Area
   line-height: inherit;
   border-radius: 50%;
   color: #EB008B;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
 }
 .social .fa:hover {
-  background: #f0f0f0;
+  background-color: #008996;
+  color: white;
 }
 
 .quick-links {
   display: inline-block;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease;
 }
 
 button.join {
@@ -1062,14 +1093,22 @@ button.join {
   display: none;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .opacity-0 {
   opacity: 0;
 }
 
+.opacity-1 {
+  opacity: 1;
+}
+
 .search-expand {
-  -webkit-transform: translateX(-200px);
-      -ms-transform: translateX(-200px);
-          transform: translateX(-200px);
+  -webkit-transform: translateX(-310px);
+      -ms-transform: translateX(-310px);
+          transform: translateX(-310px);
 }
 
 /*--------------------------------------------------------------
@@ -1258,15 +1297,14 @@ Footer
 /*--------------------------------------------------------------
 About Page
 --------------------------------------------------------------*/
-.bracelet {
-  background-image: url("../img/bracelets_background.jpg");
+.background-image {
   background-size: cover;
   padding: 0 0 72px 0;
 }
-.bracelet .container {
+.background-image .container {
   padding: 20px 115px 55px 115px;
 }
-.bracelet .entry-content {
+.background-image .entry-content {
   color: #414042;
   font-size: 16px;
 }
@@ -1323,6 +1361,11 @@ About Page
 }
 .subnav li:nth-child(4):hover {
   background-color: #f2b4cd;
+}
+.subnav .current-menu-item a {
+  border-bottom: 3px solid white;
+  font-weight: 700;
+  cursor: default;
 }
 
 .centered-text {

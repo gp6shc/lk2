@@ -333,6 +333,16 @@ textarea {
 /*--------------------------------------------------------------
 Search
 --------------------------------------------------------------*/
+.search-elements {
+    /* display: inline-block; */
+    position: absolute;
+    right: 0;
+    top: 14px;
+    opacity: 0;
+	transition: opacity 0.4s ease;
+	margin-top: 2px;
+}
+
 .search {
 	display: inline-block;
 	
@@ -348,18 +358,12 @@ Search
 		cursor: pointer;
 		//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 		//text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+		transition: all 0.3s ease;
+		
 		&:hover{
-			background: darken( white, 6%);
+			background-color: $brand-accent;
+			color: white;
 		}
-	}
-	
-	span {
-		display: inline-block;
-		position: absolute;
-		right: 0;
-		top: 14px;
-		opacity: 0;
-		display: none;
 	}
 	
 	input[type="search"] {
@@ -369,9 +373,12 @@ Search
 		border-radius: 20px;
 		height: 28px;
 		text-indent: 10px;
-		background-color: lighten($brand-main, 15%);
-		border: 2px solid lighten($brand-main, 15%);
+		background-color: #ff39ae;
+		border: 2px solid #ff39ae;
 		transition: background-color 0.3s ease;
+		width: 200px;
+		height: 25px;
+		vertical-align: middle;
 		
 		&:focus {
 			background-color: white;
@@ -386,7 +393,16 @@ Search
 	}
 	
 	input[type="submit"] {
-
+		padding: 0 15px;
+		background: white;
+		text-transform: uppercase;
+		color: #EB008B;
+		border: 0;
+		border-radius: 1px;
+		transition: 0.2s ease-in-out;
+		height: 29px;
+		vertical-align: middle;
+		margin-left: 8px;
 	}
 }
 

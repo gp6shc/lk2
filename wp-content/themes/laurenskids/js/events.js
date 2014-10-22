@@ -28,6 +28,7 @@ jQuery(document).ready(function() {
 
 	
 //listen for click on menu icon 
+
 jQuery(document).ready(function() {
     jQuery('.fa-bars').click(function() {		
 		if (jQuery(this).hasClass('fa-bars')) {
@@ -40,3 +41,25 @@ jQuery(document).ready(function() {
 });
 
 // Search expanding
+
+var searchBtn = document.getElementById("js-search-btn");
+var socialLinks = document.getElementById("js-social");
+var quickLinks = document.getElementById("js-quick-links");
+var searchElems = document.getElementById("js-search-contain");
+
+searchBtn.addEventListener('click', function() {
+			socialLinks.classList.toggle("opacity-0"/* , "pointer-events-none" */);
+			quickLinks.classList.toggle("opacity-0"/* , "pointer-events-none" */);
+			searchBtn.classList.toggle("search-expand");
+			
+			if( searchElems.classList.contains("display-none") ) {
+				setTimeout( function() {searchElems.classList.toggle("opacity-1");}, 150);
+				searchElems.classList.remove("display-none");
+				searchElems.firstElementChild.focus();			
+			}else{
+				searchElems.classList.toggle("opacity-1");
+				setTimeout( function() {searchElems.classList.add("display-none");}, 300);
+				
+			}
+			
+}, false);

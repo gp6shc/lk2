@@ -21,7 +21,7 @@
 				&& ! is_active_sidebar( 'footer-3'  )
 			)
 				return;
-			// If we get this far, we have widgets. Let do this.
+			// If we get this far, we have widgets. Lets do this.
 		?>
 		<div id="footer-widgets" class="<?php lk_footer_widget_count(); ?>">
 			<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
