@@ -31,18 +31,30 @@ h1, h2{
   font-size: 24px;
 }
 
-#masthead{
+.masthead{
 	position: fixed;
 	height: 64px;
 }
+.stickyhead {
+	display: none;
+}
 .header{
 	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	
+	a[rel="home"] {
+		width: 193px;
+		order: 2;
+		
+	}
+
 
 	.logo{
 		display: inline-block;
-		float: left;
+		float: none;
 		margin: 0;
-		background: url('../img/logo-small.png') 0 0 no-repeat; //small logo
+		background: url('../img/logo-small.png') center center no-repeat; //small logo
 		max-width: 193px;
 		height: 39px;
 	}
@@ -54,6 +66,12 @@ h1, h2{
 .quick-links{
 	display: none;
 }
+
+.top-area {
+	order: 3;
+	margin-top: 6px;
+}
+
 .menu-toggle {
 	display: inline-block;
 	margin: 10px 0px;
@@ -72,14 +90,14 @@ h1, h2{
 	left: 0;
 	width: 100%;
 	padding: 20px;
-	text-align: right;
 	background: $brand-main;
 	color: white;
 	border: none;
 	box-shadow: none;
 }
 .main-navigation{
-
+	order: 1;
+	
 	ul{
 		display: none;
 
@@ -95,7 +113,7 @@ h1, h2{
 				border: 0;
 				margin: 5px 0;
 				height: 3px;
-				background-image: linear-gradient(to right, rgba(255,255,255,0) 40%, rgba(255,255,255,0.6) 80%, rgba(255,255,255,0.6) 100%);
+				background-image: linear-gradient(to left, rgba(255,255,255,0) 40%, rgba(255,255,255,0.6) 80%, rgba(255,255,255,0.6) 100%);
 			}
 		}
 	}

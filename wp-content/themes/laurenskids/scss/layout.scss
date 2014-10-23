@@ -1,20 +1,21 @@
 /*--------------------------------------------------------------
 Header & Top-Area
 --------------------------------------------------------------*/
-#masthead{
+.masthead{
 	position: relative;
 	width: 100%;
 	margin: 0;
 	height: 166px;
 	background: $brand-main;
-	z-index: 11;
+	z-index: 200;
 }
-#masthead.stickyhead{
+.stickyhead{
 	position: fixed;
 	top: 0;
 	max-width: 100%;
 	height: 80px;
-	transition: height 0.3s ease-in-out;
+	background-color: rgba($brand-main, 0.94);
+	z-index: 100;	
 }
 .header{
 	width: 100%;
@@ -67,7 +68,7 @@ Header & Top-Area
 		width: 34px;
 		height: 34px;
 		font-size: 1.5em;
-		line-height: inherit;
+		line-height: 34px;
 		border-radius: 50%;
 		color: $brand-main;
 		//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
@@ -106,7 +107,7 @@ button.join{
 }
 
 .search-expand {
-	transform: translateX(-310px);
+	transform: translateX(-312px);
 }
 
 /*--------------------------------------------------------------
@@ -181,6 +182,7 @@ Homepage welcome section
 	p{
 		color: white;
 		text-transform: none;
+		font-size: 18px;
 	}
 	
 	button{
