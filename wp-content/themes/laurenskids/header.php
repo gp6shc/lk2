@@ -30,7 +30,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-	<header id="masthead" role="banner">
+	<header class="masthead" role="banner">
 
 		<div class="header">
 
@@ -43,7 +43,7 @@
 					<a href="#"><li><i class="fa fa-twitter"></i></li></a>
 					<a href="#"><li><i class="fa fa-facebook"></i></li></a>
 					<a href="#"><li><i class="fa fa-rss"></i></li></a>
-					<a href="#"><li><i class="fa fa-youtube"></i></li></a>
+					<a href="#"><li><i class="fa fa-youtube-play"></i></li></a>
 				</ul>
 				<div id="js-quick-links" class="quick-links">
 					<a href="#"><button class="help">Need Help?</button></a>
@@ -54,6 +54,21 @@
 				</div>
 			</div>
 
+			<nav id="site-navigation" class="main-navigation push-nav" role="navigation">
+				<button class="menu-toggle"><?php _e( '<i class="fa fa-bars fa-2x"></i>', 'laurenskids' ); ?></button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</nav><!-- /#site-navigation -->
+		</div><!--/.header -->
+
+	</header><!--/#masthead -->
+	<header class="stickyhead masthead" role="banner">
+
+		<div class="header">
+
+			<a href="<?php echo home_url() ?>" rel="home">
+				<div class="logo small"></div>
+			</a>
+			
 			<nav id="site-navigation" class="main-navigation push-nav" role="navigation">
 				<button class="menu-toggle"><?php _e( '<i class="fa fa-bars fa-2x"></i>', 'laurenskids' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

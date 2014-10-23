@@ -1,5 +1,6 @@
 // Header switching
 
+/*
 jQuery(document).ready(function() {
   jQuery(window).scroll(function () {
     var scrolled = jQuery(this).scrollTop();
@@ -9,24 +10,24 @@ jQuery(document).ready(function() {
 	var logo = jQuery(".logo");
 	//var menu = jQuery(".menu-toggle");
 	    //when we scroll past 70
-        if (scrolled > 70 && viewport > 800) { 
+        if (scrolled > 73 && viewport > 800) { 
 			masthead.addClass('stickyhead');
 			logo.addClass('small');
 			top_area.css({'display':'none'});
 		//when we scroll back up
-		} else if (scrolled < 70 && viewport > 800) { 
+		} else if (scrolled < 73 && viewport > 800) { 
 			masthead.removeClass('stickyhead');
 			logo.removeClass('small');
 			top_area.css({'display':'block'});	
 		//<800 viewport, remove stickyhead and use media queries to style
-		} else if (viewport < 800) { 	
+		} else { 	
 			masthead.removeClass('stickyhead');
-		} else {
 		}			
   });
 });
 
 	
+*/
 //listen for click on menu icon 
 
 jQuery(document).ready(function() {
@@ -53,10 +54,14 @@ searchBtn.addEventListener('click', function() {
 			searchBtn.classList.toggle("search-expand");
 			
 			if( searchElems.classList.contains("display-none") ) {
+				searchBtn.classList.remove("fa-search");
+				searchBtn.classList.add("fa-times");
 				setTimeout( function() {searchElems.classList.toggle("opacity-1");}, 150);
 				searchElems.classList.remove("display-none");
 				searchElems.firstElementChild.focus();			
 			}else{
+				searchBtn.classList.remove("fa-times");
+				searchBtn.classList.add("fa-search");
 				searchElems.classList.toggle("opacity-1");
 				setTimeout( function() {searchElems.classList.add("display-none");}, 300);
 				

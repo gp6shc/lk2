@@ -33,17 +33,20 @@ Menus
 		li{
 			float: left;
 			position: relative;
-			padding: 0 7px;
+			padding: 0 10px;
 			text-transform: uppercase;
 			
 			a{
-				padding: 0 0 2px;
+				padding: 0 2px;
 				color: white;
 				text-decoration: none;
 				font-family: $font-header;
-				font-weight: 400;
-				&:hover{
-					border-bottom: 2px solid white;
+				font-weight: 700;
+				border-bottom: 2px solid rgba(0,0,0,0);
+				transition: border-bottom-color 0.3s ease;
+				
+				&:hover {
+					border-bottom-color: rgba(255,255,255,1);
 				}
 			}
 		}
@@ -58,7 +61,7 @@ Menus
 	left: -999em;
 	z-index: 99999;
 	background: $brand-accent;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	//box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	
 	li{
 		
