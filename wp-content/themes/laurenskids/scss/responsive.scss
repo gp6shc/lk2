@@ -27,6 +27,10 @@ Above 801px
 Below 800px
 --------------------------------------------------------------*/
 @media screen and (max-width: 800px) { 
+body {
+	padding-top: 64px;
+}
+
 h1, h2{
   font-size: 24px;
 }
@@ -70,6 +74,18 @@ h1, h2{
 .top-area {
 	order: 3;
 	margin-top: 6px;
+	height: 34px;
+	overflow: visible;
+	
+	.fa {
+		background-color: transparent;
+		color: white;
+		font-size: 1.6em;
+		
+		&:hover {
+			background: transparent;
+		}
+	}
 }
 
 .menu-toggle {
@@ -80,34 +96,45 @@ h1, h2{
 	color: white;
 	border: none;
 	box-shadow: none;
-	&:hover{
-		background: transparent;
+	cursor: pointer;
+	
+	span {
+		position: relative;
+		
+		i {
+			transition: opacity 0.3s ease;
+		}
+	}	
+	
+	.fa-bars {
+		opacity: 1;
+	}
+	.fa-times {
+		opacity: 0;
 	}
 }
-.main-navigation.toggled .nav-menu {
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	padding: 20px;
-	background: $brand-main;
-	color: white;
-	border: none;
-	box-shadow: none;
-}
-.main-navigation{
+
+.main-navigation {
 	order: 1;
 	
-	ul{
-		display: none;
+	ul {
+		position: absolute;
+		left: 0;
+		height: 0;
+		width: 100px;
+		overflow: hidden;
+		background: $brand-main;
+		opacity: 0;
+		transition: all 0.3s;
 
 		
-		li{
+		li {
 			float: none;
 			margin: 0;
 			padding: 0;
+		}
 	
-			&:before{
+		li + li:before {
 				content: "";
 				display: block;
 				border: 0;
@@ -115,10 +142,39 @@ h1, h2{
 				height: 3px;
 				background-image: linear-gradient(to left, rgba(255,255,255,0) 40%, rgba(255,255,255,0.6) 80%, rgba(255,255,255,0.6) 100%);
 			}
-		}
+	}
+
+	&.toggled .menu {
+		height: 228px;
+		width: 100%;
+		padding: 20px;
+		border: none;
+		opacity: 1;
+		box-shadow: none;
+		
 	}
 }
-.video{
+
+.search-expand {
+	transform: translateX(0);
+}
+
+.search-elements {
+	width: 330px;
+	top: 48px;
+	right: -20px;
+	background: rgba(white, 0.85);
+	padding: 10px;
+}
+.search-submit {
+	-webkit-appearance: none;
+}
+
+.search-field {
+	font-size: 20px;
+}
+
+.video {
 	height: 266px;
 	background-attachment: scroll;
 	background-position: center center;

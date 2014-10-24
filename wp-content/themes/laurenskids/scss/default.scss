@@ -8,7 +8,34 @@ body{
 	-webkit-text-size-adjust: 100%;
 	font-size: 14px;
 	line-height: 1.42857143;
+	min-width: 320px;
+	
+	padding-top: 160px;
+	transition: padding-top 0.5s ease;
 }
+body.sticky {
+	padding-top: 80px;
+	
+	.masthead {
+		top: 0;
+		height: 80px;
+		background-color: rgba($brand-main, 0.94);
+		
+		.top-area {
+			opacity: 0;
+			height: 0;
+			margin: 0;
+		}
+		
+		.logo {
+			background: url('../img/logo-small.png') 0 0 no-repeat;
+			max-width: 190px;
+			height: 39px;
+			margin: -12px 0 0 0;
+		}
+	}
+}
+
 a, img {
   text-decoration: none;
   transition: all 0.4s ease-in-out;
@@ -213,6 +240,7 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	outline: none;
 }
 
 button,

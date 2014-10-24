@@ -50,27 +50,21 @@
 					<a href="<?php echo home_url('/join-donate') ?>"><button class="join">Join the Movement &amp; Donate</button></a>
 				</div>
 				<div class="search">
-					<?php get_search_form() ?>
+					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+					    <i id="js-search-btn" class="fa fa-search"></i>
+					    <span id="js-search-contain" class="search-elements display-none">
+					    	<input type="search" class="search-field" placeholder="Search for..." value="<?php echo get_search_query() ?>" name="s" title="Search" />
+					    	<input type="submit" class="search-submit" value="Search" />
+					    </span>
+					</form>
 				</div>
 			</div>
 
 			<nav id="site-navigation" class="main-navigation push-nav" role="navigation">
-				<button class="menu-toggle"><?php _e( '<i class="fa fa-bars fa-2x"></i>', 'laurenskids' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- /#site-navigation -->
-		</div><!--/.header -->
-
-	</header><!--/#masthead -->
-	<header class="stickyhead masthead" role="banner">
-
-		<div class="header">
-
-			<a href="<?php echo home_url() ?>" rel="home">
-				<div class="logo small"></div>
-			</a>
-			
-			<nav id="site-navigation" class="main-navigation push-nav" role="navigation">
-				<button class="menu-toggle"><?php _e( '<i class="fa fa-bars fa-2x"></i>', 'laurenskids' ); ?></button>
+				<span class="fa-stack menu-toggle" id="js-icon-toggle">
+					<i class="fa fa-bars fa-stack-2x"></i>
+					<i class="fa fa-times fa-stack-2x"></i>
+				</span>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- /#site-navigation -->
 		</div><!--/.header -->

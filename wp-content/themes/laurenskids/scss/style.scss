@@ -32,6 +32,7 @@ $font-body: 'Roboto Slab', sans-serif, Arial; //google font imported below; weig
 -------------------------------------------------------------- */
 @import 'reset';
 @import 'default';
+@import 'font-awesome';
 @import 'nav';
 @import 'content';
 @import 'layout';
@@ -40,4 +41,3 @@ $font-body: 'Roboto Slab', sans-serif, Arial; //google font imported below; weig
 
 /* Vendor @imports
 -------------------------------------------------------------- */
-@import 'font-awesome';

@@ -2,21 +2,48 @@
 Header & Top-Area
 --------------------------------------------------------------*/
 .masthead{
-	position: relative;
+	position: fixed;
+	top: 0;
 	width: 100%;
 	margin: 0;
 	height: 166px;
 	background: $brand-main;
-	z-index: 200;
+	z-index: 100;
+	transition: all 0.5s ease;	
+	
 }
+/*
 .stickyhead{
 	position: fixed;
 	top: 0;
 	max-width: 100%;
 	height: 80px;
 	background-color: rgba($brand-main, 0.94);
-	z-index: 100;	
+	
+	.top-area {
+
+	}
+	
+	.logo {
+		background: url('../img/logo-small.png') 0 0 no-repeat;
+		max-width: 190px;
+		height: 39px;
+		margin: -12px 0 0 0;
+	}
 }
+*/
+/*
+.overflow { //covers the persistent stickyhead from view when overscrolling in safari. Easter egg?
+	position: absolute;
+	top: -500px;
+	left: 0;
+	right: 0;
+	height: 1000px;
+	z-index: 90;
+	background-color: $brand-main;
+	background-color: $brand-accent;
+}
+*/
 .header{
 	width: 100%;
 	max-width: 1040px;
@@ -46,10 +73,14 @@ Header & Top-Area
 	margin: 0 0 10px 0;
 	background: $brand-main;	
 	position: relative;
+	overflow: hidden;
+	height: 66px;
+	opacity: 1;
+	transition: all 0.3s ease;
 }
 .social{
 	display: inline-block;
-	margin: 15px 0;
+	margin: 15px 8px 15px 0;
 	opacity: 1;
 	transition: opacity 0.3s ease;
 	
@@ -147,11 +178,13 @@ Homepage video section
 --------------------------------------------------------------*/
 .video{
 	width: 100%;
-	height: 566px;
+	height: 792px;
 	background: url('../img/vid-bg.jpg'); //placeholder img
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	position: relative;
+	z-index: 95;
 	
 	.videoWrapper{
 	 	height: 0;
