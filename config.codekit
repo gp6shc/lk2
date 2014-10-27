@@ -4421,9 +4421,9 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/events.js",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/min\/events-min.js",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/min\/events.min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -4714,6 +4714,15 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 1
+		},
+	"\/wp-content\/themes\/laurenskids\/search.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/search.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/wp-content\/themes\/laurenskids\/searchform.php": {
 		"fileType": 8192,
@@ -10194,7 +10203,7 @@
 	"bowerAbbreviatedPath": "",
 	"displayValue": "lk2",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "pencil_gray"
+	"iconImageName": "\/wp-content\/themes\/laurenskids\/img\/butterfly.png"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 1,

@@ -24,7 +24,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head(); ?>
-<script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/events.js"></script>
+<script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -39,12 +39,12 @@
 			</a>
 			
 			<div class="top-area">
-				<ul id="js-social" class="social">
-					<a href="#"><li><i class="fa fa-twitter"></i></li></a>
-					<a href="#"><li><i class="fa fa-facebook"></i></li></a>
-					<a href="#"><li><i class="fa fa-rss"></i></li></a>
-					<a href="#"><li><i class="fa fa-youtube-play"></i></li></a>
-				</ul>
+				<div id="js-social" class="social">
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-rss"></i></a>
+					<a href="#"><i class="fa fa-youtube-play"></i></a>
+				</div>
 				<div id="js-quick-links" class="quick-links">
 					<a href="#"><button class="help">Need Help?</button></a>
 					<a href="<?php echo home_url('/join-donate') ?>"><button class="join">Join the Movement &amp; Donate</button></a>
