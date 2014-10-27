@@ -2413,6 +2413,7 @@ Header & Top-Area
   display: inline-block;
   margin: 15px 8px 15px 0;
   opacity: 1;
+  text-align: center;
   -webkit-transition: opacity 0.3s ease;
           transition: opacity 0.3s ease; }
   .social a li {
