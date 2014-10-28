@@ -1,17 +1,39 @@
 // Header switching
-
 jQuery(document).ready(function($) {
 	var docBody = $(document.body);
 	var viewport = $(window).width();
 	
-	(function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);
+	var deBouncer = function($,cf,of, interval){
+	    // deBouncer by hnldesign.nl
+	    // based on code by Paul Irish and the original debouncing function from John Hann
+	    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+	    var debounce = function (func, threshold, execAsap) {
+	        var timeout;
+	        return function debounced () {
+	            var obj = this, args = arguments;
+	            function delayed () {
+	                if (!execAsap) {
+	                    func.apply(obj, args);
+	                }
+	                timeout = null;
+	            }
+	            if (timeout) {
+	                clearTimeout(timeout);
+	            }else if (execAsap) {
+	                func.apply(obj, args);
+	            }
+	            timeout = setTimeout(delayed, threshold || interval);
+	        };
+	    };
+	    jQuery.fn[cf] = function(fn){  return fn ? this.bind(of, debounce(fn)) : this.trigger(cf); };
+	};
 	
-	function addSticky() {
-			docBody.toggleClass("sticky", window.pageYOffset >= 1 || document.scrollTop);
-		}
+	deBouncer(jQuery,'smartscroll', 'scroll', 1);
 	
 	if( viewport > 800 ) {
-		$(window).scroll( addSticky ); 
+		$(window).scroll(function(){
+				docBody.toggleClass("sticky", (window.pageYOffset || document.scrollTop) >= 5 );
+		});
 	}
 });
 
@@ -44,10 +66,7 @@ function searchExpand() {
 
 searchBtn.addEventListener('mousedown', searchExpand , false);
 
-//listen for click on menu icon 
-
-
-
+// listen for click on menu icon 
 // adds "toggle" class to #site-navigation
 
 	var	container = document.getElementById( 'site-navigation' );

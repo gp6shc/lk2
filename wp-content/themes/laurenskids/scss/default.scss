@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 Default
 --------------------------------------------------------------*/
-body{
+body {
 	color: $body;
 	font-family: $font-body;
 	-webkit-font-smoothing: antialiased;
@@ -10,11 +10,10 @@ body{
 	line-height: 1.42857143;
 	min-width: 320px;
 	
-	padding-top: 160px;
-	transition: padding-top 0.5s ease;
+	margin-top: -100px;
+	border-top: 266px solid $brand-main;
 }
 body.sticky {
-	padding-top: 80px;
 	
 	.masthead {
 		top: 0;
@@ -23,8 +22,8 @@ body.sticky {
 		
 		.top-area {
 			opacity: 0;
-			height: 0;
-			margin: 0;
+			transform: translateY(-80px);
+			margin-top: -80px;
 		}
 		
 		.logo {
