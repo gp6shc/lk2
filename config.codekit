@@ -11,6 +11,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/styleguide.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/styleguide.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-activate.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -4318,6 +4327,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_advocacy.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5722,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_advocacy.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_advocacy.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_awareness.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4208,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_awareness.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_awareness.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_education.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4994,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_education.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_education.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/laurenskids\/img\/logo-full.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4424,7 +4466,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/min\/events.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/wp-content\/themes\/laurenskids\/js\/flowtype.js": {
@@ -4444,6 +4486,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/min\/events-min.js",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/min\/min\/events-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/wp-content\/themes\/laurenskids\/js\/min\/events.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/min\/events.min.js",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/js\/min\/min\/events.min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,

@@ -32,6 +32,7 @@ get_header(); ?>
 					    <div class="entry-content centered-text">
 					    	<?php the_content(); ?>
 					    </div><!-- .entry-content -->
+					    
 					
 					    <footer class="entry-footer">
 					    	<?php edit_post_link( __( 'Edit', 'laurenskids' ), '<span class="edit-link">', '</span>' ); ?>

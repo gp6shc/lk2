@@ -131,7 +131,9 @@ h2 {
   text-rendering: optimizeLegibility; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 100;
+  color: #008996; }
 
 h4 {
   font-size: 18px; }
@@ -346,6 +348,7 @@ Search
   position: absolute;
   right: 0;
   top: 14px;
+  margin-top: 2px;
   opacity: 0;
   -webkit-transition: opacity 0.4s ease;
           transition: opacity 0.4s ease; }
@@ -411,6 +414,11 @@ Search
     height: 29px;
     vertical-align: middle;
     margin-left: 8px; }
+
+.search-expand {
+  -webkit-transform: translateX(-316px);
+      -ms-transform: translateX(-316px);
+          transform: translateX(-316px); }
 
 /*--------------------------------------------------------------
 Accessibility
@@ -2446,23 +2454,6 @@ Header & Top-Area
 button.join {
   margin: 0 8px; }
 
-.display-none {
-  display: none; }
-
-.pointer-events-none {
-  pointer-events: none; }
-
-.opacity-0 {
-  opacity: 0; }
-
-.opacity-1 {
-  opacity: 1; }
-
-.search-expand {
-  -webkit-transform: translateX(-312px);
-      -ms-transform: translateX(-312px);
-          transform: translateX(-312px); }
-
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
@@ -2689,6 +2680,62 @@ About Page
     top: -21px;
     margin-left: -7px; }
 
+/*--------------------------------------------------------------
+Boxes on About, Donate pages
+--------------------------------------------------------------*/
+.boxes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 40px 0 0 0; }
+  .boxes article {
+    width: 243px;
+    margin: 40px 27px 40px 0;
+    padding-left: 27px; }
+  .boxes article + article {
+    padding-left: 26px;
+    margin-left: 0;
+    border-left: 1px solid #d7d7d7; }
+  .boxes .icons {
+    margin: 0 auto 25px auto;
+    height: 121px;
+    width: 121px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
+  .boxes .education-icon {
+    background-image: url(../img/iconcircle_education.png); }
+  .boxes .awareness-icon {
+    background-image: url(../img/iconcircle_awareness.png); }
+  .boxes .advocacy-icon {
+    background-image: url(../img/iconcircle_advocacy.png); }
+  .boxes button {
+    margin-top: 25px;
+    background-color: #008996;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 12px; }
+  .boxes article:hover .education-icon {
+    background-image: url(../img/iconcircle_education_hover.png); }
+  .boxes article:hover .awareness-icon {
+    background-image: url(../img/iconcircle_awareness_hover.png); }
+  .boxes article:hover .advocacy-icon {
+    background-image: url(../img/iconcircle_advocacy_hover.png); }
+  .boxes article:hover h3 {
+    color: #EB008B; }
+  .boxes article:hover button {
+    background-color: #EB008B; }
+
 .grid_1 {
   width: 6.5%; }
 
@@ -2777,7 +2824,7 @@ Below 800px
 --------------------------------------------------------------*/
 @media screen and (max-width: 800px) {
   body {
-    padding-top: 64px; }
+    margin-top: -201px; }
   h1, h2 {
     font-size: 24px; }
   .masthead {
@@ -2887,7 +2934,14 @@ Below 800px
     top: 48px;
     right: -20px;
     background: rgba(255, 255, 255, 0.85);
-    padding: 10px; }
+    margin: 0;
+    padding: 10px;
+    z-index: 1;
+    -webkit-transform: translateX(400px);
+        -ms-transform: translateX(400px);
+            transform: translateX(400px);
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease; }
   .search-submit {
     -webkit-appearance: none; }
   .search-field {
@@ -2921,6 +2975,25 @@ Below 480px
     float: none;
     width: auto;
     margin-right: 0; } }
+
+/*--------------------------------------------------------------
+Miscellaneous self-named classes to be added with JS; added to 
+end to ensure override of the default 
+--------------------------------------------------------------*/
+.display-none {
+  display: none; }
+
+.pointer-events-none {
+  pointer-events: none; }
+
+.opacity-0 {
+  opacity: 0; }
+
+.opacity-1 {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
 
 /* Vendor @imports
 -------------------------------------------------------------- */
