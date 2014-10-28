@@ -68,6 +68,9 @@ h2 {
 }
 h3 {
   font-size: 24px;
+  font-weight: 100;
+  color: $brand-accent;
+  
 }
 h4 {
   font-size: 18px;
@@ -366,6 +369,7 @@ Search
     position: absolute;
     right: 0;
     top: 14px;
+    margin-top: 2px;
     opacity: 0;
 	transition: opacity 0.4s ease;
 }
@@ -433,6 +437,9 @@ Search
 	}
 }
 
+.search-expand {
+	transform: translateX(-316px);
+}
 
 
 /*--------------------------------------------------------------

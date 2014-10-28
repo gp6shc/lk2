@@ -1,8 +1,10 @@
 // Header switching
+
 jQuery(document).ready(function($) {
+	var viewport = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	var docBody = $(document.body);
-	var viewport = $(window).width();
 	
+/*
 	var deBouncer = function($,cf,of, interval){
 	    // deBouncer by hnldesign.nl
 	    // based on code by Paul Irish and the original debouncing function from John Hann
@@ -29,6 +31,7 @@ jQuery(document).ready(function($) {
 	};
 	
 	deBouncer(jQuery,'smartscroll', 'scroll', 1);
+*/
 	
 	if( viewport > 800 ) {
 		$(window).scroll(function(){
@@ -64,7 +67,13 @@ function searchExpand() {
 	}
 }
 
-searchBtn.addEventListener('mousedown', searchExpand , false);
+if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 800) {
+	searchBtn.addEventListener('click', searchExpand , false);
+	
+}else{
+	searchBtn.addEventListener('touchstart', searchExpand , false);
+	
+}
 
 // listen for click on menu icon 
 // adds "toggle" class to #site-navigation
