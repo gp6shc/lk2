@@ -4338,6 +4338,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_advocacy_hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5694,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_advocacy_hover.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_advocacy_hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_awareness.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4349,6 +4360,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_awareness_hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4132,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_awareness_hover.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_awareness_hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_education.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4356,6 +4378,17 @@
 		"initialSize": 4994,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_education.png",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_education.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/laurenskids\/img\/iconcircle_education_hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4994,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_education_hover.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/iconcircle_education_hover.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4681,22 +4714,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/scss\/grid.scss",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/grid.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/wp-content\/themes\/laurenskids\/scss\/layout.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/scss\/layout.scss",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/layout.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

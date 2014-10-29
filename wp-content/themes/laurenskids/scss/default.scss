@@ -58,13 +58,16 @@ h6 {
 }
 h1 {
   font-size: 36px;
+  font-weight: 100;
+  color: $brand-main;
+  letter-spacing: 0;
 }
 h2 {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 100;
   color: $brand-main;
   letter-spacing: 1px;
-  text-rendering: optimizeLegibility;
+  line-height: 1;
 }
 h3 {
   font-size: 24px;
@@ -181,10 +184,10 @@ big {
 Elements
 --------------------------------------------------------------*/
 hr {
-	background-color: #ccc;
+	background-color: #d7d7d7;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin: 55px 0;
 }
 
 ul,
@@ -262,6 +265,9 @@ input[type="submit"] {
 		background: $brand-accent;
 	}
 }
+button, inout[type="submit"] {
+	box-shadow: 2px 2px 0 0 rgba(black, 0.2);	
+}
 
 button.default{
 	padding: 10px 30px;
@@ -283,6 +289,22 @@ button.accent{
 	@extend button.default;
 	background: $brand-accent;
 	color: white;
+}
+
+button.interior {
+	margin-top: 25px;
+	background-color: $brand-accent;
+	color: white;
+	font-weight: 400;
+	padding: 12px 15px;
+	
+	&:hover {
+		background-color: $brand-main;
+	}
+}
+
+button + button {
+	margin-left: 25px;
 }
 
 button:hover,
@@ -387,8 +409,8 @@ Search
 		color: $brand-main;
 		text-align: center;
 		cursor: pointer;
-		//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-		//text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+		box-shadow: 2px 2px rgba(black, 0.2);
+		margin-right: 12px;
 		transition: all 0.3s ease;
 		
 		&:hover{
@@ -438,7 +460,7 @@ Search
 }
 
 .search-expand {
-	transform: translateX(-316px);
+	transform: translateX(-305px);
 }
 
 
