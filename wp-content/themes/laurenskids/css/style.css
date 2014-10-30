@@ -77,7 +77,7 @@ a img {
 Default
 --------------------------------------------------------------*/
 body {
-  color: #444;
+  color: #5B5B5B;
   font-family: 'Roboto Slab', sans-serif, Arial;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -90,7 +90,17 @@ body {
 body.sticky .masthead {
   top: 0;
   height: 80px;
-  background-color: rgba(235, 0, 139, 0.94); }
+  background-color: rgba(235, 0, 139, 0.85); }
+  body.sticky .masthead:before, body.sticky .masthead.clearfix:after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    height: 80px;
+    -webkit-filter: blur(10px);
+            filter: blur(10px); }
   body.sticky .masthead .top-area {
     opacity: 0;
     -webkit-transform: translateY(-80px);
@@ -102,6 +112,9 @@ body.sticky .masthead {
     max-width: 190px;
     height: 39px;
     margin: -12px 0 0 0; }
+
+p {
+  color: #5B5B5B; }
 
 a, img {
   text-decoration: none;
@@ -118,25 +131,26 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   color: inherit;
   text-rendering: optimizelegibility;
-  margin-bottom: 15px; }
+  line-height: 1; }
 
 h1 {
+  font-size: 40px;
+  font-weight: 100;
+  color: #EB008B;
+  letter-spacing: 0;
+  margin-bottom: 40px; }
+
+h2 {
   font-size: 36px;
   font-weight: 100;
   color: #EB008B;
-  letter-spacing: 0; }
-
-h2 {
-  font-size: 32px;
-  font-weight: 100;
-  color: #EB008B;
-  letter-spacing: 1px;
-  line-height: 1; }
+  letter-spacing: 1px; }
 
 h3 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 100;
-  color: #008996; }
+  color: #008996;
+  margin-bottom: 15px; }
 
 h4 {
   font-size: 18px; }
@@ -283,6 +297,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     background: #008996; }
 
 button, inout[type="submit"] {
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
   box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2); }
 
 button.default, button.accent {
@@ -2662,8 +2677,7 @@ Homepage news section
 
 .posted-on, .posted-on a, .posted-on a:visited {
   display: block;
-  margin: -15px 0 0 0;
-  color: #444;
+  color: #5B5B5B;
   text-transform: uppercase;
   font-weight: 100; }
 
@@ -2715,6 +2729,9 @@ Footer
 #footer-widgets.widget-count-3 #footer-widget-3 {
   margin-right: 0; }
 
+.padded {
+  padding: 0 95px; }
+
 /*--------------------------------------------------------------
 About Page
 --------------------------------------------------------------*/
@@ -2722,7 +2739,7 @@ About Page
   background-size: cover;
   padding: 0 0 72px 0; }
   .background-image .container {
-    padding: 20px 115px 55px 115px; }
+    padding: 20px 30px 55px 30px; }
   .background-image .entry-content {
     color: #414042;
     font-size: 16px; }
@@ -2776,7 +2793,7 @@ About Page
   text-align: center; }
 
 .translucent {
-  background-color: rgba(255, 255, 255, 0.9); }
+  background-color: rgba(255, 255, 255, 0.85); }
 
 .butterfly {
   position: relative;
@@ -2790,6 +2807,12 @@ About Page
 /*--------------------------------------------------------------
 Boxes on About, Donate pages
 --------------------------------------------------------------*/
+.boxes-3 section {
+  width: 256px; }
+
+.boxes-4 section {
+  width: 225px; }
+
 .boxes {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2801,18 +2824,16 @@ Boxes on About, Donate pages
           justify-content: center;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin: 40px 0 0 0; }
+          flex-wrap: wrap; }
   .boxes section {
-    width: 243px;
-    margin: 40px 27px 40px 0;
-    padding-left: 27px; }
+    margin: 0 20px 40px 0;
+    padding-left: 20px; }
   .boxes section + section {
-    padding-left: 26px;
+    padding-left: 19px;
     margin-left: 0;
     border-left: 1px solid #d7d7d7; }
   .boxes .icons {
-    margin: 0 auto 25px auto;
+    margin: 0 auto 40px auto;
     height: 121px;
     width: 121px;
     background-repeat: no-repeat;
@@ -2835,6 +2856,16 @@ Boxes on About, Donate pages
     color: #EB008B; }
   .boxes section:hover button {
     background-color: #EB008B; }
+
+/*--------------------------------------------------------------
+What's New? Blog Singles
+--------------------------------------------------------------*/
+#page {
+  background-color: #F7F7F5; }
+
+.content-area {
+  max-width: 746px;
+  background-color: white; }
 
 .grid_1 {
   width: 6.5%; }

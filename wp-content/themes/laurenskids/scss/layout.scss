@@ -341,7 +341,6 @@ Homepage news section
 }
 .posted-on, .posted-on a, .posted-on a:visited{
 	display: block;
-	margin: -15px 0 0 0;
 	color: $body;
 	text-transform: uppercase;
 	font-weight: 100;
@@ -405,7 +404,9 @@ Footer
     margin-right: 0;
 }
 
-
+.padded {
+	padding: 0 95px;
+}
 /*--------------------------------------------------------------
 About Page
 --------------------------------------------------------------*/
@@ -414,7 +415,7 @@ About Page
 	padding: 0 0 72px 0;
 	
 	.container {
-		padding: 20px 115px 55px 115px;
+		padding: 20px 30px 55px 30px;
 	}
 	
 	.entry-content {
@@ -495,7 +496,7 @@ About Page
 }
 
 .translucent {
-	background-color: fade-out(white, 0.1);
+	background-color: rgba(white, 0.85);
 }
 
 .butterfly {
@@ -514,27 +515,27 @@ About Page
 /*--------------------------------------------------------------
 Boxes on About, Donate pages
 --------------------------------------------------------------*/
+.boxes-3 section { width: 256px; } // 3 box rows
+.boxes-4 section { width: 225px; } // 4 box rows
 
 .boxes {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: 40px 0 0 0;
 	
 	section {
-		width: 243px;
-		margin: 40px 27px 40px 0;
-		padding-left: 27px;
+		margin: 0 20px 40px 0;
+		padding-left: 20px;
 	}	
 	
 	section + section {
-		padding-left: 26px;
+		padding-left: 19px;
 		margin-left: 0;
 		border-left: 1px solid #d7d7d7;
 	}
 	
 	.icons {
-		margin: 0 auto 25px auto;
+		margin: 0 auto 40px auto;
 		height: 121px;
 		width: 121px;
 		background-repeat: no-repeat;
@@ -578,4 +579,17 @@ Boxes on About, Donate pages
 			background-color: $brand-main;
 		}
 	}
+}
+
+/*--------------------------------------------------------------
+What's New? Blog Singles
+--------------------------------------------------------------*/
+
+#page {
+	background-color: #F7F7F5;	
+}
+
+.content-area {
+	max-width: 746px;
+	background-color: white;
 }
