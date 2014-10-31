@@ -51,11 +51,27 @@ p {
 	color: $body;
 }
 
+a {
+	color: $brand-accent;
+	
+	&:hover {
+		color: $brand-main;
+	}
+	&:visited {
+		color: darken($brand-accent, 10%);
+		
+		&:hover {
+			color: $brand-main;			
+		}
+	}
+}
+
 a, img {
   text-decoration: none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
+  
   &:hover{
-	  transition: all 0.4s ease-in-out;
+	  transition: all 0.3s ease;
   }
 }
 /* Headings */
@@ -88,10 +104,13 @@ h3 {
   
 }
 h4 {
-	font-size: 18px;
+	font-size: 24px;
+	color: $brand-offset;
+	font-weight: 100;
 }
 h5 {
-	font-size: 14px;
+	font-size: 22px;
+	font-weight: 100;
 
 }
 h6 {
@@ -196,23 +215,18 @@ big {
 Elements
 --------------------------------------------------------------*/
 hr {
-	background-color: #d7d7d7;
+	background-color: $light-grey;
 	border: 0;
 	height: 1px;
 	margin: 55px 0;
 }
 
-ul,
-ol {
-	margin: 0 0 1.5em 3em;
-}
-
 ul {
-	list-style: disc;
+	list-style: disc inside none;
 }
 
 ol {
-	list-style: decimal;
+	list-style: decimal inside none;
 }
 
 li > ul,
@@ -264,44 +278,26 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	padding: 10px 15px;
-	background: white;
-	text-transform: uppercase;
-	color: $brand-main;
-	border: 0;
-	border-radius: 1px;
-	//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-	transition: 0.2s ease-in-out;
-	&:hover{
-		color: white;
-		background: $brand-accent;
-	}
-}
-button, inout[type="submit"] {
 	font-family: $font-header;
-	box-shadow: 2px 2px 0 0 rgba(black, 0.2);	
-}
-
-button.default{
-	padding: 10px 30px;
-	background: white;
 	text-transform: uppercase;
-	color: $brand-accent;
+	color: white;
+	padding: 10px 30px;
+	background-color: $brand-main;
 	border: 0;
-	border-radius: 1px;
-	//box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease;
-	
+	border-radius: 0;
+	transition: 0.3s ease;
+	box-shadow: 2px 2px 0 0 rgba(black, 0.2);
+
 	&:hover{
 		color: white;
-		background: $brand-main;
+		background-color: $brand-accent;
 	}
 }
 
-button.accent{
-	@extend button.default;
-	background: $brand-accent;
-	color: white;
+button.white {
+	@extend button;
+	background-color: white;
+	color: $brand-main;
 }
 
 button.interior {
@@ -395,87 +391,6 @@ textarea {
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
 }
-
-/*--------------------------------------------------------------
-Search
---------------------------------------------------------------*/
-.search-elements {
-    /* display: inline-block; */
-    position: absolute;
-    right: 0;
-    top: 14px;
-    margin-top: 2px;
-    opacity: 0;
-	transition: opacity 0.4s ease;
-}
-
-.search {
-	display: inline-block;
-	
-	.fa {
-		background: white;
-		width: 34px;
-		height: 34px;
-		font-size: 1.2em;
-		line-height: 34px;
-		border-radius: 50%;
-		color: $brand-main;
-		text-align: center;
-		cursor: pointer;
-		box-shadow: 2px 2px rgba(black, 0.2);
-		margin-right: 12px;
-		transition: all 0.3s ease;
-		
-		&:hover{
-			background-color: $brand-accent;
-			color: white;
-		}
-	}
-	
-	input[type="search"] {
-		-webkit-appearance: none;
-		outline: none;
-		border: none;
-		border-radius: 20px;
-		height: 28px;
-		text-indent: 10px;
-		background-color: #ff39ae;
-		border: 2px solid #ff39ae;
-		transition: background-color 0.3s ease;
-		width: 200px;
-		height: 25px;
-		vertical-align: middle;
-		
-		&:focus {
-			background-color: white;
-				&::placeholder {
-					color: #D3D3D3;
-				}
-		}
-		
-		&::placeholder {
-			color: white;
-		}
-	}
-	
-	input[type="submit"] {
-		padding: 0 15px;
-		background: white;
-		text-transform: uppercase;
-		color: #EB008B;
-		border: 0;
-		border-radius: 1px;
-		transition: 0.2s ease-in-out;
-		height: 29px;
-		vertical-align: middle;
-		margin-left: 8px;
-	}
-}
-
-.search-expand {
-	transform: translateX(-305px);
-}
-
 
 /*--------------------------------------------------------------
 Accessibility
@@ -599,6 +514,6 @@ Clearings
 }
 
 ::selection {
-	background-color: $brand-main;
+	background-color: $brand-offset;
 	color: white;
 }

@@ -4285,11 +4285,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/wp-content\/themes\/laurenskids\/home.php": {
+	"\/wp-content\/themes\/laurenskids\/home_page.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/home.php",
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/home_page.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -4312,6 +4312,17 @@
 		"initialSize": 1295,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/butterfly.png",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/butterfly.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/wp-content\/themes\/laurenskids\/img\/butterfly_bullet.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1058,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/butterfly_bullet.png",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/butterfly_bullet.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4714,6 +4725,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/scss\/grid.scss",
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/grid.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/wp-content\/themes\/laurenskids\/scss\/layout.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/scss\/layout.scss",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/layout.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

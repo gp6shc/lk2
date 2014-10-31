@@ -140,7 +140,7 @@ Search
 	transition: opacity 0.4s ease;
 }
 
-.search {
+.search-nav {
 	float: left;
 	margin-top: 2px;
 	
@@ -155,7 +155,6 @@ Search
 		text-align: center;
 		cursor: pointer;
 		box-shadow: 2px 2px rgba(black, 0.2);
-		margin-right: 12px;
 		transition: all 0.3s ease;
 		
 		&:hover{
@@ -180,7 +179,7 @@ Search
 		&:focus {
 			background-color: white;
 				&::placeholder {
-					color: #D3D3D3;
+					color: $light-grey;
 				}
 		}
 		
@@ -216,7 +215,7 @@ Container, Content, Pads (main)
 .container{ //on all page layouts, set a max-width & padding
 	max-width: 1040px;
 	margin: 0 auto;
-	padding: 72px 30px;
+	padding: 72px 20px;
 	overflow: hidden;
     zoom: 1;
 }
@@ -582,14 +581,96 @@ Boxes on About, Donate pages
 }
 
 /*--------------------------------------------------------------
-What's New? Blog Singles
+What's New? Singles: single.php, content-single.php
 --------------------------------------------------------------*/
 
 #page {
 	background-color: #F7F7F5;	
 }
 
-.content-area {
+.post {
 	max-width: 746px;
+	float: left;
 	background-color: white;
+	
+}
+
+/*--------------------------------------------------------------
+Single's Sidebar: sidebar.php
+--------------------------------------------------------------*/
+
+.single-sidebar {
+	width: 237px;
+	float: right;
+	padding-top: 35px;
+	
+	hr {
+		margin: 35px 0;
+	}
+	
+}
+
+.sidebar-search {
+
+	.search-field {
+		border: none;
+		border-radius: 0;
+		box-sizing: border-box;
+		box-shadow: 2px 2px 0 0 rgba(black, 0.1);
+		height: 35px;
+		width: 100%;	
+		padding: 0 10px;
+		margin-top: 25px;
+		border-left: 5px solid $brand-accent;
+		transition: border 0.3s ease;
+		
+		&::placeholder {
+			color: $light-grey;
+		}
+		
+		&:focus {
+			border-left-color: $brand-main;
+		}
+		
+		
+	}
+	.search-submit {
+		display: none;		
+	}
+}
+
+.sidebar-nav {
+	display: block;
+	background-color: $brand-accent;
+	color: white;
+	height: 40px;
+	h5 {
+		line-height: 40px;
+	}
+	padding-left: 20px;
+	margin-top: 15px;
+	transition: background-color 0.3s ease;
+	
+	&:hover {
+		background-color: $brand-main;
+		color: white;
+		
+	}
+}
+
+.recent-posts {
+	margin-top: 10px;
+	
+	ul {
+		list-style-image: url(../img/butterfly.png);
+		&:hover {
+			list-style-image: url(../img/butterfly_bullet.png);
+			
+		}
+	}
+	li {
+		margin-top: 5px;
+		font-size: 14px;
+		
+	}
 }

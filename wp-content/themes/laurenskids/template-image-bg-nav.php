@@ -46,5 +46,4 @@ get_header(); ?>
 	</div><!-- .container -->
 </div><!-- .background-image -->	
 	
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

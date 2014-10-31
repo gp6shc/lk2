@@ -46,10 +46,10 @@
 					<a href="#"><i class="fa fa-youtube-play"></i></a>
 				</div>
 				<div id="js-quick-links" class="quick-links">
-					<a href="#"><button class="help">Need Help?</button></a>
-					<a href="<?php echo home_url('/join-donate') ?>"><button class="join">Join the Movement &amp; Donate</button></a>
+					<a href="#"><button class="help white">Need Help?</button></a>
+					<a href="<?php echo home_url('/join-donate') ?>"><button class="join white">Join the Movement &amp; Donate</button></a>
 				</div>
-				<div class="search">
+				<div class="search-nav">
 					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 					    <i id="js-search-btn" class="fa fa-search"></i>
 					    <span id="js-search-contain" class="search-elements display-none">

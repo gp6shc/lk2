@@ -116,13 +116,22 @@ body.sticky .masthead {
 p {
   color: #5B5B5B; }
 
+a {
+  color: #008996; }
+  a:hover {
+    color: #EB008B; }
+  a:visited {
+    color: #005b63; }
+    a:visited:hover {
+      color: #EB008B; }
+
 a, img {
   text-decoration: none;
-  -webkit-transition: all 0.4s ease-in-out;
-          transition: all 0.4s ease-in-out; }
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease; }
   a:hover, img:hover {
-    -webkit-transition: all 0.4s ease-in-out;
-            transition: all 0.4s ease-in-out; }
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -153,10 +162,13 @@ h3 {
   margin-bottom: 15px; }
 
 h4 {
-  font-size: 18px; }
+  font-size: 24px;
+  color: #58595B;
+  font-weight: 100; }
 
 h5 {
-  font-size: 14px; }
+  font-size: 22px;
+  font-weight: 100; }
 
 h6 {
   font-size: 12px; }
@@ -236,14 +248,11 @@ hr {
   height: 1px;
   margin: 55px 0; }
 
-ul, ol {
-  margin: 0 0 1.5em 3em; }
-
 ul {
-  list-style: disc; }
+  list-style: disc inside none; }
 
 ol {
-  list-style: decimal; }
+  list-style: decimal inside none; }
 
 li > ul, li > ol {
   margin-bottom: 0;
@@ -274,7 +283,7 @@ th {
 /*--------------------------------------------------------------
 Forms
 --------------------------------------------------------------*/
-button, input, select, textarea {
+button, button.white, input, select, textarea {
   font-size: 100%;
   /* Corrects font size not being inherited in all browsers */
   margin: 0;
@@ -283,56 +292,41 @@ button, input, select, textarea {
   /* Improves appearance and consistency in all browsers */
   outline: none; }
 
-button, input[type="button"], input[type="reset"], input[type="submit"] {
-  padding: 10px 15px;
-  background: white;
-  text-transform: uppercase;
-  color: #EB008B;
-  border: 0;
-  border-radius: 1px;
-  -webkit-transition: 0.2s ease-in-out;
-          transition: 0.2s ease-in-out; }
-  button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-    color: white;
-    background: #008996; }
-
-button, inout[type="submit"] {
+button, button.white, input[type="button"], input[type="reset"], input[type="submit"] {
   font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
-  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2); }
-
-button.default, button.accent {
-  padding: 10px 30px;
-  background: white;
   text-transform: uppercase;
-  color: #008996;
+  color: white;
+  padding: 10px 30px;
+  background-color: #EB008B;
   border: 0;
-  border-radius: 1px;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease; }
-  button.default:hover, button.accent:hover {
+  border-radius: 0;
+  -webkit-transition: 0.3s ease;
+          transition: 0.3s ease;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2); }
+  button:hover, button.white:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
     color: white;
-    background: #EB008B; }
+    background-color: #008996; }
 
-button.accent {
-  background: #008996;
-  color: white; }
+button.white {
+  background-color: white;
+  color: #EB008B; }
 
-button.interior {
+button.interior, button.interior.white {
   margin-top: 25px;
   background-color: #008996;
   color: white;
   font-weight: 400;
   padding: 12px 15px; }
-  button.interior:hover {
+  button.interior:hover, button.interior.white:hover {
     background-color: #EB008B; }
 
-button + button {
+button + button, button + button.white, button + button.white {
   margin-left: 25px; }
 
-button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+button:hover, button.white:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
   cursor: pointer; }
 
-button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
+button:focus, button.white:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, button.white:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
   border: none; }
 
 input[type="checkbox"], input[type="radio"] {
@@ -350,7 +344,7 @@ input[type="search"]::-webkit-search-decoration {
   /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
   -webkit-appearance: none; }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner, button.white::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -372,88 +366,6 @@ textarea {
   vertical-align: top;
   /* Improves readability and alignment in all browsers */
   width: 100%; }
-
-/*--------------------------------------------------------------
-Search
---------------------------------------------------------------*/
-.search-elements {
-  /* display: inline-block; */
-  position: absolute;
-  right: 0;
-  top: 14px;
-  margin-top: 2px;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s ease;
-          transition: opacity 0.4s ease; }
-
-.search {
-  display: inline-block; }
-  .search .fa {
-    background: white;
-    width: 34px;
-    height: 34px;
-    font-size: 1.2em;
-    line-height: 34px;
-    border-radius: 50%;
-    color: #EB008B;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    margin-right: 12px;
-    -webkit-transition: all 0.3s ease;
-            transition: all 0.3s ease; }
-    .search .fa:hover {
-      background-color: #008996;
-      color: white; }
-  .search input[type="search"] {
-    -webkit-appearance: none;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-    height: 28px;
-    text-indent: 10px;
-    background-color: #ff39ae;
-    border: 2px solid #ff39ae;
-    -webkit-transition: background-color 0.3s ease;
-            transition: background-color 0.3s ease;
-    width: 200px;
-    height: 25px;
-    vertical-align: middle; }
-    .search input[type="search"]:focus {
-      background-color: white; }
-      .search input[type="search"]:focus::-webkit-input-placeholder {
-        color: #D3D3D3; }
-      .search input[type="search"]:focus::-moz-placeholder {
-        color: #D3D3D3; }
-      .search input[type="search"]:focus:-ms-input-placeholder {
-        color: #D3D3D3; }
-      .search input[type="search"]:focus::placeholder {
-        color: #D3D3D3; }
-    .search input[type="search"]::-webkit-input-placeholder {
-      color: white; }
-    .search input[type="search"]::-moz-placeholder {
-      color: white; }
-    .search input[type="search"]:-ms-input-placeholder {
-      color: white; }
-    .search input[type="search"]::placeholder {
-      color: white; }
-  .search input[type="submit"] {
-    padding: 0 15px;
-    background: white;
-    text-transform: uppercase;
-    color: #EB008B;
-    border: 0;
-    border-radius: 1px;
-    -webkit-transition: 0.2s ease-in-out;
-            transition: 0.2s ease-in-out;
-    height: 29px;
-    vertical-align: middle;
-    margin-left: 8px; }
-
-.search-expand {
-  -webkit-transform: translateX(-305px);
-      -ms-transform: translateX(-305px);
-          transform: translateX(-305px); }
 
 /*--------------------------------------------------------------
 Accessibility
@@ -547,11 +459,11 @@ Clearings
   display: none; }
 
 ::-moz-selection {
-  background-color: #EB008B;
+  background-color: #58595B;
   color: white; }
 
 ::selection {
-  background-color: #EB008B;
+  background-color: #58595B;
   color: white; }
 
 /*!
@@ -2154,18 +2066,6 @@ Clearings
 Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Links
---------------------------------------------------------------*/
-a {
-  color: royalblue; }
-
-a:visited {
-  color: purple; }
-
-a:hover, a:focus, a:active {
-  color: midnightblue; }
-
-/*--------------------------------------------------------------
 Menus
 --------------------------------------------------------------*/
 .main-navigation {
@@ -2486,12 +2386,12 @@ Header & Top-Area
   opacity: 1;
   -webkit-transition: opacity 0.3s ease;
           transition: opacity 0.3s ease; }
-  .quick-links button {
+  .quick-links button, .quick-links button.white {
     font-size: 14px;
     font-weight: 700;
     padding: 10px 15px 9px 15px; }
 
-button.join {
+button.join, button.join.white {
   margin: 0 8px; }
 
 /*--------------------------------------------------------------
@@ -2506,10 +2406,10 @@ Search
   -webkit-transition: opacity 0.4s ease;
           transition: opacity 0.4s ease; }
 
-.search {
+.search-nav {
   float: left;
   margin-top: 2px; }
-  .search .fa {
+  .search-nav .fa {
     background: white;
     width: 32px;
     height: 32px;
@@ -2520,13 +2420,12 @@ Search
     text-align: center;
     cursor: pointer;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    margin-right: 12px;
     -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease; }
-    .search .fa:hover {
+    .search-nav .fa:hover {
       background-color: #008996;
       color: white; }
-  .search input[type="search"] {
+  .search-nav input[type="search"] {
     -webkit-appearance: none;
     outline: none;
     border-radius: 20px;
@@ -2539,25 +2438,25 @@ Search
     width: 200px;
     height: 25px;
     vertical-align: middle; }
-    .search input[type="search"]:focus {
+    .search-nav input[type="search"]:focus {
       background-color: white; }
-      .search input[type="search"]:focus::-webkit-input-placeholder {
-        color: #D3D3D3; }
-      .search input[type="search"]:focus::-moz-placeholder {
-        color: #D3D3D3; }
-      .search input[type="search"]:focus:-ms-input-placeholder {
-        color: #D3D3D3; }
-      .search input[type="search"]:focus::placeholder {
-        color: #D3D3D3; }
-    .search input[type="search"]::-webkit-input-placeholder {
+      .search-nav input[type="search"]:focus::-webkit-input-placeholder {
+        color: #d7d7d7; }
+      .search-nav input[type="search"]:focus::-moz-placeholder {
+        color: #d7d7d7; }
+      .search-nav input[type="search"]:focus:-ms-input-placeholder {
+        color: #d7d7d7; }
+      .search-nav input[type="search"]:focus::placeholder {
+        color: #d7d7d7; }
+    .search-nav input[type="search"]::-webkit-input-placeholder {
       color: white; }
-    .search input[type="search"]::-moz-placeholder {
+    .search-nav input[type="search"]::-moz-placeholder {
       color: white; }
-    .search input[type="search"]:-ms-input-placeholder {
+    .search-nav input[type="search"]:-ms-input-placeholder {
       color: white; }
-    .search input[type="search"]::placeholder {
+    .search-nav input[type="search"]::placeholder {
       color: white; }
-  .search input[type="submit"] {
+  .search-nav input[type="submit"] {
     padding: 0 15px;
     background: white;
     text-transform: uppercase;
@@ -2567,7 +2466,7 @@ Search
     margin-left: 8px;
     -webkit-transition: background-color 0.3s ease;
             transition: background-color 0.3s ease; }
-    .search input[type="submit"]:hover {
+    .search-nav input[type="submit"]:hover {
       background-color: #008996;
       color: white; }
 
@@ -2582,7 +2481,7 @@ Container, Content, Pads (main)
 .container {
   max-width: 1040px;
   margin: 0 auto;
-  padding: 72px 30px;
+  padding: 72px 20px;
   overflow: hidden;
   zoom: 1; }
 
@@ -2640,7 +2539,7 @@ Homepage welcome section
     color: white;
     text-transform: none;
     font-size: 18px; }
-  .welcome button {
+  .welcome button, .welcome button.white {
     margin-top: 36px; }
 
 /*--------------------------------------------------------------
@@ -2854,18 +2753,80 @@ Boxes on About, Donate pages
     background-image: url(../img/iconcircle_advocacy_hover.png); }
   .boxes section:hover h3 {
     color: #EB008B; }
-  .boxes section:hover button {
+  .boxes section:hover button, .boxes section:hover button.white {
     background-color: #EB008B; }
 
 /*--------------------------------------------------------------
-What's New? Blog Singles
+What's New? Singles: single.php, content-single.php
 --------------------------------------------------------------*/
 #page {
   background-color: #F7F7F5; }
 
-.content-area {
+.post {
   max-width: 746px;
+  float: left;
   background-color: white; }
+
+/*--------------------------------------------------------------
+Single's Sidebar: sidebar.php
+--------------------------------------------------------------*/
+.single-sidebar {
+  width: 237px;
+  float: right;
+  padding-top: 35px; }
+  .single-sidebar hr {
+    margin: 35px 0; }
+
+.sidebar-search .search-field {
+  border: none;
+  border-radius: 0;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.1);
+  height: 35px;
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 25px;
+  border-left: 5px solid #008996;
+  -webkit-transition: border 0.3s ease;
+          transition: border 0.3s ease; }
+  .sidebar-search .search-field::-webkit-input-placeholder {
+    color: #d7d7d7; }
+  .sidebar-search .search-field::-moz-placeholder {
+    color: #d7d7d7; }
+  .sidebar-search .search-field:-ms-input-placeholder {
+    color: #d7d7d7; }
+  .sidebar-search .search-field::placeholder {
+    color: #d7d7d7; }
+  .sidebar-search .search-field:focus {
+    border-left-color: #EB008B; }
+.sidebar-search .search-submit {
+  display: none; }
+
+.sidebar-nav {
+  display: block;
+  background-color: #008996;
+  color: white;
+  height: 40px;
+  padding-left: 20px;
+  margin-top: 15px;
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease; }
+  .sidebar-nav h5 {
+    line-height: 40px; }
+  .sidebar-nav:hover {
+    background-color: #EB008B;
+    color: white; }
+
+.recent-posts {
+  margin-top: 10px; }
+  .recent-posts ul {
+    list-style-image: url(../img/butterfly.png); }
+    .recent-posts ul:hover {
+      list-style-image: url(../img/butterfly_bullet.png); }
+  .recent-posts li {
+    margin-top: 5px;
+    font-size: 14px; }
 
 .grid_1 {
   width: 6.5%; }
@@ -2914,32 +2875,11 @@ What's New? Blog Singles
 .omega {
   margin-right: 0; }
 
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0; }
-
-.clearfix:after {
-  clear: both;
-  content: ' ';
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  visibility: hidden;
-  width: 0;
-  height: 0; }
-
-* html .clearfix, :first-child + html .clearfix {
-  zoom: 1; }
-
 /*--------------------------------------------------------------
 Above 801px
 --------------------------------------------------------------*/
 @media screen and (min-width: 801px) {
-  .social button {
+  .social button, .social button.white {
     margin: 0px 5px; }
   #featured article + article {
     padding-top: 30px; }
