@@ -119,7 +119,7 @@ function laurenskids_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'laurenskids' ),
 		'id'            => 'sidebar-1',
-		'description'   => 'To show on all interior pages. Position: sidebar, right.',
+		'description'   => 'To show on all Posts. Position: sidebar, right.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',

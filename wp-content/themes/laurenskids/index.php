@@ -15,7 +15,6 @@ get_header(); ?>
 <div class="container">
 	<div id="primary" class="content-area clear">
 		<main id="main" class="site-main" role="main">
-		<?php get_sidebar(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
