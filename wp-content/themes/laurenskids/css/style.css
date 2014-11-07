@@ -91,27 +91,24 @@ body.sticky .masthead {
   top: 0;
   height: 80px;
   background-color: rgba(235, 0, 139, 0.85); }
-  body.sticky .masthead:before, body.sticky .masthead.clearfix:after {
-    content: "";
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    display: block;
-    height: 80px;
-    -webkit-filter: blur(10px);
-            filter: blur(10px); }
   body.sticky .masthead .top-area {
     opacity: 0;
     -webkit-transform: translateY(-80px);
         -ms-transform: translateY(-80px);
-            transform: translateY(-80px);
-    margin-top: -80px; }
+            transform: translateY(-80px); }
+  body.sticky .masthead .main-navigation {
+    -webkit-transform: translateY(-80px);
+        -ms-transform: translateY(-80px);
+            transform: translateY(-80px); }
   body.sticky .masthead .logo {
     background: url('../img/logo-small.png') 0 0 no-repeat;
     max-width: 190px;
     height: 39px;
     margin: -12px 0 0 0; }
+body.sticky .subnav {
+  -webkit-transform: translateY(-86px);
+      -ms-transform: translateY(-86px);
+          transform: translateY(-86px); }
 
 p {
   color: #5B5B5B; }
@@ -153,7 +150,8 @@ h2 {
   font-size: 36px;
   font-weight: 100;
   color: #EB008B;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  margin-bottom: 10px; }
 
 h3 {
   font-size: 28px;
@@ -2069,7 +2067,9 @@ Navigation
 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  float: right; }
+  float: right;
+  -webkit-transition: -webkit-transform 0.3s ease;
+          transition: transform 0.3s ease; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -2090,6 +2090,7 @@ Menus
         -webkit-transition: border-bottom-color 0.3s ease;
                 transition: border-bottom-color 0.3s ease; }
         .main-navigation ul li a:hover {
+          color: white;
           border-bottom-color: white; }
 
 .main-navigation ul ul {
@@ -2398,10 +2399,9 @@ button.join, button.join.white {
 Search
 --------------------------------------------------------------*/
 .search-elements {
-  /* display: inline-block; */
   position: absolute;
+  top: 3px;
   right: 0;
-  top: -2px;
   opacity: 0;
   -webkit-transition: opacity 0.4s ease;
           transition: opacity 0.4s ease; }
@@ -2429,15 +2429,14 @@ Search
     -webkit-appearance: none;
     outline: none;
     border-radius: 20px;
-    height: 28px;
     text-indent: 10px;
-    background-color: #ff39ae;
-    border: 2px solid #ff39ae;
-    -webkit-transition: background-color 0.3s ease;
-            transition: background-color 0.3s ease;
+    background-color: #ff39b0;
+    border: none;
     width: 200px;
-    height: 25px;
-    vertical-align: middle; }
+    height: 24px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease; }
     .search-nav input[type="search"]:focus {
       background-color: white; }
       .search-nav input[type="search"]:focus::-webkit-input-placeholder {
@@ -2471,9 +2470,9 @@ Search
       color: white; }
 
 .search-expand {
-  -webkit-transform: translateX(-305px);
-      -ms-transform: translateX(-305px);
-          transform: translateX(-305px); }
+  -webkit-transform: translateX(-311px);
+      -ms-transform: translateX(-311px);
+          transform: translateX(-311px); }
 
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
@@ -2574,12 +2573,6 @@ Homepage news section
 	white-space: nowrap;
 	max-width: 100%;*/ }
 
-.posted-on, .posted-on a, .posted-on a:visited {
-  display: block;
-  color: #5B5B5B;
-  text-transform: uppercase;
-  font-weight: 100; }
-
 .excerpt {
   margin: 15px 0 0 0; }
 
@@ -2608,6 +2601,9 @@ Footer
   margin: 0;
   color: white;
   background: #008996; }
+
+.widget-title {
+  color: white; }
 
 #footer-widgets .widget ul ul {
   margin: 0 0 0 1.5em; }
@@ -2646,7 +2642,12 @@ About Page
 .subnav {
   height: 55px;
   background-color: rgba(88, 89, 91, 0.75);
-  margin-bottom: 72px; }
+  margin-bottom: 72px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 0.4s ease;
+          transition: transform 0.4s ease; }
   .subnav .container {
     padding: 0; }
   .subnav ul {
@@ -2667,24 +2668,26 @@ About Page
       color: white;
       font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
       text-transform: uppercase; }
+      .subnav li a:hover {
+        color: white; }
   .subnav li:nth-child(1) {
-    background-color: #008996; }
+    background-color: rgba(0, 137, 150, 0.75); }
     .subnav li:nth-child(1):hover {
       background-color: #00a6b5; }
   .subnav li:nth-child(2) {
-    background-color: #5D9BA7; }
+    background-color: rgba(93, 155, 167, 0.75); }
     .subnav li:nth-child(2):hover {
       background-color: #71a8b2; }
   .subnav li:nth-child(3) {
-    background-color: #E95298; }
+    background-color: rgba(233, 82, 152, 0.75); }
     .subnav li:nth-child(3):hover {
       background-color: #ec6da9; }
   .subnav li:nth-child(4) {
-    background-color: #ED9ABC; }
+    background-color: rgba(237, 154, 188, 0.75); }
     .subnav li:nth-child(4):hover {
       background-color: #f2b4ce; }
   .subnav .current-menu-item a {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.75);
     font-weight: 700;
     cursor: default; }
 
@@ -2700,12 +2703,15 @@ About Page
   .butterfly:after {
     content: url("../img/butterfly.png");
     position: absolute;
-    top: -21px;
-    margin-left: -7px; }
+    top: -24px;
+    margin-left: -5px; }
 
 /*--------------------------------------------------------------
 Boxes on About, Donate pages
 --------------------------------------------------------------*/
+p + .boxes {
+  margin-top: 35px; }
+
 .boxes-3 section {
   width: 256px; }
 
@@ -2759,19 +2765,26 @@ Boxes on About, Donate pages
 /*--------------------------------------------------------------
 What's New? Singles: single.php, content-single.php
 --------------------------------------------------------------*/
-#page {
+.off-white {
   background-color: #F7F7F5; }
 
 .post {
-  max-width: 746px;
+  width: 74.6%;
   float: left;
   background-color: white; }
+
+/*--------------------------------------------------------------
+General Interior Page
+--------------------------------------------------------------*/
+.banner {
+  height: 412px;
+  background-position: bottom center; }
 
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php
 --------------------------------------------------------------*/
 .single-sidebar {
-  width: 237px;
+  width: 23.7%;
   float: right;
   padding-top: 35px; }
   .single-sidebar hr {
@@ -2810,6 +2823,7 @@ Single's Sidebar: sidebar.php
   height: 40px;
   padding-left: 20px;
   margin-top: 15px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: background-color 0.3s ease;
           transition: background-color 0.3s ease; }
   .sidebar-nav h5 {
@@ -2821,12 +2835,90 @@ Single's Sidebar: sidebar.php
 .recent-posts {
   margin-top: 10px; }
   .recent-posts ul {
-    list-style-image: url(../img/butterfly.png); }
-    .recent-posts ul:hover {
-      list-style-image: url(../img/butterfly_bullet.png); }
+    list-style-image: url(../img/butterfly_bullet.png); }
   .recent-posts li {
     margin-top: 5px;
-    font-size: 14px; }
+    font-size: 12px; }
+
+.testimonial {
+  background-color: white;
+  padding: 15px;
+  text-align: right;
+  margin-top: -5px; }
+  .testimonial h4 {
+    color: #EB008B;
+    text-align: left;
+    margin-bottom: 15px; }
+  .testimonial p {
+    text-align: left; }
+  .testimonial hr {
+    margin: 15px 0; }
+  .testimonial cite {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 100;
+    font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
+    font-size: 13px;
+    line-height: 0.5; }
+
+/*--------------------------------------------------------------
+Single's post content
+--------------------------------------------------------------*/
+.entry-header {
+  padding: 35px 35px 0 35px; }
+
+.entry-title {
+  color: #EB008B;
+  line-height: 1.1;
+  margin: 0; }
+
+.entry-meta {
+  color: #58595B;
+  font-weight: 100;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 5px; }
+  .entry-meta ul {
+    display: inline;
+    font-size: 0; }
+  .entry-meta li {
+    display: inline;
+    list-style: none;
+    font-size: 12px; }
+  .entry-meta li + li:before, .entry-meta li + li.clearfix:after {
+    content: ", "; }
+
+.post-feature {
+  margin: 35px 0;
+  background-color: rgba(0, 137, 150, 0.16); }
+  .post-feature img {
+    display: block;
+    margin: auto; }
+
+article:not(.page) .entry-content {
+  padding: 0 35px 35px 35px;
+  margin: 0; }
+
+.post-footer {
+  margin: 0 35px 35px 35px;
+  padding: 10px 0;
+  border-top: 2px solid #d7d7d7;
+  border-bottom: 2px solid #d7d7d7;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 40px; }
+
+.post-tags {
+  float: left;
+  height: 40px; }
+
+.post-share {
+  float: right; }
+
+.fb-comments {
+  width: -webkit-calc(100% - 70px);
+  width: calc(100% - 70px);
+  margin: auto; }
 
 .grid_1 {
   width: 6.5%; }
@@ -2876,19 +2968,18 @@ Single's Sidebar: sidebar.php
   margin-right: 0; }
 
 /*--------------------------------------------------------------
+Screens shorter than 1080pc hight
+--------------------------------------------------------------*/
+@media screen and (max-height: 1079px) { }
+
+/*--------------------------------------------------------------
 Above 801px
 --------------------------------------------------------------*/
 @media screen and (min-width: 801px) {
   .social button, .social button.white {
     margin: 0px 5px; }
   #featured article + article {
-    padding-top: 30px; }
-  .entry-title, .entry-title a {
-    /*  truncate title to 1 line only on desktop view  */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%; } }
+    padding-top: 30px; } }
 
 /*--------------------------------------------------------------
 Below 800px

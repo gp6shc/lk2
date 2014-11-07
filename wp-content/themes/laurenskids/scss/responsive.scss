@@ -1,4 +1,19 @@
 /*--------------------------------------------------------------
+Screens shorter than 1080pc hight
+--------------------------------------------------------------*/
+@media screen and (max-height: 1079px) { 
+/*
+	.entry-feature img {
+		width: 50%;
+		margin: 0 auto;
+	}
+*/
+}
+
+
+
+
+/*--------------------------------------------------------------
 Above 801px
 --------------------------------------------------------------*/
 @media screen and (min-width: 801px) { 
@@ -8,15 +23,19 @@ Above 801px
 		margin: 0px 5px;
 	}
 }
-#featured article + article{
+#featured article + article {
 	padding-top: 30px;
 }
-.entry-title, .entry-title a{
+.entry-title, .entry-title a {
 	/*  truncate title to 1 line only on desktop view  */
-	overflow: hidden;
+	/*
+overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	max-width: 100%;
+	
+	Why?
+*/
 }
 
 }//end >801
