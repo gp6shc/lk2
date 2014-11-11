@@ -9,11 +9,11 @@
 		<h1 class="h-pad-bottom">Our Latest News</h1>
 		
 		<div id="featured" class="grid_4">
-		<?php $lk_featured_query = new WP_Query( 'category_name=featured-news&posts_per_page=2' );
+		<?php $lk_featured_query = new WP_Query( 'category_name=featured&posts_per_page=2' );
 		while ( $lk_featured_query->have_posts() ) : $lk_featured_query->the_post();
 		$do_not_duplicate = $post->ID; ?>
-			<?php get_template_part( 'loop', 'news-featured' ); //'loop-news-featured.php' ?>
-		<?php endwhile; // end of news-featured loop. ?>
+			<?php get_template_part( 'loop', 'featured' ); //'loop-featured.php' ?>
+		<?php endwhile;?>
 		</div>
 		
 		<div id="latest" class="grid_8 omega">
