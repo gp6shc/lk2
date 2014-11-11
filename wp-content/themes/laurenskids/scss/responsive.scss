@@ -27,14 +27,12 @@ Above 801px
 	padding-top: 30px;
 }
 .entry-title, .entry-title a {
-	/*  truncate title to 1 line only on desktop view  */
+	// truncate title to 1 line only on desktop view
 	/*
 overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	max-width: 100%;
-	
-	Why?
 */
 }
 

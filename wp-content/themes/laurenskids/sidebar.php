@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="single-sidebar clear" role="complementary">
+<aside class="single-sidebar clear" role="complementary">
 	<h3>What's New?</h3>
 	<a href="/news" class="sidebar-nav"><h5>News</h5></a>
 	<a href="/blog" class="sidebar-nav"><h5>Blog</h5></a>
@@ -38,6 +38,6 @@
 	
 	<hr>
 
-	<?php dynamic_sidebar('sidebar-1'); ?>
+	<?php dynamic_sidebar('testimonial'); ?>
 
-</div><!-- .single-sidebar -->
+</aside><!-- .single-sidebar -->

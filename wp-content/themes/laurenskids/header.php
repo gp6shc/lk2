@@ -26,9 +26,9 @@
 <?php wp_head(); ?>
 <script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
 </head>
-
+<?php //echo the_ID(); ?>
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site <?php if (is_single()) echo "off-white";?>">
+<div id="page" class="hfeed site<?php if ( is_single() || is_page(16) ) {echo " off-white";}?>">
 
 	<header class="masthead" role="banner">
 

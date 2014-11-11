@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
 	
 	if( viewport > 800 ) {
 		$(window).scroll(function(){
-				docBody.toggleClass("sticky", (window.pageYOffset || document.scrollTop) >= 1 );
+				docBody.toggleClass("sticky", (window.pageYOffset || document.scrollTop) >= 20 );
 		});
 	}
 });
