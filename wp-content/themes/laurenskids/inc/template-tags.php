@@ -158,3 +158,16 @@ function laurenskids_category_transient_flusher() {
 }
 add_action( 'edit_category', 'laurenskids_category_transient_flusher' );
 add_action( 'save_post',     'laurenskids_category_transient_flusher' );
+
+
+function laurenskids_excerpt($limit) {
+	$excerpt = explode(' ', get_the_content(), $limit);
+	if (count($excerpt)>=$limit) {
+	  array_pop($excerpt);
+	  $excerpt = implode(" ",$excerpt).'...';
+	} else {
+	  $excerpt = implode(" ",$excerpt);
+	}	
+	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+	echo $excerpt;
+}

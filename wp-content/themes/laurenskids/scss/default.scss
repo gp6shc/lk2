@@ -18,7 +18,7 @@ body.sticky {
 	.masthead {
 		top: 0;
 		height: 80px;
-		background-color: rgba($brand-main, 0.85);
+		background-color: rgba($brand-main, 0.9);
 		
 		.top-area {
 			opacity: 0;
@@ -43,6 +43,10 @@ body.sticky {
 
 p {
 	color: $body;
+}
+
+p + p {
+	margin-top: 1em;
 }
 
 a {
@@ -293,6 +297,11 @@ button.white {
 	@extend button;
 	background-color: white;
 	color: $brand-main;
+	
+	&:hover {
+		background-color: $brand-main;
+		color: white;
+	}
 }
 
 button.interior {

@@ -71,8 +71,7 @@ function laurenskids_setup() {
 	//set latest-news size
 	add_image_size( 'news-latest-thumb', 192, 140 ); //w x h
 	
-	
-	
+	set_post_thumbnail_size( 237, 172, true ); // sets the default size "post_thumbnail" for the_post_thumbnail();
 	
 	/*
 	 * the_excerpt()
@@ -117,8 +116,8 @@ add_action( 'after_setup_theme', 'laurenskids_setup' );
 function laurenskids_widgets_init() {
 	//sidebar-1
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'laurenskids' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Testimonials', 'laurenskids' ),
+		'id'            => 'testimonial',
 		'description'   => 'To show on all Posts. Position: sidebar, right.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -195,10 +194,6 @@ function lk_footer_widget_count() {
 }
 
 
-
-
-
-
 /**
  * Enqueue scripts and styles.
  */
@@ -221,7 +216,66 @@ function laurenskids_scripts() {
 add_action( 'wp_enqueue_scripts', 'laurenskids_scripts' );
 
 
+add_filter('uwpqsf_result_tempt', 'customize_output', '', 4);
 
+function customize_output($results , $arg, $id, $getdata ){
+	// The Query
+		$apiclass = new uwpqsfprocess();
+		$query = new WP_Query( $arg );
+		ob_start();	$result = '';
+	
+		// The Loop
+		if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				global $post; ?>
+					<div class="lk-post<?php if(in_category('featured') ) echo " featured-post";?>">
+					<a href="<?php the_permalink(); ?>">
+						<?php 
+							if ( has_post_thumbnail() ) {
+								if(in_category('featured') ) {
+									the_post_thumbnail("large");
+								}else{
+									the_post_thumbnail();
+								}
+							} else { ?>
+							
+						<?php  } ?>
+						<div class="post-preview">
+								<h3><?php the_title(); ?></h3>
+								<h5><?php the_time('F j, Y'); ?></h5>
+								<hr>
+									<p><?php laurenskids_excerpt(25); ?></p>
+								<hr>
+								<span> <?php 
+									$category = get_the_category();
+									$length = count($category);
+									$i = 0;
+									foreach($category as $aCat) {
+										if ($i < $length - 1) {
+											echo $aCat->cat_name . ", ";
+										}else{
+											echo $aCat->cat_name;
+										}
+									$i++;
+									}?> 
+								</span>
+						</div>
+					</a>
+					</div>
+	<?php   }
+			echo  $apiclass->ajax_pagination($arg['paged'],$query->max_num_pages, 4, $id, $getdata);
+	
+			} else {
+				echo  'No posts found :(';
+			}
+
+			/* Restore original Post Data */
+			wp_reset_postdata();
+ 
+		$results = ob_get_clean();		
+			return $results;
+}
 
 
 

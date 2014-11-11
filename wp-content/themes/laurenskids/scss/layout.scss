@@ -424,12 +424,12 @@ About Page
 
 .subnav {
 	height: 55px;
-	background-color: rgba(#58595B, 0.75);
+	background-color: rgba($brand-offset, 0.75);
 	margin-bottom: 72px;
 	width: 100%;
 	position: fixed;
 	z-index: 10;
-	transition: transform 0.4s ease;
+	transition: transform 0.5s ease;
 	
 	.container {
 		padding: 0;
@@ -503,6 +503,10 @@ About Page
 
 .translucent {
 	background-color: rgba(white, 0.85);
+	
+	.entry-header {
+		padding-top: 90px;
+	}
 }
 
 .butterfly {
@@ -596,7 +600,7 @@ What's New? Singles: single.php, content-single.php
 --------------------------------------------------------------*/
 
 .off-white { //added by php in header.php to div#page if is single
-	background-color: #F7F7F5;
+	background-color: $off-white;
 }
 
 .post {
@@ -611,9 +615,28 @@ General Interior Page
 --------------------------------------------------------------*/
 .banner {
 	height: 412px;
+	padding: 0;
 	background-position: bottom center;
 }
 
+.interior .entry-header {
+	padding: 0;
+}
+
+.interior-page-content {
+	width: 73.3%;
+	float: right;
+}
+
+.page-testimonial {
+	width: 23.3%;
+	float: left;
+	margin-top: 29px;
+	
+	.testimonial {
+		background-color: #FEF5F9;
+	}
+}
 
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php
@@ -733,7 +756,7 @@ Single's post content
 	margin: 0;
 }
 
-.entry-meta {
+.entry-metadata {
 	color: $brand-offset;
 	font-weight: 100;
 	font-size: 12px;
@@ -794,7 +817,194 @@ article:not(.page) .entry-content {
 }
 
 
+/*--------------------------------------------------------------
+UWPQSF form
+--------------------------------------------------------------*/
+
+#uwpqsf_id {
+	border: none;
+	width: 80%;
+	margin: 40px auto 72px auto;
+}
+
+#uwpqsf_id_key {
+	border: none;
+	border-radius: 0;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 0 0 rgba(black, 0.1);
+	height: 35px;
+	width: 250px;	
+	padding: 0 10px;
+	border-left: 5px solid $brand-accent;
+	transition: border 0.3s ease;
+	
+	&::placeholder {
+		color: $light-grey;
+	}
+	
+	&:focus {
+		border-left-color: $brand-main;
+	}
+}
+
+.tax-radio-0 {
+		
+	span {
+		display: inline-block;
+		height: 35px;
+		margin-right: 17px;
+		padding: 0 26px;
+		
+		color: white;
+		line-height: 35px;
+		font-size: 22px;
+		font-family: $font-header;
+		font-weight: 100;
+		text-transform: uppercase;
+		text-align: center;
+		
+		background-color: $brand-accent;
+		box-shadow: 2px 2px rgba(black, 0.2);
+		transition: background-color 0.3s ease;
+		
+		&:hover {
+			background-color: $brand-main;
+			cursor: pointer;
+		}
+	}
+	
+	input[type="radio"] {
+		position: absolute;
+		visibility: hidden;
+		
+		&:checked + span {
+			background-color: $brand-main;
+		}
+	}
+}
+
+.uwpqsf_class {
+	display: inline-block;
+}
+
+.uwpqsfpagi {
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	text-align: center;
+	
+	> a, > span {
+		display: inline-block;
+		height: 35px;
+		width: 35px;
+		line-height: 35px;
+		font-size: 22px;
+		font-family: $font-header;
+		padding: 0 10px;
+		color: white;
+		background-color: $brand-accent;
+		
+	}
+	
+	> span.upagicurrent {
+		background-color: $brand-offset;
+		color: $light-grey;
+	}
+}
+
+/*--------------------------------------------------------------
+Loading Spinner
+--------------------------------------------------------------*/
+
+/*
+.umloading {
+  border-radius: 80%;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  animation: spin .675s linear 0 infinite normal;
+  background: lightgrey;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  &:before {
+    border-radius: 0 90px 90px 0;
+    height: 50px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    background-color: $brand-accent;
+    background-image: linear-gradient( lightgrey, $brand-accent);
+    z-index: 1;
+  }
+
+  &:after {
+    border-radius: 80%;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $off-white;
+    z-index: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/
+
+/*--------------------------------------------------------------
+Blog Loop
+--------------------------------------------------------------*/
+.blog-container {
+	min-height: 500px;
+	position: relative;
+}
+
+#lk-blog {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+}
+
+.lk-post {
+	align-self: flex-start;
+	width: 237px;
+	height: auto;
+	margin-bottom: 17px;
+	background-color: white;
+	
+	img {
+		width: 100%;
+	}
+}
+
+.post-preview {
+	padding: 17px;
+	
+	h5 {
+		font-size: 14px;
+		font-weight: 100;
+		color: $body;
+	}
+	
+	hr {
+		margin: 10px 0;
+	}
+}
 
 
-
+.featured-post {
+	width: 491px;
+}
 
