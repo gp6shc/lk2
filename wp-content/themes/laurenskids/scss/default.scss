@@ -294,9 +294,8 @@ input[type="submit"] {
 }
 
 button.white {
-	@extend button;
 	background-color: white;
-	color: $brand-main;
+	color: $brand-accent;
 	
 	&:hover {
 		background-color: $brand-main;
@@ -308,7 +307,7 @@ button.interior {
 	margin-top: 25px;
 	background-color: $brand-accent;
 	color: white;
-	font-weight: 400;
+	font-weight: 100;
 	padding: 12px 15px;
 	
 	&:hover {

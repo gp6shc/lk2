@@ -11,6 +11,29 @@ Header & Top-Area
 	z-index: 100;
 	transition: all 0.5s ease;	
 	
+	&.home-page {
+		background: transparent;
+		
+		.fa, button {
+			color: white;
+			background-color: transparent;
+			border: 1px solid white;
+			box-shadow: none;
+		}
+	}
+}
+
+body.home {
+	border: none;
+	margin-top: 0;
+	position: relative;
+	
+	.container { //on homepage layout, set to full width, use padding on ".content"
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
 }
 /*
 .stickyhead{
@@ -33,7 +56,7 @@ Header & Top-Area
 }
 */
 /*
-.overflow { //covers the persistent stickyhead from view when overscrolling in safari. Easter egg?
+.overflow { //covers the persistent stickyhead from view when overscrolling in safari.
 	position: absolute;
 	top: -500px;
 	left: 0;
@@ -72,7 +95,6 @@ Header & Top-Area
 .top-area{
 	float: right;
 	margin-right: 10px;
-	background: #EB008B;
 	position: relative;
 	opacity: 1;
 	transition: all 0.3s ease;
@@ -122,6 +144,11 @@ Header & Top-Area
 		font-size: 14px;
 		font-weight: 700;
 		padding: 10px 15px 9px 15px;
+		color: $brand-main;
+		
+		&:hover {
+			background-color: $brand-accent;
+		}
 	}
 }
 button.join{
@@ -211,27 +238,21 @@ Search
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
-.container{ //on all page layouts, set a max-width & padding
+.container { //on all page layouts, set a max-width & padding
 	max-width: 1040px;
 	margin: 0 auto;
 	padding: 72px 20px;
 	overflow: hidden;
     zoom: 1;
 }
-body.home .container{ //on homepage layout, set to full width, use padding on ".content"
-	width: 100%;
-	max-width: 100%;
-	margin: 0;
-	padding: 0;
-}
-.content{ //used to pad homepage sections w/ different background colors
+.content { //used to pad homepage sections w/ different background colors
 	max-width: 1040px;
 	margin: 0 auto;
 	padding: 72px 30px;
 	overflow: hidden;
     zoom: 1;
 }
-.h-pad-bottom{ //h1 pads for section titles
+.h-pad-bottom { //h1 pads for section titles
 	padding-bottom: 42px;
 }
 
@@ -243,49 +264,44 @@ Homepage
 /*--------------------------------------------------------------
 Homepage video section
 --------------------------------------------------------------*/
-.video{
-	width: 100%;
-	height: 566px;
-	background: url('../img/vid-bg.jpg'); //placeholder img
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
-	z-index: 95;
+.videoWrapper {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	z-index: 0;
+	background: $brand-offset url(img/vid-bg.jpg) no-repeat cover;
 	
-	.videoWrapper{
-	 	height: 0;
-	 	padding-bottom: 56.25%;
-	
-		> video{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-		}
-	}
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-height: 100%;
+		min-width: 100%;
+	}	
 }
+
 
 /*--------------------------------------------------------------
 Homepage welcome section
 --------------------------------------------------------------*/
-.welcome{
+.welcome {
 	background: $brand-accent url('../img/butterflies.png') center bottom no-repeat;
 	text-align: center;
-	margin-top: -20px;
+	margin-top: 100vh;
+	position: relative;
+	z-index: 10;
 	
-	h1{
+	h1 {
 		color: white;
 	}
 	
-	p{
+	p {
 		color: white;
 		text-transform: none;
 		font-size: 18px;
 	}
 	
-	button{
+	button {
 		margin-top: 36px;
 	}
 }
@@ -294,71 +310,102 @@ Homepage welcome section
 /*--------------------------------------------------------------
 Homepage news section
 --------------------------------------------------------------*/
-.news{
-	background: white;
+.news {
+	background: $off-white;
+	position: relative;
+	z-index: 10;
 	
 	h1{
 		color: $brand-main;
 		text-align: center;
 	}
-
-	img{
-		opacity: 1;
-		
-		&:hover{
-			opacity: 0.6;
-		}
-	}
 	
 }
 
-.overlay{
-	background: red;
+.featured {
+	padding-right: 19px;
+	border-right: 1px solid $light-grey;
 }
 
-#featured{
-	padding-right: 20px;
-	
-	article{
-		margin: 0 0 5px 0;
-	}
-}
-#latest{
-	
-	article{
-		margin: 0 0 5px 0;
-	}
-}
-.entry-title, .entry-title a{
-	color: $brand-accent;
-	/*truncate title to 1 line only*/
-	/*overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	max-width: 100%;*/
+.latest article {
+	margin: 0 0 5px 0;
+	float: left;	
 }
 
-.excerpt{
+.excerpt p {
 	margin: 15px 0 0 0;
 }
-a.read-more{
-	display: inline;
-	padding-left: 10px;
-	color: $brand-accent;
-	&:hover{
-		color: $brand-main;
+
+.featured .excerpt {
+	padding: 15px;
+}
+
+.latest-preview {
+	background-color: white;
+	
+	a {
+		display: block;
 	}
+	
+	h4 {
+		color: $brand-accent;
+		margin-top: 15px;
+		/*truncate title to 1 line only*/
+		/*
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		*/
+	}
+	
+	h5 {
+		font-size: 14px;
+		font-weight: 100;
+		color: $body;
+	}
+	
+	&:hover {
+	
+		h4 {
+			color: $brand-main;
+		}
+		
+		img {
+			opacity: 0.5;
+			filter: grayscale(0.5) blur(2px);
+		}
+	}
+}
+
+.latest-preview + .latest-preview {
+	margin-top: 15px;
+}
+
+.news-thumb {
+	background-color: $brand-accent;
+	font-size: 0;
+	width: auto;
+	margin-right: 20px;
+	float: left;
+}
+	
+.featured-thumb {
+	background-color: $brand-accent;
+	font-size: 0;
 }
 
 /*--------------------------------------------------------------
 Homepage partners section
 --------------------------------------------------------------*/
-.partners{
+.partners {
 	background: $brand-offset;
+	height: 384px;
+	position: relative;
+	z-index: 10;
 	
-	h1{
+	h1 {
 		color: white;
-		text-align: center;
+		margin-bottom: 36px;
 	}
 }
 	
@@ -366,12 +413,14 @@ Homepage partners section
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
-.site-footer{
+.site-footer {
 	width: 100%;
 	height: auto;
 	margin: 0;
 	color: white;
-	background: $brand-accent;	
+	background: $brand-accent;
+	position: relative;
+	z-index: 10;
 }
 .widget-title {
 	color: white;
@@ -423,7 +472,7 @@ About Page
 }
 
 .subnav {
-	height: 55px;
+	height: 48px;
 	background-color: rgba($brand-offset, 0.75);
 	margin-bottom: 72px;
 	width: 100%;
@@ -450,7 +499,7 @@ About Page
 		a {
 			display: table-cell;
 			vertical-align: middle;
-			height: 55px;
+			height: 48px;
 			padding: 0 10px;
 			color: white;
 			font-family: $font-header;
@@ -552,6 +601,8 @@ p + .boxes {
 		margin: 0 auto 40px auto;
 		height: 121px;
 		width: 121px;
+		border-radius: 50%;
+		background-color: $brand-accent;
 		background-repeat: no-repeat;
 		background-position: center center;
 		transition: all 0.3s ease;
@@ -559,30 +610,32 @@ p + .boxes {
 	
 	//About Page's boxes
 	.education-icon {
-		background-image: url(../img/iconcircle_education.png);
+		background-image: url(../img/education.png);
 	}
 	.awareness-icon {
-		background-image: url(../img/iconcircle_awareness.png);
+		background-image: url(../img/awareness.png);
 	}
 	.advocacy-icon {
-		background-image: url(../img/iconcircle_advocacy.png);
+		background-image: url(../img/advocacy.png);
 	}
-	
-	p {
-		
+	.licenseplate-icon {
+		background-image: url(../img/licenseplate.png);
+	}
+	.shop-icon {
+		background-image: url(../img/shop.png);
+	}
+	.materials-icon {
+		background-image: url(../img/materials.png);
+	}
+	.volunteer-icon {
+		background-image: url(../img/volunteer.png);
 	}
 	
 	section:hover {
 		
 		// About Page's boxes
-		.education-icon{
-			background-image: url(../img/iconcircle_education_hover.png);
-		}
-		.awareness-icon {
-			background-image: url(../img/iconcircle_awareness_hover.png);
-		}
-		.advocacy-icon {
-			background-image: url(../img/iconcircle_advocacy_hover.png);
+		.icons {
+			background-color: $brand-main;
 		}
 		
 		h3 {
@@ -849,19 +902,21 @@ UWPQSF form
 
 .tax-radio-0 {
 		
-	span {
+	label {
 		display: inline-block;
 		height: 35px;
 		margin-right: 17px;
-		padding: 0 26px;
-		
+		text-align: center;
+	}
+	
+	span {	
+		padding: 4px 26px;
 		color: white;
 		line-height: 35px;
 		font-size: 22px;
 		font-family: $font-header;
 		font-weight: 100;
 		text-transform: uppercase;
-		text-align: center;
 		
 		background-color: $brand-accent;
 		box-shadow: 2px 2px rgba(black, 0.2);
@@ -883,8 +938,13 @@ UWPQSF form
 	}
 }
 
+#uwpqsffrom_119 > div:nth-child(5) > label {
+	display: none;
+}
+
 .uwpqsf_class {
 	display: inline-block;
+	vertical-align: top;
 }
 
 .uwpqsfpagi {
@@ -966,14 +1026,15 @@ Loading Spinner
 Blog Loop
 --------------------------------------------------------------*/
 .blog-container {
-	min-height: 500px;
+	min-height: 700px;
+	min-height: 100vh;
 	position: relative;
 }
 
 #lk-blog {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-content: center;
 }
 
@@ -982,15 +1043,33 @@ Blog Loop
 	width: 237px;
 	height: auto;
 	margin-bottom: 17px;
-	background-color: white;
+	background-color: $brand-accent;
 	
 	img {
 		width: 100%;
+		margin-bottom: -5px;
+	}
+	
+	h3 {
+		font-size: 22px;
+	}
+	
+	&:hover {
+		
+		h3 {
+			color: $brand-main;
+		}
+		
+		img {
+			opacity: 0.6;
+			filter: grayscale(0.5) blur(2px);
+		}
 	}
 }
 
 .post-preview {
 	padding: 17px;
+	background-color: white;
 	
 	h5 {
 		font-size: 14px;
@@ -1006,5 +1085,6 @@ Blog Loop
 
 .featured-post {
 	width: 491px;
+	width: 237px;
 }
 
