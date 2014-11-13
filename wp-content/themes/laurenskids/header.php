@@ -30,7 +30,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site<?php if ( is_single() || is_page(16) ) {echo " off-white";}?>">
 
-	<header class="masthead" role="banner">
+	<header class="masthead <?php if (is_front_page()) echo "home-page"; ?>" role="banner">
 
 		<div class="header">
 
