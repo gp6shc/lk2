@@ -33,6 +33,14 @@ jQuery(document).ready(function($) {
 	deBouncer(jQuery,'smartscroll', 'scroll', 1);
 */
 	
+
+	if ($(window).scrollTop() > 20) {
+		docBody.addClass("sticky");
+		console.log("fixed");
+	}
+
+	
+		
 	if( viewport > 800 ) {
 		$(window).scroll(function(){
 				docBody.toggleClass("sticky", (window.pageYOffset || document.scrollTop) >= 20 );
