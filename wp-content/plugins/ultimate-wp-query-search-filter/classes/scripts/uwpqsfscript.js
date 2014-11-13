@@ -57,13 +57,13 @@ jQuery(document).ready(function($) {
 				 url: ajax.url,
 				 data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				 beforeSend:function() {
-					 $(''+ajxdiv+'').empty();
+					 $(''+ajxdiv+'').fadeOut(500);
 					 // res.container.append(res.loader);
 					 $('html, body').animate({scrollTop : 360}, 500);
 					 },
 				 success: function(html) {
 				  // res.container.find(res.loader).remove();
-				  $(''+ajxdiv+'').html(html);
+				  $(''+ajxdiv+'').html(html).fadeIn(500);
 				
 				//res.container.find(res.loader).remove();
 				 }
