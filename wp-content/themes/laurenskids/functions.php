@@ -67,11 +67,11 @@ function laurenskids_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' ); 
 	//set feautred-news size
-	add_image_size( 'news-featured-thumb', 321, 234 ); //w x h
+	add_image_size( 'news-featured-thumb', 321, 234, true ); //w x h
 	//set latest-news size
-	add_image_size( 'news-latest-thumb', 192, 140 ); //w x h
+	add_image_size( 'news-latest-thumb', 192, 140, true ); //w x h
 	
-	set_post_thumbnail_size( 237, 172, true ); // sets the default size "post_thumbnail" for the_post_thumbnail();
+	set_post_thumbnail_size( 237, 172, true ); // sets the default size "post_thumbnail" for the_post_thumbnail(), will crop;
 	
 	/*
 	 * the_excerpt()
@@ -233,11 +233,13 @@ function customize_output($results , $arg, $id, $getdata ){
 					<a href="<?php the_permalink(); ?>">
 						<?php 
 							if ( has_post_thumbnail() ) {
-								if(in_category('featured') ) {
+								/*
+if(in_category('featured') ) {
 									the_post_thumbnail("large");
 								}else{
+*/
 									the_post_thumbnail();
-								}
+								/* } */
 							} else { ?>
 							
 						<?php  } ?>
@@ -247,7 +249,7 @@ function customize_output($results , $arg, $id, $getdata ){
 								<hr>
 									<p><?php laurenskids_excerpt(25); ?></p>
 								<hr>
-								<span> <?php 
+								<h5>Category:<span> <?php 
 									$category = get_the_category();
 									$length = count($category);
 									$i = 0;
@@ -259,7 +261,7 @@ function customize_output($results , $arg, $id, $getdata ){
 										}
 									$i++;
 									}?> 
-								</span>
+								</span></h5>
 						</div>
 					</a>
 					</div>
