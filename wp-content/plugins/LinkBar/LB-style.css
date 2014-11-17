@@ -1,0 +1,132 @@
+.LB .LB-display-none {
+  display: none;
+}
+
+.LB {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  height: 137px;
+  width: 137px;
+  margin: 0%;
+  background-color: lightgrey;
+  vertical-align: top;
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
+}
+.LB svg {
+  position: absolute;
+  fill: white;
+  -webkit-transition: fill 0.3s ease;
+          transition: fill 0.3s ease;
+}
+
+.LB-facebook svg {
+  top: 22%;
+  left: 11%;
+}
+.LB-facebook:hover {
+  background-color: #3b5998;
+}
+
+.LB-twitter svg {
+  top: 28%;
+  left: 3%;
+}
+.LB-twitter:hover {
+  background-color: #55acee;
+}
+
+.LB-googleplus svg {
+  top: 28%;
+  left: 3%;
+}
+.LB-googleplus:hover {
+  background-color: #dd4b39;
+}
+
+.LB-linkedin svg {
+  top: 24%;
+  left: 2.5%;
+}
+.LB-linkedin:hover {
+  background-color: #007bb6;
+}
+
+.LB-pinterest svg {
+  top: 27%;
+}
+.LB-pinterest:hover {
+  background-color: #B8242A;
+}
+
+.LB-tumblr svg {
+  top: 27%;
+}
+.LB-tumblr:hover {
+  background-color: #35465c;
+}
+
+.LB-reddit-eye {
+  fill: white;
+  -webkit-transition: fill 0.3s ease;
+          transition: fill 0.3s ease;
+}
+
+.LB-reddit-body {
+  fill: white;
+  -webkit-transition: fill 0.3s ease;
+          transition: fill 0.3s ease;
+}
+
+.LB-reddit svg {
+  top: 25%;
+}
+.LB-reddit:hover {
+  background-color: #cee3f8;
+}
+.LB-reddit:hover .LB-reddit-body {
+  fill: black;
+}
+.LB-reddit:hover .LB-reddit-eye {
+  fill: #dd452a;
+}
+
+.LB-stumbleupon svg {
+  top: 25%;
+}
+.LB-stumbleupon:hover {
+  background-color: #eb4924;
+}
+
+.LB-email svg {
+  top: 30%;
+}
+.LB-email:hover {
+  background-color: #c02ee0;
+}
+
+.LB-url {
+  cursor: pointer;
+}
+.LB-url svg {
+  top: 30%;
+}
+.LB-url:hover {
+  background-color: #1ada41;
+}
+.LB-url input {
+  position: absolute;
+  top: 30%;
+  left: 110%;
+  display: inline;
+  opacity: 1;
+  height: auto;
+  width: auto;
+  background-color: white;
+  border: 2px solid #666666;
+  font-family: monospace;
+  padding: 2%;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}

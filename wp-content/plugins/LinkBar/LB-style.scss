@@ -1,0 +1,174 @@
+//The compiled CSS file is never actually used in the final display. Since PHP variables are needed for user defined color schemes, the style is copied into LB-generator.php
+
+.LB .LB-display-none {
+	display: none;
+}
+
+.LB {
+	display: inline-block;
+	position: relative;
+	border-radius: 50%;	
+	height: 137px;
+	width: 137px;
+	margin: 0%;
+	background-color: lightgrey;
+	vertical-align: top;
+	transition: background-color 0.3s ease;
+	
+	svg {
+		position: absolute;
+		fill: white;
+		transition: fill 0.3s ease;
+	}
+}
+
+.LB-facebook {
+	
+	svg {
+		top: 22%;
+		left: 11%;
+	}
+	
+	&:hover {
+		background-color: #3b5998;;
+	}
+}
+
+.LB-twitter {
+
+	svg {
+		top: 28%;
+		left: 3%;
+	}
+	
+	&:hover {
+		background-color: #55acee;
+	}
+}
+
+.LB-googleplus {
+	
+	svg {
+		top: 28%;
+		left: 3%;
+	}
+	
+	&:hover {
+		background-color: #dd4b39;
+	}
+}
+
+.LB-linkedin {
+	
+	svg {
+		top: 24%;
+		left: 2.5%;
+	}
+	
+	&:hover {
+		background-color: #007bb6;
+	}
+}
+
+.LB-pinterest {
+	
+	svg {
+		top: 27%;
+	}
+	
+	&:hover {
+		background-color: #B8242A;
+	}
+}
+
+.LB-tumblr {
+	
+	svg {
+		top: 27%;
+	}
+	
+	&:hover {
+		background-color: #35465c;
+	}
+}
+
+.LB-reddit-eye {
+	fill: white;
+	transition: fill 0.3s ease;
+		
+}
+
+.LB-reddit-body {
+	fill: white;
+	transition: fill 0.3s ease;
+}
+
+.LB-reddit {
+	
+	svg {
+		top: 25%;
+	}
+	
+	&:hover {
+		background-color: #cee3f8;
+		
+		.LB-reddit-body {
+			fill: black;
+		}
+		
+		.LB-reddit-eye {
+			fill: #dd452a;
+
+		}
+	}
+}
+
+.LB-stumbleupon {
+	
+	svg {
+		top: 25%;
+	}
+	
+	&:hover {
+		background-color: #eb4924;
+	}
+}
+
+.LB-email {
+
+	svg {
+		top: 30%;
+	}
+	
+	&:hover {
+		background-color: #c02ee0;
+	}
+}
+
+.LB-url {
+	cursor: pointer;
+	
+	svg {
+		top: 30%;
+	}
+	
+	&:hover {
+		background-color: #1ada41;
+	}
+	
+	input {
+		position: absolute;
+		top: 30%;
+		left: 110%;
+		display: inline;
+		opacity: 1;
+		height: auto; 
+		width: auto;
+		background-color: white;
+		border: 2px solid #666666;
+		font-family: monospace;
+		padding: 2%;
+		transition: all 0.3s;
+	}
+}
+
