@@ -3,7 +3,12 @@
 jQuery(document).ready(function($) {
 	var viewport = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	var docBody = $(document.body);
+	var LKVideo = document.getElementById('js-video');
 	
+	if (LKVideo !== null) {
+		var videoWrapperHeight = LKVideo.offsetHeight;
+		var videoHome = LKVideo.firstElementChild;
+	}
 /*
 	var deBouncer = function($,cf,of, interval){
 	    // deBouncer by hnldesign.nl
@@ -36,16 +41,33 @@ jQuery(document).ready(function($) {
 
 	if ($(window).scrollTop() > 20) {
 		docBody.addClass("sticky");
-		console.log("fixed");
 	}
 
-	
 		
-	if( viewport > 800 ) {
-		$(window).scroll(function(){
-				docBody.toggleClass("sticky", (window.pageYOffset || document.scrollTop) >= 20 );
-		});
+	if (viewport > 800 ) {
+		if (LKVideo !== null) {
+			$(window).scroll(function(){
+				docBody.toggleClass("sticky", window.pageYOffset >= 20 );
+				if (window.pageYOffset >= videoWrapperHeight) {
+					if (!videoHome.paused) {
+						videoHome.pause();
+					}
+				}else{
+					if (videoHome.paused) {
+						videoHome.play();
+					}
+				}
+			});
+		}else{
+			$(window).scroll(function(){
+				docBody.toggleClass("sticky", window.pageYOffset >= 20 );
+				
+			});
+			
+		}
 	}
+	
+	
 });
 
 // Search expanding

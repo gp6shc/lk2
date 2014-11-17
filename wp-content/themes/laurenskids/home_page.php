@@ -6,9 +6,9 @@ get_header(); ?>
 
 	<!-- Landing Video -->
 
-	<div class="videoWrapper">
+	<div class="videoWrapper" id="js-video">
 		<video autoplay="autoplay" loop="loop" muted>
-		  <source src="<?php echo get_stylesheet_directory_uri(); ?>/img/sample-hq.mp4" type="video/mp4">
+		  <!-- <source src="<?php echo get_stylesheet_directory_uri(); ?>/img/sample-hq.mp4" type="video/mp4"> -->
 		  <source src="<?php echo get_stylesheet_directory_uri(); ?>/img/sample.mp4" type="video/mp4">
 		  <!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
 		</video>	
