@@ -12,8 +12,18 @@ get_header(); ?>
 	<div class="subnav">
 		<div class="container">
 			<?php
-			if( is_page( array(8,75,77,79,81) ) ) { // About page and its children
+			if ( is_page( array(75,77,79,81) ) ) { // About page children
 				wp_nav_menu( array( 'theme_location' => 'about' ) );
+				
+			}elseif ( is_page( array(148,150,152,154) ) ) { // Awareness page children
+				wp_nav_menu( array( 'theme_location' => 'awareness' ) );
+				
+			}elseif ( is_page( array(161,163) ) ) { // Education page children
+				wp_nav_menu( array( 'theme_location' => 'education' ) );
+				
+			}elseif ( is_page( array(167,169,171) ) ) { // Advocacy page children
+				wp_nav_menu( array( 'theme_location' => 'advocacy' ) );
+				
 			}?>
 		</div>
 	</div>

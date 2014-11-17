@@ -8,19 +8,24 @@ Menus
 	float: right;
 	transition: transform 0.3s ease;
 	
-	ul{
+	ul {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
 		background: black;
 		
-		li{
+		li {
 			float: left;
 			position: relative;
 			padding: 0 10px;
 			text-transform: uppercase;
 			
-			a{
+			&.current-page-ancestor a {
+				color: white;
+				border-bottom-color: rgba(255,255,255,1);
+			}
+			
+			a {
 				padding: 0 2px;
 				color: white;
 				text-decoration: none;

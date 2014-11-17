@@ -48,6 +48,9 @@ function laurenskids_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'laurenskids' ),
 		'about' => __( 'About Menu', 'laurenskids' ),
+		'awareness' => __( 'Awareness Menu', 'laurenskids' ),
+		'education' => __( 'Education Menu', 'laurenskids' ),
+		'advocacy' => __( 'Advocacy Menu', 'laurenskids' ),
 	) );
 
 

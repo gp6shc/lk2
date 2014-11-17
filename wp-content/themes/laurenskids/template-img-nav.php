@@ -12,8 +12,18 @@ get_header(); ?>
 	<div class="subnav">
 		<div class="container">
 			<?php
-			if( is_page( array(8,75,77,79,81) ) ) { // About page and its children
+			if( is_page(8) ) { 
 				wp_nav_menu( array( 'theme_location' => 'about' ) );
+				
+			}elseif ( is_page(10) ) { 
+				wp_nav_menu( array( 'theme_location' => 'awareness' ) );
+				
+			}elseif ( is_page(12) ) {
+				wp_nav_menu( array( 'theme_location' => 'education' ) );
+				
+			}elseif ( is_page(14) ) {
+				wp_nav_menu( array( 'theme_location' => 'advocacy' ) );
+				
 			}?>
 		</div>
 	</div>
