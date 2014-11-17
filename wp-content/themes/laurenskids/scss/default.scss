@@ -13,33 +13,6 @@ body {
 	margin-top: -100px;
 	border-top: 266px solid $brand-main;
 }
-body.sticky {
-	
-	.masthead {
-		top: 0;
-		height: 80px;
-		background-color: rgba($brand-main, 0.9);
-		
-		.top-area {
-			opacity: 0;
-			transform: translateY(-80px);
-		}
-		
-		.main-navigation {
-			transform: translateY(-80px);
-		}
-
-		.logo {
-			background: url('../img/logo-small.png') 0 0 no-repeat;
-			max-width: 190px;
-			height: 39px;
-			margin: -12px 0 0 0;
-		}
-	}
-	.subnav {
-		transform: translateY(-86px);
-	}
-}
 
 p {
 	color: $body;

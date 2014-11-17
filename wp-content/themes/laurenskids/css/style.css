@@ -87,29 +87,6 @@ body {
   margin-top: -100px;
   border-top: 266px solid #EB008B; }
 
-body.sticky .masthead {
-  top: 0;
-  height: 80px;
-  background-color: rgba(235, 0, 139, 0.9); }
-  body.sticky .masthead .top-area {
-    opacity: 0;
-    -webkit-transform: translateY(-80px);
-        -ms-transform: translateY(-80px);
-            transform: translateY(-80px); }
-  body.sticky .masthead .main-navigation {
-    -webkit-transform: translateY(-80px);
-        -ms-transform: translateY(-80px);
-            transform: translateY(-80px); }
-  body.sticky .masthead .logo {
-    background: url('../img/logo-small.png') 0 0 no-repeat;
-    max-width: 190px;
-    height: 39px;
-    margin: -12px 0 0 0; }
-body.sticky .subnav {
-  -webkit-transform: translateY(-86px);
-      -ms-transform: translateY(-86px);
-          transform: translateY(-86px); }
-
 p {
   color: #5B5B5B; }
 
@@ -2086,6 +2063,9 @@ Menus
       position: relative;
       padding: 0 10px;
       text-transform: uppercase; }
+      .main-navigation ul li.current-page-ancestor a {
+        color: white;
+        border-bottom-color: white; }
       .main-navigation ul li a {
         padding: 0 2px;
         color: white;
@@ -2295,6 +2275,10 @@ Header & Top-Area
       background-color: transparent;
       border: 1px solid white;
       box-shadow: none; }
+      .masthead.home-page .fa:hover, .masthead.home-page button:hover {
+        background-color: #EB008B; }
+    .masthead.home-page:hover {
+      background-color: rgba(0, 0, 0, 0.35); }
 
 body.home {
   border: none;
@@ -2305,6 +2289,26 @@ body.home {
     max-width: 100%;
     margin: 0;
     padding: 0; }
+
+body.sticky .masthead {
+  top: 0;
+  height: 80px;
+  background-color: rgba(235, 0, 139, 0.9); }
+  body.sticky .masthead:hover {
+    background-color: #EB008B; }
+  body.sticky .masthead .top-area {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+        -ms-transform: translateY(-80px);
+            transform: translateY(-80px); }
+  body.sticky .masthead .main-navigation {
+    -webkit-transform: translateY(-80px);
+        -ms-transform: translateY(-80px);
+            transform: translateY(-80px); }
+body.sticky .subnav {
+  -webkit-transform: translateY(-86px);
+      -ms-transform: translateY(-86px);
+          transform: translateY(-86px); }
 
 /*
 .stickyhead{
@@ -2346,23 +2350,32 @@ body.home {
   padding: 30px; }
 
 .logo {
-  background: url('../img/logo-full.png') 0 0 no-repeat;
   float: left;
-  width: 100%;
-  max-width: 137px;
-  height: 94px;
   margin: 0;
   padding: 0;
+  text-align: center;
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease; }
+  .logo .logo-heart {
+    display: inline-block;
+    -webkit-transform: translateX(4px);
+        -ms-transform: translateX(4px);
+            transform: translateX(4px);
+    margin-bottom: 5px;
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
+  .logo .logo-letters {
+    -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
 
-.logo.small {
-  background: url('../img/logo-small.png') 0 0 no-repeat;
-  max-width: 190px;
-  height: 39px;
-  margin: -12px 0 0 0;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease; }
+.sticky .logo .logo-heart {
+  -webkit-transform: scale(0.65) translate(-75px, -45px);
+      -ms-transform: scale(0.65) translate(-75px, -45px);
+          transform: scale(0.65) translate(-75px, -45px); }
+.sticky .logo .logo-letters {
+  -webkit-transform: translate(43px, -75px);
+      -ms-transform: translate(43px, -75px);
+          transform: translate(43px, -75px); }
 
 .top-area {
   float: right;
@@ -2560,9 +2573,11 @@ Homepage welcome section
 Homepage news section
 --------------------------------------------------------------*/
 .news {
-  background: #F7F7F5;
+  background: white;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px); }
   .news h1 {
     color: #EB008B;
     text-align: center; }
@@ -2692,20 +2707,21 @@ About Page
   .subnav .container {
     padding: 0; }
   .subnav ul {
-    margin: 0; }
+    margin: 0;
+    width: 100%; }
   .subnav li {
     display: table;
+    width: 25%;
     float: left;
     list-style-type: none;
     text-align: center;
-    width: 25%;
     -webkit-transition: background-color 0.3s ease;
             transition: background-color 0.3s ease; }
     .subnav li a {
       display: table-cell;
       vertical-align: middle;
       height: 48px;
-      padding: 0 10px;
+      padding: 0 8px;
       color: white;
       font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
       text-transform: uppercase; }
@@ -2728,7 +2744,7 @@ About Page
     .subnav li:nth-child(4):hover {
       background-color: #f2b4cd; }
   .subnav .current-menu-item a {
-    border-bottom: 3px solid rgba(255, 255, 255, 0.75);
+    text-decoration: underline;
     font-weight: 700;
     cursor: default; }
 

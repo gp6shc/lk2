@@ -26,7 +26,7 @@
 <?php wp_head(); ?>
 <script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
 </head>
-<?php //echo the_ID(); ?>
+
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site<?php if ( is_single() || is_page(16) ) {echo " off-white";}?>">
 
@@ -35,7 +35,10 @@
 		<div class="header">
 
 			<a href="<?php echo home_url() ?>" rel="home">
-				<div class="logo"></div>
+				<div class="logo">
+					<div class="logo-heart"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/LK-heart-logo.svg"/></div>
+					<div class="logo-letters"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/LK-letters-logo.svg"/></div>
+				</div>
 			</a>
 			
 			<div class="top-area">
