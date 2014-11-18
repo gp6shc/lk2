@@ -2063,7 +2063,7 @@ Menus
       position: relative;
       padding: 0 10px;
       text-transform: uppercase; }
-      .main-navigation ul li.current-page-ancestor a {
+      .main-navigation ul li.current-page-ancestor a, .main-navigation ul li.current-menu-item a {
         color: white;
         border-bottom-color: white; }
       .main-navigation ul li a {
@@ -2291,20 +2291,18 @@ body.home {
     padding: 0; }
 
 body.sticky .masthead {
-  top: 0;
-  height: 80px;
+  -webkit-transform: translateY(-86px);
+      -ms-transform: translateY(-86px);
+          transform: translateY(-86px);
   background-color: rgba(235, 0, 139, 0.9); }
   body.sticky .masthead:hover {
     background-color: #EB008B; }
   body.sticky .masthead .top-area {
-    opacity: 0;
-    -webkit-transform: translateY(-80px);
-        -ms-transform: translateY(-80px);
-            transform: translateY(-80px); }
-  body.sticky .masthead .main-navigation {
-    -webkit-transform: translateY(-80px);
-        -ms-transform: translateY(-80px);
-            transform: translateY(-80px); }
+    opacity: 0; }
+  body.sticky .masthead .logo {
+    -webkit-transform: translateY(86px);
+        -ms-transform: translateY(86px);
+            transform: translateY(86px); }
 body.sticky .subnav {
   -webkit-transform: translateY(-86px);
       -ms-transform: translateY(-86px);
@@ -2354,19 +2352,19 @@ body.sticky .subnav {
   margin: 0;
   padding: 0;
   text-align: center;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease; }
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
   .logo .logo-heart {
     display: inline-block;
     -webkit-transform: translateX(4px);
         -ms-transform: translateX(4px);
             transform: translateX(4px);
     margin-bottom: 5px;
-    -webkit-transition: all 0.3s ease;
-            transition: all 0.3s ease; }
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease; }
   .logo .logo-letters {
-    -webkit-transition: all 0.3s ease;
-            transition: all 0.3s ease; }
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease; }
 
 .sticky .logo .logo-heart {
   -webkit-transform: scale(0.65) translate(-75px, -45px);
@@ -2382,8 +2380,8 @@ body.sticky .subnav {
   margin-right: 10px;
   position: relative;
   opacity: 1;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
   margin: 13px 0 28px 0; }
 
 .social {
@@ -2391,8 +2389,8 @@ body.sticky .subnav {
   margin: 2px 8px 0 0;
   opacity: 1;
   text-align: center;
-  -webkit-transition: opacity 0.3s ease;
-          transition: opacity 0.3s ease; }
+  -webkit-transition: opacity 0.5s ease;
+          transition: opacity 0.5s ease; }
   .social a li {
     display: inline;
     padding: 0px 1px;
@@ -2702,8 +2700,8 @@ About Page
   width: 100%;
   position: fixed;
   z-index: 10;
-  -webkit-transition: -webkit-transform 0.5s ease;
-          transition: transform 0.5s ease; }
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
   .subnav .container {
     padding: 0; }
   .subnav ul {
@@ -2743,10 +2741,28 @@ About Page
     background-color: rgba(237, 154, 188, 0.75); }
     .subnav li:nth-child(4):hover {
       background-color: #f2b4cd; }
-  .subnav .current-menu-item a {
+  .subnav .current-menu-item a, .subnav .current-page-ancestor a {
     text-decoration: underline;
-    font-weight: 700;
-    cursor: default; }
+    font-weight: 700; }
+
+.size-1 li {
+  width: 100%; }
+
+.size-2 li {
+  width: 50%; }
+
+.size-3 li {
+  width: 33.333%; }
+
+.size-3 li:nth-child(2) {
+  width: -webkit-calc(33.333% + 2px);
+  width: calc(33.333% + 2px); }
+
+.size-4 li {
+  width: 25%; }
+
+.size-5 li {
+  width: 20%; }
 
 .centered-text {
   text-align: center; }
@@ -3086,51 +3102,54 @@ UWPQSF form
 /*--------------------------------------------------------------
 Loading Spinner
 --------------------------------------------------------------*/
-/*
-.umloading {
+.loader {
   border-radius: 80%;
   height: 50px;
   width: 50px;
   position: absolute;
-  animation: spin .675s linear 0 infinite normal;
-  background: lightgrey;
-
-  &:before,
-  &:after {
+  top: 0;
+  left: 48%;
+  left: -webkit-calc(50% - 25px);
+  left: calc(50% - 25px);
+  -webkit-animation: spin 0.675s linear 0 infinite normal;
+          animation: spin 0.675s linear 0 infinite normal;
+  background: lightgrey; }
+  .loader:before, .loader.clearfix:after, .loader:after {
     content: "";
     display: block;
-    position: absolute;
-  }
-
-  &:before {
+    position: absolute; }
+  .loader:before, .loader.clearfix:after {
     border-radius: 0 90px 90px 0;
     height: 50px;
     width: 50%;
     top: 0;
     right: 0;
-    background-color: $brand-accent;
-    background-image: linear-gradient( lightgrey, $brand-accent);
-    z-index: 1;
-  }
-
-  &:after {
+    background-color: #008996;
+    background-image: -webkit-linear-gradient(lightgrey, #008996);
+    background-image: linear-gradient(lightgrey, #008996);
+    z-index: 1; }
+  .loader:after {
     border-radius: 80%;
     height: 40px;
     width: 40px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $off-white;
-    z-index: 1;
-  }
-}
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #F7F7F5;
+    z-index: 1; }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 @keyframes spin {
   to {
-    transform: rotate(360deg);
-  }
-}
-*/
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
 /*--------------------------------------------------------------
 Blog Loop
 --------------------------------------------------------------*/
@@ -3291,13 +3310,15 @@ Below 800px
       -webkit-order: 2;
           -ms-flex-order: 2;
               order: 2; }
-    .header .logo {
-      display: inline-block;
-      float: none;
-      margin: 0;
-      background: url('../img/logo-small.png') center center no-repeat;
-      max-width: 193px;
-      height: 39px; }
+
+  .logo {
+    display: inline-block;
+    float: none;
+    margin: 0; }
+    .logo .logo-heart {
+      -webkit-transform: scale(0.65);
+          -ms-transform: scale(0.65);
+              transform: scale(0.65); }
 
   .social {
     display: none; }

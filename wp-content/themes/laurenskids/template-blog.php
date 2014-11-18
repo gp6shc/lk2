@@ -23,6 +23,8 @@ get_header(); ?>
 		
 		<?php echo do_shortcode('[ULWPQSF id=119 button=0 formtitle="0"]'); ?>
 		<div class="blog-container">
+			<div class="loader"></div>
+			
 			<div id="lk-blog">
 			
 			</div>

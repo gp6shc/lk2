@@ -22,25 +22,24 @@ jQuery(document).ready(function($) {
 		window.process_data = function ($obj) {
 			
 			var ajxdiv = $obj.closest("form").find("#uajaxdiv").val();	
-			// var res = {loader:$('<div />',{'class':'umloading'}),container : $(''+ajxdiv+'')};
-		
+			var res = $('.loader');
 			var getdata = $obj.closest("form").serialize();
 			var pagenum = '1';
-			
-			// res.container.append(res.loader);
-			
+						
 			jQuery.ajax({
 				type: 'POST',	 
 				url: ajax.url,
 				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				beforeSend:function() {
-					$(''+ajxdiv+'').fadeOut(500);
-					// res.loader.fadeIn(150);
+					$(''+ajxdiv+'').fadeOut(300);
+					res.fadeIn(150);
 					 
 					},
 				success: function(html) {
-					$(''+ajxdiv+'').html(html).fadeIn(500);
-					// res.loader.fadeOut(150);
+					setTimeout(function() {
+						$(''+ajxdiv+'').html(html).fadeIn(300);
+						res.fadeOut(150);
+					}, 250);
 
 				 }
 				 });
@@ -49,25 +48,26 @@ jQuery(document).ready(function($) {
 		
 		window.upagi_ajax = function (pagenum, formid) {
 			var ajxdiv = $(''+formid+'').find("#uajaxdiv").val();	
-			// var res = {loader:$('<div />',{'class':'umloading'}),container : $(''+ajxdiv+'')};
+			var res = $('.loader');
 			var getdata = $(''+formid+'').serialize();
 		
 			jQuery.ajax({
-				 type: 'POST',	 
-				 url: ajax.url,
-				 data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
-				 beforeSend:function() {
-					 $(''+ajxdiv+'').fadeOut(500);
-					 // res.container.append(res.loader);
+				type: 'POST',	 
+				url: ajax.url,
+				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
+				beforeSend:function() {
+					 $(''+ajxdiv+'').fadeOut(300);
+					 res.fadeIn(150);
 					 $('html, body').animate({scrollTop : 360}, 500);
-					 },
-				 success: function(html) {
-				  // res.container.find(res.loader).remove();
-				  $(''+ajxdiv+'').html(html).fadeIn(500);
-				
-				//res.container.find(res.loader).remove();
-				 }
-				 });
+				},
+					
+				success: function(html) {
+					setTimeout(function() {
+						$(''+ajxdiv+'').html(html).fadeIn(300);
+						res.fadeOut(150);
+					}, 250);
+				}
+			});
 		}
 		
 	 $('body').on('click', '.chktaxoall,.chkcmfall',function () {

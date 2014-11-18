@@ -1028,43 +1028,45 @@ UWPQSF form
 Loading Spinner
 --------------------------------------------------------------*/
 
-/*
-.umloading {
-  border-radius: 80%;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  animation: spin .675s linear 0 infinite normal;
-  background: lightgrey;
-
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-  }
-
-  &:before {
-    border-radius: 0 90px 90px 0;
-    height: 50px;
-    width: 50%;
-    top: 0;
-    right: 0;
-    background-color: $brand-accent;
-    background-image: linear-gradient( lightgrey, $brand-accent);
-    z-index: 1;
-  }
-
-  &:after {
-    border-radius: 80%;
-    height: 40px;
-    width: 40px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $off-white;
-    z-index: 1;
-  }
+.loader {
+	border-radius: 80%;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: 0;
+	left: 48%;
+	left: calc(50% - 25px);
+	animation: spin .675s linear 0 infinite normal;
+	background: lightgrey;
+	
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+	
+	&:before {
+		border-radius: 0 90px 90px 0;
+		height: 50px;
+		width: 50%;
+		top: 0;
+		right: 0;
+		background-color: $brand-accent;
+		background-image: linear-gradient( lightgrey, $brand-accent);
+		z-index: 1;
+	}
+	
+	&:after {
+		border-radius: 80%;
+		height: 40px;
+		width: 40px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: $off-white;
+		z-index: 1;
+	}
 }
 
 @keyframes spin {
@@ -1072,7 +1074,6 @@ Loading Spinner
     transform: rotate(360deg);
   }
 }
-*/
 
 /*--------------------------------------------------------------
 Blog Loop
