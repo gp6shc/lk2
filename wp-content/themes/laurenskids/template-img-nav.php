@@ -13,16 +13,24 @@ get_header(); ?>
 		<div class="container">
 			<?php
 			if( is_page(8) ) { 
-				wp_nav_menu( array( 'theme_location' => 'about' ) );
+				$menu = get_term(get_nav_menu_locations()['about'], 'nav_menu');				
 				
-			}elseif ( is_page(10) ) { 
-				wp_nav_menu( array( 'theme_location' => 'awareness' ) );
+				wp_nav_menu( array( 'theme_location' => 'about', 'menu_class' => 'size-'.$menu->count, ) );
 				
 			}elseif ( is_page(12) ) {
-				wp_nav_menu( array( 'theme_location' => 'education' ) );
+				$menu = get_term(get_nav_menu_locations()['education'], 'nav_menu');				
 				
+				wp_nav_menu( array( 'theme_location' => 'education', 'menu_class' => 'size-'.$menu->count, ) );
+				
+			}elseif ( is_page(10) ) { 
+				$menu = get_term(get_nav_menu_locations()['awareness'], 'nav_menu');				
+				
+				wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );
+
 			}elseif ( is_page(14) ) {
-				wp_nav_menu( array( 'theme_location' => 'advocacy' ) );
+				$menu = get_term(get_nav_menu_locations()['advocacy'], 'nav_menu');				
+				
+				wp_nav_menu( array( 'theme_location' => 'advocacy', 'menu_class' => 'size-'.$menu->count, ) );
 				
 			}?>
 		</div>

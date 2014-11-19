@@ -12,17 +12,22 @@ get_header(); ?>
 	<div class="subnav">
 		<div class="container">
 			<?php
-			if ( is_page( array(75,77,79,81) ) ) { // About page children
-				wp_nav_menu( array( 'theme_location' => 'about' ) );
+			if ( is_page( array(75,77,79,81) ) ) { 																// About page children
+				$menu = get_term(get_nav_menu_locations()['about'], 'nav_menu');				
+				wp_nav_menu( array( 'theme_location' => 'about', 'menu_class' => 'size-'.$menu->count, ) );
 				
-			}elseif ( is_page( array(148,150,152,154) ) ) { // Awareness page children
-				wp_nav_menu( array( 'theme_location' => 'awareness' ) );
+			}elseif ( is_page( array(161,163,203) ) ) { 															// Education page children
+				$menu = get_term(get_nav_menu_locations()['education'], 'nav_menu');				
+				wp_nav_menu( array( 'theme_location' => 'education', 'menu_class' => 'size-'.$menu->count, ) );
+			
+			}elseif ( is_page( array(148,150,152,154, 176,178,180,182) ) ) { 									// Awareness page children and grandchildren
+				$menu = get_term(get_nav_menu_locations()['awareness'], 'nav_menu');				
+				wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );
 				
-			}elseif ( is_page( array(161,163) ) ) { // Education page children
-				wp_nav_menu( array( 'theme_location' => 'education' ) );
+			}elseif ( is_page( array(167,169,171) ) ) { 														// Advocacy page children
+				$menu = get_term(get_nav_menu_locations()['advocacy'], 'nav_menu');				
 				
-			}elseif ( is_page( array(167,169,171) ) ) { // Advocacy page children
-				wp_nav_menu( array( 'theme_location' => 'advocacy' ) );
+				wp_nav_menu( array( 'theme_location' => 'advocacy', 'menu_class' => 'size-'.$menu->count, ) );
 				
 			}?>
 		</div>
@@ -36,6 +41,18 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					
 					<aside class="page-testimonial">
+						<div class="grandchildren-links">
+						<?php 
+							$children = get_pages('child_of='.$post->ID);
+							if( count( $children ) != 0 ) {									// checks if the current page has any children
+								wp_list_pages("title_li=&child_of=".$post->ID);				// if so, list them out in the sidebar
+								echo '<hr>';
+							}elseif (count(get_post_ancestors($post->ID)) >= 2 ) {			// if not, check if the page is a grandchild
+								wp_list_pages("title_li=&child_of=".$post->post_parent);	// and if so, list out the sibilings to current page 
+								echo '<hr>';
+							}
+						?>
+						</div>
 						<?php dynamic_sidebar('testimonial'); ?>
 					</aside> 
 					

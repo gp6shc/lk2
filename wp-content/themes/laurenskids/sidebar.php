@@ -9,9 +9,9 @@
 
 <aside class="single-sidebar clear" role="complementary">
 	<h3>What's New?</h3>
-	<a href="/news" class="sidebar-nav"><h5>News</h5></a>
-	<a href="/blog" class="sidebar-nav"><h5>Blog</h5></a>
-	<a href="/archive" class="sidebar-nav"><h5>Archive</h5></a>
+	<a href="<?php echo home_url(); ?>/whats-new/?uformid=119&taxo%5B0%5D%5Bname%5D=category&taxo%5B0%5D%5Bopt%5D=1&taxo%5B0%5D%5Bterm%5D=news&skeyword=" class="sidebar-nav"><h5>News</h5></a>
+	<a href="<?php echo home_url(); ?>/whats-new/?uformid=119&taxo%5B0%5D%5Bname%5D=category&taxo%5B0%5D%5Bopt%5D=1&taxo%5B0%5D%5Bterm%5D=blog&skeyword=" class="sidebar-nav"><h5>Blog</h5></a>
+	<a href="#" class="sidebar-nav"><h5>Archive</h5></a>
 	
 	<hr>
 	
