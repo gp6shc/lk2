@@ -237,10 +237,10 @@ function customize_output($results , $arg, $id, $getdata ){
 						<?php 
 							if ( has_post_thumbnail() ) {
 								/*
-if(in_category('featured') ) {
+								if(in_category('featured') ) {
 									the_post_thumbnail("large");
 								}else{
-*/
+								*/
 									the_post_thumbnail();
 								/* } */
 							} else { ?>
@@ -251,6 +251,7 @@ if(in_category('featured') ) {
 								<h5><?php the_time('F j, Y'); ?></h5>
 								<hr>
 									<p><?php laurenskids_excerpt(25); ?></p>
+								<?php if (is_page(16)): ?>
 								<hr>
 								<h5>Category:<span> <?php 
 									$category = get_the_category();
@@ -265,6 +266,7 @@ if(in_category('featured') ) {
 									$i++;
 									}?> 
 								</span></h5>
+								<?php endif; ?>
 						</div>
 					</a>
 					</div>
@@ -282,9 +284,48 @@ if(in_category('featured') ) {
 			return $results;
 }
 
+// Add Survivor Stories Custom Post Type
 
+add_action( 'init', 'survivor_stories_init' );
 
+function survivor_stories_init() {
+	$labels = array(
+		'name'               => _x( 'Survivor Stories', 'post type general name', 'laurenskids' ),
+		'singular_name'      => _x( 'Survivor Story', 'post type singular name', 'laurenskids' ),
+		'menu_name'          => _x( 'Survivor Stories', 'admin menu', 'laurenskids' ),
+		'name_admin_bar'     => _x( 'Survivor Story', 'add new on admin bar', 'laurenskids' ),
+		'add_new'            => _x( 'Add New', 'Story', 'laurenskids' ),
+		'add_new_item'       => __( 'Add New Story', 'laurenskids' ),
+		'new_item'           => __( 'New Story', 'laurenskids' ),
+		'edit_item'          => __( 'Edit Story', 'laurenskids' ),
+		'view_item'          => __( 'View this Story', 'laurenskids' ),
+		'all_items'          => __( 'All Stories', 'laurenskids' ),
+		'search_items'       => __( 'Search Stories', 'laurenskids' ),
+		'parent_item_colon'  => __( 'Parent Stories:', 'laurenskids' ),
+		'not_found'          => __( 'No stories found.', 'laurenskids' ),
+		'not_found_in_trash' => __( 'No stories found in Trash.', 'laurenskids' )
+	);
 
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'exclude_from_search'=> true,
+		'show_ui'            => true,
+		'show_in_nav_menu'	 => false,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'survivor-stories' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 20,
+		'menu_icon'			 => 'dashicons-groups',
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions' )
+	);
+
+	register_post_type( 'survivor-stories', $args );
+}
 
 
 /**

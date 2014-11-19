@@ -225,6 +225,8 @@ hr {
   border: 0;
   height: 1px;
   margin: 55px 0; }
+  hr.short-hr {
+    margin: 15px; }
 
 ul {
   list-style: disc inside none; }
@@ -2291,22 +2293,26 @@ body.home {
     padding: 0; }
 
 body.sticky .masthead {
-  -webkit-transform: translateY(-86px);
-      -ms-transform: translateY(-86px);
-          transform: translateY(-86px);
+  -webkit-transform: translateY(-96px);
+      -ms-transform: translateY(-96px);
+          transform: translateY(-96px);
   background-color: rgba(235, 0, 139, 0.9); }
   body.sticky .masthead:hover {
     background-color: #EB008B; }
   body.sticky .masthead .top-area {
     opacity: 0; }
   body.sticky .masthead .logo {
-    -webkit-transform: translateY(86px);
-        -ms-transform: translateY(86px);
-            transform: translateY(86px); }
+    -webkit-transform: translateY(96px);
+        -ms-transform: translateY(96px);
+            transform: translateY(96px); }
+body.sticky .main-navigation {
+  -webkit-transform: translateY(16px);
+      -ms-transform: translateY(16px);
+          transform: translateY(16px); }
 body.sticky .subnav {
-  -webkit-transform: translateY(-86px);
-      -ms-transform: translateY(-86px);
-          transform: translateY(-86px); }
+  -webkit-transform: translateY(-96px);
+      -ms-transform: translateY(-96px);
+          transform: translateY(-96px); }
 
 /*
 .stickyhead{
@@ -2536,18 +2542,22 @@ Homepage
 /*--------------------------------------------------------------
 Homepage video section
 --------------------------------------------------------------*/
-.videoWrapper {
+.video-wrapper {
   position: fixed;
   top: 0;
+  width: 100%;
   height: 100vh;
   z-index: 0;
   background: #58595B url(img/vid-bg.jpg) no-repeat cover; }
-  .videoWrapper video {
+  .video-wrapper video {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     min-height: 100%;
     min-width: 100%; }
+  .video-wrapper img {
+    display: none; }
 
 /*--------------------------------------------------------------
 Homepage welcome section
@@ -2666,6 +2676,10 @@ Footer
   float: left;
   width: 47.5%;
   margin-right: 5%; }
+
+.textwidget a {
+  display: block;
+  margin-top: 15px; }
 
 #footer-widgets.widget-count-2 #footer-widget-2 {
   margin-right: 0; }
@@ -2849,7 +2863,7 @@ What's New? Singles: single.php, content-single.php
 .off-white {
   background-color: #F7F7F5; }
 
-.post {
+.post, .survivor-stories {
   width: 74.6%;
   float: left;
   background-color: white; }
@@ -2875,6 +2889,28 @@ General Interior Page
   margin-top: 29px; }
   .page-testimonial .testimonial {
     background-color: #FEF5F9; }
+
+.grandchildren-links li {
+  list-style-type: none; }
+.grandchildren-links a {
+  display: block;
+  height: 40px;
+  color: white;
+  line-height: 40px;
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
+  font-size: 22px;
+  font-weight: 100;
+  padding-left: 20px;
+  margin-top: 15px;
+  background-color: #008996;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease; }
+  .grandchildren-links a:hover {
+    background-color: #EB008B;
+    color: white; }
+.grandchildren-links hr {
+  margin: 15px 0; }
 
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php
@@ -2930,11 +2966,14 @@ Single's Sidebar: sidebar.php
 
 .recent-posts {
   margin-top: 10px; }
-  .recent-posts ul {
-    list-style-image: url(../img/butterfly_bullet.png); }
   .recent-posts li {
+    list-style-image: url(../img/butterfly-bullet_green.png);
     margin-top: 5px;
     font-size: 12px; }
+    .recent-posts li:hover {
+      list-style-image: url(../img/butterfly-bullet_hover.png); }
+      .recent-posts li:hover a {
+        color: #EB008B; }
 
 .testimonial {
   background-color: white;
@@ -3151,14 +3190,14 @@ Loading Spinner
             transform: rotate(360deg); } }
 
 /*--------------------------------------------------------------
-Blog Loop
+Blog Loop -- What's New?
 --------------------------------------------------------------*/
 .blog-container {
   min-height: 700px;
   min-height: 100vh;
   position: relative; }
 
-#lk-blog {
+#lk-blog, #survivor-stories {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3290,6 +3329,12 @@ Below 800px
   .masthead {
     position: fixed;
     height: 64px; }
+    .masthead.home-page {
+      background-color: #EB008B; }
+      .masthead.home-page:hover {
+        background-color: #EB008B; }
+      .masthead.home-page .fa {
+        border: none; }
 
   .stickyhead {
     display: none; }
@@ -3314,11 +3359,21 @@ Below 800px
   .logo {
     display: inline-block;
     float: none;
-    margin: 0; }
+    margin: 0;
+    text-align: left; }
     .logo .logo-heart {
       -webkit-transform: scale(0.65);
           -ms-transform: scale(0.65);
               transform: scale(0.65); }
+
+  .video-wrapper video {
+    display: none; }
+  .video-wrapper img {
+    display: block;
+    min-width: 400px; }
+
+  .welcome {
+    margin-top: 267px; }
 
   .social {
     display: none; }

@@ -33,6 +33,7 @@ jQuery(document).ready(function($) {
 				beforeSend:function() {
 					$(''+ajxdiv+'').fadeOut(300);
 					res.fadeIn(150);
+					//console.log(({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }));
 					 
 					},
 				success: function(html) {
@@ -76,6 +77,6 @@ jQuery(document).ready(function($) {
 		
          });
          
-	process_data(jQuery('#uwpqsffrom_119'));
+	process_data(jQuery('form[id*="uwpqsffrom_"]'));
 
 });//end of script
