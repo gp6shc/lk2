@@ -52,14 +52,27 @@ h1, h2{
   font-size: 24px;
 }
 
-.masthead{
+.masthead {
 	position: fixed;
 	height: 64px;
+	
+	&.home-page {
+		background-color: $brand-main;
+		
+		&:hover {
+			background-color: $brand-main;
+			
+		}
+		
+		.fa {
+			border: none;
+		}
+	}
 }
 .stickyhead {
 	display: none;
 }
-.header{
+.header {
 	padding: 10px 20px;
 	display: flex;
 	justify-content: space-between;
@@ -69,16 +82,37 @@ h1, h2{
 		order: 2;
 		
 	}
+}
 
-
-	.logo{
-		display: inline-block;
-		float: none;
-		margin: 0;
-		background: url('../img/logo-small.png') center center no-repeat; //small logo
-		max-width: 193px;
-		height: 39px;
+.logo {
+	display: inline-block;
+	float: none;
+	margin: 0;
+	text-align: left;
+	
+	.logo-heart {
+		transform: scale(0.65);
 	}
+		
+	.logo-letters {
+		
+	}
+}
+
+.video-wrapper {
+	
+	video {
+		display: none;
+	}
+	
+	img {
+		display: block;
+		min-width: 400px;
+	}
+}
+
+.welcome {
+	margin-top: 267px;
 }
 		
 .social{

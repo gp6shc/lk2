@@ -191,6 +191,10 @@ hr {
 	border: 0;
 	height: 1px;
 	margin: 55px 0;
+	
+	&.short-hr {
+		margin: 15px;
+	}
 }
 
 ul {
