@@ -9,7 +9,8 @@ Header & Top-Area
 	height: 166px;
 	background: $brand-main;
 	z-index: 100;
-	transition: all 0.5s ease;	
+	transition: all 0.5s ease;
+
 	
 	&.home-page {
 		background: transparent;
@@ -47,8 +48,9 @@ body.home {
 body.sticky {
 	
 	.masthead {
-		transform: translateY(-96px);
+		transform: translate3d(0,-96px,2px);
 		background-color: rgba($brand-main, 0.9);
+		
 		
 		&:hover {
 			background-color: $brand-main;
@@ -56,11 +58,10 @@ body.sticky {
 		
 		.top-area {
 			opacity: 0;
-			//transform: translateY(-80px);
 		}
 		
 		.logo {
-			transform: translateY(96px);
+			// transform: translateY(96px);
 		}
 
 	}
@@ -136,11 +137,11 @@ body.sticky {
 .sticky .logo {
 	
 	.logo-heart {
-		transform: scale(0.65) translate(-75px, -45px);
+		transform: scale(0.65) translate(-75px, 101px);
 	}
 	
 	.logo-letters {
-		transform: translate(43px, -75px);
+		transform: translate(43px, 20px);
 	}
 }
 .top-area {
@@ -347,6 +348,7 @@ Homepage welcome section
 	margin-top: 100vh;
 	position: relative;
 	z-index: 10;
+	transform: translateZ(1px);
 	
 	h1 {
 		color: white;
@@ -460,6 +462,7 @@ Homepage partners section
 	height: 384px;
 	position: relative;
 	z-index: 10;
+	transform: translateZ(1px);
 	
 	h1 {
 		color: white;
@@ -480,6 +483,10 @@ Footer
 	position: relative;
 	z-index: 10;
 }
+.home .site-footer {
+	transform: translateZ(1px);
+}
+
 .widget-title {
 	color: white;
 }

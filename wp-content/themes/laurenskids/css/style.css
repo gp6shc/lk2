@@ -2293,18 +2293,13 @@ body.home {
     padding: 0; }
 
 body.sticky .masthead {
-  -webkit-transform: translateY(-96px);
-      -ms-transform: translateY(-96px);
-          transform: translateY(-96px);
+  -webkit-transform: translate3d(0, -96px, 2px);
+          transform: translate3d(0, -96px, 2px);
   background-color: rgba(235, 0, 139, 0.9); }
   body.sticky .masthead:hover {
     background-color: #EB008B; }
   body.sticky .masthead .top-area {
     opacity: 0; }
-  body.sticky .masthead .logo {
-    -webkit-transform: translateY(96px);
-        -ms-transform: translateY(96px);
-            transform: translateY(96px); }
 body.sticky .main-navigation {
   -webkit-transform: translateY(16px);
       -ms-transform: translateY(16px);
@@ -2373,13 +2368,13 @@ body.sticky .subnav {
             transition: all 0.5s ease; }
 
 .sticky .logo .logo-heart {
-  -webkit-transform: scale(0.65) translate(-75px, -45px);
-      -ms-transform: scale(0.65) translate(-75px, -45px);
-          transform: scale(0.65) translate(-75px, -45px); }
+  -webkit-transform: scale(0.65) translate(-75px, 101px);
+      -ms-transform: scale(0.65) translate(-75px, 101px);
+          transform: scale(0.65) translate(-75px, 101px); }
 .sticky .logo .logo-letters {
-  -webkit-transform: translate(43px, -75px);
-      -ms-transform: translate(43px, -75px);
-          transform: translate(43px, -75px); }
+  -webkit-transform: translate(43px, 20px);
+      -ms-transform: translate(43px, 20px);
+          transform: translate(43px, 20px); }
 
 .top-area {
   float: right;
@@ -2567,7 +2562,9 @@ Homepage welcome section
   text-align: center;
   margin-top: 100vh;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px); }
   .welcome h1 {
     color: white; }
   .welcome p {
@@ -2649,7 +2646,9 @@ Homepage partners section
   background: #58595B;
   height: 384px;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px); }
   .partners h1 {
     color: white;
     margin-bottom: 36px; }
@@ -2665,6 +2664,10 @@ Footer
   background: #008996;
   position: relative;
   z-index: 10; }
+
+.home .site-footer {
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px); }
 
 .widget-title {
   color: white; }
