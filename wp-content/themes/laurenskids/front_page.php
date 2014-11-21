@@ -7,7 +7,7 @@ get_header(); ?>
 	<!-- Landing Video -->
 
 	<div class="video-wrapper" id="js-video">
-		<video autoplay="autoplay" loop="loop" muted="muted">
+		<video autoplay="true" loop="true" muted="muted">
 			<source src="<?php echo get_stylesheet_directory_uri(); ?>/img/LK-banner-video.mp4" type="video/mp4">
 			<!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
 		</video>	
@@ -30,7 +30,7 @@ get_header(); ?>
 		</div>
 	</div>
 		
-	<div class="news">
+	<div class="news ">
 		<div class="content">
 			<h1 class="h-pad-bottom butterfly">Our Latest News</h1>
 			
@@ -87,8 +87,36 @@ get_header(); ?>
 	
 	<!-- Partners Section -->			
 	<div class="partners">
-		<div class="content centered-text">
-			<h1>Partners & Supporters</h1>
+		<div class="content">
+			<h1 class="centered-text">Partners & Supporters</h1>
+			<div class="gradient-container">	
+				<div class="all-supporters">
+				   <?php $themeURI = get_stylesheet_directory_uri(); ?>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/unicef.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/loreal.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/CMI.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/miami-heat.png)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/autism_speaks.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/bloomingdales.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/CSI.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/KIND.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/vitas.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/publix.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/metrosigns.png)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/fcasv.png)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/ashbritt.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/acordis.png)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/tnt.png)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/autonation.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/BACA.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/dademedia.png)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/RAINN.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/hilton-hhonors.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/FNCAC.jpg)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/dolphins.png)"></div></div>
+				   <div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/carnival-foundation.png)"></div></div>
+				</div>
+			</div>
 		</div>
 	</div>
 		

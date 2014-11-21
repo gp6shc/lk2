@@ -55,7 +55,7 @@
 					<a href="#" title="View our YouTube Page"><i class="fa fa-youtube-play"></i></a>
 				</div>
 				<div id="js-quick-links" class="quick-links">
-					<a href="#"><button class="help white">Need Help?</button></a>
+					<a href="<?php echo home_url('/resources') ?>"><button class="help white">Need Help?</button></a>
 					<a href="<?php echo home_url('/join-donate') ?>"><button class="join white">Join the Movement &amp; Donate</button></a>
 				</div>
 				<div class="search-nav">
