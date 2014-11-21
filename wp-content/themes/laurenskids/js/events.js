@@ -124,3 +124,17 @@ if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 800
 
 		}
 	}, false);
+	
+// listen for click on Archive button in sidebar.php to open the list of archives
+
+var archiveBtn = document.getElementById('js-archive-btn');
+
+if (archiveBtn !== null) {
+	var archiveList =  document.getElementById('js-archive-list');
+	
+	archiveBtn.addEventListener('click', function() {
+		archiveList.classList.toggle('open');
+	}, false);
+}
+
+
