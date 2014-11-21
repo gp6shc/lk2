@@ -174,5 +174,5 @@ function laurenskids_excerpt($limit) {
 	  $excerpt = implode(" ",$excerpt);
 	}	
 	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-	echo $excerpt;
+	echo strip_tags($excerpt);
 }
