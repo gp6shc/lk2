@@ -226,7 +226,7 @@ hr {
   height: 1px;
   margin: 55px 0; }
   hr.short-hr {
-    margin: 15px; }
+    margin: 15px 0; }
 
 ul {
   list-style: disc inside none; }
@@ -2113,8 +2113,7 @@ Menus
   display: none; }
 
 .site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
+  margin: 0 0 1.5em; }
 
 .comment-navigation .nav-previous, .paging-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
@@ -2293,18 +2292,13 @@ body.home {
     padding: 0; }
 
 body.sticky .masthead {
-  -webkit-transform: translateY(-96px);
-      -ms-transform: translateY(-96px);
-          transform: translateY(-96px);
+  -webkit-transform: translate3d(0, -96px, 2px);
+          transform: translate3d(0, -96px, 2px);
   background-color: rgba(235, 0, 139, 0.9); }
   body.sticky .masthead:hover {
     background-color: #EB008B; }
   body.sticky .masthead .top-area {
     opacity: 0; }
-  body.sticky .masthead .logo {
-    -webkit-transform: translateY(96px);
-        -ms-transform: translateY(96px);
-            transform: translateY(96px); }
 body.sticky .main-navigation {
   -webkit-transform: translateY(16px);
       -ms-transform: translateY(16px);
@@ -2373,13 +2367,13 @@ body.sticky .subnav {
             transition: all 0.5s ease; }
 
 .sticky .logo .logo-heart {
-  -webkit-transform: scale(0.65) translate(-75px, -45px);
-      -ms-transform: scale(0.65) translate(-75px, -45px);
-          transform: scale(0.65) translate(-75px, -45px); }
+  -webkit-transform: scale(0.65) translate(-75px, 101px);
+      -ms-transform: scale(0.65) translate(-75px, 101px);
+          transform: scale(0.65) translate(-75px, 101px); }
 .sticky .logo .logo-letters {
-  -webkit-transform: translate(43px, -75px);
-      -ms-transform: translate(43px, -75px);
-          transform: translate(43px, -75px); }
+  -webkit-transform: translate(43px, 20px);
+      -ms-transform: translate(43px, 20px);
+          transform: translate(43px, 20px); }
 
 .top-area {
   float: right;
@@ -2516,6 +2510,13 @@ Search
       -ms-transform: translateX(-311px);
           transform: translateX(-311px); }
 
+.search article.post a {
+  display: block; }
+  .search article.post a:hover h3 {
+    color: #008996; }
+.search .entry-content span {
+  color: #5B5B5B; }
+
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
@@ -2567,7 +2568,9 @@ Homepage welcome section
   text-align: center;
   margin-top: 100vh;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px); }
   .welcome h1 {
     color: white; }
   .welcome p {
@@ -2649,7 +2652,9 @@ Homepage partners section
   background: #58595B;
   height: 384px;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px); }
   .partners h1 {
     color: white;
     margin-bottom: 36px; }
@@ -2665,6 +2670,10 @@ Footer
   background: #008996;
   position: relative;
   z-index: 10; }
+
+.home .site-footer {
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px); }
 
 .widget-title {
   color: white; }
@@ -2922,6 +2931,13 @@ Single's Sidebar: sidebar.php
   .single-sidebar hr {
     margin: 35px 0; }
 
+.archive article.post {
+  margin-right: 1.7%; }
+
+.archive .single-sidebar {
+  float: none;
+  overflow: hidden; }
+
 .sidebar-search .search-field {
   border: none;
   border-radius: 0;
@@ -2955,6 +2971,7 @@ Single's Sidebar: sidebar.php
   height: 40px;
   padding-left: 20px;
   margin-top: 15px;
+  cursor: pointer;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-transition: background-color 0.3s ease;
           transition: background-color 0.3s ease; }
@@ -3190,7 +3207,7 @@ Loading Spinner
             transform: rotate(360deg); } }
 
 /*--------------------------------------------------------------
-Blog Loop -- What's New?
+Blog Loop -- What's New?, Survivor Stories
 --------------------------------------------------------------*/
 .blog-container {
   min-height: 700px;
@@ -3246,6 +3263,72 @@ Blog Loop -- What's New?
 .featured-post {
   width: 491px;
   width: 237px; }
+
+/*--------------------------------------------------------------
+Archive
+--------------------------------------------------------------*/
+.archive article.post a {
+  display: block; }
+  .archive article.post a:hover h3 {
+    color: #008996; }
+.archive .entry-content span {
+  color: #5B5B5B; }
+
+.archive-list {
+  max-height: 0;
+  margin-top: 15px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  overflow: hidden; }
+  .archive-list li {
+    list-style-type: square;
+    font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
+    font-size: 20px;
+    margin-left: 20px; }
+
+.open {
+  max-height: 300px;
+  overflow-y: scroll;
+  opacity: 1; }
+
+/*--------------------------------------------------------------
+404
+--------------------------------------------------------------*/
+.error-404 {
+  width: 50%;
+  margin: 5px auto 150px auto;
+  padding: 35px 5px;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.search-404 {
+  margin-top: 35px; }
+  .search-404 input[type="search"] {
+    border: none;
+    border-radius: 0;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.1);
+    height: 35px;
+    width: 300px;
+    padding: 0 10px;
+    margin-top: 25px;
+    border-left: 5px solid #008996;
+    -webkit-transition: border 0.3s ease;
+            transition: border 0.3s ease; }
+    .search-404 input[type="search"]::-webkit-input-placeholder {
+      color: #d7d7d7; }
+    .search-404 input[type="search"]::-moz-placeholder {
+      color: #d7d7d7; }
+    .search-404 input[type="search"]:-ms-input-placeholder {
+      color: #d7d7d7; }
+    .search-404 input[type="search"]::placeholder {
+      color: #d7d7d7; }
+    .search-404 input[type="search"]:focus {
+      border-left-color: #EB008B; }
+
+.error404 #page {
+  background: #F7F7F5 url(../img/buddy.png) no-repeat center 210px; }
 
 .grid_1 {
   width: 6.5%; }

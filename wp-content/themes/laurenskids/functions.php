@@ -250,7 +250,8 @@ function customize_output($results , $arg, $id, $getdata ){
 								<h3><?php the_title(); ?></h3>
 								<h5><?php the_time('F j, Y'); ?></h5>
 								<hr>
-									<p><?php laurenskids_excerpt(25); ?></p>
+								<p><?php laurenskids_excerpt(25); ?></p>
+								
 								<?php if (is_page(16)): ?>
 								<hr>
 								<h5>Category:<span> <?php 

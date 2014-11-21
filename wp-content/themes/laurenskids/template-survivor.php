@@ -9,7 +9,10 @@ get_header(); ?>
 
 <div class="subnav">
 	<div class="container">
-		<?php wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );?>		
+		<?php 
+			$menu = get_term(get_nav_menu_locations()['awareness'], 'nav_menu');				
+			wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );
+		?>		
 	</div>
 </div>
 

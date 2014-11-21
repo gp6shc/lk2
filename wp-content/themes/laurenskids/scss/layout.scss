@@ -9,7 +9,8 @@ Header & Top-Area
 	height: 166px;
 	background: $brand-main;
 	z-index: 100;
-	transition: all 0.5s ease;	
+	transition: all 0.5s ease;
+
 	
 	&.home-page {
 		background: transparent;
@@ -47,8 +48,9 @@ body.home {
 body.sticky {
 	
 	.masthead {
-		transform: translateY(-96px);
+		transform: translate3d(0,-96px,2px);
 		background-color: rgba($brand-main, 0.9);
+		
 		
 		&:hover {
 			background-color: $brand-main;
@@ -56,11 +58,10 @@ body.sticky {
 		
 		.top-area {
 			opacity: 0;
-			//transform: translateY(-80px);
 		}
 		
 		.logo {
-			transform: translateY(96px);
+			// transform: translateY(96px);
 		}
 
 	}
@@ -136,11 +137,11 @@ body.sticky {
 .sticky .logo {
 	
 	.logo-heart {
-		transform: scale(0.65) translate(-75px, -45px);
+		transform: scale(0.65) translate(-75px, 101px);
 	}
 	
 	.logo-letters {
-		transform: translate(43px, -75px);
+		transform: translate(43px, 20px);
 	}
 }
 .top-area {
@@ -286,6 +287,20 @@ Search
 	transform: translateX(-311px);
 }
 
+.search {
+	article.post a {
+		display: block;
+		
+		&:hover h3 {
+			color: $brand-accent;
+		}
+	}
+	.entry-content span {
+		color: $body;
+	}
+}
+
+
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
 --------------------------------------------------------------*/
@@ -347,6 +362,7 @@ Homepage welcome section
 	margin-top: 100vh;
 	position: relative;
 	z-index: 10;
+	transform: translateZ(1px);
 	
 	h1 {
 		color: white;
@@ -460,6 +476,7 @@ Homepage partners section
 	height: 384px;
 	position: relative;
 	z-index: 10;
+	transform: translateZ(1px);
 	
 	h1 {
 		color: white;
@@ -480,6 +497,10 @@ Footer
 	position: relative;
 	z-index: 10;
 }
+.home .site-footer {
+	transform: translateZ(1px);
+}
+
 .widget-title {
 	color: white;
 }
@@ -809,6 +830,15 @@ Single's Sidebar: sidebar.php
 	}
 	
 }
+.archive article.post {
+	margin-right: 1.7%;
+	
+}
+
+.archive .single-sidebar {
+	float: none;
+	overflow: hidden;
+}
 
 .sidebar-search {
 
@@ -849,6 +879,7 @@ Single's Sidebar: sidebar.php
 	}
 	padding-left: 20px;
 	margin-top: 15px;
+	cursor: pointer;
 	box-shadow: 2px 2px rgba(black, 0.2);
 	transition: background-color 0.3s ease;
 	
@@ -1134,7 +1165,7 @@ Loading Spinner
 }
 
 /*--------------------------------------------------------------
-Blog Loop -- What's New?
+Blog Loop -- What's New?, Survivor Stories
 --------------------------------------------------------------*/
 .blog-container {
 	min-height: 700px;
@@ -1199,3 +1230,80 @@ Blog Loop -- What's New?
 	width: 237px;
 }
 
+/*--------------------------------------------------------------
+Archive
+--------------------------------------------------------------*/
+.archive {
+	article.post a {
+		display: block;
+		
+		&:hover h3 {
+			color: $brand-accent;
+		}
+	}
+	.entry-content span {
+		color: $body;
+	}
+}
+
+.archive-list {
+	max-height: 0;
+	margin-top: 15px;
+	opacity: 0;
+	transition: all 0.5s ease;
+	overflow: hidden;
+	
+	li {
+		list-style-type: square;
+		font-family: $font-header;
+		font-size: 20px;
+		margin-left: 20px;
+	}
+}
+
+.open {
+	max-height: 300px;
+	overflow-y: scroll;
+	opacity: 1;
+	
+}
+
+/*--------------------------------------------------------------
+404
+--------------------------------------------------------------*/
+.error-404 {
+	width: 50%;
+	margin: 5px auto 150px auto;
+	padding: 35px 5px;
+	background-color: rgba(white, 0.7);
+	
+}
+
+.search-404 {
+	margin-top: 35px;
+	
+	input[type="search"] {
+		border: none;
+		border-radius: 0;
+		box-sizing: border-box;
+		box-shadow: 2px 2px 0 0 rgba(black, 0.1);
+		height: 35px;
+		width: 300px;	
+		padding: 0 10px;
+		margin-top: 25px;
+		border-left: 5px solid $brand-accent;
+		transition: border 0.3s ease;
+		
+		&::placeholder {
+			color: $light-grey;
+		}
+		
+		&:focus {
+			border-left-color: $brand-main;
+		}
+	}
+}
+
+.error404 #page {
+	background: $off-white url(../img/buddy.png) no-repeat center 210px;
+}

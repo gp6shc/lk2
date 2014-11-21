@@ -28,7 +28,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site<?php if ( is_single() || is_page(array(16,152)) ) {echo " off-white";}?>">
+<div id="page" class="hfeed site<?php if ( is_single() || is_page(array(16,152)) || is_archive() || is_search() ) {echo " off-white";}?>">
 
 	<header class="masthead <?php if (is_front_page()) echo "home-page"; ?>" role="banner">
 
