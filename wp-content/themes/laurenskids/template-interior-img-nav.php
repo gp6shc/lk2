@@ -9,6 +9,8 @@ get_header(); ?>
 
 
 <div class="background-image banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>);">
+	
+	<?php if (!is_page(167) ): ?>
 	<div class="subnav">
 		<div class="container">
 			<?php
@@ -27,6 +29,7 @@ get_header(); ?>
 			}?>
 		</div>
 	</div>
+	<?php endif; ?>
 </div><!-- .background-image -->
 	
 	<div class="container interior">
