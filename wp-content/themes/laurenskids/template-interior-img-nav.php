@@ -24,11 +24,6 @@ get_header(); ?>
 				$menu = get_term(get_nav_menu_locations()['awareness'], 'nav_menu');				
 				wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );
 				
-			}elseif ( is_page( array(167,169,171) ) ) { 														// Advocacy page children
-				$menu = get_term(get_nav_menu_locations()['advocacy'], 'nav_menu');				
-				
-				wp_nav_menu( array( 'theme_location' => 'advocacy', 'menu_class' => 'size-'.$menu->count, ) );
-				
 			}?>
 		</div>
 	</div>

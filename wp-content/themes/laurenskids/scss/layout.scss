@@ -492,6 +492,7 @@ Homepage partners section
 	}
 }
 
+/*
 .gradient-container {
 	position: relative;
 	
@@ -502,7 +503,7 @@ Homepage partners section
 		left: 0;
 		height: 100%;
 		width: 30px;
-		background-image: linear-gradient( to right, $brand-offset, transparent);
+		background-image: linear-gradient( to right, rgba($brand-offset, 0.9), rgba(0,0,0,0) );
 	}
 	
 	&:after {
@@ -512,9 +513,10 @@ Homepage partners section
 		right: 0;
 		height: 100%;
 		width: 30px;
-		background-image: linear-gradient( to left, $brand-offset, transparent);
+		background-image: linear-gradient( to left, rgba($brand-offset, 0.9), rgba(0,0,0,0) );
 	}
 }
+*/
 
 .all-supporters {
 	overflow-x: scroll;
@@ -599,6 +601,24 @@ Footer
 
 .padded {
 	padding: 0 95px;
+}
+
+/*--------------------------------------------------------------
+Twitter
+--------------------------------------------------------------*/
+.tp_recent_tweets {
+	
+	a, a:visited {
+		color: $off-white;
+		
+		&:hover {
+			color: $brand-main;
+		}
+	}
+	
+	.twitter_time {
+		
+	}
 }
 
 /*--------------------------------------------------------------

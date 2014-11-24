@@ -50,7 +50,6 @@ function laurenskids_setup() {
 		'about' => __( 'About Menu', 'laurenskids' ),
 		'awareness' => __( 'Awareness Menu', 'laurenskids' ),
 		'education' => __( 'Education Menu', 'laurenskids' ),
-		'advocacy' => __( 'Advocacy Menu', 'laurenskids' ),
 	) );
 
 
@@ -327,6 +326,10 @@ function survivor_stories_init() {
 
 	register_post_type( 'survivor-stories', $args );
 }
+
+/* dequeue styles from Recent Tweets */
+
+wp_dequeue_style('tp_twitter_plugin_styles');
 
 
 /**
