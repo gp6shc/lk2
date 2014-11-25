@@ -54,6 +54,7 @@ h1,h2,h3,h4,h5,h6 {
 	color: inherit;
 	text-rendering: optimizelegibility;
 	line-height: 1;
+	transition: color 0.3s ease;
 }
 h1 {
 	font-size: 40px;

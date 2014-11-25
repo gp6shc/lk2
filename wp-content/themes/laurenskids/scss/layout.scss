@@ -410,8 +410,12 @@ Homepage news section
 	float: left;	
 }
 
-.excerpt p {
-	margin: 15px 0 0 0;
+.excerpt {
+	text-align: left;
+	
+	p {
+		margin: 15px 0 0 0;
+	}
 }
 
 .featured .excerpt {
@@ -420,6 +424,21 @@ Homepage news section
 
 .latest-preview {
 	background-color: white;
+	position: relative;
+	text-align: center;
+	
+	.featured-thumb + img {
+		max-width: 100%;
+		height: 234px;
+		z-index: 1;	
+	}
+	
+	.news-thumb + img {
+		max-width: 100%;
+		height: 140px;
+		z-index: 1;	
+		
+	}
 	
 	a {
 		display: block;
@@ -449,10 +468,14 @@ Homepage news section
 		}
 		
 		img {
-			opacity: 0.5;
 			filter: grayscale(0.5) blur(2px);
 		}
+		
+		.featured-thumb, .news-thumb {
+			opacity: 0.4;
+		}
 	}
+
 }
 
 .latest-preview + .latest-preview {
@@ -461,15 +484,38 @@ Homepage news section
 
 .news-thumb {
 	background-color: $brand-accent;
-	font-size: 0;
-	width: auto;
-	margin-right: 20px;
-	float: left;
+	height: 140px;
+	width: 192px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	transition: opacity 0.3s ease;
+	
+    + img {
+		font-size: 0;
+		width: auto;
+		margin-right: 20px;
+		float: left;
+	    
+    }
 }
 	
 .featured-thumb {
 	background-color: $brand-accent;
 	font-size: 0;
+	height: 234px;
+	width: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+	transition: opacity 0.3s ease;
+	
+}
+
+.entry-meta {
+	text-align: left;
 }
 
 /*--------------------------------------------------------------

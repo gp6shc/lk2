@@ -43,7 +43,8 @@ get_header(); ?>
 						<article id="post-<?php the_ID(); ?>" class="latest-preview">
 						<a href="<?php the_permalink(); ?>" class="clear">
 
-							<div class="featured-thumb"><?php the_post_thumbnail( 'news-featured-thumb', array('class' => 'attachment-full') ); ?></div>
+							<div class="featured-thumb"></div>
+							<?php the_post_thumbnail( 'news-featured-thumb', array('class' => 'attachment-full') ); ?>
 						
 							<div class="excerpt">
 								<h4><?php the_title();?></h4>
@@ -62,11 +63,11 @@ get_header(); ?>
 						
 						<article id="post-<?php the_ID(); ?>" class="latest-preview">
 						<a href="<?php the_permalink(); ?>" class="clear">
-
-							<div class="news-thumb">
-								<?php the_post_thumbnail( 'news-latest-thumb', array('class' => 'attachment-full') ); ?>
-							</div>
 						
+						<?php if ( has_post_thumbnail() ): ?>
+							<div class="news-thumb"></div>
+							<?php the_post_thumbnail( 'news-latest-thumb', array('class' => 'attachment-full') ); ?>
+						<?php endif; ?>
 							<div class="entry-meta grid_8 omega">
 								<h4><?php the_title();?></h4>
 								<h5><?php the_time('F j, Y'); ?></h5>
