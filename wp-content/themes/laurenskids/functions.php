@@ -204,16 +204,21 @@ function laurenskids_scripts() {
 	//replace default stylesheet with SASS-compiled stylesheet, "css/style.css"
 	wp_enqueue_style( 'SASS', get_template_directory_uri() . '/css/style.css', array(), '0.1');
 	
+	// remove Recent Tweets plugin css
+	wp_dequeue_style('tp_twitter_plugin_css');
+	
 	//SCRIPTS
 	//jquery
 	wp_register_script('jquery',"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
-	wp_enqueue_script('jquery');
+	/* wp_enqueue_script('jquery'); */
 	//link focus
 	wp_enqueue_script( 'laurenskids-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '0.1', true );
 	// comment script (when comments open on single-view)
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	
 }
 add_action( 'wp_enqueue_scripts', 'laurenskids_scripts' );
 
@@ -234,17 +239,17 @@ function customize_output($results , $arg, $id, $getdata ){
 					<div class="lk-post<?php if(in_category('featured') ) echo " featured-post";?>">
 					<a href="<?php the_permalink(); ?>">
 						<?php 
-							if ( has_post_thumbnail() ) {
+							if ( has_post_thumbnail() ): 
 								/*
 								if(in_category('featured') ) {
 									the_post_thumbnail("large");
 								}else{
-								*/
-									the_post_thumbnail();
+								*/?>
+								<div class="post-img"></div>
+								<?php the_post_thumbnail(); 
 								/* } */
-							} else { ?>
+							endif; ?>
 							
-						<?php  } ?>
 						<div class="post-preview">
 								<h3><?php the_title(); ?></h3>
 								<h5><?php the_time('F j, Y'); ?></h5>
@@ -326,11 +331,6 @@ function survivor_stories_init() {
 
 	register_post_type( 'survivor-stories', $args );
 }
-
-/* dequeue styles from Recent Tweets */
-
-wp_dequeue_style('tp_twitter_plugin_styles');
-
 
 /**
  * Implement the Custom Header feature.

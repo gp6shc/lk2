@@ -48,6 +48,7 @@
 </footer><!-- /#colophon -->
 </div><!-- /#page -->
 
+<script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
 <?php wp_footer(); ?>
 
 </body>

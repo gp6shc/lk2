@@ -31,7 +31,6 @@ get_header(); ?>
 			
 			</div>
 		</div>
-		<?php laurenskids_paging_nav(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
