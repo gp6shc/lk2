@@ -166,7 +166,8 @@ add_action( 'save_post',     'laurenskids_category_transient_flusher' );
 
 
 function laurenskids_excerpt($limit) {
-	$excerpt = explode(' ', get_the_content(), $limit);
+	$excerpt = strip_tags( get_the_content() );
+	$excerpt = explode(' ', $excerpt, $limit);
 	if (count($excerpt)>=$limit) {
 	  array_pop($excerpt);
 	  $excerpt = implode(" ",$excerpt).'...';
@@ -174,5 +175,5 @@ function laurenskids_excerpt($limit) {
 	  $excerpt = implode(" ",$excerpt);
 	}	
 	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
-	echo strip_tags($excerpt);
+	echo $excerpt;
 }
