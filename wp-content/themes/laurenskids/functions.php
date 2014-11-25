@@ -256,7 +256,7 @@ function customize_output($results , $arg, $id, $getdata ){
 								<hr>
 								<p><?php laurenskids_excerpt(25); ?></p>
 								
-								<?php if (is_page(16)): ?>
+								<?php if (has_category()): ?>
 								<hr>
 								<h5>Category:<span> <?php 
 									$category = get_the_category();
