@@ -3589,8 +3589,12 @@ Contact
 
 .mc_signup_submit {
   text-align: left; }
-  .mc_signup_submit input {
-    width: 200px; }
+
+#mc-indicates-required {
+  display: none; }
+
+#mc_signup_submit {
+  width: 250px; }
 
 .grid_1 {
   width: 6.5%; }

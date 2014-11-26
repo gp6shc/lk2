@@ -1616,7 +1616,12 @@ Contact
 .mc_signup_submit {
 	text-align: left;
 	
-	input {
-		width: 200px;
-	}
+}
+
+#mc-indicates-required {
+	display: none;
+}
+	
+#mc_signup_submit {
+	width: 250px;
 }
