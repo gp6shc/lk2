@@ -634,7 +634,7 @@ footer .widget-title {
     
 .textwidget a, .textwidget a:visited {
 	color: darken($brand-accent, 8%);
-	font-weight: 400;
+	font-weight: 700;
 	
 	&:hover {
 		color: $off-white;
@@ -960,6 +960,10 @@ General Interior Page
 	
 	.testimonial {
 		background-color: #FEF5F9;
+	}
+	
+	a {
+		display: block;
 	}
 }
 
@@ -1628,4 +1632,15 @@ Contact
 	
 #mc_signup_submit {
 	width: 250px !important;
+}
+
+.mc_custom_border_hdr {
+	font-family: $font-header;
+	text-transform: uppercase;
+	clear: both;
+	line-height: 1;
+	font-size: 28px;
+	font-weight: 100;
+	color: $brand-accent;
+	margin: 15px 0;
 }
