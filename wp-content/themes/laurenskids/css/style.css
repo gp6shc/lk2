@@ -2639,7 +2639,6 @@ Homepage news section
     display: block; }
   .latest-preview h4 {
     color: #008996;
-    margin-top: 15px;
     /*truncate title to 1 line only*/
     /*
 		overflow: hidden;
@@ -2942,8 +2941,8 @@ About Page
   .butterfly:after {
     content: url("../img/butterfly.png");
     position: absolute;
-    top: -24px;
-    margin-left: -5px; }
+    top: -27px;
+    margin-left: -6px; }
 
 .butterfly-white {
   position: relative;
@@ -2951,8 +2950,8 @@ About Page
   .butterfly-white:after {
     content: url("../img/butterfly_white.png");
     position: absolute;
-    top: -24px;
-    margin-left: -5px; }
+    top: -27px;
+    margin-left: -6px; }
 
 /*--------------------------------------------------------------
 Boxes on About, Donate pages

@@ -447,7 +447,7 @@ Homepage news section
 	
 	h4 {
 		color: $brand-accent;
-		margin-top: 15px;
+		//margin-top: 15px;
 		/*truncate title to 1 line only*/
 		/*
 		overflow: hidden;
@@ -833,8 +833,8 @@ About Page
 	&:after {
 		content: url("../img/butterfly.png");
 		position: absolute;
-		top: -24px;
-		margin-left: -5px;
+		top: -27px;
+		margin-left: -6px;
 	}
 }
 
@@ -846,8 +846,8 @@ About Page
 	&:after {
 		content: url("../img/butterfly_white.png");
 		position: absolute;
-		top: -24px;
-		margin-left: -5px;
+		top: -27px;
+		margin-left: -6px;
 	}
 	
 }
