@@ -2922,10 +2922,6 @@ About Page
 .size-3 li {
   width: 33.333%; }
 
-.size-3 li:nth-child(2) {
-  width: -webkit-calc(33.333% + 2px);
-  width: calc(33.333% + 2px); }
-
 .size-4 li {
   width: 25%; }
 
@@ -2945,6 +2941,15 @@ About Page
   margin-top: 25px; }
   .butterfly:after {
     content: url("../img/butterfly.png");
+    position: absolute;
+    top: -24px;
+    margin-left: -5px; }
+
+.butterfly-white {
+  position: relative;
+  margin-top: 25px; }
+  .butterfly-white:after {
+    content: url("../img/butterfly_white.png");
     position: absolute;
     top: -24px;
     margin-left: -5px; }
@@ -3047,7 +3052,8 @@ General Interior Page
   .page-testimonial .testimonial {
     background-color: #FEF5F9; }
   .page-testimonial a {
-    display: block; }
+    display: block;
+    margin-top: 15px; }
 
 .grandchildren-links li {
   list-style-type: none; }

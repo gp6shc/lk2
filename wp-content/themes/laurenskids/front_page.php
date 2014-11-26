@@ -89,7 +89,7 @@ get_header(); ?>
 	<!-- Partners Section -->			
 	<div class="partners">
 		<div class="content">
-			<h1 class="centered-text">Partners & Supporters</h1>
+			<h1 class="centered-text butterfly-white">Partners & Supporters</h1>
 			<div class="gradient-container">	
 				<div class="all-supporters">
 					<?php $themeURI = get_stylesheet_directory_uri(); ?>

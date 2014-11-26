@@ -32,6 +32,7 @@
 </script>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<?php if (is_page(152)) ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 </head>
 

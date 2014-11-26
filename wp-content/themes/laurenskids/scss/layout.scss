@@ -809,7 +809,6 @@ About Page
 .size-1 li {width: 100%}
 .size-2 li {width: 50%}
 .size-3 li {width: 33.333%}
-.size-3 li:nth-child(2) {width: calc(33.333% + 2px)} // fixes rounding issues with the 33% width
 .size-4 li {width: 25%}
 .size-5 li {width: 20%}
 
@@ -837,6 +836,20 @@ About Page
 		top: -24px;
 		margin-left: -5px;
 	}
+}
+
+.butterfly-white {
+	position: relative;
+	margin-top: 25px;
+		
+
+	&:after {
+		content: url("../img/butterfly_white.png");
+		position: absolute;
+		top: -24px;
+		margin-left: -5px;
+	}
+	
 }
 
 /*--------------------------------------------------------------
@@ -964,6 +977,7 @@ General Interior Page
 	
 	a {
 		display: block;
+		margin-top: 15px;
 	}
 }
 
