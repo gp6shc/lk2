@@ -42,8 +42,8 @@
 			
 			<div class="top-area">
 				<div id="js-social" class="social">
-					<a href="#" title="View our Twitter feed"><i class="fa fa-twitter"></i></a>
-					<a href="#" title="View our Facebook community"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/laurenskids" target="_blank" title="View our Twitter feed"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.facebook.com/laurenskids" target="_blank" title="View our Facebook community"><i class="fa fa-facebook"></i></a>
 					<a href="#" title="View our SmugMug photos "><i class="fa"><svg width="17px" height="17px" viewBox="0 0 270 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 												<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd" sketch:type="MSPage">
 													<path d="M67.33,61.304 C95.79,60.87 109.43,44.146 107.61,28.943 C106.09,16.235 93.77,4.585 70.28,4.394 C50.93,4.24 38.3,18.568 36.4,32.883 C34.49,47.279 43.44,61.665 67.33,61.304" id="Fill-10"></path>

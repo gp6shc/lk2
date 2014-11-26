@@ -44,10 +44,8 @@ get_header(); ?>
 							$children = get_pages('child_of='.$post->ID);
 							if( count( $children ) != 0 ) {									// checks if the current page has any children
 								wp_list_pages("title_li=&child_of=".$post->ID);				// if so, list them out in the sidebar
-								echo '<hr>';
 							}elseif (count(get_post_ancestors($post->ID)) >= 2 ) {			// if not, check if the page is a grandchild
 								wp_list_pages("title_li=&child_of=".$post->post_parent);	// and if so, list out the sibilings to current page 
-								echo '<hr>';
 							}
 						?>
 						</div>

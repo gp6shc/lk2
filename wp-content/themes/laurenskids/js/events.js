@@ -137,4 +137,19 @@ if (archiveBtn !== null) {
 	}, false);
 }
 
+// lisiten for click on FAQ blocks
 
+var faqs = document.getElementsByClassName('faq');
+
+if (faqs.length > 0) {
+	
+	var openFAQ = function(e) {
+		console.log("yup");
+		e.classList.toggle('opened');
+	};
+	
+	for (var i = 0; i < faqs.length; i++) {
+		faqs[i].addEventListener('click', function() { openFAQ(this) }, false);
+	}
+	
+}

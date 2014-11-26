@@ -613,7 +613,12 @@ Footer
 }
 
 .widget-title {
+	display: none;
+}
+
+footer .widget-title {
 	color: white;
+	display: block;
 }
 
 #footer-widgets .widget ul ul {
@@ -971,6 +976,16 @@ General Interior Page
 	hr {
 		margin: 15px 0;
 	}
+	
+	.current_page_item a{
+		background-color: $soft-pink;
+	}
+}
+
+.grandchildren-links + aside.widget {
+	border-top: 1px solid $light-grey;
+	margin-top: 25px;
+	padding-top: 25px;
 }
 
 /*--------------------------------------------------------------
@@ -1507,4 +1522,69 @@ Archive
 
 .error404 #page {
 	background: $off-white url(../img/buddy.png) no-repeat center 210px;
+}
+
+/*--------------------------------------------------------------
+FAQs
+--------------------------------------------------------------*/
+.faq {
+	height: auto;
+	margin-bottom: 15px;
+}
+
+.question {
+	padding: 10px;
+	background-color: $light-teal;
+	cursor: pointer;
+	position: relative;
+	transition: background-color 0.5s ease;
+	
+	p {
+		line-height: 1.2;
+		font-family: $font-header;
+		font-size: 22px;
+		margin-left: 30px;
+		color: white;
+		
+		&:before {
+			content: "\f00d";
+			display: inline-block;
+			position: absolute;
+			font-family: 'FontAwesome';
+			font-size: 20px;
+			margin-left: -25px;
+			transform: rotate(45deg);
+			transition: transform 0.6s ease;
+		}
+		
+	}
+}
+
+.answer {
+	max-height: 0;
+	padding: 0 50px 0 25px;
+	opacity: 0;
+	overflow: hidden;
+	pointer-events: none;
+	background-color: $off-white;
+	transition: all 0.5s ease;
+}
+
+.opened {
+	
+	.question {
+		background-color: darken($light-teal, 15%);
+		
+		p:before {
+			transform: rotate(-90deg);
+		}
+	}
+	
+	.answer {
+		max-height: 700px;
+		padding: 25px 25px 25px 50px;
+		overflow-y: scroll;
+		opacity: 1;
+		pointer-events: all;
+	}
 }

@@ -1,3 +1,4 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700');
 /* LK main stylesheet: "style.scss", compiling to "css/style.css"
 -------------------------------------------------------------- */
 /* Color variables
@@ -6,20 +7,12 @@
 -------------------------------------------------------------- */
 /* Font @imports
 -------------------------------------------------------------- */
-@import url("http://fonts.googleapis.com/css?family=Roboto+Slab:100,400,700");
 /* Main @imports
 -------------------------------------------------------------- */
 /*--------------------------------------------------------------
 Reset
 --------------------------------------------------------------*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   border: 0;
   font-family: inherit;
   font-size: 100%;
@@ -40,10 +33,7 @@ html {
   -ms-text-size-adjust: 100%;
   /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
 
-*,
-*:before,
-*.clearfix:after,
-*:after {
+*, *:before, *.clearfix:after, *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
   -moz-box-sizing: border-box;
@@ -54,48 +44,30 @@ body {
   background: #fff;
   /* Fallback */ }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
   display: block; }
 
-ol,
-ul {
+ol, ul {
   list-style: none; }
 
 table {
   border-collapse: separate;
   border-spacing: 0; }
 
-caption,
-th,
-td {
+caption, th, td {
   font-weight: normal;
   text-align: left; }
 
-blockquote:before, blockquote.clearfix:after,
-blockquote:after,
-q:before,
-q.clearfix:after,
-q:after {
+blockquote:before, blockquote.clearfix:after, blockquote:after, q:before, q.clearfix:after, q:after {
   content: ""; }
 
-blockquote,
-q {
+blockquote, q {
   quotes: "" ""; }
 
 a:focus {
   outline: thin dotted; }
 
-a:hover,
-a:active {
+a:hover, a:active {
   outline: 0; }
 
 a img {
@@ -106,7 +78,7 @@ Default
 --------------------------------------------------------------*/
 body {
   color: #5B5B5B;
-  font-family: "Roboto Slab", sans-serif, Arial;
+  font-family: 'Roboto Slab', sans-serif, Arial;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   font-size: 14px;
@@ -141,7 +113,7 @@ a, img {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
   text-transform: uppercase;
   clear: both;
   color: inherit;
@@ -164,6 +136,9 @@ h2 {
   letter-spacing: 1px;
   margin-bottom: 10px; }
 
+p + h3 {
+  margin-top: 25px; }
+
 h3 {
   font-size: 28px;
   font-weight: 100;
@@ -171,9 +146,10 @@ h3 {
   margin-bottom: 15px; }
 
 h4 {
-  font-size: 24px;
   color: #58595B;
-  font-weight: 100; }
+  font-size: 24px;
+  font-weight: 100;
+  margin-bottom: 10px; }
 
 h5 {
   font-size: 22px;
@@ -182,14 +158,10 @@ h5 {
 h6 {
   font-size: 12px; }
 
-b,
-strong {
+b, strong {
   font-weight: bold; }
 
-dfn,
-cite,
-em,
-i {
+dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
@@ -222,24 +194,18 @@ pre {
   overflow: auto;
   padding: 1.6em; }
 
-code,
-kbd,
-tt,
-var {
+code, kbd, tt, var {
   font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
 
-abbr,
-acronym {
+abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help; }
 
-mark,
-ins {
+mark, ins {
   background: #fff9c0;
   text-decoration: none; }
 
-sup,
-sub {
+sup, sub {
   font-size: 75%;
   height: 0;
   line-height: 0;
@@ -250,7 +216,7 @@ sup {
   bottom: 1ex; }
 
 sub {
-  top: .5ex; }
+  top: 0.5ex; }
 
 small {
   font-size: 75%; }
@@ -270,13 +236,14 @@ hr {
     margin: 15px 0; }
 
 ul {
-  list-style: disc inside none; }
+  list-style: disc outside none;
+  margin-top: 1em; }
 
 ol {
-  list-style: decimal inside none; }
+  list-style: decimal outside none;
+  margin-bottom: 1em; }
 
-li > ul,
-li > ol {
+li > ul, li > ol {
   margin-bottom: 0;
   margin-left: 1.5em; }
 
@@ -305,10 +272,7 @@ th {
 /*--------------------------------------------------------------
 Forms
 --------------------------------------------------------------*/
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
   font-size: 100%;
   /* Corrects font size not being inherited in all browsers */
   margin: 0;
@@ -317,11 +281,8 @@ textarea {
   /* Improves appearance and consistency in all browsers */
   outline: none; }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
   text-transform: uppercase;
   color: white;
   padding: 10px 30px;
@@ -331,10 +292,7 @@ input[type="submit"] {
   -webkit-transition: 0.3s ease;
           transition: 0.3s ease;
   box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
+  button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
     color: white;
     background-color: #008996; }
 
@@ -357,24 +315,13 @@ button.interior {
 button + button {
   margin-left: 25px; }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
   cursor: pointer; }
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
+button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
   border: none; }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   padding: 0;
   /* Addresses excess padding in IE8/9 */ }
 
@@ -389,34 +336,19 @@ input[type="search"]::-webkit-search-decoration {
   /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
   -webkit-appearance: none; }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 3px; }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
   color: #111; }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
   padding: 3px; }
 
 textarea {
@@ -438,9 +370,7 @@ Accessibility
   width: 1px;
   overflow: hidden; }
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -490,32 +420,11 @@ Alignments & Show/hide content
 /*--------------------------------------------------------------
 Clearings
 --------------------------------------------------------------*/
-.clear:before, .clear.clearfix:after,
-.clear:after,
-.entry-content:before,
-.entry-content.clearfix:after,
-.entry-content:after,
-.comment-content:before,
-.comment-content.clearfix:after,
-.comment-content:after,
-.site-header:before,
-.site-header.clearfix:after,
-.site-header:after,
-.site-content:before,
-.site-content.clearfix:after,
-.site-content:after,
-.site-footer:before,
-.site-footer.clearfix:after,
-.site-footer:after {
+.clear:before, .clear.clearfix:after, .clear:after, .entry-content:before, .entry-content.clearfix:after, .entry-content:after, .comment-content:before, .comment-content.clearfix:after, .comment-content:after, .site-header:before, .site-header.clearfix:after, .site-header:after, .site-content:before, .site-content.clearfix:after, .site-content:after, .site-footer:before, .site-footer.clearfix:after, .site-footer:after {
   content: "";
   display: table; }
 
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
   clear: both; }
 
 .clearfix {
@@ -557,10 +466,11 @@ Clearings
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("fonts/fontawesome-webfont.eot?v=4.2.0");
-  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  src: url('fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal; }
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -610,9 +520,9 @@ Clearings
   left: -1.85714286em; }
 
 .fa-border {
-  padding: .2em .25em .15em;
+  padding: 0.2em 0.25em 0.15em;
   border: solid 0.08em #eeeeee;
-  border-radius: .1em; }
+  border-radius: 0.1em; }
 
 .pull-right {
   float: right; }
@@ -621,10 +531,10 @@ Clearings
   float: left; }
 
 .fa.pull-left {
-  margin-right: .3em; }
+  margin-right: 0.3em; }
 
 .fa.pull-right {
-  margin-left: .3em; }
+  margin-left: 0.3em; }
 
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
@@ -634,16 +544,20 @@ Clearings
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
+
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 @keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
+
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
+
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
@@ -674,11 +588,7 @@ Clearings
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
-:root .fa-rotate-90,
-:root .fa-rotate-180,
-:root .fa-rotate-270,
-:root .fa-flip-horizontal,
-:root .fa-flip-vertical {
+:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-flip-horizontal, :root .fa-flip-vertical {
   -webkit-filter: none;
           filter: none; }
 
@@ -690,8 +600,7 @@ Clearings
   line-height: 2em;
   vertical-align: middle; }
 
-.fa-stack-1x,
-.fa-stack-2x {
+.fa-stack-1x, .fa-stack-2x {
   position: absolute;
   left: 0;
   width: 100%;
@@ -747,11 +656,7 @@ Clearings
 .fa-check:before, .fa-check.clearfix:after {
   content: "\f00c"; }
 
-.fa-remove:before, .fa-remove.clearfix:after,
-.fa-close:before,
-.fa-close.clearfix:after,
-.fa-times:before,
-.fa-times.clearfix:after {
+.fa-remove:before, .fa-remove.clearfix:after, .fa-close:before, .fa-close.clearfix:after, .fa-times:before, .fa-times.clearfix:after {
   content: "\f00d"; }
 
 .fa-search-plus:before, .fa-search-plus.clearfix:after {
@@ -766,9 +671,7 @@ Clearings
 .fa-signal:before, .fa-signal.clearfix:after {
   content: "\f012"; }
 
-.fa-gear:before, .fa-gear.clearfix:after,
-.fa-cog:before,
-.fa-cog.clearfix:after {
+.fa-gear:before, .fa-gear.clearfix:after, .fa-cog:before, .fa-cog.clearfix:after {
   content: "\f013"; }
 
 .fa-trash-o:before, .fa-trash-o.clearfix:after {
@@ -801,9 +704,7 @@ Clearings
 .fa-play-circle-o:before, .fa-play-circle-o.clearfix:after {
   content: "\f01d"; }
 
-.fa-rotate-right:before, .fa-rotate-right.clearfix:after,
-.fa-repeat:before,
-.fa-repeat.clearfix:after {
+.fa-rotate-right:before, .fa-rotate-right.clearfix:after, .fa-repeat:before, .fa-repeat.clearfix:after {
   content: "\f01e"; }
 
 .fa-refresh:before, .fa-refresh.clearfix:after {
@@ -884,9 +785,7 @@ Clearings
 .fa-list:before, .fa-list.clearfix:after {
   content: "\f03a"; }
 
-.fa-dedent:before, .fa-dedent.clearfix:after,
-.fa-outdent:before,
-.fa-outdent.clearfix:after {
+.fa-dedent:before, .fa-dedent.clearfix:after, .fa-outdent:before, .fa-outdent.clearfix:after {
   content: "\f03b"; }
 
 .fa-indent:before, .fa-indent.clearfix:after {
@@ -895,11 +794,7 @@ Clearings
 .fa-video-camera:before, .fa-video-camera.clearfix:after {
   content: "\f03d"; }
 
-.fa-photo:before, .fa-photo.clearfix:after,
-.fa-image:before,
-.fa-image.clearfix:after,
-.fa-picture-o:before,
-.fa-picture-o.clearfix:after {
+.fa-photo:before, .fa-photo.clearfix:after, .fa-image:before, .fa-image.clearfix:after, .fa-picture-o:before, .fa-picture-o.clearfix:after {
   content: "\f03e"; }
 
 .fa-pencil:before, .fa-pencil.clearfix:after {
@@ -914,9 +809,7 @@ Clearings
 .fa-tint:before, .fa-tint.clearfix:after {
   content: "\f043"; }
 
-.fa-edit:before, .fa-edit.clearfix:after,
-.fa-pencil-square-o:before,
-.fa-pencil-square-o.clearfix:after {
+.fa-edit:before, .fa-edit.clearfix:after, .fa-pencil-square-o:before, .fa-pencil-square-o.clearfix:after {
   content: "\f044"; }
 
 .fa-share-square-o:before, .fa-share-square-o.clearfix:after {
@@ -1006,9 +899,7 @@ Clearings
 .fa-arrow-down:before, .fa-arrow-down.clearfix:after {
   content: "\f063"; }
 
-.fa-mail-forward:before, .fa-mail-forward.clearfix:after,
-.fa-share:before,
-.fa-share.clearfix:after {
+.fa-mail-forward:before, .fa-mail-forward.clearfix:after, .fa-share:before, .fa-share.clearfix:after {
   content: "\f064"; }
 
 .fa-expand:before, .fa-expand.clearfix:after {
@@ -1044,9 +935,7 @@ Clearings
 .fa-eye-slash:before, .fa-eye-slash.clearfix:after {
   content: "\f070"; }
 
-.fa-warning:before, .fa-warning.clearfix:after,
-.fa-exclamation-triangle:before,
-.fa-exclamation-triangle.clearfix:after {
+.fa-warning:before, .fa-warning.clearfix:after, .fa-exclamation-triangle:before, .fa-exclamation-triangle.clearfix:after {
   content: "\f071"; }
 
 .fa-plane:before, .fa-plane.clearfix:after {
@@ -1088,9 +977,7 @@ Clearings
 .fa-arrows-h:before, .fa-arrows-h.clearfix:after {
   content: "\f07e"; }
 
-.fa-bar-chart-o:before, .fa-bar-chart-o.clearfix:after,
-.fa-bar-chart:before,
-.fa-bar-chart.clearfix:after {
+.fa-bar-chart-o:before, .fa-bar-chart-o.clearfix:after, .fa-bar-chart:before, .fa-bar-chart.clearfix:after {
   content: "\f080"; }
 
 .fa-twitter-square:before, .fa-twitter-square.clearfix:after {
@@ -1105,9 +992,7 @@ Clearings
 .fa-key:before, .fa-key.clearfix:after {
   content: "\f084"; }
 
-.fa-gears:before, .fa-gears.clearfix:after,
-.fa-cogs:before,
-.fa-cogs.clearfix:after {
+.fa-gears:before, .fa-gears.clearfix:after, .fa-cogs:before, .fa-cogs.clearfix:after {
   content: "\f085"; }
 
 .fa-comments:before, .fa-comments.clearfix:after {
@@ -1236,14 +1121,10 @@ Clearings
 .fa-arrows-alt:before, .fa-arrows-alt.clearfix:after {
   content: "\f0b2"; }
 
-.fa-group:before, .fa-group.clearfix:after,
-.fa-users:before,
-.fa-users.clearfix:after {
+.fa-group:before, .fa-group.clearfix:after, .fa-users:before, .fa-users.clearfix:after {
   content: "\f0c0"; }
 
-.fa-chain:before, .fa-chain.clearfix:after,
-.fa-link:before,
-.fa-link.clearfix:after {
+.fa-chain:before, .fa-chain.clearfix:after, .fa-link:before, .fa-link.clearfix:after {
   content: "\f0c1"; }
 
 .fa-cloud:before, .fa-cloud.clearfix:after {
@@ -1252,32 +1133,22 @@ Clearings
 .fa-flask:before, .fa-flask.clearfix:after {
   content: "\f0c3"; }
 
-.fa-cut:before, .fa-cut.clearfix:after,
-.fa-scissors:before,
-.fa-scissors.clearfix:after {
+.fa-cut:before, .fa-cut.clearfix:after, .fa-scissors:before, .fa-scissors.clearfix:after {
   content: "\f0c4"; }
 
-.fa-copy:before, .fa-copy.clearfix:after,
-.fa-files-o:before,
-.fa-files-o.clearfix:after {
+.fa-copy:before, .fa-copy.clearfix:after, .fa-files-o:before, .fa-files-o.clearfix:after {
   content: "\f0c5"; }
 
 .fa-paperclip:before, .fa-paperclip.clearfix:after {
   content: "\f0c6"; }
 
-.fa-save:before, .fa-save.clearfix:after,
-.fa-floppy-o:before,
-.fa-floppy-o.clearfix:after {
+.fa-save:before, .fa-save.clearfix:after, .fa-floppy-o:before, .fa-floppy-o.clearfix:after {
   content: "\f0c7"; }
 
 .fa-square:before, .fa-square.clearfix:after {
   content: "\f0c8"; }
 
-.fa-navicon:before, .fa-navicon.clearfix:after,
-.fa-reorder:before,
-.fa-reorder.clearfix:after,
-.fa-bars:before,
-.fa-bars.clearfix:after {
+.fa-navicon:before, .fa-navicon.clearfix:after, .fa-reorder:before, .fa-reorder.clearfix:after, .fa-bars:before, .fa-bars.clearfix:after {
   content: "\f0c9"; }
 
 .fa-list-ul:before, .fa-list-ul.clearfix:after {
@@ -1331,19 +1202,13 @@ Clearings
 .fa-columns:before, .fa-columns.clearfix:after {
   content: "\f0db"; }
 
-.fa-unsorted:before, .fa-unsorted.clearfix:after,
-.fa-sort:before,
-.fa-sort.clearfix:after {
+.fa-unsorted:before, .fa-unsorted.clearfix:after, .fa-sort:before, .fa-sort.clearfix:after {
   content: "\f0dc"; }
 
-.fa-sort-down:before, .fa-sort-down.clearfix:after,
-.fa-sort-desc:before,
-.fa-sort-desc.clearfix:after {
+.fa-sort-down:before, .fa-sort-down.clearfix:after, .fa-sort-desc:before, .fa-sort-desc.clearfix:after {
   content: "\f0dd"; }
 
-.fa-sort-up:before, .fa-sort-up.clearfix:after,
-.fa-sort-asc:before,
-.fa-sort-asc.clearfix:after {
+.fa-sort-up:before, .fa-sort-up.clearfix:after, .fa-sort-asc:before, .fa-sort-asc.clearfix:after {
   content: "\f0de"; }
 
 .fa-envelope:before, .fa-envelope.clearfix:after {
@@ -1352,19 +1217,13 @@ Clearings
 .fa-linkedin:before, .fa-linkedin.clearfix:after {
   content: "\f0e1"; }
 
-.fa-rotate-left:before, .fa-rotate-left.clearfix:after,
-.fa-undo:before,
-.fa-undo.clearfix:after {
+.fa-rotate-left:before, .fa-rotate-left.clearfix:after, .fa-undo:before, .fa-undo.clearfix:after {
   content: "\f0e2"; }
 
-.fa-legal:before, .fa-legal.clearfix:after,
-.fa-gavel:before,
-.fa-gavel.clearfix:after {
+.fa-legal:before, .fa-legal.clearfix:after, .fa-gavel:before, .fa-gavel.clearfix:after {
   content: "\f0e3"; }
 
-.fa-dashboard:before, .fa-dashboard.clearfix:after,
-.fa-tachometer:before,
-.fa-tachometer.clearfix:after {
+.fa-dashboard:before, .fa-dashboard.clearfix:after, .fa-tachometer:before, .fa-tachometer.clearfix:after {
   content: "\f0e4"; }
 
 .fa-comment-o:before, .fa-comment-o.clearfix:after {
@@ -1373,9 +1232,7 @@ Clearings
 .fa-comments-o:before, .fa-comments-o.clearfix:after {
   content: "\f0e6"; }
 
-.fa-flash:before, .fa-flash.clearfix:after,
-.fa-bolt:before,
-.fa-bolt.clearfix:after {
+.fa-flash:before, .fa-flash.clearfix:after, .fa-bolt:before, .fa-bolt.clearfix:after {
   content: "\f0e7"; }
 
 .fa-sitemap:before, .fa-sitemap.clearfix:after {
@@ -1384,9 +1241,7 @@ Clearings
 .fa-umbrella:before, .fa-umbrella.clearfix:after {
   content: "\f0e9"; }
 
-.fa-paste:before, .fa-paste.clearfix:after,
-.fa-clipboard:before,
-.fa-clipboard.clearfix:after {
+.fa-paste:before, .fa-paste.clearfix:after, .fa-clipboard:before, .fa-clipboard.clearfix:after {
   content: "\f0ea"; }
 
 .fa-lightbulb-o:before, .fa-lightbulb-o.clearfix:after {
@@ -1479,9 +1334,7 @@ Clearings
 .fa-tablet:before, .fa-tablet.clearfix:after {
   content: "\f10a"; }
 
-.fa-mobile-phone:before, .fa-mobile-phone.clearfix:after,
-.fa-mobile:before,
-.fa-mobile.clearfix:after {
+.fa-mobile-phone:before, .fa-mobile-phone.clearfix:after, .fa-mobile:before, .fa-mobile.clearfix:after {
   content: "\f10b"; }
 
 .fa-circle-o:before, .fa-circle-o.clearfix:after {
@@ -1499,9 +1352,7 @@ Clearings
 .fa-circle:before, .fa-circle.clearfix:after {
   content: "\f111"; }
 
-.fa-mail-reply:before, .fa-mail-reply.clearfix:after,
-.fa-reply:before,
-.fa-reply.clearfix:after {
+.fa-mail-reply:before, .fa-mail-reply.clearfix:after, .fa-reply:before, .fa-reply.clearfix:after {
   content: "\f112"; }
 
 .fa-github-alt:before, .fa-github-alt.clearfix:after {
@@ -1540,16 +1391,10 @@ Clearings
 .fa-code:before, .fa-code.clearfix:after {
   content: "\f121"; }
 
-.fa-mail-reply-all:before, .fa-mail-reply-all.clearfix:after,
-.fa-reply-all:before,
-.fa-reply-all.clearfix:after {
+.fa-mail-reply-all:before, .fa-mail-reply-all.clearfix:after, .fa-reply-all:before, .fa-reply-all.clearfix:after {
   content: "\f122"; }
 
-.fa-star-half-empty:before, .fa-star-half-empty.clearfix:after,
-.fa-star-half-full:before,
-.fa-star-half-full.clearfix:after,
-.fa-star-half-o:before,
-.fa-star-half-o.clearfix:after {
+.fa-star-half-empty:before, .fa-star-half-empty.clearfix:after, .fa-star-half-full:before, .fa-star-half-full.clearfix:after, .fa-star-half-o:before, .fa-star-half-o.clearfix:after {
   content: "\f123"; }
 
 .fa-location-arrow:before, .fa-location-arrow.clearfix:after {
@@ -1561,9 +1406,7 @@ Clearings
 .fa-code-fork:before, .fa-code-fork.clearfix:after {
   content: "\f126"; }
 
-.fa-unlink:before, .fa-unlink.clearfix:after,
-.fa-chain-broken:before,
-.fa-chain-broken.clearfix:after {
+.fa-unlink:before, .fa-unlink.clearfix:after, .fa-chain-broken:before, .fa-chain-broken.clearfix:after {
   content: "\f127"; }
 
 .fa-question:before, .fa-question.clearfix:after {
@@ -1677,63 +1520,37 @@ Clearings
 .fa-compass:before, .fa-compass.clearfix:after {
   content: "\f14e"; }
 
-.fa-toggle-down:before, .fa-toggle-down.clearfix:after,
-.fa-caret-square-o-down:before,
-.fa-caret-square-o-down.clearfix:after {
+.fa-toggle-down:before, .fa-toggle-down.clearfix:after, .fa-caret-square-o-down:before, .fa-caret-square-o-down.clearfix:after {
   content: "\f150"; }
 
-.fa-toggle-up:before, .fa-toggle-up.clearfix:after,
-.fa-caret-square-o-up:before,
-.fa-caret-square-o-up.clearfix:after {
+.fa-toggle-up:before, .fa-toggle-up.clearfix:after, .fa-caret-square-o-up:before, .fa-caret-square-o-up.clearfix:after {
   content: "\f151"; }
 
-.fa-toggle-right:before, .fa-toggle-right.clearfix:after,
-.fa-caret-square-o-right:before,
-.fa-caret-square-o-right.clearfix:after {
+.fa-toggle-right:before, .fa-toggle-right.clearfix:after, .fa-caret-square-o-right:before, .fa-caret-square-o-right.clearfix:after {
   content: "\f152"; }
 
-.fa-euro:before, .fa-euro.clearfix:after,
-.fa-eur:before,
-.fa-eur.clearfix:after {
+.fa-euro:before, .fa-euro.clearfix:after, .fa-eur:before, .fa-eur.clearfix:after {
   content: "\f153"; }
 
 .fa-gbp:before, .fa-gbp.clearfix:after {
   content: "\f154"; }
 
-.fa-dollar:before, .fa-dollar.clearfix:after,
-.fa-usd:before,
-.fa-usd.clearfix:after {
+.fa-dollar:before, .fa-dollar.clearfix:after, .fa-usd:before, .fa-usd.clearfix:after {
   content: "\f155"; }
 
-.fa-rupee:before, .fa-rupee.clearfix:after,
-.fa-inr:before,
-.fa-inr.clearfix:after {
+.fa-rupee:before, .fa-rupee.clearfix:after, .fa-inr:before, .fa-inr.clearfix:after {
   content: "\f156"; }
 
-.fa-cny:before, .fa-cny.clearfix:after,
-.fa-rmb:before,
-.fa-rmb.clearfix:after,
-.fa-yen:before,
-.fa-yen.clearfix:after,
-.fa-jpy:before,
-.fa-jpy.clearfix:after {
+.fa-cny:before, .fa-cny.clearfix:after, .fa-rmb:before, .fa-rmb.clearfix:after, .fa-yen:before, .fa-yen.clearfix:after, .fa-jpy:before, .fa-jpy.clearfix:after {
   content: "\f157"; }
 
-.fa-ruble:before, .fa-ruble.clearfix:after,
-.fa-rouble:before,
-.fa-rouble.clearfix:after,
-.fa-rub:before,
-.fa-rub.clearfix:after {
+.fa-ruble:before, .fa-ruble.clearfix:after, .fa-rouble:before, .fa-rouble.clearfix:after, .fa-rub:before, .fa-rub.clearfix:after {
   content: "\f158"; }
 
-.fa-won:before, .fa-won.clearfix:after,
-.fa-krw:before,
-.fa-krw.clearfix:after {
+.fa-won:before, .fa-won.clearfix:after, .fa-krw:before, .fa-krw.clearfix:after {
   content: "\f159"; }
 
-.fa-bitcoin:before, .fa-bitcoin.clearfix:after,
-.fa-btc:before,
-.fa-btc.clearfix:after {
+.fa-bitcoin:before, .fa-bitcoin.clearfix:after, .fa-btc:before, .fa-btc.clearfix:after {
   content: "\f15a"; }
 
 .fa-file:before, .fa-file.clearfix:after {
@@ -1886,9 +1703,7 @@ Clearings
 .fa-arrow-circle-o-left:before, .fa-arrow-circle-o-left.clearfix:after {
   content: "\f190"; }
 
-.fa-toggle-left:before, .fa-toggle-left.clearfix:after,
-.fa-caret-square-o-left:before,
-.fa-caret-square-o-left.clearfix:after {
+.fa-toggle-left:before, .fa-toggle-left.clearfix:after, .fa-caret-square-o-left:before, .fa-caret-square-o-left.clearfix:after {
   content: "\f191"; }
 
 .fa-dot-circle-o:before, .fa-dot-circle-o.clearfix:after {
@@ -1900,9 +1715,7 @@ Clearings
 .fa-vimeo-square:before, .fa-vimeo-square.clearfix:after {
   content: "\f194"; }
 
-.fa-turkish-lira:before, .fa-turkish-lira.clearfix:after,
-.fa-try:before,
-.fa-try.clearfix:after {
+.fa-turkish-lira:before, .fa-turkish-lira.clearfix:after, .fa-try:before, .fa-try.clearfix:after {
   content: "\f195"; }
 
 .fa-plus-square-o:before, .fa-plus-square-o.clearfix:after {
@@ -1923,16 +1736,10 @@ Clearings
 .fa-openid:before, .fa-openid.clearfix:after {
   content: "\f19b"; }
 
-.fa-institution:before, .fa-institution.clearfix:after,
-.fa-bank:before,
-.fa-bank.clearfix:after,
-.fa-university:before,
-.fa-university.clearfix:after {
+.fa-institution:before, .fa-institution.clearfix:after, .fa-bank:before, .fa-bank.clearfix:after, .fa-university:before, .fa-university.clearfix:after {
   content: "\f19c"; }
 
-.fa-mortar-board:before, .fa-mortar-board.clearfix:after,
-.fa-graduation-cap:before,
-.fa-graduation-cap.clearfix:after {
+.fa-mortar-board:before, .fa-mortar-board.clearfix:after, .fa-graduation-cap:before, .fa-graduation-cap.clearfix:after {
   content: "\f19d"; }
 
 .fa-yahoo:before, .fa-yahoo.clearfix:after {
@@ -2010,14 +1817,10 @@ Clearings
 .fa-recycle:before, .fa-recycle.clearfix:after {
   content: "\f1b8"; }
 
-.fa-automobile:before, .fa-automobile.clearfix:after,
-.fa-car:before,
-.fa-car.clearfix:after {
+.fa-automobile:before, .fa-automobile.clearfix:after, .fa-car:before, .fa-car.clearfix:after {
   content: "\f1b9"; }
 
-.fa-cab:before, .fa-cab.clearfix:after,
-.fa-taxi:before,
-.fa-taxi.clearfix:after {
+.fa-cab:before, .fa-cab.clearfix:after, .fa-taxi:before, .fa-taxi.clearfix:after {
   content: "\f1ba"; }
 
 .fa-tree:before, .fa-tree.clearfix:after {
@@ -2047,26 +1850,16 @@ Clearings
 .fa-file-powerpoint-o:before, .fa-file-powerpoint-o.clearfix:after {
   content: "\f1c4"; }
 
-.fa-file-photo-o:before, .fa-file-photo-o.clearfix:after,
-.fa-file-picture-o:before,
-.fa-file-picture-o.clearfix:after,
-.fa-file-image-o:before,
-.fa-file-image-o.clearfix:after {
+.fa-file-photo-o:before, .fa-file-photo-o.clearfix:after, .fa-file-picture-o:before, .fa-file-picture-o.clearfix:after, .fa-file-image-o:before, .fa-file-image-o.clearfix:after {
   content: "\f1c5"; }
 
-.fa-file-zip-o:before, .fa-file-zip-o.clearfix:after,
-.fa-file-archive-o:before,
-.fa-file-archive-o.clearfix:after {
+.fa-file-zip-o:before, .fa-file-zip-o.clearfix:after, .fa-file-archive-o:before, .fa-file-archive-o.clearfix:after {
   content: "\f1c6"; }
 
-.fa-file-sound-o:before, .fa-file-sound-o.clearfix:after,
-.fa-file-audio-o:before,
-.fa-file-audio-o.clearfix:after {
+.fa-file-sound-o:before, .fa-file-sound-o.clearfix:after, .fa-file-audio-o:before, .fa-file-audio-o.clearfix:after {
   content: "\f1c7"; }
 
-.fa-file-movie-o:before, .fa-file-movie-o.clearfix:after,
-.fa-file-video-o:before,
-.fa-file-video-o.clearfix:after {
+.fa-file-movie-o:before, .fa-file-movie-o.clearfix:after, .fa-file-video-o:before, .fa-file-video-o.clearfix:after {
   content: "\f1c8"; }
 
 .fa-file-code-o:before, .fa-file-code-o.clearfix:after {
@@ -2081,28 +1874,16 @@ Clearings
 .fa-jsfiddle:before, .fa-jsfiddle.clearfix:after {
   content: "\f1cc"; }
 
-.fa-life-bouy:before, .fa-life-bouy.clearfix:after,
-.fa-life-buoy:before,
-.fa-life-buoy.clearfix:after,
-.fa-life-saver:before,
-.fa-life-saver.clearfix:after,
-.fa-support:before,
-.fa-support.clearfix:after,
-.fa-life-ring:before,
-.fa-life-ring.clearfix:after {
+.fa-life-bouy:before, .fa-life-bouy.clearfix:after, .fa-life-buoy:before, .fa-life-buoy.clearfix:after, .fa-life-saver:before, .fa-life-saver.clearfix:after, .fa-support:before, .fa-support.clearfix:after, .fa-life-ring:before, .fa-life-ring.clearfix:after {
   content: "\f1cd"; }
 
 .fa-circle-o-notch:before, .fa-circle-o-notch.clearfix:after {
   content: "\f1ce"; }
 
-.fa-ra:before, .fa-ra.clearfix:after,
-.fa-rebel:before,
-.fa-rebel.clearfix:after {
+.fa-ra:before, .fa-ra.clearfix:after, .fa-rebel:before, .fa-rebel.clearfix:after {
   content: "\f1d0"; }
 
-.fa-ge:before, .fa-ge.clearfix:after,
-.fa-empire:before,
-.fa-empire.clearfix:after {
+.fa-ge:before, .fa-ge.clearfix:after, .fa-empire:before, .fa-empire.clearfix:after {
   content: "\f1d1"; }
 
 .fa-git-square:before, .fa-git-square.clearfix:after {
@@ -2120,19 +1901,13 @@ Clearings
 .fa-qq:before, .fa-qq.clearfix:after {
   content: "\f1d6"; }
 
-.fa-wechat:before, .fa-wechat.clearfix:after,
-.fa-weixin:before,
-.fa-weixin.clearfix:after {
+.fa-wechat:before, .fa-wechat.clearfix:after, .fa-weixin:before, .fa-weixin.clearfix:after {
   content: "\f1d7"; }
 
-.fa-send:before, .fa-send.clearfix:after,
-.fa-paper-plane:before,
-.fa-paper-plane.clearfix:after {
+.fa-send:before, .fa-send.clearfix:after, .fa-paper-plane:before, .fa-paper-plane.clearfix:after {
   content: "\f1d8"; }
 
-.fa-send-o:before, .fa-send-o.clearfix:after,
-.fa-paper-plane-o:before,
-.fa-paper-plane-o.clearfix:after {
+.fa-send-o:before, .fa-send-o.clearfix:after, .fa-paper-plane-o:before, .fa-paper-plane-o.clearfix:after {
   content: "\f1d9"; }
 
 .fa-history:before, .fa-history.clearfix:after {
@@ -2159,9 +1934,7 @@ Clearings
 .fa-bomb:before, .fa-bomb.clearfix:after {
   content: "\f1e2"; }
 
-.fa-soccer-ball-o:before, .fa-soccer-ball-o.clearfix:after,
-.fa-futbol-o:before,
-.fa-futbol-o.clearfix:after {
+.fa-soccer-ball-o:before, .fa-soccer-ball-o.clearfix:after, .fa-futbol-o:before, .fa-futbol-o.clearfix:after {
   content: "\f1e3"; }
 
 .fa-tty:before, .fa-tty.clearfix:after {
@@ -2275,11 +2048,7 @@ Clearings
 .fa-cc:before, .fa-cc.clearfix:after {
   content: "\f20a"; }
 
-.fa-shekel:before, .fa-shekel.clearfix:after,
-.fa-sheqel:before,
-.fa-sheqel.clearfix:after,
-.fa-ils:before,
-.fa-ils.clearfix:after {
+.fa-shekel:before, .fa-shekel.clearfix:after, .fa-sheqel:before, .fa-sheqel.clearfix:after, .fa-ils:before, .fa-ils.clearfix:after {
   content: "\f20b"; }
 
 .fa-meanpath:before, .fa-meanpath.clearfix:after {
@@ -2312,9 +2081,9 @@ Menus
         padding: 0 2px;
         color: white;
         text-decoration: none;
-        font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+        font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
         font-weight: 700;
-        border-bottom: 2px solid transparent;
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
         -webkit-transition: border-bottom-color 0.3s ease;
                 transition: border-bottom-color 0.3s ease; }
         .main-navigation ul li a:hover {
@@ -2352,20 +2121,14 @@ Menus
 .menu-toggle {
   display: none; }
 
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
+.site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
   margin: 0 0 1.5em; }
 
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
+.comment-navigation .nav-previous, .paging-navigation .nav-previous, .post-navigation .nav-previous {
   float: left;
   width: 50%; }
 
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
+.comment-navigation .nav-next, .paging-navigation .nav-next, .post-navigation .nav-next {
   float: right;
   text-align: right;
   width: 50%; }
@@ -2376,21 +2139,10 @@ Content
 /*--------------------------------------------------------------
 Posts and pages
 --------------------------------------------------------------*/
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block; }
 
-audio,
-canvas,
-video {
+audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -2404,17 +2156,13 @@ audio:not([controls]) {
 .hentry {
   margin: 0 0 1.5em; }
 
-.byline,
-.updated:not(.published) {
+.byline, .updated:not(.published) {
   display: none; }
 
-.single .byline,
-.group-blog .byline {
+.single .byline, .group-blog .byline {
   display: inline; }
 
-.page-content,
-.entry-content,
-.entry-summary {
+.page-content, .entry-content, .entry-summary {
   margin: 1.5em 0 0; }
 
 .page-links {
@@ -2424,8 +2172,7 @@ audio:not([controls]) {
 /*--------------------------------------------------------------
 Asides
 --------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
+.blog .format-aside .entry-title, .archive .format-aside .entry-title {
   display: none; }
 
 /*--------------------------------------------------------------
@@ -2441,8 +2188,7 @@ Comments
 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation,
-.infinite-scroll.neverending .site-footer {
+.infinite-scroll .paging-navigation, .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
   display: none; }
 
@@ -2453,18 +2199,14 @@ Infinite scroll
 /*--------------------------------------------------------------
 Media
 --------------------------------------------------------------*/
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
+.page-content img.wp-smiley, .entry-content img.wp-smiley, .comment-content img.wp-smiley {
   border: none;
   margin-bottom: 0;
   margin-top: 0;
   padding: 0; }
 
 /* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
+embed, iframe, object {
   max-width: 100%; }
 
 /*--------------------------------------------------------------
@@ -2831,7 +2573,7 @@ Homepage video section
 Homepage welcome section
 --------------------------------------------------------------*/
 .welcome {
-  background: #008996 url("../img/butterflies.png") center bottom no-repeat;
+  background: #008996 url('../img/butterflies.png') center bottom no-repeat;
   text-align: center;
   margin-top: 100vh;
   position: relative;
@@ -2899,10 +2641,10 @@ Homepage news section
     margin-top: 15px;
     /*truncate title to 1 line only*/
     /*
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    */ }
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		*/ }
   .latest-preview h5 {
     font-size: 14px;
     font-weight: 100;
@@ -3033,7 +2775,11 @@ Footer
           transform: translateZ(1px); }
 
 .widget-title {
-  color: white; }
+  display: none; }
+
+footer .widget-title {
+  color: white;
+  display: block; }
 
 #footer-widgets .widget ul ul {
   margin: 0 0 0 1.5em; }
@@ -3134,7 +2880,7 @@ About Page
       height: 48px;
       padding: 0 8px;
       color: white;
-      font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+      font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
       text-transform: uppercase; }
       .subnav li a:hover {
         color: white; }
@@ -3296,7 +3042,7 @@ General Interior Page
   height: 40px;
   color: white;
   line-height: 40px;
-  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
   font-size: 22px;
   font-weight: 100;
   padding-left: 20px;
@@ -3310,6 +3056,13 @@ General Interior Page
     color: white; }
 .grandchildren-links hr {
   margin: 15px 0; }
+.grandchildren-links .current_page_item a {
+  background-color: #ED9ABC; }
+
+.grandchildren-links + aside.widget {
+  border-top: 1px solid #d7d7d7;
+  margin-top: 25px;
+  padding-top: 25px; }
 
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php
@@ -3399,7 +3152,7 @@ Single's Sidebar: sidebar.php
     text-transform: uppercase;
     font-style: normal;
     font-weight: 100;
-    font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+    font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
     font-size: 13px;
     line-height: 0.5; }
 
@@ -3503,7 +3256,7 @@ UWPQSF form
   color: white;
   line-height: 35px;
   font-size: 22px;
-  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
   font-weight: 100;
   text-transform: uppercase;
   background-color: #008996;
@@ -3542,7 +3295,7 @@ UWPQSF form
   min-width: 35px;
   line-height: 35px;
   font-size: 22px;
-  font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
   padding: 0 10px;
   color: white;
   background-color: #008996;
@@ -3580,8 +3333,8 @@ Loading Spinner
   left: 48%;
   left: -webkit-calc(50% - 25px);
   left: calc(50% - 25px);
-  -webkit-animation: spin .675s linear 0 infinite normal;
-          animation: spin .675s linear 0 infinite normal;
+  -webkit-animation: spin 0.675s linear 0 infinite normal;
+          animation: spin 0.675s linear 0 infinite normal;
   background: lightgrey; }
   .loader:before, .loader.clearfix:after, .loader:after {
     content: "";
@@ -3618,6 +3371,7 @@ Loading Spinner
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+
 /*--------------------------------------------------------------
 Blog Loop -- What's New?, Survivor Stories
 --------------------------------------------------------------*/
@@ -3711,7 +3465,7 @@ Archive
   overflow: hidden; }
   .archive-list li {
     list-style-type: square;
-    font-family: "proxima-nova-alt", "Proxima Sans", sans-serif, Arial;
+    font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
     font-size: 20px;
     margin-left: 20px; }
 
@@ -3757,6 +3511,62 @@ Archive
 
 .error404 #page {
   background: #F7F7F5 url(../img/buddy.png) no-repeat center 210px; }
+
+/*--------------------------------------------------------------
+FAQs
+--------------------------------------------------------------*/
+.faq {
+  height: auto;
+  margin-bottom: 15px; }
+
+.question {
+  padding: 10px;
+  background-color: #5D9BA7;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: background-color 0.5s ease;
+          transition: background-color 0.5s ease; }
+  .question p {
+    line-height: 1.2;
+    font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif, Arial;
+    font-size: 22px;
+    margin-left: 30px;
+    color: white; }
+    .question p:before, .question p.clearfix:after {
+      content: "\f00d";
+      display: inline-block;
+      position: absolute;
+      font-family: 'FontAwesome';
+      font-size: 20px;
+      margin-left: -25px;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transition: -webkit-transform 0.6s ease;
+              transition: transform 0.6s ease; }
+
+.answer {
+  max-height: 0;
+  padding: 0 50px 0 25px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #F7F7F5;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease; }
+
+.opened .question {
+  background-color: #416e77; }
+  .opened .question p:before, .opened .question p.clearfix:after {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+.opened .answer {
+  max-height: 700px;
+  padding: 25px 25px 25px 50px;
+  overflow-y: scroll;
+  opacity: 1;
+  pointer-events: all; }
 
 .grid_1 {
   width: 6.5%; }
@@ -3808,13 +3618,6 @@ Archive
 /*--------------------------------------------------------------
 Screens shorter than 1080pc hight
 --------------------------------------------------------------*/
-@media screen and (max-height: 1079px) {
-  /*
-  	.entry-feature img {
-  		width: 50%;
-  		margin: 0 auto;
-  	}
-  */ }
 /*--------------------------------------------------------------
 Above 801px
 --------------------------------------------------------------*/
@@ -3826,12 +3629,14 @@ Above 801px
     padding-top: 30px; }
 
   .entry-title, .entry-title a {
-    	/*
-    overflow: hidden;
-    	text-overflow: ellipsis;
-    	white-space: nowrap;
-    	max-width: 100%;
-    */ } }
+    /*
+overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100%;
+*/ }
+ }
+
 /*--------------------------------------------------------------
 Below 800px
 --------------------------------------------------------------*/
@@ -4006,7 +3811,9 @@ Below 800px
     display: none; }
 
   .grid_1, .grid_10, .grid_11, .grid_12, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9 {
-    width: 100%; } }
+    width: 100%; }
+ }
+
 /*--------------------------------------------------------------
 Below 480px
 --------------------------------------------------------------*/
@@ -4026,7 +3833,9 @@ Below 480px
   #footer-widgets.widget-count-3 .widget-area, #footer-widgets.widget-count-2 .widget-area {
     float: none;
     width: auto;
-    margin-right: 0; } }
+    margin-right: 0; }
+ }
+
 /*--------------------------------------------------------------
 Miscellaneous self-named classes to be added with JS; added to 
 end to ensure override of the default 
@@ -4048,3 +3857,4 @@ end to ensure override of the default
 
 /* Vendor @imports
 -------------------------------------------------------------- */
+/*# sourceMappingURL=style.css.map */
