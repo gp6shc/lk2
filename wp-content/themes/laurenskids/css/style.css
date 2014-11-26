@@ -2847,7 +2847,10 @@ Twitter
 About Page
 --------------------------------------------------------------*/
 .background-image {
+  background-color: rgba(0, 137, 150, 0.16);
   background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 20%;
   background-repeat: no-repeat;
   padding: 0 0 72px 0; }
   .background-image .container {
@@ -3066,13 +3069,11 @@ General Interior Page
 .grandchildren-links .current_page_item a {
   background-color: #ED9ABC; }
 
-/*
 .grandchildren-links + aside.widget {
-	border-top: 1px solid $light-grey;
-	margin-top: 25px;
-	padding-top: 25px;
-}
-*/
+  border-top: 1px solid #d7d7d7;
+  margin-top: 25px;
+  padding-top: 25px; }
+
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php
 --------------------------------------------------------------*/
@@ -3579,6 +3580,17 @@ FAQs
   overflow-y: scroll;
   opacity: 1;
   pointer-events: all; }
+
+/*--------------------------------------------------------------
+Contact
+--------------------------------------------------------------*/
+.mc_merge_var input {
+  width: 250px; }
+
+.mc_signup_submit {
+  text-align: left; }
+  .mc_signup_submit input {
+    width: 200px; }
 
 .grid_1 {
   width: 6.5%; }

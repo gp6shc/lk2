@@ -37,7 +37,7 @@ get_header(); ?>
 					
 					<aside class="page-testimonial">
 						<div class="grandchildren-links">
-						<?php if ( !is_page( array(150,962) ) ) {
+						<?php if ( !is_page( array(150,962) ) ) {
 							$children = get_pages('child_of='.$post->ID);
 							if( count( $children ) != 0 ) {									// checks if the current page has any children
 								wp_list_pages("title_li=&child_of=".$post->ID);				// if so, list them out in the sidebar

@@ -12,6 +12,15 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
+<style>
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5 {
+	font-family: sans-serif;
+	visibility: hidden;
+}
+.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5 {
+	visibility: visible;
+}
+</style>
 <script>
   (function(d) {
     var config = {
