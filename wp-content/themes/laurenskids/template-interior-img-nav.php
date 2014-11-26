@@ -20,7 +20,7 @@ get_header(); ?>
 				$menu = get_term(get_nav_menu_locations()['education'], 'nav_menu');				
 				wp_nav_menu( array( 'theme_location' => 'education', 'menu_class' => 'size-'.$menu->count, ) );
 			
-			}elseif ( is_page( array(148,150,152,154, 176,178,180,182) ) ) { 									// Awareness page children and grandchildren
+			}elseif ( is_page( array(148,150,152,154, 176,178,180,182, 962) ) ) { 									// Awareness page children and grandchildren
 				$menu = get_term(get_nav_menu_locations()['awareness'], 'nav_menu');				
 				wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );
 				
