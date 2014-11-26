@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Interior: Image + Nav
+ * Template Name: Interior: Image
  *
  * @package laurenskids
  */
@@ -9,24 +9,6 @@ get_header(); ?>
 
 
 <div class="background-image banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>);">
-	<div class="subnav">
-		<div class="container">
-			<?php
-			if ( is_page( array(75,77,79,81) ) ) { 																// About page children
-				$menu = get_term(get_nav_menu_locations()['about'], 'nav_menu');				
-				wp_nav_menu( array( 'theme_location' => 'about', 'menu_class' => 'size-'.$menu->count, ) );
-				
-			}elseif ( is_page( array(161,163,203) ) ) { 															// Education page children
-				$menu = get_term(get_nav_menu_locations()['education'], 'nav_menu');				
-				wp_nav_menu( array( 'theme_location' => 'education', 'menu_class' => 'size-'.$menu->count, ) );
-			
-			}elseif ( is_page( array(148,150,152,154, 176,178,180,182) ) ) { 									// Awareness page children and grandchildren
-				$menu = get_term(get_nav_menu_locations()['awareness'], 'nav_menu');				
-				wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );
-				
-			}?>
-		</div>
-	</div>
 </div><!-- .background-image -->
 	
 	<div class="container interior">
