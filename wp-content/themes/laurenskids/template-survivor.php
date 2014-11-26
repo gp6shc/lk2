@@ -41,7 +41,7 @@ get_header(); ?>
 			
 			</div>
 		</div>
-		<p class="centered-text"><a href="/lk2/contact"><button class="interior">Submit Your Story</button></a></p>
+		<p class="centered-text submit-story"><a href="/lk2/contact"><button class="interior">Submit Your Story</button></a></p>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>

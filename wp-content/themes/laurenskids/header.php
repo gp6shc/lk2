@@ -51,7 +51,7 @@
 													<path d="M104.52,277.695 C6.16,277.695 19.6,160.745 36.15,160.077 C150.47,155.472 179.73,150.745 220.5,150.745 C261.96,150.745 183.03,277.695 104.52,277.695 L104.52,277.695 Z M227.25,118.498 C159.11,125.359 155.78,126.034 30.44,128.925 C-22.42,129.15 -11.16,310 101.7,310 C209.19,310 338.87,107.26 227.25,118.498 L227.25,118.498 Z" id="Fill-13"></path>
 												</g>
 											</svg></i></a>
-					<a href="#" title="View our YouTube Page"><i class="fa fa-youtube-play"></i></a>
+					<a href="http://www.youtube.com/user/LaurensKids" title="View our YouTube Page"><i class="fa fa-youtube-play"></i></a>
 				</div>
 				<div id="js-quick-links" class="quick-links">
 					<a href="<?php echo home_url('/resources') ?>"><button class="help white">Need Help?</button></a>

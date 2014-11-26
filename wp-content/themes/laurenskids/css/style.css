@@ -167,11 +167,10 @@ dfn, cite, em, i {
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 20px;
-  border-left: 5px solid #eeeeee; }
+  border-left: 5px solid #EB008B; }
   blockquote p {
     margin-bottom: 0;
     font-size: 17.5px;
-    font-weight: 300;
     line-height: 1.25; }
   blockquote small {
     display: block;
@@ -2287,7 +2286,8 @@ Header & Top-Area
       border: 1px solid white;
       box-shadow: none; }
       .masthead.home-page .fa:hover, .masthead.home-page button:hover {
-        background-color: #EB008B; }
+        background-color: #EB008B;
+        border-color: #EB008B; }
     .masthead.home-page:hover {
       background-color: rgba(0, 0, 0, 0.35); }
 
@@ -2816,6 +2816,8 @@ Twitter
   clear: left;
   background-color: #007b87;
   padding: 7px 7px 0 7px; }
+  .tp_recent_tweets ul {
+    margin: 0; }
   .tp_recent_tweets li {
     list-style-type: none;
     padding-left: 30px;
@@ -3452,6 +3454,9 @@ Blog Loop -- What's New?, Survivor Stories
 .featured-post {
   width: 491px;
   width: 237px; }
+
+.submit-story {
+  margin-top: 30px; }
 
 /*--------------------------------------------------------------
 Archive

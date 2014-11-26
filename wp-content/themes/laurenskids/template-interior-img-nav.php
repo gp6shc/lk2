@@ -54,7 +54,7 @@ get_header(); ?>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('interior-page-content'); ?>>
 					    <header class="entry-header">
-					    	<h2 class="butterfly"><?php the_title() ?></h2>
+					    	<?php if (!is_page(182)) {?><h2 class="butterfly"><?php the_title() ?></h2><?php }//hide on Campaigns & Clips page?> 
 					    </header><!-- .entry-header -->
 					
 					    <div class="entry-content">

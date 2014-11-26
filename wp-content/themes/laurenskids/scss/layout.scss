@@ -23,6 +23,7 @@ Header & Top-Area
 			
 			&:hover {
 				background-color: $brand-main;
+				border-color: $brand-main;
 			}
 		}
 		
@@ -662,6 +663,10 @@ Twitter
 	clear: left;
 	background-color: darken($brand-accent, 3%);
 	padding: 7px 7px 0 7px;
+	
+	ul {
+		margin: 0;
+	}
 	
 	li {
 		list-style-type: none;
@@ -1452,6 +1457,10 @@ Blog Loop -- What's New?, Survivor Stories
 .featured-post {
 	width: 491px;
 	width: 237px;
+}
+
+.submit-story {
+	margin-top: 30px;
 }
 
 /*--------------------------------------------------------------
