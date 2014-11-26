@@ -18,17 +18,19 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					
 					<aside class="page-testimonial">
-						<div class="grandchildren-links">
 						<?php 
 							$children = get_pages('child_of='.$post->ID);
 							if( count( $children ) != 0 ) {									// checks if the current page has any children
+								echo '<div class="grandchildren-links">';
 								wp_list_pages("title_li=&child_of=".$post->ID);				// if so, list them out in the sidebar
+								echo '</div>';
 							}elseif (count(get_post_ancestors($post->ID)) >= 2 ) {			// if not, check if the page is a grandchild
+								echo '<div class="grandchildren-links">';
 								wp_list_pages("title_li=&child_of=".$post->post_parent);	// and if so, list out the sibilings to current page 
+								echo '</div>';
 							}
-						?>
-						</div>
-						<?php dynamic_sidebar('testimonial'); ?>
+							
+						dynamic_sidebar('testimonial'); ?>
 					</aside> 
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('interior-page-content'); ?>>

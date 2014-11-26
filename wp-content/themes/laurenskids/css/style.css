@@ -2790,9 +2790,11 @@ footer .widget-title {
   width: 47.5%;
   margin-right: 5%; }
 
-.textwidget a {
-  display: block;
-  margin-top: 15px; }
+.textwidget a, .textwidget a:visited {
+  color: #00646d;
+  font-weight: 400; }
+  .textwidget a:hover, .textwidget a:visited:hover {
+    color: #F7F7F5; }
 
 #footer-widgets.widget-count-2 #footer-widget-2 {
   margin-right: 0; }
@@ -3594,7 +3596,7 @@ Contact
   display: none; }
 
 #mc_signup_submit {
-  width: 250px; }
+  width: 250px !important; }
 
 .grid_1 {
   width: 6.5%; }
