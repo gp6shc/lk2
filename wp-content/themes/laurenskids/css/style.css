@@ -237,7 +237,8 @@ hr {
 
 ul {
   list-style: disc outside none;
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-left: 20px; }
 
 ol {
   list-style: decimal outside none;
@@ -3002,6 +3003,9 @@ p + .boxes {
     color: #EB008B; }
   .boxes section:hover button {
     background-color: #EB008B; }
+
+.donate + .donate {
+  margin-left: 25px; }
 
 /*--------------------------------------------------------------
 What's New? Singles: single.php, content-single.php
