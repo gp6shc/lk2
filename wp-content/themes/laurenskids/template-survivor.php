@@ -30,8 +30,8 @@ get_header(); ?>
 				the_content();
 				wp_reset_postdata( $post );
 			?>	
-			<hr class="short-hr">
 		</p>
+		<hr class="short-hr">
 		
 		<?php echo do_shortcode('[ULWPQSF id=188 button=0 formtitle="0"]'); ?>
 		<div class="blog-container">
@@ -41,8 +41,7 @@ get_header(); ?>
 			
 			</div>
 		</div>
-		<?php laurenskids_paging_nav(); ?>
-
+		<p class="centered-text"><a href="/lk2/contact"><button class="interior">Submit Your Story</button></a></p>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>

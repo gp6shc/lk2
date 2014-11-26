@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div class="background-image banner" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>);">
 	
-	<?php if (!is_page(167) ): ?>
+	<?php if (!is_page(array(167, 196)) ): ?>
 	<div class="subnav">
 		<div class="container">
 			<?php

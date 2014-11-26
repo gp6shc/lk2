@@ -2845,6 +2845,7 @@ About Page
 --------------------------------------------------------------*/
 .background-image {
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 0 0 72px 0; }
   .background-image .container {
     padding: 20px 30px 55px 30px; }
@@ -3059,11 +3060,13 @@ General Interior Page
 .grandchildren-links .current_page_item a {
   background-color: #ED9ABC; }
 
+/*
 .grandchildren-links + aside.widget {
-  border-top: 1px solid #d7d7d7;
-  margin-top: 25px;
-  padding-top: 25px; }
-
+	border-top: 1px solid $light-grey;
+	margin-top: 25px;
+	padding-top: 25px;
+}
+*/
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php
 --------------------------------------------------------------*/

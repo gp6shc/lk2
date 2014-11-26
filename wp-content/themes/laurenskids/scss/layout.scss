@@ -704,7 +704,9 @@ Twitter
 About Page
 --------------------------------------------------------------*/
 .background-image {
-	background-size: cover;
+	background-size: cover; 
+//	background-position-x: -500px;
+	background-repeat: no-repeat;
 	padding: 0 0 72px 0;
 	
 	.container {
@@ -982,11 +984,13 @@ General Interior Page
 	}
 }
 
+/*
 .grandchildren-links + aside.widget {
 	border-top: 1px solid $light-grey;
 	margin-top: 25px;
 	padding-top: 25px;
 }
+*/
 
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php

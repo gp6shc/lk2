@@ -5594,6 +5594,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/themes\/laurenskids\/template--redirect.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/template--redirect.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-content\/themes\/laurenskids\/template-blog.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -9531,7 +9540,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2014\/11\/beach-1024x645.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/uploads\/2014\/11\/beach-150x150.jpg": {
 		"fileType": 16384,
@@ -9542,7 +9551,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2014\/11\/beach-150x150.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/uploads\/2014\/11\/beach-192x140.jpg": {
 		"fileType": 16384,
@@ -9553,7 +9562,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2014\/11\/beach-192x140.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/uploads\/2014\/11\/beach-237x172.jpg": {
 		"fileType": 16384,
@@ -9564,7 +9573,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2014\/11\/beach-237x172.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/uploads\/2014\/11\/beach-300x189.jpg": {
 		"fileType": 16384,
@@ -9575,7 +9584,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2014\/11\/beach-300x189.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/uploads\/2014\/11\/beach-321x234.jpg": {
 		"fileType": 16384,
@@ -9586,7 +9595,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2014\/11\/beach-321x234.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/uploads\/2014\/11\/beach.jpg": {
 		"fileType": 16384,
@@ -9597,7 +9606,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/uploads\/2014\/11\/beach.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/wp-content\/uploads\/2014\/11\/bracelets_background-1024x621.jpg": {
 		"fileType": 16384,
