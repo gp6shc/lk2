@@ -36,7 +36,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					
 					<aside class="page-testimonial">
-						<?php 
+						<?php if (!is_page(150)) {
 							$children = get_pages('child_of='.$post->ID);
 							if( count( $children ) != 0 ) {									// checks if the current page has any children
 								echo '<div class="grandchildren-links">';
@@ -47,9 +47,9 @@ get_header(); ?>
 								wp_list_pages("title_li=&child_of=".$post->post_parent);	// and if so, list out the sibilings to current page 
 								echo '</div>';
 							}
-							
+						}		
 						dynamic_sidebar('testimonial'); ?>
-					</aside> 
+					</aside>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('interior-page-content'); ?>>
 					    <header class="entry-header">
