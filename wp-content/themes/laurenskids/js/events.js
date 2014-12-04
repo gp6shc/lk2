@@ -144,12 +144,39 @@ var faqs = document.getElementsByClassName('faq');
 if (faqs.length > 0) {
 	
 	var openFAQ = function(e) {
-		console.log("yup");
 		e.classList.toggle('opened');
 	};
 	
 	for (var i = 0; i < faqs.length; i++) {
-		faqs[i].addEventListener('click', function() { openFAQ(this) }, false);
+		faqs[i].addEventListener('click', function() { openFAQ(this); }, false);
 	}
 	
+}
+
+// open mail contact section if inquiry requests materials and require those fields
+
+var topic = document.getElementById('topic');
+
+if (topic !== null) {
+	
+	var onSelectionChange = function() {
+		var mailingSection = document.getElementById('js-mailing-section'); 
+		var selectedOption = topic.options[topic.selectedIndex];
+		var mailingFields = document.getElementsByClassName('js-mail-field');
+		
+		if(selectedOption.value === "Materials Request") {
+			mailingSection.classList.add('loose');
+			for (var i = 0; i < mailingFields.length; i++) {
+				mailingFields[i].setAttribute("required", "required");
+				
+			}
+		}else{
+			mailingSection.classList.remove('loose');
+			for (var j = 0; j < mailingFields.length; j++) {
+				mailingFields[j].removeAttribute("required");
+			}
+		}
+	};
+
+	topic.addEventListener('change', onSelectionChange, false);
 }

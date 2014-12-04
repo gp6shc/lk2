@@ -332,6 +332,55 @@ function survivor_stories_init() {
 	register_post_type( 'survivor-stories', $args );
 }
 
+// License Plate Form shortcode
+
+function addLicensePlateForm() {
+	$output = 
+	'<!-- License Form -->
+		<div class="license-form-wrapper">
+		<div class="license-form forms">
+			<form action="http://laurens-kids.force.com/website/contact_us" method="post" data-webforms2-force-js-validation="true">
+				<input type="hidden" name="thankYouURL" value="http://www.laurenskids.org"/>
+			
+				<h3 class="centered-text">license Plate Interest</h3>
+				<div class="field">
+					<label for="firstname" class="required">First Name:</label>
+					<input id="firstname" type="text" name="firstname" required="required" placeholder="first name" maxlength="40"/>
+				</div>
+				<div class="field">
+					<label for="lastname" class="required">Last Name:</label>
+					<input id="lastname" type="text" name="lastname" required="required" placeholder="last name" maxlength="80"/>
+				</div>
+				<div class="field">
+					<label for="zip_code" class="required">Zip Code:</label>
+					<input id="zip_code" type="text" name="zip_code" required="required" pattern="[0-9]{5}(-?[0-9]{4})?" placeholder="zip code" maxlength="10"/>
+				</div>
+				<div class="field">
+					<label for="phone">Phone:</label>
+					<input id="phone" name="phone" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="(123) 456-7890" maxlength="12"/>
+				</div>
+				<div class="field">
+					<label for="email_address" class="required">Email Address:</label>
+					<input id="email_address" type="email" name="email_address" required="required" placeholder="email@host.com"/>
+				</div>
+			    <div class="submit-btn">
+					<button type="submit">Submit</button>
+			    </div>
+			</form>
+			
+			<div class="required-info">
+				<p>Fields marked with <img src="'. get_stylesheet_directory_uri().'/img/butterfly-bullet_hover.png"/> are required.</p>
+			</div>
+				
+		</div><!--End License Form-->
+		</div>';
+		
+	return $output;	
+}
+
+add_shortcode('license-plate-form', 'addLicensePlateForm');
+
+
 /**
  * Implement the Custom Header feature.
  */

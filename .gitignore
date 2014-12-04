@@ -2,3 +2,4 @@ wp-config.php
 .htaccess
 .sass-cache/
 .DS_Store
+wp-content/themes/laurenskids/scss/.DS_Store
