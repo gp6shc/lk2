@@ -12,14 +12,10 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
-<style>
-.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5 {
-	font-family: sans-serif;
-	visibility: hidden;
-}
-.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5 {
-	visibility: visible;
-}
+<style> /* hides font while typekit loads */
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5 {font-family: sans-serif;visibility: hidden;}
+.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5 {visibility: visible;}
+.wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, .wf-inactive h5 {visibility: visible;}
 </style>
 <script>
   (function(d) {
@@ -32,7 +28,7 @@
 </script>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php if (is_page(152)) ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'>
+<?php if (is_page(152)): ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> <?php endif; ?>
 <?php wp_head(); ?>
 </head>
 
@@ -54,13 +50,14 @@
 				<div id="js-social" class="social">
 					<a href="https://twitter.com/laurenskids" target="_blank" title="View our Twitter feed"><i class="fa fa-twitter"></i></a>
 					<a href="https://www.facebook.com/laurenskids" target="_blank" title="View our Facebook community"><i class="fa fa-facebook"></i></a>
-					<a href="http://www.laurenskidsphotos.org/" target="_blank" title="View our SmugMug photos "><i class="fa"><svg width="17px" height="17px" viewBox="0 0 270 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+					<a href="http://www.laurenskidsphotos.org/" target="_blank" title="View our SmugMug photos "><!--
+<i class="fa"><svg width="17px" height="17px" viewBox="0 0 270 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
 												<g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd" sketch:type="MSPage">
 													<path d="M67.33,61.304 C95.79,60.87 109.43,44.146 107.61,28.943 C106.09,16.235 93.77,4.585 70.28,4.394 C50.93,4.24 38.3,18.568 36.4,32.883 C34.49,47.279 43.44,61.665 67.33,61.304" id="Fill-10"></path>
 													<path d="M209.83,57.755 C237.14,56.205 249.08,42.556 249.25,28.92 C249.44,13.545 234.68,-1.816 210.13,0.175 C190.45,1.774 178.93,15.355 177.18,28.935 C175.24,44.035 185.39,59.138 209.83,57.755" id="Fill-12"></path>
 													<path d="M104.52,277.695 C6.16,277.695 19.6,160.745 36.15,160.077 C150.47,155.472 179.73,150.745 220.5,150.745 C261.96,150.745 183.03,277.695 104.52,277.695 L104.52,277.695 Z M227.25,118.498 C159.11,125.359 155.78,126.034 30.44,128.925 C-22.42,129.15 -11.16,310 101.7,310 C209.19,310 338.87,107.26 227.25,118.498 L227.25,118.498 Z" id="Fill-13"></path>
 												</g>
-											</svg></i></a>
+											</svg></i>--><i class="fa fa-camera"></i></a>
 					<a href="http://www.youtube.com/user/LaurensKids" title="View our YouTube Page"><i class="fa fa-youtube-play"></i></a>
 				</div>
 				<div id="js-quick-links" class="quick-links">

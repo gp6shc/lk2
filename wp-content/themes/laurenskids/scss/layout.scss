@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 Header & Top-Area
 --------------------------------------------------------------*/
-.masthead{
+.masthead {
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -17,13 +17,13 @@ Header & Top-Area
 		
 		.fa, button {
 			color: white;
-			background-color: transparent;
-			border: 1px solid white;
+			background-color: rgba(0,0,0,0.2);
+			//border: 1px solid white;
 			box-shadow: none;
 			
 			&:hover {
 				background-color: $brand-main;
-				border-color: $brand-main;
+				//border-color: $brand-main;
 			}
 		}
 		
@@ -479,6 +479,10 @@ Homepage news section
 
 }
 
+.latest h4 {
+	margin-bottom: 0;
+}
+
 .latest-preview + .latest-preview {
 	margin-top: 15px;
 }
@@ -524,7 +528,6 @@ Homepage partners section
 --------------------------------------------------------------*/
 .partners {
 	background: $brand-offset;
-	height: 384px;
 	position: relative;
 	z-index: 10;
 	transform: translateZ(1px);
@@ -536,46 +539,16 @@ Homepage partners section
 	
 	.content {
 		padding: 72px 0;
+		max-width: 1080px;
+		text-align: center;
+		font-size: 0;
+		overflow: visible;
 	}
-}
-
-/*
-.gradient-container {
-	position: relative;
-	
-	&:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 30px;
-		background-image: linear-gradient( to right, rgba($brand-offset, 0.9), rgba(0,0,0,0) );
-	}
-	
-	&:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		width: 30px;
-		background-image: linear-gradient( to left, rgba($brand-offset, 0.9), rgba(0,0,0,0) );
-	}
-}
-*/
-
-.all-supporters {
-	overflow-x: scroll;
-	white-space: nowrap;
-	padding: 0 30px 15px 30px;
-		
 }
 
 .supporter-contain {
-	width: 238px;
 	height: 173px;
-	display: inline-block;
+	margin: 0 5px;
 	box-shadow: $box-shadow;
 	background-color: white;
 	padding: 20px;
@@ -589,13 +562,114 @@ Homepage partners section
 	background-position: center center;
 }
 
-.supporter-contain + .supporter-contain {
-	margin-left: 9px;
-	
+.arrows {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	margin-bottom: 96.5px;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	cursor: pointer;
 }
-.supporter-contain:nth-child(4n) {
-	margin-right: 30px;
+
+.arrow-right {
+	margin-left: 10px;
+	border-left: 20px solid darken($brand-offset, 10%);
 }
+
+.arrow-left {
+	margin-right: 10px;
+	border-right: 20px solid darken($brand-offset, 10%); 
+}
+
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: calc(100% - 80px);
+	margin: auto;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	backface-visibility: hidden;
+	transform: translate3d(0,0,0);
+}
+
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	border-radius: 20px;
+	background: darken($brand-offset, 10%);
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+
+
+
 
 /*--------------------------------------------------------------
 Footer

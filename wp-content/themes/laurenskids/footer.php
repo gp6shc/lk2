@@ -49,6 +49,35 @@
 </div><!-- /#page -->
 
 <script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
+<?php if (is_front_page()): ?>
+	<script type="text/javascript" src='<?php echo get_stylesheet_directory_uri() ?>/js/min/owl.carousel.min.js'></script>
+	<script>
+		jQuery(document).ready(function($) {
+			var owl = $('#js-supporters');
+			
+			owl.owlCarousel({
+				items: 4,
+				itemsDesktop: [1040,4],
+				itemsDesktopSmall: [1000, 3],
+				itemsTablet: [768,2],
+				itemsMobile: [480,1],
+				slideSpeed: 300,
+				autoPlay: 6000,
+				scrollPerPage: true,
+				responsiveRefreshRate: 4000,
+				mouseDrag: false
+			});
+		
+			$('#js-left-arrow').click(function() {
+				owl.trigger("owl.prev");
+			});
+			
+			$('#js-right-arrow').click(function() {
+				owl.trigger("owl.next");
+			});
+		});
+	</script>
+<?php endif; ?>
 <?php wp_footer(); ?>
 
 </body>
