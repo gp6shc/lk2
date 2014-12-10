@@ -12,8 +12,12 @@ Header & Top-Area
 	transition: all 0.5s ease;
 
 	
-	&.home-page {
+	&.home-page { // Go dark translucent for home page full header 
 		background: transparent;
+		
+		&:hover {
+			background-color: rgba(black, 0.35);
+		}
 		
 		.fa, button {
 			color: white;
@@ -27,52 +31,87 @@ Header & Top-Area
 			}
 		}
 		
-		&:hover {
-			background-color: rgba(black, 0.35);
+		input[type="search"] {
+			background-color: rgba(0,0,0,0.2);
+			
+			&:focus {
+				background-color: white;
+				
+				+ input[type="submit"] {
+					background-color: white;
+					color: $brand-main;
+				}
+			}
+		}
+		
+		input[type="submit"] {
+			background-color: rgba(0,0,0,0.2);
+			color: white;
 		}
 	}
 }
 
-body.home {
-	border: none;
-	margin-top: 0;
-	position: relative;
+body {
+	color: $body;
+	font-family: $font-body;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	font-size: 14px;
+	line-height: 1.42857143;
+	min-width: 320px;
+	overflow: hidden;
 	
-	.container { //on homepage layout, set to full width, use padding on ".content"
-		width: 100%;
-		max-width: 100%;
-		margin: 0;
-		padding: 0;
-	}
+	margin-top: -100px;
+	border-top: 266px solid $brand-main;
 }
 
-body.sticky {
-	
-	.masthead {
-		transform: translate3d(0,-96px,2px);
-		background-color: rgba($brand-main, 0.9);
-		
-		
-		&:hover {
-			background-color: $brand-main;
-		}
-		
-		.top-area {
-			opacity: 0;
-		}
-		
-		.logo {
-			// transform: translateY(96px);
-		}
+body {
 
+	&.home {
+		border: none;
+		margin-top: 0;
+		position: relative;
+		
+		.container { //on homepage layout, set to full width, use padding on ".content"
+			width: 100%;
+			max-width: 100%;
+			margin: 0;
+			padding: 0;
+		}
 	}
 	
-	.main-navigation {
-		transform: translateY(16px);
+	&.sticky {
+	
+		.masthead {
+			transform: translate3d(0,-96px,2px);
+			background-color: rgba($brand-main, 0.9);
+			
+			
+			&:hover {
+				background-color: $brand-main;
+			}
+			
+			.top-area {
+				opacity: 0;
+			}
+			
+			.logo {
+				// transform: translateY(96px);
+			}
+		
+		}
+		
+		.main-navigation {
+			transform: translateY(14px);
+		}
+		
+		.subnav {
+			transform: translateY(-96px);
+		}
 	}
 	
-	.subnav {
-		transform: translateY(-96px);
+	&.grey-border {
+		border-top: 266px solid $brand-offset;
 	}
 }
 
@@ -185,8 +224,15 @@ body.sticky {
 			background-color: $brand-accent;
 			color: white;
 		}
+		
+		&.fa-camera {
+			font-size: 1.3em;
+			
+		}
 	}		
 }
+
+
 .quick-links{
 	float: left;
 	margin: 0 3px;
@@ -259,7 +305,7 @@ Search
 			background-color: white;
 				&::placeholder {
 					color: $light-grey;
-				}
+			}
 		}
 		
 		&::placeholder {
@@ -289,18 +335,38 @@ Search
 }
 
 .search {
-	article.post a {
+	article a {
 		display: block;
 		
 		&:hover h3 {
 			color: $brand-accent;
 		}
 	}
-	.entry-content span {
-		color: $body;
+	
+	.entry-content {
+		margin: 0; 
+		
+		h6 span {
+			color: $body;
+		}
 	}
 }
 
+.page-label {
+	display: inline-block;
+	background-color: #EB008B;
+	padding: 5px 20px;
+	margin: 15px 0 0 0;
+	float: right;
+	
+	span {
+		font-weight: 100;
+		font-size: 18px;
+		font-family: $font-header;
+		text-transform: uppercase;
+		color: white;
+	}
+}
 
 /*--------------------------------------------------------------
 Container, Content, Pads (main)
@@ -358,7 +424,7 @@ Homepage video section
 Homepage welcome section
 --------------------------------------------------------------*/
 .welcome {
-	background: $brand-accent url('../img/butterflies.png') center bottom no-repeat;
+	background: rgba($brand-accent, 0.9) url('../img/butterflies.png') center bottom no-repeat;
 	text-align: center;
 	margin-top: 100vh;
 	position: relative;
@@ -389,7 +455,7 @@ Homepage welcome section
 Homepage news section
 --------------------------------------------------------------*/
 .news {
-	background: white;
+	background-color: white;
 	position: relative;
 	z-index: 10;
 	transform: translateZ(1px);
@@ -527,7 +593,7 @@ Homepage news section
 Homepage partners section
 --------------------------------------------------------------*/
 .partners {
-	background: $brand-offset;
+	background-color: $brand-offset;
 	position: relative;
 	z-index: 10;
 	transform: translateZ(1px);
@@ -570,16 +636,27 @@ Homepage partners section
 	border-top: 20px solid transparent;
 	border-bottom: 20px solid transparent;
 	cursor: pointer;
+	transition: border 0.3s;
 }
 
 .arrow-right {
 	margin-left: 10px;
 	border-left: 20px solid darken($brand-offset, 10%);
+	
+	&:hover {
+		border-left: 20px solid white;
+		
+	}
 }
 
 .arrow-left {
 	margin-right: 10px;
 	border-right: 20px solid darken($brand-offset, 10%); 
+	
+	&:hover {
+		border-right: 20px solid white;
+		
+	}
 }
 
 /* 
@@ -682,6 +759,22 @@ Footer
 	background: $brand-accent;
 	position: relative;
 	z-index: 10;
+	
+	.social {
+		float: none;
+		text-align: left;
+		
+	}
+	
+	.fa {
+		color: $brand-accent;
+		text-align: center;
+		
+		&:hover {
+			color: $brand-main;
+			background-color: white;
+		}
+	}
 }
 .home .site-footer {
 	transform: translateZ(1px);
@@ -1018,9 +1111,9 @@ What's New? Singles: single.php, content-single.php
 .post, .survivor-stories {
 	width: 74.6%;
 	float: left;
-	background-color: white;
-	
+	background-color: white;	
 }
+
 
 /*--------------------------------------------------------------
 General Interior Page
@@ -1046,7 +1139,7 @@ General Interior Page
 	margin-top: 29px;
 	
 	.testimonial {
-		background-color: #FEF5F9;
+		background-color: $pale-pink;
 	}
 	
 	a {
@@ -1104,7 +1197,7 @@ Single's Sidebar: sidebar.php
 .single-sidebar {
 	width: 23.7%;
 	float: right;
-	padding-top: 35px;
+	padding-top: 21px;
 	
 	hr {
 		margin: 35px 0;
@@ -1114,11 +1207,6 @@ Single's Sidebar: sidebar.php
 .archive article.post {
 	margin-right: 1.7%;
 	
-}
-
-.archive .single-sidebar {
-	float: none;
-	overflow: hidden;
 }
 
 .sidebar-search {
@@ -1233,24 +1321,23 @@ Single's post content
 
 .entry-metadata {
 	color: $brand-offset;
+	font-family: $font-header;
 	font-weight: 100;
-	font-size: 12px;
+	font-size: 14px;
 	text-transform: uppercase;
 	margin-top: 5px;
 	
 	ul {
 		display: inline;
-		font-size: 0;
+		margin: 0;
 	}
 	
 	li {
 		display: inline;
 		list-style: none;
-		font-size: 12px;
 	}
 	li + li:before { //handles multiple categories
 		content: ", ";
-		
 	}
 }
 
@@ -1386,13 +1473,12 @@ UWPQSF form
 	font-size: 22px;
 	font-family: $font-header;
 	padding: 0 10px;
-	color: white;
+	color: white !important; // keep color white no matter the visit or hover gobal "a" state 
 	background-color: $brand-accent;
 	transition: background-color 0.3s ease;
 	
 	&:hover {
 		background-color: $brand-main;
-		color: white;
 	}
 }
 	
@@ -1562,18 +1648,38 @@ Blog Loop -- What's New?, Survivor Stories
 /*--------------------------------------------------------------
 Archive
 --------------------------------------------------------------*/
-.archive {
-	article.post a {
+.archive-contain {
+	width: 74.6%;
+	float: left;
+	
+	article {
+		width: 100%;
+		float: none;
+		
+		&.post a {
 		display: block;
 		
-		&:hover h3 {
-			color: $brand-accent;
+			&:hover h3 {
+				color: $brand-accent;
+			}
 		}
 	}
+	
 	.entry-content span {
 		color: $body;
 	}
 }
+
+.archive .page, .search .page {
+	width: 84.6%;
+	background-color: white;
+	color: white;
+	
+	.entry-content {
+		padding: 0 35px 35px 35px;
+	}
+}
+
 
 .archive-list {
 	max-height: 0;
@@ -1706,14 +1812,14 @@ FAQs
 Contact
 --------------------------------------------------------------*/
 .form-wrapper {
-	background-color: $off-white;
+	background-color: $pale-pink;
 	margin-top: 30px;
 }
 
 .license-form-wrapper {
 	width: 70%;
 	margin: 15px auto;
-	background-color: $off-white;
+	background-color: $pale-pink;
 }
 
 .contact-us-form {
@@ -1723,7 +1829,7 @@ Contact
 	float: left;
 	
 	section {
-		background-color: darken($off-white, 4%);
+		background-color: darken($pale-pink, 2%);
 		max-height: 0;
 		margin: 15px 0;
 		overflow: hidden;
