@@ -91,6 +91,8 @@ function laurenskids_setup() {
 	add_filter('excerpt_more', 'lk_excerpt_more');
 	
 	
+	// Enable shortcodes in widgets
+	add_filter('widget_text', 'do_shortcode');
 	
 
 	/*
@@ -339,10 +341,9 @@ function customize_output($results , $arg, $id, $getdata) {
 		$results = ob_get_clean();		
 			return $results;
 }
+add_filter('uwpqsf_result_tempt', 'customize_output', '', 4);
 
 // Add Survivor Stories Custom Post Type
-
-add_action( 'init', 'survivor_stories_init' );
 
 function survivor_stories_init() {
 	$labels = array(
@@ -475,6 +476,64 @@ function addLicensePlateForm() {
 
 add_shortcode('license-plate-form', 'addLicensePlateForm');
 
+
+// Get the home url for shortcode use
+function home_url_shortcode() {
+	return get_home_url();
+} 
+
+add_shortcode('home-url','home_url_shortcode');
+
+
+// check if the current page is the given page or if it is a child/descendant http://css-tricks.com/snippets/wordpress/if-page-is-parent-or-child/
+function is_tree($pid) {      												// $pid = The ID of the page we're looking for pages underneath
+	global $post;        													// load details about this page
+	if(is_page()&&($post->post_parent==$pid||is_page($pid))) 
+		return true;   														// we're at the page or at a sub page
+	else 
+		return false;		  												// we're elsewhere
+};
+
+
+// work in progress, adding array support...
+
+/*
+function is_tree($pid) {      												// $pid = The ID of the page we're looking for pages underneath
+	global $post;   	  													// load details about this page
+	error_log(print_r($pid,true));
+	if ( is_array($pid) ) {
+		foreach($pid as $thePage) {
+			error_log(print_r($thePage,true));
+			if (is_page() && ($post->post_parent === $thePage || is_page($thePage) ) ) {
+				$stillTrue = true; 											// we're at the page or at a sub page
+				error_log("is a subby");
+			}else{
+				return false;  												// we're elsewhere, return early
+				error_log("is not a subby");
+			}
+		}
+	return $stillTrue;
+	}else{
+		if (is_page() && ($post->post_parent === $pid || is_page($pid) ) ) {
+			return true;		   											// we're at the page or at a sub page
+		}else{
+			return false;  													// we're elsewhere
+		}
+	}
+}
+*/
+
+// add a class to body_class() if on a certain page
+
+add_filter( 'body_class','grey_border_add' );
+
+function grey_border_add( $class ) { // adds the "grey-border" class to the body on pages with a subnav
+	if (is_tree(8) || is_tree(10) || is_tree(12) || is_tree(148) || is_tree(150)) {
+		$class[] = 'grey-border';
+	}
+     
+    return $class;    
+}
 
 /**
  * Implement the Custom Header feature.

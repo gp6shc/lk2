@@ -79,8 +79,8 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
+			<div class="archive-contain clear">
 			<?php while ( have_posts() ) : the_post(); ?>
-
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
@@ -88,11 +88,10 @@ get_header(); ?>
 					 */
 					get_template_part( 'content-archive');
 				?>
-
 			<?php endwhile; ?>
-
-			<?php get_sidebar(); ?>
 			<?php laurenskids_paging_nav(); ?>
+			</div>
+			<?php get_sidebar(); ?>
 
 		<?php else : ?>
 

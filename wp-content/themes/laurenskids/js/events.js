@@ -1,6 +1,9 @@
-// Header switching
+// Collapse header on scroll away from top
 
 jQuery(document).ready(function($) {
+	var miliseconds = 0; // uptime in seconds
+	setInterval(function() {miliseconds++;}, 1);
+	
 	var viewport = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	var docBody = $(document.body);
 	var LKVideo = document.getElementById('js-video');
@@ -8,36 +11,11 @@ jQuery(document).ready(function($) {
 	if (LKVideo !== null) {
 		var videoWrapperHeight = LKVideo.offsetHeight;
 		var videoHome = LKVideo.firstElementChild;
+		
+		videoHome.addEventListener("canplaythrough", function() {
+			//alert('ready @ '+miliseconds);
+		}, false);
 	}
-/*
-	var deBouncer = function($,cf,of, interval){
-	    // deBouncer by hnldesign.nl
-	    // based on code by Paul Irish and the original debouncing function from John Hann
-	    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
-	    var debounce = function (func, threshold, execAsap) {
-	        var timeout;
-	        return function debounced () {
-	            var obj = this, args = arguments;
-	            function delayed () {
-	                if (!execAsap) {
-	                    func.apply(obj, args);
-	                }
-	                timeout = null;
-	            }
-	            if (timeout) {
-	                clearTimeout(timeout);
-	            }else if (execAsap) {
-	                func.apply(obj, args);
-	            }
-	            timeout = setTimeout(delayed, threshold || interval);
-	        };
-	    };
-	    jQuery.fn[cf] = function(fn){  return fn ? this.bind(of, debounce(fn)) : this.trigger(cf); };
-	};
-	
-	deBouncer(jQuery,'smartscroll', 'scroll', 1);
-*/
-	
 
 	if ($(window).scrollTop() > 20) {
 		docBody.addClass("sticky");
@@ -48,7 +26,7 @@ jQuery(document).ready(function($) {
 		if (LKVideo !== null) {
 			$(window).scroll(function(){
 				docBody.toggleClass("sticky", window.pageYOffset >= 20 );
-				if (window.pageYOffset >= videoWrapperHeight) {
+				if (window.pageYOffset >= (videoWrapperHeight + 320)) {
 					if (!videoHome.paused) {
 						videoHome.pause();
 					}
@@ -60,14 +38,12 @@ jQuery(document).ready(function($) {
 			});
 		}else{
 			$(window).scroll(function(){
-				docBody.toggleClass("sticky", window.pageYOffset >= 20 );
-				
+				docBody.toggleClass("sticky", window.pageYOffset >= 25 );
+
 			});
 			
 		}
 	}
-	
-	
 });
 
 // Search expanding
@@ -180,3 +156,5 @@ if (topic !== null) {
 
 	topic.addEventListener('change', onSelectionChange, false);
 }
+
+

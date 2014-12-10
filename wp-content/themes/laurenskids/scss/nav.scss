@@ -90,6 +90,7 @@ Menus
 	display: none;
 }
 
+
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
@@ -110,4 +111,8 @@ Menus
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.paging-navigation {
+	padding: 0 35px;
 }
