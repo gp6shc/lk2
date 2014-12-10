@@ -331,6 +331,50 @@ function survivor_stories_init() {
 
 	register_post_type( 'survivor-stories', $args );
 }
+add_action( 'init', 'survivor_stories_init' );
+
+
+// Add Partners & Supporters Custom Post Type
+function partners_and_supporters_init() {
+	$labels = array(
+		'name'               => _x( 'Partners & Supporters', 'post type general name', 'laurenskids' ),
+		'singular_name'      => _x( 'Partner', 'post type singular name', 'laurenskids' ),
+		'menu_name'          => _x( 'Partners & Supporters', 'admin menu', 'laurenskids' ),
+		'name_admin_bar'     => _x( 'Partners & Supporters', 'add new on admin bar', 'laurenskids' ),
+		'add_new'            => _x( 'Add New', 'Partner', 'laurenskids' ),
+		'add_new_item'       => __( 'Add New Partner', 'laurenskids' ),
+		'new_item'           => __( 'New Partner', 'laurenskids' ),
+		'edit_item'          => __( 'Edit Partner', 'laurenskids' ),
+		'view_item'          => __( 'View this Partner', 'laurenskids' ),
+		'all_items'          => __( 'All Partners', 'laurenskids' ),
+		'search_items'       => __( 'Search Partners', 'laurenskids' ),
+		'parent_item_colon'  => __( 'Parent Supporter:', 'laurenskids' ),
+		'not_found'          => __( 'No partners found.', 'laurenskids' ),
+		'not_found_in_trash' => __( 'No partners found in Trash.', 'laurenskids' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'exclude_from_search'=> true,
+		'show_ui'            => true,
+		'show_in_nav_menu'	 => false,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'partners-and-supporters' ),
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'hierarchical'       => false,
+		'menu_position'      => 21,
+		'menu_icon'			 => 'dashicons-universal-access-alt',
+		'supports'           => array( 'title', 'thumbnail' )
+	);
+
+	register_post_type( 'partners-supporters', $args );
+}
+add_action( 'init', 'partners_and_supporters_init' );
+
 
 // License Plate Form shortcode
 

@@ -85,37 +85,22 @@ get_header(); ?>
 		</div>
 	</div>
 	
-	
 	<!-- Partners Section -->			
 	<div class="partners">
 		<div class="content">
 			<h1 class="centered-text butterfly-white">Partners & Supporters</h1>
 			<div id="js-left-arrow" class="arrows arrow-left"></div>
 			<div id="js-supporters" class="owl-carousel">
-				<?php $themeURI = get_stylesheet_directory_uri(); ?>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/unicef.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/loreal.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/CMI.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/miami-heat.png)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/autism_speaks.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/bloomingdales.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/CSI.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/KIND.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/vitas.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/publix.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/metrosigns.png)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/fcasv.png)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/ashbritt.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/acordis.png)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/tnt.png)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/autonation.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/BACA.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/dademedia.png)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/RAINN.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/hilton-hhonors.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/FNCAC.jpg)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/dolphins.png)"></div></div>
-				<div class="supporter-contain"><div class="supporter" style="background-image: url(<?php echo $themeURI;?>/img/partner-logos/carnival-foundation.png)"></div></div>
+				<?php 
+					$args = array( 'post_type' => 'partners-supporters', 'posts_per_page' => -1, 'order' => 'ASC' );
+					$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+							$logo = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+						?>
+							<div class="supporter-contain">
+								<div class="supporter" style="background-image: url(<?php echo $logo[0];?>)"></div>
+							</div>
+				<?php	endwhile; ?>
 			</div>
 			<div id="js-right-arrow" class="arrows arrow-right"></div>
 		</div>
