@@ -23,8 +23,14 @@ get_header(); ?>
 					
 					    <div class="entry-content">
 					    	<?php the_content(); ?>
-							
-							
+							<?php 
+								if (isset($_GET['action']) ) {
+									$action = $_GET['action'];
+									if ($action === "materials_request") {
+										$materials = true;
+									}
+								}
+							?>
 							<!-- Contact Us Form -->
 							<div class="form-wrapper clear">
 							<div class="contact-us-form forms">
@@ -57,7 +63,7 @@ get_header(); ?>
 											<option value="">Select a topic</option>
 											<option value="General Information">General Information</option>
 											<option value="Legislative Story Submission">Legislative Story Submission</option>
-											<option value="Materials Request">Materials Request</option>
+											<option value="Materials Request" <?php if($materials) echo "selected";?>>Materials Request</option>
 											<option value="Media Inquiry">Media Inquiry</option>
 											<option value="Safer, Smarter Kids Curriculum Inquiry">Safer, Smarter Kids Curriculum Inquiry</option>
 											<option value="Speaking Request">Speaking Request</option>
@@ -67,7 +73,7 @@ get_header(); ?>
 										</select>
 									</div>
 								
-								<section id="js-mailing-section">
+								<section id="js-mailing-section" <?php if($materials) echo 'class="loose"';?>>
 									<h6>Please provide your mailing address if you are requesting awareness materials.</h6>
 									<div class="field">
 										<label for="mailing_street">Mailing Street:</label>
