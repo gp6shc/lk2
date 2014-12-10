@@ -1,14 +1,7 @@
 <?php
 defined('ABSPATH') or die("Nope.");
 
-// Add stylesheet to the page
-function LB_add_scripts() {
-	wp_enqueue_script( 'LB-script', plugins_url( 'LB-script.js', __FILE__ ),'','',true );
-}
-
-add_action( 'wp_enqueue_scripts', 'LB_add_scripts' );
-
-function get_the_excerpt_max_charlength($charlength) {
+function LB_get_the_excerpt_max_charlength($charlength) {
 	$excerpt = get_the_excerpt();
 	$charlength++;
 
@@ -26,18 +19,18 @@ function get_the_excerpt_max_charlength($charlength) {
 	}
 }
 
-function capture_first_image() {
-  global $post, $posts;
-  $first_img = '';
-  ob_start();
-  ob_end_clean();
-  $result = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-  $first_img = $matches[1][0];
-
-  if(empty($first_img)) {
-    return;
-  }
-  return $first_img;
+function LB_capture_first_image() {
+	global $post, $posts;
+	$first_img = '';
+	ob_start();
+	ob_end_clean();
+	$result = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+	$first_img = $matches[1][0];
+	
+	if(empty($first_img)) {
+	  return;
+	}
+	return $first_img;
 }
 
 function LB_services_display( $atts ) {
@@ -52,8 +45,8 @@ function LB_services_display( $atts ) {
 	$thePermalink = urlencode( get_the_permalink() );
 	$featureURL = urlencode( wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) );
 	$thePageTitle = urlencode( get_the_title() );
-	$interiorImage = urlencode( capture_first_image() );
-	$thePageExcept = get_the_excerpt_max_charlength(140);
+	$interiorImage = urlencode( LB_capture_first_image() );
+	$thePageExcept = LB_get_the_excerpt_max_charlength(140);
 	
 	$services = shortcode_atts( array(
 		'facebook' => 0,
@@ -351,13 +344,33 @@ function LB_services_display( $atts ) {
 	$output = ob_get_contents();
 	ob_end_clean();
 	
-	return '<div class="LB-contain">'.$output.'</div>';
+	return '<div class="LB-contain">'.$output.'</div>	
+<script>
+var LBInput = document.getElementById("LB-url-to-select");
+if( LBInput !== null ) {
+	LBInput.parentNode.addEventListener("mouseup", function() {
+	    LBInput.classList.toggle("LB-display-none");
+	    LBInput.select();
+	}, false);
+	
+	window.addEventListener("keydown", function (e) {
+		if (e.keyCode === 67) {
+			LBInput.style.backgroundColor = "#1ada41";
+			LBInput.style.color = "#ffffff";
+			setTimeout( function() { 
+				LBInput.style.backgroundColor = LBInput.parentNode.style.backgroundColor;
+				LBInput.style.color = LBInput.parentNode.style.color;
+			}, 1800);
+		}
+	}, false);
+}	
+</script>';
 }
 
-function register_shortcodes(){
-  add_shortcode('linkbar', 'LB_services_display');
+function LB_register_shortcodes(){
+	add_shortcode('linkbar', 'LB_services_display');
 }
 
-add_action( 'init', 'register_shortcodes');
+add_action( 'init', 'LB_register_shortcodes');
 
 ?>
