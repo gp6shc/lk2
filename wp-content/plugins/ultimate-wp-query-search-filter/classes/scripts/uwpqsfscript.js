@@ -21,6 +21,7 @@ jQuery(document).ready(function($) {
 		
 		window.process_data = function ($obj) {
 			
+			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
 			var ajxdiv = $obj.closest("form").find("#uajaxdiv").val();	
 			var res = $('.loader');
 			var getdata = $obj.closest("form").serialize();
@@ -28,7 +29,7 @@ jQuery(document).ready(function($) {
 						
 			jQuery.ajax({
 				type: 'POST',	 
-				url: ajax.url,
+				url: ajaxURL,
 				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				beforeSend:function() {
 					$(''+ajxdiv+'').fadeOut(300);
@@ -48,13 +49,15 @@ jQuery(document).ready(function($) {
 		}	
 		
 		window.upagi_ajax = function (pagenum, formid) {
+			
+			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
 			var ajxdiv = $(''+formid+'').find("#uajaxdiv").val();	
 			var res = $('.loader');
 			var getdata = $(''+formid+'').serialize();
 		
 			jQuery.ajax({
 				type: 'POST',	 
-				url: ajax.url,
+				url: ajaxURL,
 				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				beforeSend:function() {
 					 $(''+ajxdiv+'').fadeOut(300);
@@ -71,12 +74,13 @@ jQuery(document).ready(function($) {
 			});
 		}
 		
-	 $('body').on('click', '.chktaxoall,.chkcmfall',function () {
+	$('body').on('click', '.chktaxoall,.chkcmfall',function () {
+		$(this).closest('.togglecheck').find('input:checkbox').prop('checked', this.checked);	
+	});
 	
-	    $(this).closest('.togglecheck').find('input:checkbox').prop('checked', this.checked);
-		
-         });
+	
+	$('form[id*="uwpqsffrom_"]').change(function(){ process_data($(this)); })
          
-	process_data(jQuery('form[id*="uwpqsffrom_"]'));
+	process_data($('form[id*="uwpqsffrom_"]'));
 
 });//end of script

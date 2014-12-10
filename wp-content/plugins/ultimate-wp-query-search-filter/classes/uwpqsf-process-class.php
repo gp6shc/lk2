@@ -357,7 +357,8 @@ if(!class_exists('uwpqsfprocess')){
    }// pagination
   	
   function ufront_js(){
-      $variables = array('url' => admin_url( 'admin-ajax.php' ),);
+/*
+    $variables = array('url' => admin_url( 'admin-ajax.php' ),);
 	$themeopt = new uwpqsfclass();	
 	$themeops = $themeopt->uwpqsf_theme();
 	$themenames= $themeopt->uwpqsf_theme_val();
@@ -372,6 +373,7 @@ if(!class_exists('uwpqsfprocess')){
           wp_localize_script('uwpqsfscript', 'ajax', $variables);
 	}// end foreach
       }//end if
+*/
   }
  
 

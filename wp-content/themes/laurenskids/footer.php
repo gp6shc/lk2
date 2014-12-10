@@ -48,9 +48,10 @@
 </footer><!-- /#colophon -->
 </div><!-- /#page -->
 
-<script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
 <?php if (is_front_page()): ?>
-	<script type="text/javascript" src='<?php echo get_stylesheet_directory_uri() ?>/js/min/owl.carousel.min.js'></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/owl.carousel.min.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
 			var owl = $('#js-supporters');
@@ -77,6 +78,8 @@
 			});
 		});
 	</script>
+<?php elseif (is_page( array(16, 152) )): ?>
+	<script type="text/javascript" src="<?php echo plugins_url('ultimate-wp-query-search-filter/classes/scripts/uwpqsfscript.js')?>"></script>
 <?php endif; ?>
 <?php wp_footer(); ?>
 

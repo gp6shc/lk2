@@ -78,13 +78,15 @@ $btn = apply_filters('uwpsqf_form_btn', $html, $id,$divclass,$defaultclass,$divi
 echo $btn;
 }elseif($button == '0'){
  if($auto == '1'){
-	$form = '"#uwpqsffrom_'.$id.'"';
+	//$form = '"#uwpqsffrom_'.$id.'"';
+/*
   ?>
 	<script type="text/javascript">jQuery(document).ready(function($) { 
 	var formid = <?php echo $form; ?>; 
 	$(formid).change(function(){ process_data($(this)); })
       ;})</script>
   <?php
+*/
  }
 }
 

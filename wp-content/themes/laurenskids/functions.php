@@ -206,26 +206,77 @@ function laurenskids_scripts() {
 	
 	// remove Recent Tweets plugin css
 	wp_dequeue_style('tp_twitter_plugin_css');
-	
-	//SCRIPTS
-	//jquery
-	wp_register_script('jquery',"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
-	/* wp_enqueue_script('jquery'); */
-	//link focus
-	wp_enqueue_script( 'laurenskids-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '0.1', true );
-	// comment script (when comments open on single-view)
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-	
-	
 }
 add_action( 'wp_enqueue_scripts', 'laurenskids_scripts' );
 
 
-add_filter('uwpqsf_result_tempt', 'customize_output', '', 4);
+// removes jQuery in favor of Google CDN
+function dequeue_jquery_migrate( &$scripts){
+	if(!is_admin()){
+		$scripts->remove( 'jquery');
+	}
+}
+add_filter( 'wp_default_scripts', 'dequeue_jquery_migrate' );
 
-function customize_output($results , $arg, $id, $getdata ){
+
+// Disable support for comments and trackbacks in post types
+	function df_disable_comments_post_types_support() {
+	    $post_types = get_post_types();
+	    foreach ($post_types as $post_type) {
+	        if(post_type_supports($post_type, 'comments')) {
+	            remove_post_type_support($post_type, 'comments');
+	            remove_post_type_support($post_type, 'trackbacks');
+	        }
+	    }
+	}
+	add_action('admin_init', 'df_disable_comments_post_types_support');
+	 
+	// Close comments on the front-end
+	function df_disable_comments_status() {
+	    return false;
+	}
+	add_filter('comments_open', 'df_disable_comments_status', 20, 2);
+	add_filter('pings_open', 'df_disable_comments_status', 20, 2);
+	 
+	// Hide existing comments
+	function df_disable_comments_hide_existing_comments($comments) {
+	    $comments = array();
+	    return $comments;
+	}
+	add_filter('comments_array', 'df_disable_comments_hide_existing_comments', 10, 2);
+	 
+	// Remove comments page in menu
+	function df_disable_comments_admin_menu() {
+	    remove_menu_page('edit-comments.php');
+	}
+	add_action('admin_menu', 'df_disable_comments_admin_menu');
+	 
+	// Redirect any user trying to access comments page
+	function df_disable_comments_admin_menu_redirect() {
+	    global $pagenow;
+	    if ($pagenow === 'edit-comments.php') {
+	        wp_redirect(admin_url()); exit;
+	    }
+	}
+	add_action('admin_init', 'df_disable_comments_admin_menu_redirect');
+	 
+	// Remove comments metabox from dashboard
+	function df_disable_comments_dashboard() {
+	    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+	}
+	add_action('admin_init', 'df_disable_comments_dashboard');
+	 
+	// Remove comments links from admin bar
+	function df_disable_comments_admin_bar() {
+	    if (is_admin_bar_showing()) {
+	        remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
+	    }
+	}
+	add_action('init', 'df_disable_comments_admin_bar');
+
+
+// custom output for UWPQSF 
+function customize_output($results , $arg, $id, $getdata) {
 	// The Query
 		$apiclass = new uwpqsfprocess();
 		$query = new WP_Query( $arg );
