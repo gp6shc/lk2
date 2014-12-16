@@ -2883,7 +2883,8 @@ Footer
 
 footer .widget-title {
   color: white;
-  display: block; }
+  display: block;
+  font-size: 34px; }
 
 #footer-widgets .widget ul ul {
   margin: 0 0 0 1.5em; }
@@ -3278,6 +3279,9 @@ Single's Sidebar: sidebar.php
 /*--------------------------------------------------------------
 Single's post content
 --------------------------------------------------------------*/
+.single .post .entry-content {
+  padding-top: 35px; }
+
 .entry-header {
   padding: 35px 35px 0 35px; }
 
@@ -3324,6 +3328,7 @@ article:not(.page) .entry-content {
 
 .post-tags {
   float: left;
+  font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif;
   height: 40px; }
 
 .post-share {
@@ -3339,8 +3344,10 @@ UWPQSF form
 --------------------------------------------------------------*/
 #uwpqsf_id {
   border: none;
-  width: 80%;
+  width: 100%;
   margin: 40px auto 72px auto; }
+  #uwpqsf_id form {
+    text-align: center; }
 
 #uwpqsf_id_key {
   border: none;
@@ -3396,7 +3403,8 @@ UWPQSF form
 
 .uwpqsf_class {
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+  margin-bottom: 17px; }
 
 .uwpqsfpagi {
   position: absolute;
@@ -3498,7 +3506,8 @@ Blog Loop -- What's New?, Survivor Stories
   min-height: 100vh;
   position: relative; }
 
-#lk-blog, #survivor-stories {
+#lk-ajax {
+  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3550,7 +3559,9 @@ Blog Loop -- What's New?, Survivor Stories
   z-index: 2; }
 
 .post-preview {
-  padding: 17px; }
+  padding: 0 17px 17px; }
+  .post-preview h3 {
+    text-transform: none; }
   .post-preview h5 {
     font-size: 14px;
     font-weight: 100;
@@ -3559,6 +3570,13 @@ Blog Loop -- What's New?, Survivor Stories
     margin: 10px 0; }
   .post-preview p {
     overflow: hidden; }
+
+.video-placeholder {
+  background-color: #d8d9da;
+  font-size: 28px;
+  text-align: center;
+  line-height: 90px;
+  height: 90px; }
 
 .featured-post {
   width: 491px;

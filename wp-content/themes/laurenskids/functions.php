@@ -307,7 +307,13 @@ function customize_output($results , $arg, $id, $getdata) {
 								<h3><?php the_title(); ?></h3>
 								<h5><?php the_time('F j, Y'); ?></h5>
 								<hr>
-								<p><?php laurenskids_excerpt(25); ?></p>
+								<p><?php $Xcerpt = get_laurenskids_excerpt(25);
+										if ($Xcerpt === "") {
+											echo '<div class="video-placeholder"><i class="fa fa-youtube-play"></i></div>';
+										}else{
+											echo $Xcerpt;
+										}
+									?></p>
 								
 								<?php if (has_category()): ?>
 								<hr>

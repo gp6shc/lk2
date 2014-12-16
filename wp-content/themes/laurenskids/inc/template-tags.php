@@ -168,12 +168,33 @@ add_action( 'save_post',     'laurenskids_category_transient_flusher' );
 function laurenskids_excerpt($limit) {
 	$excerpt = strip_tags( get_the_content() );
 	$excerpt = explode(' ', $excerpt, $limit);
-	if (count($excerpt)>=$limit) {
-	  array_pop($excerpt);
-	  $excerpt = implode(" ",$excerpt).'...';
+	
+	if (count($excerpt) === 0) {
+		return "";
+	}elseif (count($excerpt) >= $limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'...';
 	} else {
-	  $excerpt = implode(" ",$excerpt);
+		$excerpt = implode(" ",$excerpt);
 	}	
+	
 	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
 	echo $excerpt;
+}
+
+function get_laurenskids_excerpt($limit) {
+	$excerpt = strip_tags( get_the_content() );
+	$excerpt = explode(' ', $excerpt, $limit);
+	
+	if (count($excerpt) === 0) {
+		return "";
+	}elseif (count($excerpt) >= $limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'...';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	}	
+	
+	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+	return $excerpt;
 }
