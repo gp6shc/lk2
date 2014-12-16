@@ -28,6 +28,8 @@ get_header(); ?>
 									$action = $_GET['action'];
 									if ($action === "materials_request") {
 										$materials = true;
+									}elseif ($action === "submit_story") {
+										$story = true;
 									}
 								}
 							?>
@@ -67,7 +69,7 @@ get_header(); ?>
 											<option value="Media Inquiry">Media Inquiry</option>
 											<option value="Safer, Smarter Kids Curriculum Inquiry">Safer, Smarter Kids Curriculum Inquiry</option>
 											<option value="Speaking Request">Speaking Request</option>
-											<option value="Survivor Story Submissions">Survivor Story Submissions</option>
+											<option value="Survivor Story Submissions" <?php if($story) echo "selected";?>>Survivor Story Submissions</option>
 											<option value="Volunteer Inquiry">Volunteer Inquiry</option>
 											<option value="Walk in My Shoes Information Request">Walk in My Shoes Information Request</option>
 										</select>
