@@ -19,6 +19,14 @@ jQuery(document).ready(function($) {
 		  }
 		});
 		
+		// Inintialize Masonry instance
+		var container = document.querySelector('#lk-ajax');
+		var msnry = new Masonry( container, {
+			// options
+			columnWidth: 250,
+			itemSelector: '.lk-post'
+		});
+		
 		window.process_data = function ($obj) {
 			
 			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
@@ -34,18 +42,23 @@ jQuery(document).ready(function($) {
 				beforeSend:function() {
 					$(''+ajxdiv+'').fadeOut(300);
 					res.fadeIn(150);
-					//console.log(({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }));
-					 
+					
+					//console.log(({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }));					 
 					},
 				success: function(html) {
-					setTimeout(function() {
-						$(''+ajxdiv+'').html(html).fadeIn(300);
+					setTimeout( function() {
 						res.fadeOut(150);
+						setTimeout( function() {
+							$(''+ajxdiv+'').html(html).fadeIn(300);
+						
+							msnry.reloadItems();
+							msnry.layout();
+						}, 150);
+						
 					}, 250);
 
 				 }
-				 });
-			
+			});
 		}	
 		
 		window.upagi_ajax = function (pagenum, formid) {
@@ -60,16 +73,27 @@ jQuery(document).ready(function($) {
 				url: ajaxURL,
 				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				beforeSend:function() {
-					 $(''+ajxdiv+'').fadeOut(300);
-					 res.fadeIn(150);
-					 $('html, body').animate({scrollTop : 360}, 500);
+					$(''+ajxdiv+'').fadeOut(300);
+					res.fadeIn(150);
+					
+
+					$('html, body').animate({
+						scrollTop: ($('#lk-ajax').offset().top - 210)
+					}, 1000);
 				},
 					
 				success: function(html) {
 					setTimeout(function() {
-						$(''+ajxdiv+'').html(html).fadeIn(300);
 						res.fadeOut(150);
-					}, 250);
+						setTimeout( function() {
+							$(''+ajxdiv+'').html(html).fadeIn(300);
+						
+							msnry.reloadItems();
+							msnry.layout();
+						}, 150);
+						
+					}, 750);
+					
 				}
 			});
 		}
@@ -80,7 +104,7 @@ jQuery(document).ready(function($) {
 	
 	
 	$('form[id*="uwpqsffrom_"]').change(function(){ process_data($(this)); })
-         
+
 	process_data($('form[id*="uwpqsffrom_"]'));
 
 });//end of script
