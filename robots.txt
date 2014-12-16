@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /awareness/survivor-stories
+Disallow: /awareness/survivor-stories/*
