@@ -52,6 +52,10 @@ body {
     color: #cccccc; }
     .login #login_error a:hover {
       color: #EB008B; }
+.login .button-primary {
+  float: none;
+  width: 100%;
+  margin-top: 15px; }
 .login #backtoblog {
   display: none; }
 

@@ -169,11 +169,11 @@ ul#adminmenu a.wp-has-current-submenu:after, ul#adminmenu > li.current > a.curre
 /* Admin Menu: bubble */
 #adminmenu .awaiting-mod, #adminmenu .update-plugins {
   color: white;
-  background: red; }
+  background: #4b4c4e; }
 
 #adminmenu li.current a .awaiting-mod, #adminmenu li a.wp-has-current-submenu .update-plugins, #adminmenu li:hover a .awaiting-mod, #adminmenu li.menu-top:hover > a .update-plugins {
-  color: #5B5B5B;
-  background: #717275; }
+  color: white;
+  background: #58595B; }
 
 /* Admin Menu: collapse button */
 #collapse-menu {
