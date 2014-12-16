@@ -15,18 +15,20 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="shortcut icon" href="<?php echo home_url("favicon.ico")?>"/>
 <style> /* hides font while typekit loads */
-.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5 {font-family: sans-serif;visibility: hidden;}
-.wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5 {visibility: visible;}
-.wf-inactive h1, .wf-inactive h2, .wf-inactive h3, .wf-inactive h4, .wf-inactive h5 {visibility: visible;}
+.wf-loading h1,.wf-loading h2,.wf-loading h3,.wf-loading h4,.wf-loading h5,.wf-loading uwpqsf_class span,.wf-loading .menu-item a{font-family: sans-serif;visibility: hidden;}
+.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-loading uwpqsf_class span,.wf-active .menu-item a{visibility: visible;}
+.wf-inactive h1,.wf-inactive h2,.wf-inactive h3,.wf-inactive h4,.wf-inactive h5,.wf-loading uwpqsf_class span,.wf-inactive .menu-item a{visibility: visible;}
 </style>
 <script>
   (function(d) {
-    var config = {
-      kitId: 'hne5xvx',
-      scriptTimeout: 3000
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
+  var tkTimeout=3000;
+  if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
+  var config = {
+    kitId: 'hne5xvx',
+    scriptTimeout: tkTimeout
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
 </script>
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,700' rel='stylesheet' type='text/css'>
 <?php if (is_page(152)): ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> <?php endif; ?>
