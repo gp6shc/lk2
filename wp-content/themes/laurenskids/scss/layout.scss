@@ -550,7 +550,12 @@ Homepage news section
 }
 
 .latest-preview + .latest-preview {
-	margin-top: 15px;
+	margin-top: 30px;
+}
+
+.featured .latest-preview + .latest-preview {
+	margin-top: 60px;
+	
 }
 
 .news-thumb {
@@ -989,7 +994,7 @@ About Page
 	background-color: rgba(white, 0.85);
 	
 	.entry-header {
-		padding-top: 90px;
+		padding-top: 50px;
 	}
 }
 
@@ -1914,7 +1919,7 @@ Contact
 		float: right;
 		color: $body;
 		border: none;
-		padding: 4px 7px;
+		padding: 6px 7px;
 		border-radius: 3px;
 		box-shadow: $box-shadow;
 		transition: border 0.3s;
@@ -1955,7 +1960,13 @@ Contact
 }
 
 .field + .field, .mc-field-group + .mc-field-group {
-	margin-top: 15px;
+	margin-top: 10px;
+}
+
+.field:after, .mc-field-group:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .submit-btn {
