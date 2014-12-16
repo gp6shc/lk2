@@ -568,6 +568,13 @@ function admin_css() {
 }
 add_action('admin_print_styles', 'admin_css' );
 
+function add_favicon() {
+	echo '<link rel="shortcut icon" href="' . home_url("favicon-admin.ico") . '" />';
+}
+  
+add_action('login_head', 'add_favicon');
+add_action('admin_head', 'add_favicon');
+
 // Custom WordPress Login Page
 function login_css() {
 	wp_enqueue_style( 'login_css', get_template_directory_uri() . '/css/admin/login.css' );

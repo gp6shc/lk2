@@ -13,6 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php if (is_page(152) || is_singular("survivor-stories")):?><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><?php endif;?>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
+<link rel="shortcut icon" href="<?php echo home_url("favicon.ico")?>"/>
 <style> /* hides font while typekit loads */
 .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5 {font-family: sans-serif;visibility: hidden;}
 .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5 {visibility: visible;}
