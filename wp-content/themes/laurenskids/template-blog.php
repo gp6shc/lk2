@@ -14,12 +14,14 @@ get_header(); ?>
 		
 		<p class="centered-text">
 			<?php //call in the content of the page What's New? 
+			/* Currently unused
 				$post_id = get_the_ID();
 				global $post;
 				$post = &get_post($post_id);
 				setup_postdata( $post );
 				the_content();
 				wp_reset_postdata( $post );
+			*/
 			?>
 		</p>
 		
@@ -27,7 +29,7 @@ get_header(); ?>
 		<div class="blog-container">
 			<div class="loader"></div>
 			
-			<div id="lk-blog">
+			<div id="lk-ajax" class="clear">
 			
 			</div>
 		</div>

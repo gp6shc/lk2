@@ -20,7 +20,7 @@ get_header(); ?>
 	<div id="primary" class="content-area clear">
 		<main id="main" class="site-main" role="main">
 		<h1 class="centered-text butterfly"><?php the_title(); ?></h1>
-			<?php //call in the content of the page What's New? 
+			<?php //call in the content of the page Survivor Stories 
 				$post_id = get_the_ID();
 				global $post;
 				$post = &get_post($post_id);
@@ -34,7 +34,7 @@ get_header(); ?>
 		<div class="blog-container">
 			<div class="loader"></div>
 			
-			<div id="survivor-stories">
+			<div id="lk-ajax" class="clear">
 			
 			</div>
 		</div>

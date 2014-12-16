@@ -120,9 +120,9 @@ add_action( 'after_setup_theme', 'laurenskids_setup' );
 function laurenskids_widgets_init() {
 	//sidebar-1
 	register_sidebar( array(
-		'name'          => __( 'Testimonials', 'laurenskids' ),
+		'name'          => __( 'Interior Left Sidebar', 'laurenskids' ),
 		'id'            => 'testimonial',
-		'description'   => 'To show on all Posts. Position: sidebar, right.',
+		'description'   => 'Displays on all pages with the “Interior: Image” or “Interior: Image + Nav” templates.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',

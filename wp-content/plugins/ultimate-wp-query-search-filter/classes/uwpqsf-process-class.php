@@ -277,7 +277,7 @@ if(!class_exists('uwpqsfprocess')){
 		echo $result;
 					
 							
-		}else{ echo 'An error has occurred. Please refresh the page.';}
+		}else{ echo '<h6 class="centered-text" style="text-transform: none">The connection to the server has been lost. Please <a href="'.get_the_permalink().'">refresh the page</a>.</h6>';}
 	    	die;	
 
   }//end ajax	

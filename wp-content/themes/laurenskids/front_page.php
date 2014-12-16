@@ -81,7 +81,6 @@ get_header(); ?>
 						</article><!-- #post-## -->
 					<?php endwhile; ?>
 			</div>
-			
 		</div>
 	</div>
 	
@@ -97,9 +96,9 @@ get_header(); ?>
 						while ( $loop->have_posts() ) : $loop->the_post(); 
 							$logo = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
 						?>
-							<div class="supporter-contain">
-								<div class="supporter" style="background-image: url(<?php echo $logo[0];?>)"></div>
-							</div>
+						<a href="<?php the_permalink()?>"><div class="supporter-contain">
+							<div class="supporter" title="<?php the_title()?>" style="background-image: url(<?php echo $logo[0];?>)"></div>
+						</div></a>
 				<?php	endwhile; ?>
 			</div>
 			<div id="js-right-arrow" class="arrows arrow-right"></div>

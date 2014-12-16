@@ -78,8 +78,9 @@
 			});
 		});
 	</script>
-<?php elseif (is_page( array(16, 152) )): ?>
+<?php elseif (is_page( array(16, 152) )): // if on the Whats New or Survivor stories pages: ?> 
 	<script type="text/javascript" src="<?php echo plugins_url('ultimate-wp-query-search-filter/classes/scripts/uwpqsfscript.js')?>"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/masonry.pkgd.js"></script>
 <?php endif; ?>
 <?php wp_footer(); ?>
 
