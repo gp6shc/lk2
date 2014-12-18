@@ -62,8 +62,6 @@ function laurenskids_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
 	
-	
-	
 	/*
 	 * post thumbnail support (featured images for posts)
 	 */
@@ -90,11 +88,9 @@ function laurenskids_setup() {
 	}
 	add_filter('excerpt_more', 'lk_excerpt_more');
 	
-	
 	// Enable shortcodes in widgets
 	add_filter('widget_text', 'do_shortcode');
 	
-
 	/*
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
@@ -441,29 +437,29 @@ function addLicensePlateForm() {
 	'<!-- License Form -->
 		<div class="license-form-wrapper">
 		<div class="license-form forms">
-			<form action="http://laurens-kids.force.com/website/contact_us" method="post" data-webforms2-force-js-validation="true">
+			<form action="http://laurens-kids.force.com/website/contact_us" method="post" data-parsley-validate>
 				<input type="hidden" name="thankYouURL" value="http://www.laurenskids.org"/>
 			
 				<h3 class="centered-text">license Plate Interest</h3>
 				<div class="field">
 					<label for="firstname" class="required">First Name:</label>
-					<input id="firstname" type="text" name="firstname" required="required" placeholder="first name" maxlength="40"/>
+					<input id="firstname" type="text" name="firstname" required="required" placeholder="first name" maxlength="40" data-parsley-error-message="Please enter your first name"/>
 				</div>
 				<div class="field">
 					<label for="lastname" class="required">Last Name:</label>
-					<input id="lastname" type="text" name="lastname" required="required" placeholder="last name" maxlength="80"/>
+					<input id="lastname" type="text" name="lastname" required="required" placeholder="last name" maxlength="80" data-parsley-error-message="Please enter your last name"/>
 				</div>
 				<div class="field">
 					<label for="zip_code" class="required">Zip Code:</label>
-					<input id="zip_code" type="text" name="zip_code" required="required" pattern="[0-9]{5}(-?[0-9]{4})?" placeholder="zip code" maxlength="10"/>
+					<input id="zip_code" type="text" name="zip_code" required="required" pattern="[0-9]{5}(-?[0-9]{4})?" placeholder="zip code" maxlength="10"  data-parsley-error-message="Please enter your 5-digit zip" data-parsley-length="[5,5]"/>
 				</div>
 				<div class="field">
 					<label for="phone">Phone:</label>
-					<input id="phone" name="phone" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="(123) 456-7890" maxlength="12"/>
+					<input id="phone" name="phone" type="tel" placeholder="123-456-7890" maxlength="12" data-parsley-error-message="Please enter a valid phone number with an area code" data-parsley-pattern="^\d{3}-\d{3}-\d{4}$|^\d{3} \d{3} \d{4}$"/>
 				</div>
 				<div class="field">
 					<label for="email_address" class="required">Email Address:</label>
-					<input id="email_address" type="email" name="email_address" required="required" placeholder="email@host.com"/>
+					<input id="email_address" type="email" name="email_address" required="required" placeholder="username@host.com" data-parsley-error-message="Please enter a valid email"/>
 				</div>
 			    <div class="submit-btn">
 					<button type="submit">Submit</button>
@@ -500,34 +496,6 @@ function is_tree($pid) {      												// $pid = The ID of the page we're loo
 		return false;		  												// we're elsewhere
 };
 
-
-// work in progress, adding array support...
-
-/*
-function is_tree($pid) {      												// $pid = The ID of the page we're looking for pages underneath
-	global $post;   	  													// load details about this page
-	error_log(print_r($pid,true));
-	if ( is_array($pid) ) {
-		foreach($pid as $thePage) {
-			error_log(print_r($thePage,true));
-			if (is_page() && ($post->post_parent === $thePage || is_page($thePage) ) ) {
-				$stillTrue = true; 											// we're at the page or at a sub page
-				error_log("is a subby");
-			}else{
-				return false;  												// we're elsewhere, return early
-				error_log("is not a subby");
-			}
-		}
-	return $stillTrue;
-	}else{
-		if (is_page() && ($post->post_parent === $pid || is_page($pid) ) ) {
-			return true;		   											// we're at the page or at a sub page
-		}else{
-			return false;  													// we're elsewhere
-		}
-	}
-}
-*/
 
 // add a class to body_class() if on a certain page
 

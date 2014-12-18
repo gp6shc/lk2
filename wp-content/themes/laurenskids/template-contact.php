@@ -18,7 +18,7 @@ get_header(); ?>
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					    <header class="entry-header">
-					    	<?php if (!is_page(182)) {?><h2 class="butterfly"><?php the_title() ?></h2><?php }//hide on Campaigns & Clips page?> 
+					    	<h2 class="butterfly"><?php the_title() ?></h2>
 					    </header><!-- .entry-header -->
 					
 					    <div class="entry-content">
@@ -26,10 +26,17 @@ get_header(); ?>
 							<?php 
 								if (isset($_GET['action']) ) {
 									$action = $_GET['action'];
-									if ($action === "materials_request") {
-										$materials = true;
-									}elseif ($action === "submit_story") {
-										$story = true;
+									
+									switch ($action) {
+										case "materials_request":
+											$materials = true;
+											break;
+										case "submit_story":
+											$story = true;
+											break;
+										case "volunteer_inquiry":
+											$vol = true;
+											break;
 									}
 								}
 							?>
@@ -53,7 +60,7 @@ get_header(); ?>
 									</div>
 									<div class="field">
 										<label for="email_address" class="required">Email Address:</label>
-										<input id="email_address" type="email" name="email_address" required="required" placeholder="email@host.com" data-parsley-error-message="Please enter a valid email"/>
+										<input id="email_address" type="email" name="email_address" required="required" placeholder="username@host.com" data-parsley-error-message="Please enter a valid email"/>
 									</div>
 									<div class="field">
 										<label for="phone">Phone:</label>
@@ -70,7 +77,7 @@ get_header(); ?>
 											<option value="Safer, Smarter Kids Curriculum Inquiry">Safer, Smarter Kids Curriculum Inquiry</option>
 											<option value="Speaking Request">Speaking Request</option>
 											<option value="Survivor Story Submissions" <?php if($story) echo "selected";?>>Survivor Story Submissions</option>
-											<option value="Volunteer Inquiry">Volunteer Inquiry</option>
+											<option value="Volunteer Inquiry" <?php if($vol) echo "selected";?>>Volunteer Inquiry</option>
 											<option value="Walk in My Shoes Information Request">Walk in My Shoes Information Request</option>
 										</select>
 									</div>
