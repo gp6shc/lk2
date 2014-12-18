@@ -81,4 +81,7 @@ body {
 ::selection {
   background-color: #58595B;
   color: white; }
+
+.interim-login #login {
+  margin-top: 0; }
 /*# sourceMappingURL=login.css.map */
