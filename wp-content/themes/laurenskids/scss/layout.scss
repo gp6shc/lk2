@@ -419,6 +419,40 @@ Homepage video section
 	}
 }
 
+.video-controller {
+	font-size: 25px;
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	top: -55px;
+	right: 5px;
+	cursor: pointer;
+
+	color: rgba(black, 0.22); 
+	border-radius: 25px;
+	text-align: center;
+	background-color: rgba(white, 0.28);
+	transition: all 0.3s;
+	
+	&:hover {
+		background-color: rgba($brand-main, 1);
+		
+		&:before {
+			color: rgba(white,1);			
+		}
+	}
+}
+
+.fa-play {
+	background-color: rgba($brand-main, 1);
+	
+	&:before {
+		margin-left: 4px;
+		color: rgba(white,1);
+	}
+}
+
 
 /*--------------------------------------------------------------
 Homepage welcome section

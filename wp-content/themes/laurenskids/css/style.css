@@ -2589,6 +2589,32 @@ Homepage video section
   .video-wrapper img {
     display: none; }
 
+.video-controller {
+  font-size: 25px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  top: -55px;
+  right: 5px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.22);
+  border-radius: 25px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.28);
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+  .video-controller:hover {
+    background-color: #eb008b; }
+    .video-controller:hover:before, .video-controller.clearfix:hover:after {
+      color: white; }
+
+.fa-play {
+  background-color: #eb008b; }
+  .fa-play:before, .fa-play.clearfix:after {
+    margin-left: 4px;
+    color: white; }
+
 /*--------------------------------------------------------------
 Homepage welcome section
 --------------------------------------------------------------*/
@@ -2658,6 +2684,7 @@ Homepage news section
     display: block; }
   .latest-preview h4 {
     color: #008996;
+    text-transform: none;
     /*truncate title to 1 line only*/
     /*
 		overflow: hidden;
@@ -3047,7 +3074,7 @@ About Page
   position: relative;
   margin-top: 25px; }
   .butterfly:after {
-    content: url("../img/butterfly.png");
+    content: url("../img/butterfly_animation.gif");
     position: absolute;
     top: -27px;
     margin-left: -6px; }
@@ -3112,7 +3139,7 @@ p + .boxes {
     background-image: url(../img/licenseplate.png); }
   .boxes .shop-icon {
     background-image: url(../img/shop.png); }
-  .boxes .materials-icon {
+  .boxes .g-icon {
     background-image: url(../img/materials.png); }
   .boxes .volunteer-icon {
     background-image: url(../img/volunteer.png); }
@@ -3727,13 +3754,13 @@ FAQs
 Contact
 --------------------------------------------------------------*/
 .form-wrapper {
-  background-color: #FEF5F9;
+  background-color: #F7F7F5;
   margin-top: 30px; }
 
 .license-form-wrapper {
   width: 70%;
   margin: 15px auto;
-  background-color: #FEF5F9; }
+  background-color: #F7F7F5; }
 
 .contact-us-form {
   width: 50%;
@@ -3741,7 +3768,7 @@ Contact
   border-right: 2px solid white;
   float: left; }
   .contact-us-form section {
-    background-color: #fdecf3;
+    background-color: #eeeeea;
     max-height: 0;
     margin: 15px 0;
     overflow: hidden;
@@ -3802,6 +3829,8 @@ Contact
       color: #d7d7d7; }
     .forms input[type="text"]:focus:not(select), .forms input[type="tel"]:focus:not(select), .forms input[type="email"]:focus:not(select), .forms select:focus:not(select) {
       border-right: 6px solid #EB008B; }
+  .forms input[type="submit"]:focus {
+    background-color: #008996; }
   .forms select {
     color: #5B5B5B;
     background-color: white; }
@@ -3810,9 +3839,10 @@ Contact
     border: none;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
     padding: 2%;
+    margin-bottom: 5px;
     min-width: 100%;
     max-width: 100%;
-    max-height: 200px; }
+    max-height: 2000px; }
 
 .input-group ul {
   list-style: none; }
@@ -3840,6 +3870,45 @@ Contact
   text-align: right; }
   .required-info img {
     margin-bottom: 1px; }
+
+.forms .parsley-errors-list {
+  margin: 0;
+  list-style: none;
+  color: #008996;
+  font-weight: 700;
+  font-family: 'Roboto Slab', sans-serif; }
+.forms input.parsley-success, .forms select.parsley-success {
+  color: #58595B;
+  background-color: #DFF0D8; }
+  .forms input.parsley-success:focus:not(select), .forms select.parsley-success:focus:not(select) {
+    border-right: 6px solid #468847; }
+.forms textarea.parsley-success {
+  box-shadow: 2px 2px #c1e2b3; }
+.forms input.parsley-error, .forms select.parsley-error {
+  box-shadow: 2px 2px #ED9ABC;
+  background-color: #ffebf7; }
+  .forms input.parsley-error::-webkit-input-placeholder, .forms select.parsley-error::-webkit-input-placeholder {
+    color: #b1b2b4; }
+  .forms input.parsley-error::-moz-placeholder, .forms select.parsley-error::-moz-placeholder {
+    color: #b1b2b4; }
+  .forms input.parsley-error:-ms-input-placeholder, .forms select.parsley-error:-ms-input-placeholder {
+    color: #b1b2b4; }
+  .forms input.parsley-error::placeholder, .forms select.parsley-error::placeholder {
+    color: #b1b2b4; }
+.forms textarea.parsley-error {
+  box-shadow: 2px 2px #ED9ABC;
+  background-color: white; }
+.forms .parsley-errors-list {
+  margin: 2px 0 3px;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+          transition: all 0.3s ease-in; }
+.forms .parsley-errors-list.filled {
+  opacity: 1; }
 
 .grid_1 {
   width: 6.5%; }

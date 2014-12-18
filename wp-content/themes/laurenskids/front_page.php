@@ -16,6 +16,7 @@ get_header(); ?>
 	
 	<!-- Welcome Message -->		
 	<div class="welcome">
+		<i class="fa fa-pause video-controller" id="js-controller"></i>
 		<div class="content">
 			<?php //call in the content of the page What's New? 
 				$post_id = get_the_ID();
