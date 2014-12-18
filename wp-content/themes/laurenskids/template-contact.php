@@ -36,7 +36,7 @@ get_header(); ?>
 							<!-- Contact Us Form -->
 							<div class="form-wrapper clear">
 							<div class="contact-us-form forms">
-								<form action="http://laurens-kids.force.com/website/contact_us" method="post" data-webforms2-force-js-validation="true">
+								<form action="http://laurens-kids.force.com/website/contact_us" method="post" data-parsley-validate>
 									<input type="hidden" name="thankYouURL" value="http://www.laurenskids.org"/>
 								
 								    <input type="hidden" name="groupMember" value="Lead Manager"/>
@@ -45,19 +45,19 @@ get_header(); ?>
 									<h3 class="centered-text">Contact Us</h3>
 									<div class="field">
 										<label for="firstname" class="required">First Name:</label>
-										<input id="firstname" type="text" name="firstname" required="required" maxlength="40" placeholder="first name"/>
+										<input id="firstname" type="text" name="firstname" required="required" maxlength="40" placeholder="first name" data-parsley-error-message="Please enter your first name"/>
 									</div>
 									<div class="field">
 										<label for="lastname" class="required">Last Name:</label>
-										<input id="lastname" type="text" name="lastname" required="required" maxlength="80" placeholder="last name"/>
+										<input id="lastname" type="text" name="lastname" required="required" maxlength="80" placeholder="last name" data-parsley-error-message="Please enter your last name"/>
 									</div>
 									<div class="field">
 										<label for="email_address" class="required">Email Address:</label>
-										<input id="email_address" type="email" name="email_address" required="required" placeholder="email@host.com"/>
+										<input id="email_address" type="email" name="email_address" required="required" placeholder="email@host.com" data-parsley-error-message="Please enter a valid email"/>
 									</div>
 									<div class="field">
 										<label for="phone">Phone:</label>
-										<input id="phone" name="phone" type="tel" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" placeholder="(123) 456-7890" maxlength="12"/>
+										<input id="phone" name="phone" type="tel" placeholder="123-456-7890" maxlength="12" data-parsley-error-message="Please enter a valid phone number with an area code" data-parsley-pattern="^\d{3}-\d{3}-\d{4}$|^\d{3} \d{3} \d{4}$"/>
 									</div>
 									<div class="field">
 										<label for="topic" class="required">Nature of Your Inquiry:</label>
@@ -79,15 +79,15 @@ get_header(); ?>
 									<h6>Please provide your mailing address if you are requesting awareness materials.</h6>
 									<div class="field">
 										<label for="mailing_street">Mailing Street:</label>
-										<input class="js-mail-field" id="mailing_street" type="text" name="mailing_street" placeholder="Street Address" maxlength="80"/>
+										<input class="js-mail-field" id="mailing_street" type="text" name="mailing_street" placeholder="Street Address" maxlength="80" data-parsley-error-message="Please enter your address"/>
 									</div>
 									<div class="field">
 										<label for="mailing_city">Mailing City:</label>
-										<input class="js-mail-field" id="mailing_city" type="text" name="mailing_city" placeholder="City" maxlength="80"/>
+										<input class="js-mail-field" id="mailing_city" type="text" name="mailing_city" placeholder="City" maxlength="80" data-parsley-error-message="Please enter your city"/>
 									</div>
 									<div class="field">
 										<label for="mailing_state">Mailing State:</label>
-										<select class="js-mail-field" id="mailing_state" name="mailing_state">
+										<select class="js-mail-field" id="mailing_state" name="mailing_state" data-parsley-error-message="Please enter your state">
 											<option value="">None</option>
 											<option value="AL">Alabama</option>
 											<option value="AK">Alaska</option>
@@ -144,7 +144,7 @@ get_header(); ?>
 									</div>
 								    <div class="field">
 										<label for="mailing_country">Mailing Country:</label>
-										<select class="js-mail-field" id="country" name="mailing_country">
+										<select class="js-mail-field" id="country" name="mailing_country" data-parsley-error-message="Please enter your country">
 											<option value="">None</option>
 											<option value="US">United States</option>
 											<option value="AF">Afghanistan</option>
@@ -400,14 +400,15 @@ get_header(); ?>
 									</div>
 									<div class="field">
 										<label for="mailing_Postal_code">Mailing Postal Code:</label>
-										<input class="js-mail-field" id="mailing_zip_code" type="text" name="mailing_zip_code" pattern="[0-9]{5}(-?[0-9]{4})?" placeholder="Zip Code" maxlength="10"/>
+										<input class="js-mail-field" id="mailing_zip_code" type="text" name="mailing_zip_code" placeholder="Zip Code" maxlength="10" data-parsley-error-message="Please enter your 5-digit zip" data-parsley-length="[5,5]"/>
 									</div>
 								</section>
 									
 									<div class="field">
 										<label for="message" class="required">Message:</label>
-										<textarea id="message" name="message" required="required" placeholder="" rows="5" maxlength="512"></textarea>
+										<textarea id="message" name="message" required="required" placeholder="" rows="5" maxlength="512" data-parsley-error-message="Please leave a short message explaining your reason for contacting us"></textarea>
 									</div>
+									
 									<div class="submit-btn">
 										<button type="submit">Submit</button>
 									</div>
@@ -418,19 +419,23 @@ get_header(); ?>
 							<div class="mailchimp-signup-form forms">
 								<div id="mc_embed_signup">
 									<h3 class="centered-text">Sign Up for our Newsletter</h3>
-									<form action="//laurenskids.us4.list-manage.com/subscribe/post?u=8c9569b1c4af18a919a6267a5&amp;id=e46c1086d3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<form action="//laurenskids.us4.list-manage.com/subscribe/post?u=8c9569b1c4af18a919a6267a5&amp;id=e46c1086d3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" data-parsley-validate>
 									    <div id="mc_embed_signup_scroll">
 											<div class="mc-field-group">
 												<label for="mce-EMAIL" class="required">Email Address:</label>
-												<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email@host.com">
+												<input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="email@host.com" data-parsley-error-message="Please enter a valid email address" required>
 											</div>
 											<div class="mc-field-group">
-												<label for="mce-FNAME">First Name:</label>
-												<input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="first name">
+												<label for="mce-FNAME" class="required">First Name:</label>
+												<input type="text" value="" name="FNAME" id="mce-FNAME" placeholder="first name" data-parsley-error-message="Please enter your first name" required>
 											</div>
 											<div class="mc-field-group">
-												<label for="mce-LNAME">Last Name:</label>
-												<input type="text" value="" name="LNAME" id="mce-LNAME" placeholder="last name">
+												<label for="mce-LNAME" class="required">Last Name:</label>
+												<input type="text" value="" name="LNAME" id="mce-LNAME" placeholder="last name" data-parsley-error-message="Please enter your last name" required>
+											</div>
+											<div class="mc-field-group">
+												<label for="mce-ZIP" class="required">Zip Code:</label>
+												<input type="text" value="" name="ZIP" id="mce-ZIP" placeholder="33180" data-parsley-type="integer"  data-parsley-error-message="Please enter your 5-digit zip" data-parsley-length="[5,5]" required>
 											</div>
 											<div class="mc-field-group input-group">
 											    <strong>Email Format Preference:</strong>

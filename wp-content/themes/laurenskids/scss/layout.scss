@@ -547,6 +547,7 @@ Homepage news section
 	
 	h4 {
 		color: $brand-accent;
+		text-transform: none;
 		//margin-top: 15px;
 		/*truncate title to 1 line only*/
 		/*
@@ -1112,7 +1113,7 @@ p + .boxes {
 	.shop-icon {
 		background-image: url(../img/shop.png);
 	}
-	.materials-icon {
+	.g-icon {
 		background-image: url(../img/materials.png);
 	}
 	.volunteer-icon {
@@ -1877,14 +1878,14 @@ FAQs
 Contact
 --------------------------------------------------------------*/
 .form-wrapper {
-	background-color: $pale-pink;
+	background-color: $off-white;
 	margin-top: 30px;
 }
 
 .license-form-wrapper {
 	width: 70%;
 	margin: 15px auto;
-	background-color: $pale-pink;
+	background-color: $off-white;
 }
 
 .contact-us-form {
@@ -1894,7 +1895,7 @@ Contact
 	float: left;
 	
 	section {
-		background-color: darken($pale-pink, 2%);
+		background-color: darken($off-white, 4%);
 		max-height: 0;
 		margin: 15px 0;
 		overflow: hidden;
@@ -1967,6 +1968,10 @@ Contact
 		}
 	}
 	
+	input[type="submit"]:focus {
+		background-color: $brand-accent;
+	}
+	
 	select {
 		color: $body;
 		background-color: white;
@@ -1977,9 +1982,10 @@ Contact
 		border: none;
 		box-shadow: $box-shadow;
 		padding: 2%;
+		margin-bottom: 5px;
 		min-width: 100%;
 		max-width: 100%;
-		max-height: 200px;
+		max-height: 2000px;
 	}
 }
 
@@ -2018,5 +2024,60 @@ Contact
 	
 	img {
 		margin-bottom: 1px;
+	}
+}
+
+.forms {
+	.parsley-errors-list {
+		margin: 0;
+		list-style: none;
+		color: $brand-accent;
+		font-weight: 700;
+		font-family: $font-body;
+	}
+	
+	input.parsley-success,
+	select.parsley-success {
+		color: $brand-offset;
+		background-color: #DFF0D8;
+		
+		&:focus:not(select) {
+			border-right: 6px solid #468847;		
+		}
+	}
+	
+	textarea.parsley-success {
+		box-shadow: 2px 2px darken(#DFF0D8, 10%);
+	}
+	
+	input.parsley-error,
+	select.parsley-error {
+		box-shadow: 2px 2px $soft-pink;
+		background-color: lighten($brand-main, 50%);
+		
+		&::placeholder {
+			color: lighten($brand-offset, 35%);
+		}
+	}
+	
+	textarea.parsley-error {
+		box-shadow: 2px 2px $soft-pink;
+		background-color: white;
+		
+	}
+	
+	.parsley-errors-list {
+		margin: 2px 0 3px;
+		padding: 0;
+		list-style-type: none;
+		font-size: 0.9em;
+		line-height: 0.9em;
+		opacity: 0;
+		
+		transition: all .3s ease-in;
+	}
+	
+	.parsley-errors-list.filled {
+		opacity: 1;
 	}
 }
