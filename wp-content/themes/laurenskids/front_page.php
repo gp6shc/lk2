@@ -33,7 +33,7 @@ get_header(); ?>
 		
 	<div class="news ">
 		<div class="content">
-			<h1 class="h-pad-bottom butterfly">Our Latest News</h1>
+			<h1 class="h-pad-bottom butterfly-delay">Our Latest News</h1>
 			
 	<!-- Featured News -->			
 			<div class="grid_4 featured">

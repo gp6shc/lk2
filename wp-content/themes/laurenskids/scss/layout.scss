@@ -1483,7 +1483,7 @@ UWPQSF form
 		line-height: 35px;
 		font-size: 22px;
 		font-family: $font-header;
-		font-weight: 100;
+		font-weight: 400;
 		text-transform: uppercase;
 		
 		background-color: $brand-accent;
@@ -1624,14 +1624,12 @@ Blog Loop -- What's New?, Survivor Stories
 
 #lk-ajax {
 	height: auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: center;
+	margin: auto;
+	transition: opacity 0.5s;
 }
 
 .lk-post {
-	align-self: flex-start;
+	float: left;
 	width: 237px;
 	height: auto;
 	margin-bottom: 17px;
