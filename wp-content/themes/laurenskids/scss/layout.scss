@@ -785,9 +785,6 @@ Homepage partners section
 	opacity: 1;
 }
 
-
-
-
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
@@ -800,6 +797,10 @@ Footer
 	position: relative;
 	z-index: 10;
 	
+	p {
+		color: white;
+	}	
+
 	.social {
 		float: none;
 		text-align: left;
@@ -1033,31 +1034,36 @@ About Page
 	}
 }
 
-.butterfly {
+.butterfly, .butterfly-white, .butterfly-delay {
 	position: relative;
 	margin-top: 25px;
 		
 
 	&:after {
-		content: url("../img/butterfly.png");
+		content: "";
+		width: 22px;
+		height: 23px;
+		background-image: url(../img/butterfly_animation.png);
+		background-position: 0 0;
 		position: absolute;
-		top: -27px;
+		top: -16px;
 		margin-left: -6px;
+		animation: flutterby 8s 4s steps(5) infinite;
 	}
 }
 
-.butterfly-white {
-	position: relative;
-	margin-top: 25px;
-		
+.butterfly-white:after {
+	background-image: url(../img/butterfly_animation_white.png);
+}
 
-	&:after {
-		content: url("../img/butterfly_white.png");
-		position: absolute;
-		top: -27px;
-		margin-left: -6px;
-	}
-	
+.butterfly-delay:after {
+	animation-delay: 7.3s;
+}
+
+@keyframes flutterby {
+	0%	 {background-position: 0}
+	5%	 {background-position: -115px}
+	100% {background-position: -115px}
 }
 
 /*--------------------------------------------------------------
@@ -1107,17 +1113,17 @@ p + .boxes {
 	.advocacy-icon {
 		background-image: url(../img/advocacy.png);
 	}
-	.licenseplate-icon {
-		background-image: url(../img/licenseplate.png);
-	}
 	.shop-icon {
 		background-image: url(../img/shop.png);
 	}
-	.g-icon {
-		background-image: url(../img/materials.png);
+	.licenseplate-icon {
+		background-image: url(../img/licenseplate.png);
 	}
 	.volunteer-icon {
 		background-image: url(../img/volunteer.png);
+	}
+	.materials-icon {
+		background-image: url(../img/materials.png);
 	}
 	
 	section:hover {
@@ -1823,6 +1829,10 @@ FAQs
 	cursor: pointer;
 	position: relative;
 	transition: background-color 0.5s ease;
+	
+	&:hover {
+		background-color: darken($light-teal, 5%);
+	}
 	
 	p {
 		line-height: 1.2;

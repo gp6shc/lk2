@@ -53,9 +53,6 @@ blockquote:before, blockquote.clearfix:after, blockquote:after, q:before, q.clea
 blockquote, q {
   quotes: "" ""; }
 
-a:focus {
-  outline: thin dotted; }
-
 a:hover, a:active {
   outline: 0; }
 
@@ -2894,6 +2891,8 @@ Footer
   background: #008996;
   position: relative;
   z-index: 10; }
+  .site-footer p {
+    color: white; }
   .site-footer .social {
     float: none;
     text-align: left; }
@@ -3070,23 +3069,47 @@ About Page
   .translucent .entry-header {
     padding-top: 50px; }
 
-.butterfly {
+.butterfly, .butterfly-white, .butterfly-delay {
   position: relative;
   margin-top: 25px; }
-  .butterfly:after {
-    content: url("../img/butterfly_animation.gif");
+  .butterfly:after, .butterfly-white:after, .butterfly-delay:after {
+    content: "";
+    width: 22px;
+    height: 23px;
+    background-image: url(../img/butterfly_animation.png);
+    background-position: 0 0;
     position: absolute;
-    top: -27px;
-    margin-left: -6px; }
+    top: -16px;
+    margin-left: -6px;
+    -webkit-animation: flutterby 8s 4s steps(5) infinite;
+            animation: flutterby 8s 4s steps(5) infinite; }
 
-.butterfly-white {
-  position: relative;
-  margin-top: 25px; }
-  .butterfly-white:after {
-    content: url("../img/butterfly_white.png");
-    position: absolute;
-    top: -27px;
-    margin-left: -6px; }
+.butterfly-white:after {
+  background-image: url(../img/butterfly_animation_white.png); }
+
+.butterfly-delay:after {
+  -webkit-animation-delay: 7.3s;
+          animation-delay: 7.3s; }
+
+@-webkit-keyframes flutterby {
+  0% {
+    background-position: 0; }
+
+  5% {
+    background-position: -115px; }
+
+  100% {
+    background-position: -115px; } }
+
+@keyframes flutterby {
+  0% {
+    background-position: 0; }
+
+  5% {
+    background-position: -115px; }
+
+  100% {
+    background-position: -115px; } }
 
 /*--------------------------------------------------------------
 Boxes on About, Donate pages
@@ -3135,14 +3158,14 @@ p + .boxes {
     background-image: url(../img/awareness.png); }
   .boxes .advocacy-icon {
     background-image: url(../img/advocacy.png); }
-  .boxes .licenseplate-icon {
-    background-image: url(../img/licenseplate.png); }
   .boxes .shop-icon {
     background-image: url(../img/shop.png); }
-  .boxes .g-icon {
-    background-image: url(../img/materials.png); }
+  .boxes .licenseplate-icon {
+    background-image: url(../img/licenseplate.png); }
   .boxes .volunteer-icon {
     background-image: url(../img/volunteer.png); }
+  .boxes .materials-icon {
+    background-image: url(../img/materials.png); }
   .boxes section:hover .icons {
     background-color: #EB008B; }
   .boxes section:hover h3 {
@@ -3708,6 +3731,8 @@ FAQs
   position: relative;
   -webkit-transition: background-color 0.5s ease;
           transition: background-color 0.5s ease; }
+  .question:hover {
+    background-color: #538d98; }
   .question p {
     line-height: 1.2;
     font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif;

@@ -34,7 +34,6 @@
 <?php if (is_page(152)): ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> <?php endif; ?>
 <?php wp_head(); ?>
 
-
 </head>
 
 <body <?php body_class() ?>>

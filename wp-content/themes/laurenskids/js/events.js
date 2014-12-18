@@ -183,5 +183,3 @@ if (topic) {
 
 	topic.addEventListener('change', onSelectionChange, false);
 }
-
-
