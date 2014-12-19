@@ -2529,6 +2529,8 @@ Search
   margin: 0; }
   .search .entry-content h6 span {
     color: #5B5B5B; }
+.search .post {
+  float: none; }
 
 .page-label {
   display: inline-block;
@@ -2537,7 +2539,7 @@ Search
   margin: 15px 0 0 0;
   float: right; }
   .page-label span {
-    font-weight: 100;
+    font-weight: 400;
     font-size: 18px;
     font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif;
     text-transform: uppercase;
@@ -2585,32 +2587,6 @@ Homepage video section
     min-width: 100%; }
   .video-wrapper img {
     display: none; }
-
-.video-controller {
-  font-size: 25px;
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  top: -55px;
-  right: 5px;
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.22);
-  border-radius: 25px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.28);
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s; }
-  .video-controller:hover {
-    background-color: #eb008b; }
-    .video-controller:hover:before, .video-controller.clearfix:hover:after {
-      color: white; }
-
-.fa-play {
-  background-color: #eb008b; }
-  .fa-play:before, .fa-play.clearfix:after {
-    margin-left: 4px;
-    color: white; }
 
 /*--------------------------------------------------------------
 Homepage welcome section
@@ -3387,10 +3363,11 @@ article:not(.page) .entry-content {
 .post-share {
   float: right; }
 
-.fb-comments {
+div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid > span {
   width: -webkit-calc(100% - 70px);
   width: calc(100% - 70px);
-  margin: auto; }
+  margin: auto;
+  display: block; }
 
 /*--------------------------------------------------------------
 UWPQSF form
@@ -3512,6 +3489,7 @@ Loading Spinner
   left: 48%;
   left: -webkit-calc(50% - 25px);
   left: calc(50% - 25px);
+  opacity: 1;
   -webkit-animation: spin 0.675s linear 0 infinite normal;
           animation: spin 0.675s linear 0 infinite normal;
   background: lightgrey; }
@@ -3562,6 +3540,7 @@ Blog Loop -- What's New?, Survivor Stories
 #lk-ajax {
   height: auto;
   margin: auto;
+  opacity: 1;
   -webkit-transition: opacity 0.5s;
           transition: opacity 0.5s; }
 
@@ -4200,8 +4179,11 @@ end to ensure override of the default
 .pointer-events-none {
   pointer-events: none; }
 
+.invisible {
+  opacity: 0 !important; }
+
 .opacity-0 {
-  opacity: 0;
+  opacity: 0 !important;
   visibility: hidden; }
 
 .opacity-1 {

@@ -32,7 +32,7 @@ get_header(); ?>
 		
 		<?php echo do_shortcode('[ULWPQSF id=188 button=0 formtitle="0"]'); ?>
 		<div class="blog-container">
-			<div class="loader"></div>
+			<div class="loader opacity-0"></div>
 			
 			<div id="lk-ajax" class="clear">
 			

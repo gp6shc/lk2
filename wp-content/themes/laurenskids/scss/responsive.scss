@@ -295,8 +295,12 @@ end to ensure override of the default
 	pointer-events: none;
 }
 
+.invisible {
+	opacity: 0 !important;
+}
+
 .opacity-0 {
-	opacity: 0;
+	opacity: 0 !important;
 	visibility: hidden;
 }
 

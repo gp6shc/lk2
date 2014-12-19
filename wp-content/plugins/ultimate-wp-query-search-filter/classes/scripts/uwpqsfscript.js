@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
 		window.process_data = function ($obj) {
 			
 			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
-			var ajxdiv = $obj.closest("form").find("#uajaxdiv").val();	
+			var ajxdiv = $("#lk-ajax");
 			var res = $('.loader');
 			var getdata = $obj.closest("form").serialize();
 			var pagenum = '1';
@@ -45,17 +45,20 @@ jQuery(document).ready(function($) {
 				url: ajaxURL,
 				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				beforeSend:function() {
-					$(''+ajxdiv+'').fadeOut(300);
-					res.fadeIn(150);				 
+					ajxdiv.addClass("opacity-0");
+					res.removeClass("opacity-0");				 
 				},
 				success: function(html) {
 					setTimeout(function() {
-						res.fadeOut(150);
+						res.addClass("opacity-0");
+						debugger;
 						setTimeout( function() {
-							$(''+ajxdiv+'').html(html).fadeIn(300);
-						
+							ajxdiv.html(html);
+
 							msnry.reloadItems();
 							msnry.layout();
+
+							ajxdiv.removeClass("opacity-0");
 						}, 150);
 						
 					}, 750);
