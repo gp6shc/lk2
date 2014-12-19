@@ -1443,6 +1443,14 @@ UWPQSF form
 		height: 35px;
 		margin-right: 17px;
 		text-align: center;
+		transition: background-color 0.3s ease;
+		background-color: $brand-accent;
+		box-shadow: $box-shadow;
+		
+		&:hover {
+			background-color: $brand-main;
+			cursor: pointer;
+		}
 	}
 	
 	span {	
@@ -1453,15 +1461,6 @@ UWPQSF form
 		font-family: $font-header;
 		font-weight: 400;
 		text-transform: uppercase;
-		
-		background-color: $brand-accent;
-		box-shadow: $box-shadow;
-		transition: background-color 0.3s ease;
-		
-		&:hover {
-			background-color: $brand-main;
-			cursor: pointer;
-		}
 	}
 	
 	input[type="radio"] {
@@ -1534,17 +1533,21 @@ UWPQSF form
 Loading Spinner
 --------------------------------------------------------------*/
 
-.loader {
-	border-radius: 80%;
-	height: 50px;
-	width: 50px;
+.loader-contain {
 	position: absolute;
-	top: 0;
 	left: 48%;
 	left: calc(50% - 25px);
-	opacity: 1;
-	animation: spin .675s linear 0 infinite normal;
+	height: 50px;
+	width: 50px;
+	transform: scale(1);
+	transition: all 0.3s cubic-bezier(0.925, 0.080, 0.405, 1.105);
+}
+
+.loader {
+	height: 50px;
+	border-radius: 50%;
 	background: lightgrey;
+	animation: spin .675s linear 0 infinite normal;
 	
 	&:before,
 	&:after {

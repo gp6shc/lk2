@@ -3406,7 +3406,14 @@ UWPQSF form
   display: inline-block;
   height: 35px;
   margin-right: 17px;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease;
+  background-color: #008996;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
+  .tax-radio-0 label:hover {
+    background-color: #EB008B;
+    cursor: pointer; }
 .tax-radio-0 span {
   padding: 4px 26px;
   color: white;
@@ -3414,14 +3421,7 @@ UWPQSF form
   font-size: 22px;
   font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif;
   font-weight: 400;
-  text-transform: uppercase;
-  background-color: #008996;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-  -webkit-transition: background-color 0.3s ease;
-          transition: background-color 0.3s ease; }
-  .tax-radio-0 span:hover {
-    background-color: #EB008B;
-    cursor: pointer; }
+  text-transform: uppercase; }
 .tax-radio-0 input[type="radio"] {
   position: absolute;
   visibility: hidden; }
@@ -3480,19 +3480,25 @@ UWPQSF form
 /*--------------------------------------------------------------
 Loading Spinner
 --------------------------------------------------------------*/
-.loader {
-  border-radius: 80%;
-  height: 50px;
-  width: 50px;
+.loader-contain {
   position: absolute;
-  top: 0;
   left: 48%;
   left: -webkit-calc(50% - 25px);
   left: calc(50% - 25px);
-  opacity: 1;
+  height: 50px;
+  width: 50px;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s cubic-bezier(0.925, 0.08, 0.405, 1.105);
+          transition: all 0.3s cubic-bezier(0.925, 0.08, 0.405, 1.105); }
+
+.loader {
+  height: 50px;
+  border-radius: 50%;
+  background: lightgrey;
   -webkit-animation: spin 0.675s linear 0 infinite normal;
-          animation: spin 0.675s linear 0 infinite normal;
-  background: lightgrey; }
+          animation: spin 0.675s linear 0 infinite normal; }
   .loader:before, .loader.clearfix:after, .loader:after {
     content: "";
     display: block;
@@ -4179,9 +4185,6 @@ end to ensure override of the default
 .pointer-events-none {
   pointer-events: none; }
 
-.invisible {
-  opacity: 0 !important; }
-
 .opacity-0 {
   opacity: 0 !important;
   visibility: hidden; }
@@ -4191,4 +4194,12 @@ end to ensure override of the default
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0); }
+
+.scale-0 {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
+
+.bottom-0 {
+  bottom: 0; }
 /*# sourceMappingURL=style.css.map */

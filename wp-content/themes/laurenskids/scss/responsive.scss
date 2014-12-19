@@ -295,10 +295,6 @@ end to ensure override of the default
 	pointer-events: none;
 }
 
-.invisible {
-	opacity: 0 !important;
-}
-
 .opacity-0 {
 	opacity: 0 !important;
 	visibility: hidden;
@@ -307,4 +303,12 @@ end to ensure override of the default
 .opacity-1 {
 	opacity: 1;
 	transform: translateX(0); // pulls search box in from left on mobile nav
+}
+
+.scale-0 {
+	transform: scale(0);
+}
+
+.bottom-0 {
+	bottom: 0;
 }

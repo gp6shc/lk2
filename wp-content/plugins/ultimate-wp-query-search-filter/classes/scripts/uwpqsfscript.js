@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 			
 			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
 			var ajxdiv = $("#lk-ajax");
-			var res = $('.loader');
+			var res = $('.loader-contain');
 			var getdata = $obj.closest("form").serialize();
 			var pagenum = '1';
 						
@@ -46,20 +46,18 @@ jQuery(document).ready(function($) {
 				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				beforeSend:function() {
 					ajxdiv.addClass("opacity-0");
-					res.removeClass("opacity-0");				 
+					res.removeClass("scale-0");				 
 				},
 				success: function(html) {
 					setTimeout(function() {
-						res.addClass("opacity-0");
-						debugger;
+						res.addClass("scale-0");
 						setTimeout( function() {
 							ajxdiv.html(html);
 
 							msnry.reloadItems();
-							msnry.layout();
-
 							ajxdiv.removeClass("opacity-0");
-						}, 150);
+							msnry.layout();
+						}, 250);
 						
 					}, 750);
 				}
@@ -69,8 +67,8 @@ jQuery(document).ready(function($) {
 		window.upagi_ajax = function (pagenum, formid) {
 			
 			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
-			var ajxdiv = $(''+formid+'').find("#uajaxdiv").val();	
-			var res = $('.loader');
+			var ajxdiv = $("#lk-ajax");
+			var res = $('.loader-contain');
 			var getdata = $(''+formid+'').serialize();
 		
 			jQuery.ajax({
@@ -78,24 +76,29 @@ jQuery(document).ready(function($) {
 				url: ajaxURL,
 				data: ({action : 'uwpqsf_ajax',getdata:getdata, pagenum:pagenum }),
 				beforeSend:function() {
-					$(''+ajxdiv+'').fadeOut(300);
-					res.fadeIn(150);
-					
-					$('html, body').animate({
-						scrollTop: ($('#lk-ajax').offset().top - 210)
-					}, 1000);
+					ajxdiv.addClass("opacity-0");
+					res.removeClass("scale-0");				 
+					res.addClass("bottom-0");				 
 				},
 					
-				success: function(html) {
+				success:function(html) {
+					res.addClass("scale-0");
+					
+					$('html, body').animate({
+						scrollTop: ($('#lk-ajax').offset().top - 200)
+					}, 700);
+					
 					setTimeout(function() {
-						res.fadeOut(150);
+						res.removeClass("bottom-0");
 						setTimeout( function() {
-							$(''+ajxdiv+'').html(html).fadeIn(300);
-						
+							ajxdiv.html(html);
+
 							msnry.reloadItems();
 							msnry.layout();
+
+							ajxdiv.removeClass("opacity-0");
 						}, 150);
-					}, 750);
+					}, 710);
 				}
 			});
 		}
