@@ -11,6 +11,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php if (is_singular()): ?><meta property="fb:app_id" content="{1539132222993479}"/><?php endif;?>
 <?php if (is_page(152) || is_singular("survivor-stories")):?><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><?php endif;?>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="shortcut icon" href="<?php echo home_url("favicon.ico")?>"/>
