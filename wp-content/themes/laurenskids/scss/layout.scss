@@ -350,6 +350,9 @@ Search
 			color: $body;
 		}
 	}
+	.post {
+		float: none;
+	}
 }
 
 .page-label {
@@ -360,7 +363,7 @@ Search
 	float: right;
 	
 	span {
-		font-weight: 100;
+		font-weight: 400;
 		font-size: 18px;
 		font-family: $font-header;
 		text-transform: uppercase;
@@ -418,41 +421,6 @@ Homepage video section
 		display: none;
 	}
 }
-
-.video-controller {
-	font-size: 25px;
-	position: absolute;
-	height: 50px;
-	width: 50px;
-	line-height: 50px;
-	top: -55px;
-	right: 5px;
-	cursor: pointer;
-
-	color: rgba(black, 0.22); 
-	border-radius: 25px;
-	text-align: center;
-	background-color: rgba(white, 0.28);
-	transition: all 0.3s;
-	
-	&:hover {
-		background-color: rgba($brand-main, 1);
-		
-		&:before {
-			color: rgba(white,1);			
-		}
-	}
-}
-
-.fa-play {
-	background-color: rgba($brand-main, 1);
-	
-	&:before {
-		margin-left: 4px;
-		color: rgba(white,1);
-	}
-}
-
 
 /*--------------------------------------------------------------
 Homepage welcome section
@@ -1428,11 +1396,11 @@ article:not(.page) .entry-content {
 	float: right;
 }
 
-.fb-comments {
+div.fb-comments.fb_iframe_widget.fb_iframe_widget_fluid > span {
 	width: calc(100% - 70px);
 	margin: auto;
+	display: block;
 }
-
 
 /*--------------------------------------------------------------
 UWPQSF form
@@ -1574,6 +1542,7 @@ Loading Spinner
 	top: 0;
 	left: 48%;
 	left: calc(50% - 25px);
+	opacity: 1;
 	animation: spin .675s linear 0 infinite normal;
 	background: lightgrey;
 	
@@ -1625,6 +1594,7 @@ Blog Loop -- What's New?, Survivor Stories
 #lk-ajax {
 	height: auto;
 	margin: auto;
+	opacity: 1;
 	transition: opacity 0.5s;
 }
 

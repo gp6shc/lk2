@@ -6,30 +6,28 @@ if ($(window).scrollTop() > 20) {
 
 // Collapse header on scroll away from top
 jQuery(document).ready(function($) {
+/*
 	var miliseconds = 0; // uptime in seconds
 	setInterval(function() {miliseconds++;}, 1);
+*/
 	
 	var viewport = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	var docBody = $(document.body);
 	var LKVideo = document.getElementById('js-video');
-	var videoController = document.getElementById('js-controller');
 	
 	function changeVideo(doThis) {
 		if (doThis === "pause") {
 			if (!videoHome.paused) {
 				videoHome.pause();
-				videoController.classList.remove("fa-pause");
-				videoController.classList.add("fa-play");
 			}
 		}else if (doThis === "play") {
 			if (videoHome.paused) {
 				videoHome.play();
-				videoController.classList.remove("fa-play");
-				videoController.classList.add("fa-pause");
 			}
 		}
 	}
 	
+/*
 	function toggleVideo() {
 		if (!videoHome.paused) {
 			videoHome.pause();
@@ -41,18 +39,20 @@ jQuery(document).ready(function($) {
 			videoController.classList.add("fa-pause");
 		}
 	}
+*/
 	
+
 	if (LKVideo) {
 		var videoWrapperHeight = LKVideo.offsetHeight;
 		var videoHome = LKVideo.firstElementChild;
 		
-		videoHome.addEventListener("canplaythrough", function() {
+		/*
+videoHome.addEventListener("canplaythrough", function() {
 			//alert('ready @ '+miliseconds);
 		}, false);
-		
-		LKVideo.addEventListener("click", toggleVideo, false);
-		videoController.addEventListener("click", toggleVideo, false);
+*/
 	}
+
 	
 	if (viewport > 800 ) {
 		if (LKVideo) {
@@ -67,7 +67,6 @@ jQuery(document).ready(function($) {
 		}else{
 			$(window).scroll(function(){
 				docBody.toggleClass("sticky", window.pageYOffset >= 25 );
-
 			});
 		}
 	}

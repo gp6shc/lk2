@@ -16,9 +16,8 @@ get_header(); ?>
 	
 	<!-- Welcome Message -->		
 	<div class="welcome">
-		<i class="fa fa-pause video-controller" id="js-controller"></i>
 		<div class="content">
-			<?php //call in the content of the page What's New? 
+			<?php //call in the content of the Home page 
 				$post_id = get_the_ID();
 				global $post;
 				$post = &get_post($post_id);
@@ -26,8 +25,6 @@ get_header(); ?>
 				the_content();
 				wp_reset_postdata( $post );
 			?>
-
-			<a href="<?php echo home_url(); ?>/about"><button class="white">Learn More</button></a>
 		</div>
 	</div>
 		
