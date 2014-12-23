@@ -483,7 +483,6 @@ add_shortcode('license-plate-form', 'addLicensePlateForm');
 function home_url_shortcode() {
 	return get_home_url();
 } 
-
 add_shortcode('home-url','home_url_shortcode');
 
 
