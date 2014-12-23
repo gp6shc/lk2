@@ -3816,14 +3816,14 @@ FAQs
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }
 
-.opened .question {
+.opened > .question {
   background-color: #416e77; }
-  .opened .question p:before, .opened .question p.clearfix:after {
+  .opened > .question p:before, .opened > .question p.clearfix:after {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg); }
-.opened .answer {
-  max-height: 700px;
+.opened > .answer {
+  max-height: 1400px;
   padding: 25px 25px 25px 50px;
   overflow-y: scroll;
   opacity: 1;

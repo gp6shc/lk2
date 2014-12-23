@@ -1852,7 +1852,7 @@ FAQs
 
 .opened {
 	
-	.question {
+	> .question {
 		background-color: darken($light-teal, 15%);
 		
 		p:before {
@@ -1860,8 +1860,8 @@ FAQs
 		}
 	}
 	
-	.answer {
-		max-height: 700px;
+	> .answer {
+		max-height: 1400px;
 		padding: 25px 25px 25px 50px;
 		overflow-y: scroll;
 		opacity: 1;
