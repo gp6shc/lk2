@@ -5,8 +5,12 @@ p {
 	color: $body;
 }
 
-p + p {
+p + p, p + h4 {
 	margin-top: 1em;
+}
+
+iframe {
+	margin: 1.2em 0;
 }
 
 a {
@@ -475,6 +479,12 @@ Clearings
 		@extend :before;
 		clear: both;
 	}
+}
+
+.post-77 div:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 /*--------------------------------------------------------------
