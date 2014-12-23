@@ -146,11 +146,11 @@ var faqs = document.getElementsByClassName('faq');
 if (faqs.length > 0) {
 	
 	var openFAQ = function(e) {
-		e.classList.toggle('opened');
+		e.parentNode.classList.toggle('opened');
 	};
 	
 	for (var i = 0; i < faqs.length; i++) {
-		faqs[i].addEventListener('click', function() { openFAQ(this); }, false);
+		faqs[i].firstElementChild.addEventListener('click', function() { openFAQ(this); }, false);
 	}
 	
 }

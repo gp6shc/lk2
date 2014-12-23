@@ -2077,7 +2077,7 @@ Contact
 	}
 }
 
-.butterfly-before{
-	background-image: url(../img/butterfly_white.png) left center no-repeat;
-	padding-left: 25px;
+button.butterfly-before{
+	background: $brand-accent url(../img/butterfly_white.png) no-repeat 15px center;
+	padding-left: 45px;
 }

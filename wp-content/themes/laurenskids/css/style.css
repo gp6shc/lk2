@@ -3989,9 +3989,9 @@ Contact
 .forms .parsley-errors-list.filled {
   opacity: 1; }
 
-.butterfly-before {
-  background-image: url(../img/butterfly_white.png) left center no-repeat;
-  padding-left: 25px; }
+button.butterfly-before {
+  background: #008996 url(../img/butterfly_white.png) no-repeat 15px center;
+  padding-left: 45px; }
 
 .grid_1 {
   width: 6.5%; }
