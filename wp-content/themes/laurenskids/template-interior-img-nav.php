@@ -12,7 +12,7 @@ get_header(); ?>
 	<div class="subnav">
 		<div class="container">
 			<?php
-			if ( is_page( array(75,77,79,81) ) ) { 																// About page children
+			if ( is_page( array(75,77,79,81) ) ) { 																	// About page children
 				$menu = get_term(get_nav_menu_locations()['about'], 'nav_menu');				
 				wp_nav_menu( array( 'theme_location' => 'about', 'menu_class' => 'size-'.$menu->count, ) );
 				
@@ -20,7 +20,7 @@ get_header(); ?>
 				$menu = get_term(get_nav_menu_locations()['education'], 'nav_menu');				
 				wp_nav_menu( array( 'theme_location' => 'education', 'menu_class' => 'size-'.$menu->count, ) );
 			
-			}elseif ( is_page( array(148,150,152,154, 176,178,180,182, 962) ) ) { 									// Awareness page children and grandchildren
+			}elseif ( is_tree(10) || is_tree(150) ) { 																// Awareness page and offspring; Walk page and its offspring
 				$menu = get_term(get_nav_menu_locations()['awareness'], 'nav_menu');				
 				wp_nav_menu( array( 'theme_location' => 'awareness', 'menu_class' => 'size-'.$menu->count, ) );
 				
