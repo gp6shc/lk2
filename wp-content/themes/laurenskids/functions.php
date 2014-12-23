@@ -487,12 +487,13 @@ add_shortcode('home-url','home_url_shortcode');
 
 
 // check if the current page is the given page or if it is a child/descendant http://css-tricks.com/snippets/wordpress/if-page-is-parent-or-child/
-function is_tree($pid) {      												// $pid = The ID of the page we're looking for pages underneath
-	global $post;        													// load details about this page
-	if(is_page()&&($post->post_parent==$pid||is_page($pid))) 
-		return true;   														// we're at the page or at a sub page
+function is_tree($pid) {      														// $pid = The ID of the page we're looking for pages underneath
+	global $post;        															// load details about this page
+	$ancestors = get_ancestors($post->ID, 'page');
+	if(is_page()&&(is_page($pid) || $ancestors[0] === $pid || $ancestors[1] === $pid)) 
+		return true;   																// we're at the page or at a sub page
 	else 
-		return false;		  												// we're elsewhere
+		return false;		  														// we're elsewhere
 };
 
 

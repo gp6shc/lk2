@@ -1168,7 +1168,7 @@ General Interior Page
 .page-testimonial {
 	width: 23.3%;
 	float: left;
-	margin-top: 29px;
+	margin-top: 10px;
 	
 	.testimonial {
 		background-color: $pale-pink;
@@ -2075,4 +2075,9 @@ Contact
 	.parsley-errors-list.filled {
 		opacity: 1;
 	}
+}
+
+.butterfly-before{
+	background-image: url(../img/butterfly_white.png) left center no-repeat;
+	padding-left: 25px;
 }
