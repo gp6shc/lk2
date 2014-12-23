@@ -2363,6 +2363,9 @@ body.grey-border {
   text-align: center;
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease; }
+  .logo:hover .logo-heart {
+    -webkit-animation: thumpthump 1.1s infinite 5s;
+            animation: thumpthump 1.1s infinite 5s; }
   .logo .logo-heart {
     display: inline-block;
     -webkit-transform: translateX(4px);
@@ -2374,6 +2377,80 @@ body.grey-border {
   .logo .logo-letters {
     -webkit-transition: all 0.5s ease;
             transition: all 0.5s ease; }
+
+@-webkit-keyframes thumpthump {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  33% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+  36% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+
+  39% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  63% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+  66% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+
+  69% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes thumpthump {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  33% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+  36% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+
+  39% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+
+  63% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
+  66% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
+
+  69% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
 
 .sticky .logo .logo-heart {
   -webkit-transform: scale(0.65) translate(-75px, 101px);
