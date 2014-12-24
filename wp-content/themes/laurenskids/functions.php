@@ -429,9 +429,49 @@ function partners_and_supporters_init() {
 }
 add_action( 'init', 'partners_and_supporters_init' );
 
+// Add Walk Supporters Custom Post Type
+function walk_supporters_init() {
+	$labels = array(
+		'name'               => _x( 'Walk Supporters', 'post type general name', 'laurenskids' ),
+		'singular_name'      => _x( 'Supporter', 'post type singular name', 'laurenskids' ),
+		'menu_name'          => _x( 'Walk Supporters', 'admin menu', 'laurenskids' ),
+		'name_admin_bar'     => _x( 'Walk Supporters', 'add new on admin bar', 'laurenskids' ),
+		'add_new'            => _x( 'Add New', 'Supporter', 'laurenskids' ),
+		'add_new_item'       => __( 'Add New Supporter', 'laurenskids' ),
+		'new_item'           => __( 'New Supporter', 'laurenskids' ),
+		'edit_item'          => __( 'Edit Supporter', 'laurenskids' ),
+		'view_item'          => __( 'View this Supporter', 'laurenskids' ),
+		'all_items'          => __( 'All Supporters', 'laurenskids' ),
+		'search_items'       => __( 'Search Supporters', 'laurenskids' ),
+		'parent_item_colon'  => __( 'Parent Supporter:', 'laurenskids' ),
+		'not_found'          => __( 'No supporter found.', 'laurenskids' ),
+		'not_found_in_trash' => __( 'No supporters found in Trash.', 'laurenskids' )
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'exclude_from_search'=> true,
+		'show_ui'            => true,
+		'show_in_nav_menu'	 => false,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'walk-supporters' ),
+		'capability_type'    => 'post',
+		'has_archive'        => false,
+		'hierarchical'       => false,
+		'menu_position'      => 22,
+		'menu_icon'			 => 'dashicons-universal-access',
+		'supports'           => array( 'title', 'thumbnail' )
+	);
+
+	register_post_type( 'walk-supporters', $args );
+}
+add_action( 'init', 'walk_supporters_init' );
+
 
 // License Plate Form shortcode
-
 function addLicensePlateForm() {
 	$output = 
 	'<!-- License Form -->

@@ -50,7 +50,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/events.min.js"></script>
-<?php if (is_front_page()): ?>
+<?php if (is_front_page() || is_page(150) ): ?>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/owl.carousel.min.js"></script>
 	<script>
 		jQuery(document).ready(function($) {
