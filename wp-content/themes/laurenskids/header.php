@@ -16,16 +16,18 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="shortcut icon" href="<?php echo home_url("favicon.ico")?>"/>
 <style> /* hides font while typekit loads */
-body {transition: opacity 0.5s}
+
+body {transition: opacity 0.3s}
 .wf-loading body {opacity:0;}
 .wf-active body {opacity:1}
 .wf-inactive body {opacity:1}
 /*
-h1,h2,h3,h4,h5,.menu-item a,.tax-radio-0 span{opacity: 1;transition: all 0.5s !important;}
+h1,h2,h3,h4,h5,.menu-item a,.tax-radio-0 span{opacity: 1;transition: opacity 0.5s !important;}
 .wf-loading h1,.wf-loading h2,.wf-loading h3,.wf-loading h4,.wf-loading h5,.wf-loading .menu-item a, .wf-loading .tax-radio-0 span{opacity:0;}
 .wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active .menu-item a, .wf-active .tax-radio-0 span{opacity:1;}
 .wf-inactive h1,.wf-inactive h2,.wf-inactive h3,.wf-inactive h4,.wf-inactive h5,.wf-inactive .menu-item a, .wf-inactive .tax-radio-0 span{opacity:1;}
 */
+
 </style>
 <script>
   (function(d) {

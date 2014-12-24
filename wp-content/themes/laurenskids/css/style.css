@@ -68,6 +68,9 @@ p {
 p + p, p + h4 {
   margin-top: 1em; }
 
+p + h3 {
+  margin-top: 25px; }
+
 iframe {
   margin: 1.2em 0; }
 
@@ -112,9 +115,6 @@ h2 {
   color: #EB008B;
   letter-spacing: 1px;
   margin-bottom: 10px; }
-
-p + h3 {
-  margin-top: 25px; }
 
 h3 {
   font-size: 28px;
@@ -2690,7 +2690,7 @@ Homepage welcome section
   .welcome p {
     color: white;
     text-transform: none;
-    font-size: 18px; }
+    font-size: 21px; }
   .welcome button {
     margin-top: 36px;
     font-size: 20px;
@@ -3284,7 +3284,7 @@ General Interior Page
   line-height: 40px;
   font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif;
   font-size: 22px;
-  font-weight: 100;
+  font-weight: 300;
   padding-left: 10px;
   margin-top: 15px;
   background-color: #008996;
@@ -3321,7 +3321,7 @@ Single's Sidebar: sidebar.php
   height: 35px;
   width: 100%;
   padding: 0 10px;
-  margin-top: 25px;
+  margin-top: 15px;
   border-left: 5px solid #008996;
   -webkit-transition: border 0.3s ease;
           transition: border 0.3s ease; }
@@ -3350,7 +3350,8 @@ Single's Sidebar: sidebar.php
   -webkit-transition: background-color 0.3s ease;
           transition: background-color 0.3s ease; }
   .sidebar-nav h5 {
-    line-height: 40px; }
+    line-height: 40px;
+    font-weight: 300; }
   .sidebar-nav:hover {
     background-color: #EB008B;
     color: white; }
@@ -3502,7 +3503,7 @@ UWPQSF form
   line-height: 35px;
   font-size: 22px;
   font-family: 'proxima-nova-alt', "Proxima Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase; }
 .tax-radio-0 input[type="radio"] {
   position: absolute;
@@ -3828,6 +3829,9 @@ FAQs
   overflow-y: scroll;
   opacity: 1;
   pointer-events: all; }
+
+.faq.opened .faq.opened > .answer {
+  background: white; }
 
 /*--------------------------------------------------------------
 Contact
