@@ -374,7 +374,7 @@ function survivor_stories_init() {
 		'show_in_nav_menu'	 => false,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'survivor-stories' ),
+		'rewrite'            => array( 'slug' => '/awareness/survivor-stories' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,

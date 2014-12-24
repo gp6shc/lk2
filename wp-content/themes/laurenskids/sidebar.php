@@ -15,9 +15,9 @@
 		<a id="js-archive-btn" class="sidebar-nav"><h5>Archive</h5></a>
 		<div id="js-archive-list" class="archive-list">
 			<?php if (is_archive()) {
-				wp_get_archives(array( 'type' => "monthly", 'limit' => 24 ));
+				wp_get_archives(array( 'type' => "monthly" ));
 			}else{
-				wp_get_archives(array( 'type' => "yearly", ));
+				wp_get_archives(array( 'type' => "yearly" ));
 				
 			}?>
 		</div>
@@ -46,8 +46,11 @@
 		</ul>
 	</div>
 	
-	<hr>
-
-	<?php dynamic_sidebar('testimonial'); ?>
+	<?php 
+		if (is_active_widget()) {
+			echo "<hr>";
+			dynamic_sidebar('testimonial');
+		}
+	?>
 
 </aside><!-- .single-sidebar -->
