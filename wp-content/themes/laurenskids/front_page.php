@@ -3,18 +3,13 @@
 *Template Name: Home
 */
 get_header(); ?>
-
-	<!-- Landing Video -->
-
 	<div class="video-wrapper" id="js-video">
-		<video autoplay="true" loop="true" muted="muted">
-			<source src="<?php echo get_stylesheet_directory_uri(); ?>/img/LK-banner-video.mp4" type="video/mp4">
-			<!-- <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"> -->
-		</video>	
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/vid-bg.jpg"/>
+		<video autoplay loop poster="<?php echo get_stylesheet_directory_uri(); ?>/img/poster.jpg">
+			<source src="<?php echo get_stylesheet_directory_uri(); ?>/img/lk-video.mp4" type="video/mp4">
+			<source src="<?php echo get_stylesheet_directory_uri(); ?>/img/lk-video.webm" type="video/webm">
+		</video>
 	</div>
 	
-	<!-- Welcome Message -->		
 	<div class="welcome">
 		<div class="content">
 			<?php //call in the content of the Home page 
@@ -28,11 +23,9 @@ get_header(); ?>
 		</div>
 	</div>
 		
-	<div class="news ">
+	<div class="news">
 		<div class="content">
 			<h1 class="h-pad-bottom butterfly-delay">Our Latest News</h1>
-			
-	<!-- Featured News -->			
 			<div class="grid_4 featured">
 				<?php $lk_featured_query = new WP_Query( 'category_name=featured&posts_per_page=2' );
 					while ( $lk_featured_query->have_posts() ) : $lk_featured_query->the_post();
@@ -46,14 +39,13 @@ get_header(); ?>
 						
 							<div class="excerpt">
 								<h4><?php the_title();?></h4>
-								<p><?php laurenskids_excerpt(15); ?></p>
-							</div><!-- .entry-content -->
+								<p><?php laurenskids_excerpt(87, true); ?></p>
+							</div>
 
 						</a>
-						</article><!-- #post-## -->
+						</article>
 				<?php endwhile;?>
 			</div>
-		<!-- Latest News -->
 			<div class="grid_8 omega latest">
 				<?php $lk_latest_query = new WP_Query( 'category__not_in=3&posts_per_page=5' );
 					while ( $lk_latest_query->have_posts() ) : $lk_latest_query->the_post();
@@ -71,18 +63,17 @@ get_header(); ?>
 								<h5><?php the_time('F j, Y'); ?></h5>
 								
 								<div class="excerpt">
-									<p><?php laurenskids_excerpt(25); ?></p>
-								</div><!-- .entry-content -->
-							</div><!-- .entry-meta -->
+									<p><?php laurenskids_excerpt(150, true); ?></p>
+								</div>
+							</div>
 
 						</a>
-						</article><!-- #post-## -->
+						</article>
 					<?php endwhile; ?>
 			</div>
 		</div>
 	</div>
 	
-	<!-- Partners Section -->			
 	<div class="partners">
 		<div class="content">
 			<h1 class="centered-text butterfly-white">Partners & Supporters</h1>
