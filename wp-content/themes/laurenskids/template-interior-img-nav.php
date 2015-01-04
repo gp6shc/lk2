@@ -35,10 +35,6 @@ get_header(); ?>
 	
 				<?php while ( have_posts() ) : the_post(); ?>
 					
-					<aside class="page-testimonial">
-						<?php dynamic_sidebar('testimonial'); ?>
-					</aside>
-					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('interior-page-content'); ?>>
 					    <header class="entry-header">
 					    	<?php if (!is_page(182)) {?><h2 class="butterfly"><?php the_title() ?></h2><?php }//hide on Campaigns & Clips page?> 
@@ -52,6 +48,10 @@ get_header(); ?>
 					    	<?php edit_post_link( __( 'Edit', 'laurenskids' ), '<span class="edit-link">', '</span>' ); ?>
 					    </footer><!-- .entry-footer -->
 					</article><!-- #post-## -->
+					
+					<aside class="page-testimonial">
+						<?php dynamic_sidebar('testimonial'); ?>
+					</aside>
 	
 				<?php endwhile; // end of the loop. ?>
 	

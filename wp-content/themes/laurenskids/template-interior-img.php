@@ -17,6 +17,20 @@ get_header(); ?>
 	
 				<?php while ( have_posts() ) : the_post(); ?>
 					
+					<article id="post-<?php the_ID(); ?>" <?php post_class('interior-page-content'); ?>>
+					    <header class="entry-header">
+					    	<?php if (!is_page(182)) {?><h2 class="butterfly"><?php the_title() ?></h2><?php }//hide on Campaigns & Clips page?> 
+					    </header><!-- .entry-header -->
+					
+					    <div class="entry-content">
+					    	<?php the_content(); ?>
+					    </div><!-- .entry-content -->
+					
+					    <footer class="entry-footer">
+					    	<?php edit_post_link( __( 'Edit', 'laurenskids' ), '<span class="edit-link">', '</span>' ); ?>
+					    </footer><!-- .entry-footer -->
+					</article><!-- #post-## -->
+					
 					<aside class="page-testimonial">
 						<?php 
 							$children = get_pages('child_of='.$post->ID);
@@ -32,20 +46,6 @@ get_header(); ?>
 							
 						dynamic_sidebar('testimonial'); ?>
 					</aside> 
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('interior-page-content'); ?>>
-					    <header class="entry-header">
-					    	<?php if (!is_page(182)) {?><h2 class="butterfly"><?php the_title() ?></h2><?php }//hide on Campaigns & Clips page?> 
-					    </header><!-- .entry-header -->
-					
-					    <div class="entry-content">
-					    	<?php the_content(); ?>
-					    </div><!-- .entry-content -->
-					
-					    <footer class="entry-footer">
-					    	<?php edit_post_link( __( 'Edit', 'laurenskids' ), '<span class="edit-link">', '</span>' ); ?>
-					    </footer><!-- .entry-footer -->
-					</article><!-- #post-## -->
 	
 				<?php endwhile; // end of the loop. ?>
 	
