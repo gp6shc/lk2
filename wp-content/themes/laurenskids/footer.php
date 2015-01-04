@@ -79,7 +79,7 @@
 		});
 	</script>
 <?php elseif (is_page( array(16, 152) )): // if on the Whats New or Survivor stories pages: ?> 
-	<script async type="text/javascript" src="<?php echo plugins_url('ultimate-wp-query-search-filter/classes/scripts/uwpqsfscript.js')?>"></script>
+	<script async type="text/javascript" src="<?php echo plugins_url('ultimate-wp-query-search-filter/classes/scripts/uwpqsfscript.min.js')?>"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/masonry.pkgd.min.js"></script>
 <?php elseif (is_page( array(18, 451) )): // if on the Contact or License Form pages: ?> 
 	<script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/parsley.min.js"></script>
