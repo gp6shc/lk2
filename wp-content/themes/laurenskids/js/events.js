@@ -6,12 +6,6 @@ if ($(window).scrollTop() > 20) {
 
 // Collapse header on scroll away from top
 jQuery(document).ready(function($) {
-/*
-	var miliseconds = 0; // uptime in seconds
-	setInterval(function() {miliseconds++;}, 1);
-*/
-	
-	var viewport = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 	var docBody = $(document.body);
 	var LKVideo = document.getElementById('js-video');
 	
@@ -25,52 +19,37 @@ jQuery(document).ready(function($) {
 				videoHome.play();
 			}
 		}
-	}
-	
-/*
-	function toggleVideo() {
-		if (!videoHome.paused) {
-			videoHome.pause();
-			videoController.classList.remove("fa-pause");
-			videoController.classList.add("fa-play");
-		}else{
-			videoHome.play();
-			videoController.classList.remove("fa-play");
-			videoController.classList.add("fa-pause");
-		}
-	}
-*/
-	
+	}	
 
 	if (LKVideo) {
-		var videoWrapperHeight = LKVideo.offsetHeight;
 		var videoHome = LKVideo.firstElementChild;
-		
+		var videoWrapperHeight = LKVideo.offsetHeight;
+  
 		/*
-videoHome.addEventListener("canplaythrough", function() {
-			//alert('ready @ '+miliseconds);
-		}, false);
+var playAgain = function() {
+			videoHome.currentTime = 0;
+			console.log("looped");
+		};
+		setInterval(playAgain, ((videoHome.duration * 1000) - 450));
 */
 	}
 
-	
-	if (viewport > 800 ) {
-		if (LKVideo) {
-			$(window).scroll(function(){
-				docBody.toggleClass("sticky", window.pageYOffset >= 20 );
-				if (window.pageYOffset >= (videoWrapperHeight + 320)) {
-					changeVideo("pause");
-				}else{
-					changeVideo("play");
-				}
-			});
+// Add class "sticky" or "pinky" (mobile) when not scrolled to the top
+$(window).scroll(function(){
+ 	if (window.innerWidth > 767) {
+		docBody.toggleClass("sticky", window.pageYOffset >= 25 );
+		if (window.pageYOffset >= (videoWrapperHeight + 320)) {
+			changeVideo("pause");
 		}else{
-			$(window).scroll(function(){
-				docBody.toggleClass("sticky", window.pageYOffset >= 25 );
-			});
+			changeVideo("play");
 		}
+	}else{
+		docBody.toggleClass("pinky", window.pageYOffset >= 25 );
 	}
 });
+
+});
+
 
 // Search expanding
 
@@ -79,40 +58,34 @@ var socialLinks = document.getElementById("js-social");
 var quickLinks = document.getElementById("js-quick-links");
 var searchElems = document.getElementById("js-search-contain");
 
-function searchExpand() {
-    socialLinks.classList.toggle("opacity-0"/* , "pointer-events-none" */);
-    quickLinks.classList.toggle("opacity-0"/* , "pointer-events-none" */);
+function searchExpand(e) {
+	e.preventDefault();
+    socialLinks.classList.toggle("opacity-0");
+    quickLinks.classList.toggle("opacity-0");
     searchBtn.classList.toggle("search-expand");
     
-    if( searchElems.classList.contains("display-none") ) {
+    if( searchElems.classList.contains("opacity-0") ) {
     	searchBtn.classList.remove("fa-search");
     	searchBtn.classList.add("fa-times");
     	setTimeout( function() {searchElems.classList.toggle("opacity-1");}, 150);
-    	searchElems.classList.remove("display-none");
-    	searchElems.firstElementChild.focus();			
+    	searchElems.classList.toggle("opacity-0");
+	   	searchElems.firstElementChild.focus();
     }else{
     	searchBtn.classList.remove("fa-times");
     	searchBtn.classList.add("fa-search");
     	searchElems.classList.toggle("opacity-1");
-    	setTimeout( function() {searchElems.classList.add("display-none");}, 300);
+		setTimeout( function() {searchElems.classList.toggle("opacity-0");}, 150);
     	
 	}
 }
 
-if (Math.max(document.documentElement.clientWidth, window.innerWidth || 0) > 800) {
-	searchBtn.addEventListener('click', searchExpand , false);
-	
-}else{
-	searchBtn.addEventListener('touchstart', searchExpand , false);
-	
-}
+searchBtn.addEventListener('click', searchExpand , false);
 
 // listen for click on menu icon 
-// adds "toggle" class to #site-navigation
+// adds "toggled" class to #site-navigation
 
 	var	container = document.getElementById( 'site-navigation' );
-
-	var iconToggle = document.getElementById("js-icon-toggle");
+	var iconToggle = document.getElementById( 'js-icon-toggle' );
 	
 	iconToggle.addEventListener( 'touchstart', function() {
 		if ( container.className.indexOf( 'toggled' ) === -1 ) {
