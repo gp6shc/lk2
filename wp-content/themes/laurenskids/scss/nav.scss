@@ -17,8 +17,8 @@ Menus
 		li {
 			float: left;
 			position: relative;
-			padding: 0 10px;
 			text-transform: uppercase;
+			transition: all 0.3s;
 			
 			&.current-page-ancestor a, &.current-menu-item a {
 				color: white;
@@ -40,6 +40,12 @@ Menus
 				}
 			}
 		}
+	}
+}
+
+.main-navigation {
+	li + li {
+		padding-left: 22px;
 	}
 }
 

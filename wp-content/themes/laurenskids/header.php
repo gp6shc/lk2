@@ -10,38 +10,15 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, <?php if (is_page(18)){echo 'maximum-scale=1.0';}else{echo 'maximum-scale=2.0';}?>">
 <?php if (is_singular()): ?><meta property="fb:app_id" content="{1539132222993479}"/><?php endif;?>
 <?php if (is_page(152) || is_singular("survivor-stories")):?><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><?php endif;?>
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+<title><?php wp_title( '', true, 'right' ); ?></title>
+<script src="//use.typekit.net/hne5xvx.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 <link rel="shortcut icon" href="<?php echo home_url("favicon.ico")?>"/>
-<style> /* hides font while typekit loads */
-
-body {transition: opacity 0.3s}
-.wf-loading body {opacity:0;}
-.wf-active body {opacity:1}
-.wf-inactive body {opacity:1}
-/*
-h1,h2,h3,h4,h5,.menu-item a,.tax-radio-0 span{opacity: 1;transition: opacity 0.5s !important;}
-.wf-loading h1,.wf-loading h2,.wf-loading h3,.wf-loading h4,.wf-loading h5,.wf-loading .menu-item a, .wf-loading .tax-radio-0 span{opacity:0;}
-.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active .menu-item a, .wf-active .tax-radio-0 span{opacity:1;}
-.wf-inactive h1,.wf-inactive h2,.wf-inactive h3,.wf-inactive h4,.wf-inactive h5,.wf-inactive .menu-item a, .wf-inactive .tax-radio-0 span{opacity:1;}
-*/
-
-</style>
-<script>
-  (function(d) {
-  var tkTimeout=3000;
-  if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
-  var config = {
-    kitId: 'hne5xvx',
-    scriptTimeout: tkTimeout
-  },
-  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-})(document);
-</script>
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,700' rel='stylesheet' type='text/css'>
-<?php if (is_page(152)): ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> <?php endif; ?>
+<?php if (is_page( array(152,10) )): ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> <?php endif; ?>
 <?php wp_head(); ?>
 
 </head>
@@ -74,8 +51,8 @@ h1,h2,h3,h4,h5,.menu-item a,.tax-radio-0 span{opacity: 1;transition: opacity 0.5
 				<div class="search-nav">
 					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 					    <i id="js-search-btn" class="fa fa-search"></i>
-					    <span id="js-search-contain" class="search-elements display-none">
-					    	<input type="search" class="search-field" placeholder="Search for..." value="<?php echo get_search_query() ?>" name="s" title="Search" />
+					    <span id="js-search-contain" class="search-elements opacity-0">
+					    	<input type="search" class="search-field needsclick" placeholder="Search for..." value="<?php echo get_search_query() ?>" name="s" title="Search" />
 					    	<input type="submit" class="search-submit" value="Search" />
 					    </span>
 					</form>
