@@ -769,3 +769,7 @@ input:focus, textarea:focus {
 	background-color: $brand-offset;
 	color: white;
 }
+
+#wp-auth-check-wrap .wp-auth-check-close {
+	top: 4px;
+}

@@ -296,7 +296,7 @@ if(!class_exists('uwpqsfprocess')){
 			$html .= '<div class="entry-summary">'.get_the_excerpt().'</div></article>';
 				
 		  }
-			$html .= $this->ajax_pagination($pagenumber,$query->max_num_pages, 4, $id,$getdata);
+			$html .= $this->ajax_pagination($pagenumber,$query->max_num_pages, 2, $id,$getdata);
 		 } else {
 					$html .= __( 'Nothing Found', 'UWPQSF' );
 				}
@@ -308,7 +308,7 @@ if(!class_exists('uwpqsfprocess')){
 		
   }//end result	 
 
-  function ajax_pagination($pagenumber, $pages = '', $range = 4, $id,$getdata){
+  function ajax_pagination($pagenumber, $pages = '', $range = 2, $id,$getdata){
 	$showitems = ($range * 2)+1;  
 	 
 	$paged = $pagenumber;

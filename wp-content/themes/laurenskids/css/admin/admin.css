@@ -397,4 +397,7 @@ input:focus, textarea:focus {
 ::selection {
   background-color: #58595B;
   color: white; }
+
+#wp-auth-check-wrap .wp-auth-check-close {
+  top: 4px; }
 /*# sourceMappingURL=admin.css.map */

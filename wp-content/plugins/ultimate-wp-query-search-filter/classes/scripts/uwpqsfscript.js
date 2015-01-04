@@ -15,7 +15,9 @@ jQuery(document).ready(function($) {
 		$('body').on('keypress','.uwpqsftext',function(e) {
 		  if(e.keyCode == 13){
 		    e.preventDefault();
+		    this.blur();
 		    process_data($(this));
+		    
 		  }
 		});
 		
@@ -34,7 +36,7 @@ jQuery(document).ready(function($) {
 		
 		window.process_data = function ($obj) {
 			
-			var ajaxURL = "http://" + window.location.host + "/lk2/wp-admin/admin-ajax.php";
+			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
 			var ajxdiv = $("#lk-ajax");
 			var res = $('.loader-contain');
 			var getdata = $obj.closest("form").serialize();
@@ -62,11 +64,11 @@ jQuery(document).ready(function($) {
 					}, 750);
 				}
 			});
-		}	
+		};	
 		
 		window.upagi_ajax = function (pagenum, formid) {
 			
-			var ajaxURL = "http://" + window.location.host + "/lk2/wp-admin/admin-ajax.php";
+			var ajaxURL = "/lk2/wp-admin/admin-ajax.php";
 			var ajxdiv = $("#lk-ajax");
 			var res = $('.loader-contain');
 			var getdata = $(''+formid+'').serialize();
@@ -101,14 +103,14 @@ jQuery(document).ready(function($) {
 					}, 710);
 				}
 			});
-		}
+		};
 		
 	$('body').on('click', '.chktaxoall,.chkcmfall',function () {
 		$(this).closest('.togglecheck').find('input:checkbox').prop('checked', this.checked);	
 	});
 	
 	
-	$('form[id*="uwpqsffrom_"]').change(function(){ process_data($(this)); })
+	$('form[id*="uwpqsffrom_"]').change(function(){ process_data($(this)); });
 
 	process_data($('form[id*="uwpqsffrom_"]'));
 

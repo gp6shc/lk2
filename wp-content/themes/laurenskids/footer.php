@@ -8,17 +8,17 @@
  */
 ?>
 <footer id="colophon" class="site-footer" role="contentinfo">
+	<button class="back-to-top" onclick='$("body").animate({ scrollTop: 0 }, 500);'>Back to Top</button>
 	<div class="content">
-	
 		<?php
 			/*
 			 * Footer widgets area is triggered, only if the widgets are active
 			 *
 			 * If they are not active, then let's bail.
 			 */
-			if (   ! is_active_sidebar( 'footer-1'  )
+			if (   ! is_active_sidebar( 'footer-1' )
 				&& ! is_active_sidebar( 'footer-2' )
-				&& ! is_active_sidebar( 'footer-3'  )
+				&& ! is_active_sidebar( 'footer-3' )
 			)
 				return;
 			// If we get this far, we have widgets. Lets do this.
@@ -31,7 +31,7 @@
 			<?php endif; ?>
 		
 			<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
-			<div id="footer-widget-2" class="widget-area" role="complementary">
+			<div id="footer-widget-2" class="widget-area clear" role="complementary">
 				<?php dynamic_sidebar( 'footer-2' ); ?>
 			</div><!-- #second .widget-area -->
 			<?php endif; ?>
@@ -65,7 +65,7 @@
 				slideSpeed: 300,
 				autoPlay: 6000,
 				scrollPerPage: true,
-				responsiveRefreshRate: 4000,
+				responsiveRefreshRate: 400,
 				mouseDrag: false
 			});
 		
@@ -84,15 +84,14 @@
 <?php elseif (is_page( array(18, 451) )): // if on the Contact or License Form pages: ?> 
 	<script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/parsley.min.js"></script>
 <?php endif; ?>
-<?php wp_footer(); ?>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/fastclick.min.js"></script>
 <?php if (!is_page(16)): ?>	
 	<script> window.addEventListener('load', function() {
 				FastClick.attach(document.body);
 			}, false);
 	</script>
-<?php endif;
-	wp_footer(); ?>
+<?php endif; ?>
+<?php wp_footer(); ?>
 
 </body>
 </html>

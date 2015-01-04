@@ -331,7 +331,7 @@ function customize_output($results , $arg, $id, $getdata) {
 					</a>
 					</div>
 	<?php   }
-			echo  $apiclass->ajax_pagination($arg['paged'],$query->max_num_pages, 4, $id, $getdata);
+			echo  $apiclass->ajax_pagination($arg['paged'],$query->max_num_pages, 2, $id, $getdata);
 	
 			} else {
 				echo  'No posts found :(';

@@ -14,7 +14,7 @@
 
 	<div class="entry-content">
 		<h6><span><?php the_time('F j, Y'); ?></span></h6>
-		<p style="margin-top: 15px"><?php laurenskids_excerpt(55); ?></p>
+		<p style="margin-top: 15px"><?php laurenskids_excerpt(225, true); ?></p>
 		<hr class="short-hr">
 		<h6><span>Category:</span> <?php 
 			$category = get_the_category();

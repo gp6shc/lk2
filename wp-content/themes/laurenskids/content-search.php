@@ -20,8 +20,10 @@
 
 	<div class="entry-content">
 		
+		<?php if ($post->post_type != 'page'):?>
 		<h6><span><?php the_time('F j, Y'); ?></span></h6>
-		<p style="margin-top: 15px"><?php laurenskids_excerpt(55); ?></p>
+		<?php endif; ?>
+		<p style="margin-top: 15px"><?php echo get_laurenskids_excerpt(50); ?></p>
 		<?php 
 			$category = get_the_category();
 			$length = count($category);
