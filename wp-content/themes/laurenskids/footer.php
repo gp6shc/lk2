@@ -85,6 +85,14 @@
 	<script async type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/parsley.min.js"></script>
 <?php endif; ?>
 <?php wp_footer(); ?>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/js/min/fastclick.min.js"></script>
+<?php if (!is_page(16)): ?>	
+	<script> window.addEventListener('load', function() {
+				FastClick.attach(document.body);
+			}, false);
+	</script>
+<?php endif;
+	wp_footer(); ?>
 
 </body>
 </html>
