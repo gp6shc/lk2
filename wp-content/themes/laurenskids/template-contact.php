@@ -44,7 +44,7 @@ get_header(); ?>
 							<div class="form-wrapper clear">
 							<div class="contact-us-form forms">
 								<form action="http://laurens-kids.force.com/website/contact_us" method="post" data-parsley-validate>
-									<input type="hidden" name="thankYouURL" value="http://www.laurenskids.org"/>
+									<input type="hidden" name="thankYouURL" value="<?php home_url()?>/thank-you"/>
 								
 								    <input type="hidden" name="groupMember" value="Lead Manager"/>
 								    <input type="hidden" name="NotCreateTask" value="false"/>
@@ -85,16 +85,16 @@ get_header(); ?>
 								<section id="js-mailing-section" <?php if($materials) echo 'class="loose"';?>>
 									<h6>Please provide your mailing address if you are requesting awareness materials.</h6>
 									<div class="field">
-										<label for="mailing_street">Mailing Street:</label>
-										<input class="js-mail-field" id="mailing_street" type="text" name="mailing_street" placeholder="Street Address" maxlength="80" data-parsley-error-message="Please enter your address"/>
+										<label for="mailing_street" class="required">Mailing Street:</label>
+										<input <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_street" type="text" name="mailing_street" placeholder="Street Address" maxlength="80" data-parsley-error-message="Please enter your address"/>
 									</div>
 									<div class="field">
-										<label for="mailing_city">Mailing City:</label>
-										<input class="js-mail-field" id="mailing_city" type="text" name="mailing_city" placeholder="City" maxlength="80" data-parsley-error-message="Please enter your city"/>
+										<label for="mailing_city" class="required">Mailing City:</label>
+										<input <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_city" type="text" name="mailing_city" placeholder="City" maxlength="80" data-parsley-error-message="Please enter your city"/>
 									</div>
 									<div class="field">
-										<label for="mailing_state">Mailing State:</label>
-										<select class="js-mail-field" id="mailing_state" name="mailing_state" data-parsley-error-message="Please enter your state">
+										<label for="mailing_state" class="required">Mailing State:</label>
+										<select <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_state" name="mailing_state" data-parsley-error-message="Please enter your state">
 											<option value="">None</option>
 											<option value="AL">Alabama</option>
 											<option value="AK">Alaska</option>
@@ -150,8 +150,8 @@ get_header(); ?>
 										</select>
 									</div>
 								    <div class="field">
-										<label for="mailing_country">Mailing Country:</label>
-										<select class="js-mail-field" id="country" name="mailing_country" data-parsley-error-message="Please enter your country">
+										<label for="mailing_country" class="required">Mailing Country:</label>
+										<select <?php if($materials) echo "required";?> class="js-mail-field" id="country" name="mailing_country" data-parsley-error-message="Please enter your country">
 											<option value="">None</option>
 											<option value="US">United States</option>
 											<option value="AF">Afghanistan</option>
@@ -406,14 +406,14 @@ get_header(); ?>
 										</select>
 									</div>
 									<div class="field">
-										<label for="mailing_Postal_code">Mailing Postal Code:</label>
-										<input class="js-mail-field" id="mailing_zip_code" type="text" name="mailing_zip_code" placeholder="Zip Code" maxlength="10" data-parsley-error-message="Please enter your 5-digit zip" data-parsley-length="[5,5]"/>
+										<label for="mailing_Postal_code" class="required" >Mailing Postal Code:</label>
+										<input <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_zip_code" type="text" name="mailing_zip_code" placeholder="Zip Code" maxlength="10" data-parsley-error-message="Please enter your 5-digit zip" data-parsley-length="[5,5]"/>
 									</div>
 								</section>
 									
 									<div class="field">
 										<label for="message" class="required">Message:</label>
-										<textarea id="message" name="message" required="required" placeholder="" rows="5" maxlength="512" data-parsley-error-message="Please leave a short message explaining your reason for contacting us"></textarea>
+										<textarea id="message" name="message" required="required" placeholder="" rows="5" maxlength="32000" data-parsley-error-message="Please leave a short message explaining your reason for contacting us"></textarea>
 									</div>
 									
 									<div class="submit-btn">
