@@ -20,11 +20,12 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,700' rel='stylesheet' type='text/css'>
 <?php if (is_page( array(152,10) )): ?><link href='http://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet' type='text/css'> <?php endif; ?>
 <?php wp_head(); ?>
-
+<!--[if IE]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/css/ie.css"><![endif]-->
+<!--[if IE]><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script><![endif]-->
 </head>
 
 <body <?php body_class() ?>>
-<div id="page" class="hfeed site<?php if ( is_single() || is_page(array(16,152)) || is_archive() || is_search() ) {echo " off-white";}?>">
+<div id="page" class="hfeed site<?php if ( is_single() || is_page(array(16,152)) || is_archive() || is_search() || is_404() ) {echo " off-white";}?>">
 
 	<header class="masthead <?php if (is_front_page()) echo "home-page"; ?>" role="banner">
 
@@ -33,7 +34,7 @@
 			<a href="<?php echo home_url() ?>" rel="home">
 				<div class="logo">
 					<div class="logo-heart"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/LK-heart-logo.svg"/></div>
-					<div class="logo-letters"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/LK-letters-logo.svg"/></div>
+					<div class="logo-letters"><img src="<?php echo get_stylesheet_directory_uri() ?>/img/LK-letters-logo.svg" title="Lauren's Kids" alt="Lauren's Kids"/></div>
 				</div>
 			</a>
 			

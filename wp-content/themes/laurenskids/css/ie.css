@@ -1,0 +1,26 @@
+body.sticky .masthead {
+  height: 70px; }
+body.sticky .top-area {
+  display: none; }
+body.sticky .main-navigation {
+  margin-top: -19px; }
+body.sticky .logo {
+  margin-top: -95px; }
+
+.boxes {
+  margin: auto; }
+  .boxes:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .boxes section {
+    float: left; }
+
+.boxes-3 {
+  margin-left: 75px; }
+
+.loader {
+  display: none; }
+
+.loader-contain {
+  background-image: url(../img/load.gif); }

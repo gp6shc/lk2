@@ -1,0 +1,43 @@
+body.sticky {
+	.masthead {
+		height: 70px;
+	}
+	
+	.top-area {
+		display: none;
+	}
+	
+	.main-navigation {
+		margin-top: -19px;
+	}
+	
+	.logo {
+		margin-top: -95px;
+	}
+}
+
+.boxes {
+	margin: auto;
+	
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	 
+	section {
+		float: left;
+	}
+}
+
+.boxes-3 {
+	margin-left: 75px;
+}
+
+.loader {
+	display: none;
+}
+
+.loader-contain {
+	background-image: url(../img/load.gif);
+}
