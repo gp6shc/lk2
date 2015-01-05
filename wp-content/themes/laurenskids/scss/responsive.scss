@@ -131,6 +131,9 @@ Below 790px
 			font-size: 18px;
 		}
 	}
+	.error-404 {
+		width: 100%;
+	}
 	
 }
 
@@ -286,7 +289,8 @@ body, body.grey-border {
 .page-template-template-interior-img,
 .single,
 .search,
-.archive {
+.archive,
+.error404 {
 	margin-top: 64px;
 	border: none;
 }
@@ -434,7 +438,7 @@ body, body.grey-border {
 	&.toggled .menu {
 		opacity: 1;
 		pointer-events: auto;
-		transform: translateX(0);
+		transform: rotateX(0);
 		
 	}
 }
@@ -834,6 +838,9 @@ h3 {
 		height: 100%;
 		display: block;
 		margin: 1em auto;
+	}
+	.search-404 input[type="search"] {
+		width: 90%;	
 	}
 }
 
