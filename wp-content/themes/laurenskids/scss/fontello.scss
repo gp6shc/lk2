@@ -9,14 +9,28 @@
   font-style: normal;
 }
 .fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
- 
+.fa-stack {
+	position: relative;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+  vertical-align: middle;
+}
+.fa-stack-2x {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+}
 .fa-twitter:before { content: '\e800'; } /* '' */
 .fa-facebook:before { content: '\e801'; } /* '' */
 .fa-camera:before { content: '\e802'; } /* '' */
