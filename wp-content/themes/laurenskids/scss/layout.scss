@@ -1907,8 +1907,8 @@ FAQs
 	}
 	
 	> .answer {
-		max-height: none;
-		padding: 25px 25px 25px 50px;
+		max-height: 10001px; // for transitioning 
+		padding: 25px 25px 25px 40px;
 		opacity: 1;
 		pointer-events: all;
 	}

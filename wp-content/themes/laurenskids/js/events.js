@@ -29,14 +29,11 @@ jQuery(document).ready(function($) {
 		videoHome.addEventListener('play', function() {
 			docBody.style.opacity = 1;
 		});
-  
-		/*
-var playAgain = function() {
-			videoHome.currentTime = 0;
-			console.log("looped");
-		};
-		setInterval(playAgain, ((videoHome.duration * 1000) - 450));
-*/
+		
+		if (window.innerWidth <= 1024) {
+			docBody.style.opacity = 1;
+			
+		}
 	}
 
 // Add class "sticky" or "pinky" (mobile) when not scrolled to the top
