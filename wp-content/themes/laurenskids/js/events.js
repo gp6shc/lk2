@@ -6,7 +6,8 @@ if ($(window).scrollTop() > 20) {
 
 // Collapse header on scroll away from top
 jQuery(document).ready(function($) {
-	var docBody = $(document.body);
+	var docBody = document.body;
+	var docBodyJQ = $('body');
 	var LKVideo = document.getElementById('js-video');
 	
 	function changeVideo(doThis) {
@@ -35,18 +36,24 @@ var playAgain = function() {
 	}
 
 // Add class "sticky" or "pinky" (mobile) when not scrolled to the top
-$(window).scroll(function(){
- 	if (window.innerWidth > 767) {
-		docBody.toggleClass("sticky", window.pageYOffset >= 25 );
-		if (window.pageYOffset >= (videoWrapperHeight + 320)) {
-			changeVideo("pause");
+	$(window).scroll(function(){
+	 	if (window.innerWidth > 767) {
+			docBodyJQ.toggleClass('sticky', window.pageYOffset >= 25);
+			
+			if (LKVideo) {
+				if (window.pageYOffset >= (videoWrapperHeight + 320)) {
+					changeVideo("pause");
+				}else{
+					changeVideo("play");
+				}
+			}
 		}else{
-			changeVideo("play");
+			if (docBody.classList.contains( 'sticky' )) {		
+				docBody.classList.remove('sticky');
+			}
+			docBodyJQ.toggleClass('pinky', window.pageYOffset >= 25);
 		}
-	}else{
-		docBody.toggleClass("pinky", window.pageYOffset >= 25 );
-	}
-});
+	});
 
 });
 

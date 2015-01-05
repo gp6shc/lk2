@@ -4499,6 +4499,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/plugins\/ultimate-wp-query-search-filter\/classes\/uwpqsf-front-class.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/plugins\/ultimate-wp-query-search-filter\/classes\/uwpqsf-front-class.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-content\/plugins\/ultimate-wp-query-search-filter\/classes\/uwpqsf-process-class.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -4668,6 +4677,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/admin\/login.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wp-content\/themes\/laurenskids\/css\/ie.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/ie.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -5233,6 +5251,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/wp-content\/themes\/laurenskids\/scss\/ie.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/scss\/ie.scss",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/ie.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
 	"\/wp-content\/themes\/laurenskids\/scss\/layout.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -5308,7 +5342,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 3,
+		"outputStyle": 1,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 1

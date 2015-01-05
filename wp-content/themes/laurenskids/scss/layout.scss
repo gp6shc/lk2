@@ -161,11 +161,11 @@ body {
 .sticky .logo {
 	
 	.logo-heart {
-		transform: scale(0.65) translate(-75px, 101px);
+		transform: scale(0.65) translate(-92px, 101px);
 	}
 	
 	.logo-letters {
-		transform: translate(43px, 20px);
+		transform: translate(32px, 20px);
 	}
 }
 .top-area {
@@ -930,6 +930,7 @@ page-template-template-img-nav
 	
 	.container {
 		padding: 0;
+		background-color: transparent;
 	}
 	
 	ul {
@@ -1599,7 +1600,7 @@ Loading Spinner
 	height: 50px;
 	border-radius: 50%;
 	background: lightgrey;
-	animation: spin .675s linear 0 infinite normal;
+	animation: spin 0.675s linear infinite normal;
 	
 	&:before,
 	&:after {
@@ -1770,11 +1771,11 @@ Archive
 	}
 }
 
-
 .archive-list {
 	max-height: 0;
 	opacity: 0;
-	transition: all 1s;
+	padding: 0;
+	transition: all 0.5s;
 	overflow: hidden;
 	
 	li {
@@ -1786,18 +1787,21 @@ Archive
 }
 
 .open {
-	max-height: 300px;
+	max-height: 325px;
 	margin-top: 15px;
-	overflow-y: scroll;
 	opacity: 1;
-	
+}
+
+
+.archive .open {
+	overflow-y: scroll;
 }
 
 /*--------------------------------------------------------------
 404
 --------------------------------------------------------------*/
 .error-404 {
-	width: 50%;
+	width: 65%;
 	margin: 5px auto 150px auto;
 	padding: 35px 5px;
 	background-color: rgba(white, 0.7);
@@ -1817,6 +1821,7 @@ Archive
 		padding: 0 10px;
 		margin-top: 25px;
 		border-left: 5px solid $brand-accent;
+		-webkit-appearance: none;
 		transition: border 0.3s ease;
 		
 		&::placeholder {
@@ -1829,8 +1834,8 @@ Archive
 	}
 }
 
-.error404 #page {
-	background: $off-white url(../img/buddy.png) no-repeat center 210px;
+.error404 .container {
+	background: $off-white url(../img/buddy.png) no-repeat center bottom;
 }
 
 /*--------------------------------------------------------------
@@ -1894,9 +1899,8 @@ FAQs
 	}
 	
 	> .answer {
-		max-height: 1400px;
+		max-height: none;
 		padding: 25px 25px 25px 50px;
-		overflow-y: scroll;
 		opacity: 1;
 		pointer-events: all;
 	}
@@ -1981,7 +1985,7 @@ Contact
 		
 	}
 	
-	input[type="text"], input[type="tel"], input[type="email"], select {
+	input[type="text"], input[type="tel"], input[type="email"], select, textarea {
 		width: 50%;
 		float: right;
 		color: $body;
@@ -1995,13 +1999,14 @@ Contact
 			color: $light-grey;
 		}
 		
-		&:focus:not(select) {
+		&:focus {
 			border-right: 6px solid $brand-main;
 		}
 	}
 	
-	input[type="submit"]:focus {
-		background-color: $brand-accent;
+	input[type="radio"]:focus + label {
+		border-bottom: 2px solid $brand-main;
+		display: inline;
 	}
 	
 	select {

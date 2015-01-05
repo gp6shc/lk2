@@ -5,6 +5,7 @@
 get_header(); ?>
 	<div class="video-wrapper" id="js-video">
 		<video autoplay loop muted poster="<?php echo get_stylesheet_directory_uri(); ?>/img/poster.jpg">
+			<source src="<?php echo get_stylesheet_directory_uri(); ?>/img/lk-video.webm" type="video/webm">
 			<source src="<?php echo get_stylesheet_directory_uri(); ?>/img/lk-video.mp4" type="video/mp4">
 		</video>
 	</div>
