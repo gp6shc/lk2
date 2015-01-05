@@ -11,12 +11,21 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, <?php if (is_page(18)){echo 'maximum-scale=1.0';}else{echo 'maximum-scale=2.0';}?>">
-<?php if (is_singular()): ?><meta property="fb:app_id" content="{1539132222993479}"/><?php endif;?>
+<?php if (is_single()): ?>
+<meta property="fb:app_id" content="{1539132222993479}"/>
+<?php endif;?>
+<meta name="keywords" content="lauren's kids,sexual abuse prevention curriculum, laurens kids, sexual, abuse, child, curriculum, grade school, prevention, child sexual abuse, lauren book">
+<meta name="description" content="Our mission: To prevent sexual abuse through awareness and education, and to help survivors heal with guidance and support. Lauren's Kids educates adults and children about sexual abuse topics through an in school curriculum, a 24-hour Crisis Hotline and speaking engagements around the country.">
+<meta property="og:title" content="<?php the_title(); ?>">
+<meta property="og:url" content="<?php the_permalink(); ?>">
+
 <?php if (is_page(152) || is_singular("survivor-stories")):?><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><?php endif;?>
+<style>.masthead{background-color:#EB008B}a{color:white} </style>
 <?php if (is_front_page()): ?>
 <style>body {opacity:0; transition: opacity 0.5s;}</style>
+<noscript><style>body {opacity:1;}</style></noscript>
 <?php endif; ?>
-<title><?php wp_title( '', true, 'right' ); ?></title>
+<title><?php wp_title( '|', true, 'right' ); ?></title>
 <script src="//use.typekit.net/hne5xvx.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
 <link rel="shortcut icon" href="<?php echo home_url("favicon.ico")?>"/>
