@@ -10,23 +10,25 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'laurenskids' ); ?></h1>
+		<h1 class="page-title">Nothing Found</h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-
-			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'laurenskids' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
-
-		<?php elseif ( is_search() ) : ?>
-
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'laurenskids' ); ?></p>
-			<?php get_search_form(); ?>
+		<?php if ( is_search() ) : ?>
+			<div class="page-content">
+			<p>Sorry, but nothing matched your search terms. Please try again with some different keywords:</p>
+				<div class="search-404">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
 
 		<?php else : ?>
-
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'laurenskids' ); ?></p>
-			<?php get_search_form(); ?>
+			<div class="page-content centered-text">
+			<p>'It seems we can't find what you're looking for. Perhaps searching can help:</p>
+				<div class="search-404">
+					<?php get_search_form(); ?>
+				</div>
+			</div>
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
