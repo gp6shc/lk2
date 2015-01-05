@@ -33,8 +33,18 @@ get_header(); ?>
 		}?>
 	</div>
 </div>
-
-<div class="background-image" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>);">
+<style>
+.background-image {
+	background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "full" )[0] ?>);
+}
+	
+@media screen and (max-width: 612px) {
+	.background-image {
+		background-image: url(<?php echo wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), "large" )[0] ?>);
+	}
+}
+</style>
+<div class="background-image">
 	<div class="container translucent">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
