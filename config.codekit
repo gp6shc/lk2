@@ -5219,15 +5219,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/wp-content\/themes\/laurenskids\/scss\/font-awesome.scss": {
+	"\/wp-content\/themes\/laurenskids\/scss\/fontello.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/scss\/font-awesome.scss",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/font-awesome.css",
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/scss\/fontello.scss",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/fontello.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -5342,7 +5342,7 @@
 		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 1
@@ -18857,7 +18857,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/192.168.0.108\/lk2",
+	"externalServerAddress": "http:\/\/localhost\/lk2",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,

@@ -1187,7 +1187,6 @@ General Interior Page
 .page-testimonial {
 	width: 23.3%;
 	float: left;
-	margin-top: 15px;
 	
 	.testimonial {
 		background-color: $pale-pink;
@@ -1197,7 +1196,16 @@ General Interior Page
 		display: block;
 		margin-top: 15px;
 	}
+	
+	.widget {
+		margin-top: 30px;
+	}
 }
+
+.page-template-template-interior-img-nav .entry-content {
+	margin-top: 0;
+}
+
 
 .menu-walk-pages-container, .menu-awareness-about-pages-container {
 	ul {
@@ -1865,7 +1873,7 @@ FAQs
 		color: white;
 		
 		&:before {
-			content: "\f00d";
+			content: '\e806';
 			display: inline-block;
 			position: absolute;
 			font-family: 'FontAwesome';
