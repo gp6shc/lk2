@@ -97,15 +97,15 @@ get_header(); ?>
 									<h6>Please provide your mailing address if you are requesting awareness materials.</h6>
 									<div class="field">
 										<label for="mailing_street" class="required">Mailing Street:</label>
-										<input <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_street" type="text" name="mailing_street" placeholder="Street Address" maxlength="80" data-parsley-error-message="Please enter your address"/>
+										<input <?php if($materials) echo "required"; else echo 'tabindex="-1"';?> class="js-mail-field" id="mailing_street" type="text" name="mailing_street" placeholder="Street Address" maxlength="80" data-parsley-error-message="Please enter your address"/>
 									</div>
 									<div class="field">
 										<label for="mailing_city" class="required">Mailing City:</label>
-										<input <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_city" type="text" name="mailing_city" placeholder="City" maxlength="80" data-parsley-error-message="Please enter your city"/>
+										<input <?php if($materials) echo "required"; else echo 'tabindex="-1"';?> class="js-mail-field" id="mailing_city" type="text" name="mailing_city" placeholder="City" maxlength="80" data-parsley-error-message="Please enter your city"/>
 									</div>
 									<div class="field">
 										<label for="mailing_state" class="required">Mailing State:</label>
-										<select <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_state" name="mailing_state" data-parsley-error-message="Please enter your state">
+										<select <?php if($materials) echo "required"; else echo 'tabindex="-1"';?> class="js-mail-field" id="mailing_state" name="mailing_state" data-parsley-error-message="Please enter your state">
 											<option value="">None</option>
 											<option value="AL">Alabama</option>
 											<option value="AK">Alaska</option>
@@ -162,7 +162,7 @@ get_header(); ?>
 									</div>
 								    <div class="field">
 										<label for="mailing_country" class="required">Mailing Country:</label>
-										<select <?php if($materials) echo "required";?> class="js-mail-field" id="country" name="mailing_country" data-parsley-error-message="Please enter your country">
+										<select <?php if($materials) echo "required"; else echo 'tabindex="-1"';?> class="js-mail-field" id="country" name="mailing_country" data-parsley-error-message="Please enter your country">
 											<option value="">None</option>
 											<option value="US">United States</option>
 											<option value="AF">Afghanistan</option>
@@ -418,7 +418,7 @@ get_header(); ?>
 									</div>
 									<div class="field">
 										<label for="mailing_Postal_code" class="required" >Mailing Postal Code:</label>
-										<input <?php if($materials) echo "required";?> class="js-mail-field" id="mailing_zip_code" type="text" name="mailing_zip_code" placeholder="Zip Code" maxlength="10" data-parsley-error-message="Please enter your 5-digit zip" data-parsley-length="[5,5]"/>
+										<input <?php if($materials) echo "required"; else echo 'tabindex="-1"';?> class="js-mail-field" id="mailing_zip_code" type="text" name="mailing_zip_code" placeholder="Zip Code" maxlength="10" data-parsley-error-message="Please enter your 5-digit zip" data-parsley-length="[5,5]"/>
 									</div>
 								</section>
 									
@@ -428,7 +428,7 @@ get_header(); ?>
 									</div>
 									
 									<div class="submit-btn">
-										<button type="submit">Submit</button>
+										<button type="submit interior">Submit</button>
 									</div>
 								</form>
 							</div>

@@ -143,11 +143,13 @@ if (topic) {
 			mailingSection.classList.add('loose');
 			for (var i = 0; i < mailingFields.length; i++) {
 				mailingFields[i].setAttribute("required", "required");
+				mailingFields[i].removeAttribute("tabindex");
 				
 			}
 		}else{
 			mailingSection.classList.remove('loose');
 			for (var j = 0; j < mailingFields.length; j++) {
+				mailingFields[j].setAttribute("tabindex", "-1");
 				mailingFields[j].removeAttribute("required");
 			}
 		}
