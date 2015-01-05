@@ -14,7 +14,7 @@
 <?php if (is_singular()): ?><meta property="fb:app_id" content="{1539132222993479}"/><?php endif;?>
 <?php if (is_page(152) || is_singular("survivor-stories")):?><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><?php endif;?>
 <?php if (is_front_page()): ?>
-<style>body {opacity: 0;transition: opacity 0.5s;}</style>
+<style>body {opacity:0; transition: opacity 0.5s;}</style>
 <?php endif; ?>
 <title><?php wp_title( '', true, 'right' ); ?></title>
 <script src="//use.typekit.net/hne5xvx.js"></script>
@@ -28,6 +28,14 @@
 </head>
 
 <body <?php body_class() ?>>
+<?php if (is_front_page()): ?>
+<script>
+	document.body.style.opacity = 0;
+	setTimeout(function() {
+		document.body.style.opacity = 1;
+	}, 3000);
+</script>
+<?php endif; ?>
 <div id="page" class="hfeed site<?php if ( is_single() || is_page(array(16,152)) || is_archive() || is_search() || is_404() ) {echo " off-white";}?>">
 
 	<header class="masthead <?php if (is_front_page()) echo "home-page"; ?>" role="banner">
