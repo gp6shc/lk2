@@ -25,6 +25,10 @@ jQuery(document).ready(function($) {
 	if (LKVideo) {
 		var videoHome = LKVideo.firstElementChild;
 		var videoWrapperHeight = LKVideo.offsetHeight;
+		
+		videoHome.addEventListener('play', function() {
+			docBody.style.opacity = 1;
+		});
   
 		/*
 var playAgain = function() {

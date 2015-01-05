@@ -13,6 +13,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, <?php if (is_page(18)){echo 'maximum-scale=1.0';}else{echo 'maximum-scale=2.0';}?>">
 <?php if (is_singular()): ?><meta property="fb:app_id" content="{1539132222993479}"/><?php endif;?>
 <?php if (is_page(152) || is_singular("survivor-stories")):?><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><?php endif;?>
+<?php if (is_front_page()): ?>
+<style>body {opacity: 0;transition: opacity 0.5s;}</style>
+<?php endif; ?>
 <title><?php wp_title( '', true, 'right' ); ?></title>
 <script src="//use.typekit.net/hne5xvx.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
