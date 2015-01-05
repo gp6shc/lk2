@@ -20,7 +20,7 @@
 <meta property="og:url" content="<?php the_permalink(); ?>">
 
 <?php if (is_page(152) || is_singular("survivor-stories")):?><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><?php endif;?>
-<style>.masthead{background-color:#EB008B;width:100%}a{color:white}.subnav{width:100%}</style>
+<style>.masthead{background-color:#EB008B;width:100%;height:166px}a{color:white}.subnav{width:100%}</style>
 <?php if (is_front_page()): ?>
 <style>body {opacity:0; transition: opacity 0.5s;}</style>
 <noscript><style>body {opacity:1;}</style></noscript>
