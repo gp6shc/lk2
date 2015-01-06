@@ -1504,24 +1504,26 @@ UWPQSF form
 		height: 35px;
 		margin: 0 8px;
 		text-align: center;
-		transition: background-color 0.3s ease;
+		
+	}
+	
+	span {
+		display: block;
+		padding: 4px 26px;
+		color: white;
+		line-height: 27px;
+		font-size: 22px;
+		font-family: $font-header;
+		font-weight: 300;
+		text-transform: uppercase;
 		background-color: $brand-accent;
 		box-shadow: $box-shadow;
+		transition: background-color 0.3s ease;
 		
 		&:hover {
 			background-color: $brand-main;
 			cursor: pointer;
 		}
-	}
-	
-	span {	
-		padding: 4px 26px;
-		color: white;
-		line-height: 35px;
-		font-size: 22px;
-		font-family: $font-header;
-		font-weight: 300;
-		text-transform: uppercase;
 	}
 	
 	input[type="radio"] {
@@ -2143,4 +2145,8 @@ button.butterfly-before {
 	&:nth-child(2n) {
 		margin-left: 2%;
 	}
+}
+
+#text-4 > div > a:nth-child(4) > button {
+	padding: 10px 25px;
 }
