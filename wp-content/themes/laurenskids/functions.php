@@ -22,8 +22,6 @@ if ( ! function_exists( 'laurenskids_setup' ) ) :
  */
 function laurenskids_setup() {
 
-
-
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -34,8 +32,6 @@ function laurenskids_setup() {
 	
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
-
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -51,8 +47,6 @@ function laurenskids_setup() {
 		'awareness' => __( 'Awareness Menu', 'laurenskids' ),
 		'education' => __( 'Education Menu', 'laurenskids' ),
 	) );
-
-
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -478,7 +472,7 @@ function addLicensePlateForm() {
 		<div class="license-form-wrapper">
 		<div class="license-form forms">
 			<form action="http://laurens-kids.force.com/website/contact_us" method="post" data-parsley-validate>
-				<input type="hidden" name="thankYouURL" value="http://www.laurenskids.org"/>
+				<input type="hidden" name="thankYouURL" value="http://www.laurenskids.org/thank-you"/>
 			
 				<h3 class="centered-text">license Plate Interest</h3>
 				<div class="field">
