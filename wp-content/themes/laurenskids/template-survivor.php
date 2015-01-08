@@ -28,7 +28,7 @@ get_header(); ?>
 					the_content();
 					wp_reset_postdata( $post );
 				?>	
-			<hr class="short-hr">
+			<hr>
 		
 			<?php echo do_shortcode('[ULWPQSF id=188 button=0 formtitle="0"]'); ?>
 		
