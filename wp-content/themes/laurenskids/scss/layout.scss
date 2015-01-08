@@ -1246,6 +1246,19 @@ General Interior Page
 	}
 }
 
+.team-bio {
+	float: left;
+	width: calc(100% - 215px);
+	margin-bottom: 35px;
+	line-height: 1.5;
+}
+.books-intro {
+	float: left;
+	width: calc(100% - 230px);
+	margin-bottom: 35px;
+	line-height: 1.5;
+}
+
 /*--------------------------------------------------------------
 Single's Sidebar: sidebar.php
 --------------------------------------------------------------*/
@@ -1858,13 +1871,13 @@ FAQs
 
 .question {
 	padding: 10px;
-	background-color: $light-teal;
+	background-color: $brand-offset;
 	cursor: pointer;
 	position: relative;
 	transition: background-color 0.5s ease;
 	
 	&:hover {
-		background-color: darken($light-teal, 5%);
+		background-color: lighten($brand-offset, 8%);
 	}
 	
 	p {
@@ -1901,7 +1914,7 @@ FAQs
 .opened {
 	
 	> .question {
-		background-color: darken($light-teal, 15%);
+		background-color: lighten($brand-offset, 15%);
 		
 		p:before {
 			transform: rotate(-90deg);
@@ -1929,7 +1942,7 @@ Contact
 }
 
 .license-form-wrapper {
-	width: 70%;
+	width: 100%;
 	margin: 15px auto;
 	background-color: $off-white;
 }
@@ -2149,4 +2162,8 @@ button.butterfly-before {
 
 #text-4 > div > a:nth-child(4) > button {
 	padding: 10px 25px;
+}
+
+.page-template-template-survivor #uwpqsf_id {
+	margin: 0;
 }

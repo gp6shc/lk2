@@ -684,8 +684,10 @@ Below 550px
 			border-top: 1px solid $light-grey;
 			margin-top: 35px;
 		}
-		
-		
+	}
+	.team-bio, .books-intro {
+		float: none;
+		width: 100%;
 	}
 }
 
@@ -825,6 +827,7 @@ h3 {
 		color: $brand-accent;
 	}
 }
+
 
     
 }
