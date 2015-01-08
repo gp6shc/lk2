@@ -3,7 +3,7 @@ body {
   body:before {
     content: "";
     position: absolute;
-    background-image: url(/lk2/wp-content/uploads/2014/11/lk_balloons.jpg);
+    background-image: url(/wp-content/uploads/2014/11/lk_balloons.jpg);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -17,7 +17,7 @@ body {
     background: rgba(0, 0, 0, 0.45);
     padding: 20px 0 10px 0; }
   #login a {
-    background-image: url(/lk2/wp-content/themes/laurenskids/img/logo-full.png);
+    background-image: url(/wp-content/themes/laurenskids/img/logo-full.png);
     background-size: auto;
     height: 94px;
     width: auto;

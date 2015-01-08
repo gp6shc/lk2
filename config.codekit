@@ -4717,6 +4717,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/wp-content\/themes\/laurenskids\/header.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/header.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/wp-content\/themes\/laurenskids\/img\/advocacy.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -4849,13 +4858,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
-	"\/wp-content\/themes\/laurenskids\/img\/Hero.jpg": {
+	"\/wp-content\/themes\/laurenskids\/img\/hero.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 175820,
-		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/Hero.jpg",
-		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/Hero.jpg",
+		"inputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/hero.jpg",
+		"outputAbbreviatedPath": "\/wp-content\/themes\/laurenskids\/img\/hero.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
