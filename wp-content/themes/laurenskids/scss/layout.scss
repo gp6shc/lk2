@@ -404,7 +404,7 @@ Homepage video section
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100vh;	
 	z-index: 0;
 	background: $brand-offset;
 	
@@ -1170,7 +1170,6 @@ General Interior Page
 
 .banner {
 	height: 412px;
-	height: 43vh;
 	padding: 0;
 	background-position: bottom center;
 }
@@ -1462,7 +1461,8 @@ article:not(.page) .entry-content {
 .post-tags {
 	float: left;
 	font-family: $font-header;
-	height: 40px;
+	line-height: 1.3;
+	width: 50%;
 }
 .post-share {
 	float: right;

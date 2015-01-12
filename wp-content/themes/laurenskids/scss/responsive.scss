@@ -559,6 +559,9 @@ Below 736px and in landscape
 	.subnav, .masthead {
 		position: absolute;
 	}
+	.masthead.home-page {
+		position: fixed;
+	}
 }
 
 /*--------------------------------------------------------------
