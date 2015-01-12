@@ -91,6 +91,8 @@
 			}, false);
 	</script>
 <?php endif; ?>
+<script src="<?php echo get_stylesheet_directory_uri() ?>/js/viewport-units-buggyfill.js"></script>
+<script>window.viewportUnitsBuggyfill.init();</script>
 <?php wp_footer(); ?>
 
 </body>
